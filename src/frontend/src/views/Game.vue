@@ -33,7 +33,7 @@
           <div class="score-mini">🌟{{ gameStore.score }}</div>
           <div class="progress-mini">
             <!-- 累计分数显示在进度条左侧（计时/PK/无限模式） -->
-            <span v-if="showSessionScore" class="session-score-mini">+{{ sessionScore }}</span>
+            <span v-if="showSessionScore && sessionScore > 0" class="session-score-mini">+{{ sessionScore }}</span>
             <div class="progress-bar-mini">
               <div 
                 class="progress-fill-mini"
@@ -51,13 +51,13 @@
       <!-- 游戏网格区 -->
       <div class="game-card-main">
         <!-- 网格 -->
-        <div class="flex justify-center">
+        <div class="grid-wrapper">
           <div 
-            class="grid gap-1"
+            class="grid-container"
             :style="{ 
-              gridTemplateColumns: `repeat(${gameStore.gridSize}, minmax(0, 1fr))`,
-              maxWidth: `${gameStore.gridSize * 48}px`
+              gridTemplateColumns: `repeat(${gameStore.gridSize}, minmax(0, 1fr))`
             }"
+            :data-grid-size="gameStore.gridSize"
           >
             <div
               v-for="(row, rowIndex) in gameStore.cells"
@@ -405,7 +405,7 @@ import { useGameStore } from '../stores/game'
 import { useSettingsStore } from '../stores/settings'
 import { useUserStore } from '../stores/user'
 import { playTypeSound, playDeleteSound, playCorrectSound, playLevelCompleteSound, startBgMusic, stopBgMusic } from '../utils/audio'
-import axios from 'axios'
+import { energyApi, propsApi, gameApi, leaderboardApi, trackApi } from '../api/index.js'
 
 const route = useRoute()
 const router = useRouter()
@@ -465,22 +465,20 @@ async function saveUserEnergy(value) {
   }
   
   // 异步同步到后端（不阻塞）
-  fetch('/api/user/energy', {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    credentials: 'include',
-    body: JSON.stringify({ energy: value })
-  }).catch(e => {
+  energyApi.update(value).catch(e => {
     console.error('同步体力到后端失败:', e)
   })
 }
 
 // 消耗体力进入游戏
 async function consumeEnergy(mode) {
-  const cost = ENERGY_COST[mode] || 5
+  const cost = ENERGY_COST[mode] || 10
+  
+  console.log(`[体力] 尝试消耗体力: 模式=${mode}, 消耗=${cost}, 当前体力=${userEnergy.value}`)
   
   if (userEnergy.value < cost) {
     // 使用游戏内弹窗替代alert
+    console.log(`[体力] 体力不足: 需要${cost}, 当前${userEnergy.value}`)
     energyModalInfo.value = { required: cost, current: userEnergy.value }
     showEnergyModal.value = true
     return false
@@ -488,13 +486,12 @@ async function consumeEnergy(mode) {
   
   // 扣除体力
   const newEnergy = userEnergy.value - cost
+  console.log(`[体力] 扣除体力: ${userEnergy.value} - ${cost} = ${newEnergy}`)
   await saveUserEnergy(newEnergy)
   
-  // 同时调用后端消耗接口记录
+  // 同时调用后端消耗接口记录（仅记录，不扣费）
   try {
-    await fetch(`/api/user/energy/consume?mode=${mode}`, {
-      method: 'POST'
-    })
+    await energyApi.consume(mode)
   } catch (e) {
     console.error('后端记录体力消耗失败:', e)
   }
@@ -514,15 +511,10 @@ async function claimFreeEnergy() {
   const BONUS_ENERGY = 30
   
   try {
-    // 调用后端API增加体力
-    const response = await fetch('/api/user/energy/claim-free', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ amount: BONUS_ENERGY })
-    })
+    // 调用后端API增加体力（带埋点追踪）
+    const data = await trackApi.claimFreeEnergyTracked(BONUS_ENERGY, 'web')
     
-    if (response.ok) {
-      const data = await response.json()
+    if (data) {
       userEnergy.value = data.energy
       localStorage.setItem('user_energy', JSON.stringify({ 
         value: data.energy, 
@@ -750,12 +742,9 @@ const earnedRewards = ref([])  // 获得的奖励列表
 // 从后端获取随机奖励（三品类随机两个，由后端计算，防止前端篡改）
 async function fetchRewardsFromBackend() {
   try {
-    const API_BASE = import.meta.env.VITE_API_BASE || ''
-    const response = await axios.post(`${API_BASE}/api/game/generate-reward`, {}, {
-      withCredentials: true
-    })
-    if (response.data.success) {
-      return response.data.rewards
+    const data = await gameApi.generateReward()
+    if (data.success) {
+      return data.rewards
     }
   } catch (error) {
     console.error('获取奖励失败:', error)
@@ -773,17 +762,17 @@ async function claimRewards() {
   if (earnedRewards.value.length === 0) return
   
   try {
+    // 先标记为已领取，防止重复点击
+    rewardClaimed.value = true
+    
+    // 计算新的体力值（累加所有体力奖励）
+    let totalEnergyReward = 0
+    
     // 直接使用已显示的 earnedRewards 来累加（确保"所见即所得"）
     for (const reward of earnedRewards.value) {
       if (reward.type === 'energy') {
-        // 体力累加，上限200
-        const newEnergy = Math.min(200, userEnergy.value + reward.value)
-        userEnergy.value = newEnergy
-        localStorage.setItem('user_energy', JSON.stringify({
-          value: newEnergy,
-          lastUpdate: Date.now()
-        }))
-        console.log(`领取体力 +${reward.value}，当前体力: ${newEnergy}`)
+        totalEnergyReward += reward.value
+        console.log(`领取体力奖励 +${reward.value}`)
       } else if (reward.type === 'hint') {
         // 提示道具累加
         hintLetterCount.value += reward.value
@@ -795,36 +784,36 @@ async function claimRewards() {
       }
     }
     
+    // 如果有体力奖励，统一调用 saveUserEnergy 更新（确保本地+后端同步）
+    if (totalEnergyReward > 0) {
+      const newEnergy = Math.min(200, userEnergy.value + totalEnergyReward)
+      console.log(`[体力] 领奖增加体力: ${userEnergy.value} + ${totalEnergyReward} = ${newEnergy}`)
+      await saveUserEnergy(newEnergy)  // 统一使用 saveUserEnergy，确保同步
+    }
+    
     // 保存道具次数到本地
     savePropCounts()
     
     // 同步积分到后端
     await syncScoreToBackend(gameStore.score)
     
-    // 通知后端记录领取（不再依赖返回值）
-    const API_BASE = import.meta.env.VITE_API_BASE || ''
-    axios.post(`${API_BASE}/api/game/claim-reward`, {
-      level: gameStore.currentLevel,
-      vocab_group: gameStore.currentGroup,
-      stars: currentStars.value,
-      time_seconds: gameStore.timer,
-      rewards: earnedRewards.value  // 记录实际领取的奖励
-    }, {
-      withCredentials: true
-    }).catch(e => console.warn('后端记录领取失败:', e))
+    // 通知后端记录领取（传入前端的奖励列表，后端使用相同数据更新）
+    gameApi.claimReward(
+      gameStore.currentLevel,
+      gameStore.currentGroup,
+      currentStars.value,
+      gameStore.timer,
+      earnedRewards.value
+    ).catch(e => console.warn('后端记录领取失败:', e))
     
-    // 领取成功后，置灰按钮表示已领取
-    rewardClaimed.value = true
   } catch (error) {
     console.error('领取奖励失败:', error)
-    // 即使失败也标记为已领取，避免重复领取
-    rewardClaimed.value = true
   }
 }
 
-// 进入下一关（闯关模式扣除5点体力）
+// 进入下一关（闯关模式扣除10点体力）
 async function goNextLevel() {
-  // 检查并消耗体力（闯关模式每关5点）
+  // 检查并消耗体力（闯关模式每关10点）
   const canPlay = await consumeEnergy('campaign')
   if (!canPlay) {
     // 体力不足，显示弹窗
@@ -870,6 +859,9 @@ function useHintLetterProp() {
   hintActiveWordId.value = selectedWord.value.id  // 记录生效的单词ID
   hintLetterCount.value--
   savePropCounts()  // 保存道具次数到账号
+  
+  // 埋点：记录道具使用
+  trackApi.trackPropUsage('hint_letter', gameStore.currentMode, gameStore.currentGroup, gameStore.currentLevel, 'web')
 }
 
 // 使用发音道具 - 朗读当前选中单词发音三遍
@@ -881,6 +873,9 @@ function useSpeakProp() {
   speakPropActive.value = true
   speakPropCount.value--
   savePropCounts()  // 保存道具次数到账号
+  
+  // 埋点：记录道具使用
+  trackApi.trackPropUsage('speak', gameStore.currentMode, gameStore.currentGroup, gameStore.currentLevel, 'web')
   
   // 朗读当前单词三遍
   const word = selectedWord.value.word
@@ -956,15 +951,7 @@ function savePropCounts() {
 // 同步道具到后端
 async function syncPropsToBackend() {
   try {
-    await fetch('/api/user/props', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({
-        hintLetterCount: hintLetterCount.value,
-        showTranslationCount: speakPropCount.value  // 后端字段名称
-      })
-    })
+    await propsApi.update(hintLetterCount.value, speakPropCount.value)
     console.log('道具同步成功')
   } catch (e) {
     console.error('同步道具到后端失败:', e)
@@ -974,16 +961,7 @@ async function syncPropsToBackend() {
 // 同步积分到后端
 async function syncScoreToBackend(score) {
   try {
-    await fetch('/api/game/score', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({
-        score: score,
-        vocab_group: gameStore.currentGroup,
-        level: gameStore.currentLevel
-      })
-    })
+    await gameApi.submitScore(score, gameStore.currentGroup, gameStore.currentLevel)
     console.log('积分同步成功')
   } catch (e) {
     console.error('同步积分到后端失败:', e)
@@ -994,35 +972,29 @@ async function syncScoreToBackend(score) {
 async function loadUserDataFromBackend() {
   try {
     // 加载体力（仅当后端数据比本地新时更新）
-    const energyRes = await fetch('/api/user/energy', { credentials: 'include' })
-    if (energyRes.ok) {
-      const energyData = await energyRes.json()
-      if (energyData.energy !== undefined) {
-        // 只有后端数据更大时才更新（防止覆盖刚扣除的体力）
-        if (energyData.energy > userEnergy.value) {
-          userEnergy.value = energyData.energy
-          localStorage.setItem('user_energy', JSON.stringify({ 
-            value: energyData.energy, 
-            lastUpdate: Date.now() 
-          }))
-        }
+    const energyData = await energyApi.get()
+    if (energyData && energyData.energy !== undefined) {
+      // 只有后端数据更大时才更新（防止覆盖刚扣除的体力）
+      if (energyData.energy > userEnergy.value) {
+        userEnergy.value = energyData.energy
+        localStorage.setItem('user_energy', JSON.stringify({ 
+          value: energyData.energy, 
+          lastUpdate: Date.now() 
+        }))
       }
     }
     
     // 加载道具
-    const propsRes = await fetch('/api/user/props', { credentials: 'include' })
-    if (propsRes.ok) {
-      const propsData = await propsRes.json()
-      if (propsData.hintLetterCount !== undefined) {
-        // 只有后端数据更大时才更新
-        if (propsData.hintLetterCount > hintLetterCount.value) {
-          hintLetterCount.value = propsData.hintLetterCount
-        }
-        if ((propsData.showTranslationCount || 20) > speakPropCount.value) {
-          speakPropCount.value = propsData.showTranslationCount || 20
-        }
-        savePropCounts()
+    const propsData = await propsApi.get()
+    if (propsData && propsData.hintLetterCount !== undefined) {
+      // 只有后端数据更大时才更新
+      if (propsData.hintLetterCount > hintLetterCount.value) {
+        hintLetterCount.value = propsData.hintLetterCount
       }
+      if ((propsData.showTranslationCount || 20) > speakPropCount.value) {
+        speakPropCount.value = propsData.showTranslationCount || 20
+      }
+      savePropCounts()
     }
   } catch (e) {
     console.warn('从后端加载用户数据失败，使用本地数据:', e)
@@ -1591,6 +1563,17 @@ watch(() => gameStore.isLevelComplete, async (complete) => {
     const wordsCompleted = gameStore.completedWords.length
     const scoreEarned = wordsCompleted * 10
     
+    // 埋点：记录关卡完成
+    const elapsedSeconds = gameStore.getElapsedSeconds ? gameStore.getElapsedSeconds() : null
+    trackApi.trackLevelComplete(
+      gameStore.currentGroup, 
+      gameStore.currentLevel, 
+      3, // 默认3星
+      scoreEarned, 
+      elapsedSeconds, 
+      'web'
+    )
+    
     // 根据模式处理不同逻辑
     const mode = gameStore.currentMode
     
@@ -1704,8 +1687,7 @@ async function submitLeaderboardScore(lbType, value) {
     
     if (!userId) return
     
-    const API_BASE = import.meta.env.VITE_API_BASE || ''
-    await axios.post(`${API_BASE}/api/leaderboard/${lbType}/submit`, {
+    await leaderboardApi.submit(lbType, {
       user_id: userId,
       nickname: userInfo.nickname || '游客',
       avatar: userInfo.avatar || '😊',
@@ -1730,18 +1712,16 @@ async function submitPKResult(result) {
     
     if (!userId) return
     
-    const API_BASE = import.meta.env.VITE_API_BASE || ''
-    
     // 新API：提交到数据库
-    await axios.post(`${API_BASE}/api/game/pk-result`, {
-      vocab_group: gameStore.currentGroup,
-      result: result,
-      words_count: gameStore.completedWords.length,
-      duration_seconds: gameStore.timer
-    }, { withCredentials: true })
+    await gameApi.submitPkResult(
+      gameStore.currentGroup,
+      result,
+      gameStore.completedWords.length,
+      gameStore.timer
+    )
     
     // 兼容旧API
-    await axios.post(`${API_BASE}/api/leaderboard/pk/submit`, {
+    await leaderboardApi.submit('pk', {
       user_id: userId,
       nickname: userInfo.nickname || '游客',
       avatar: userInfo.avatar || '😊',
@@ -1760,8 +1740,6 @@ async function submitPKResult(result) {
 // 提交游戏数据到数据库
 async function submitGameData(gameMode, wordsCompleted, scoreEarned) {
   try {
-    const API_BASE = import.meta.env.VITE_API_BASE || ''
-    
     // 根据模式计算关卡数
     let levelReached = 0
     if (gameMode === 'campaign') {
@@ -1770,7 +1748,7 @@ async function submitGameData(gameMode, wordsCompleted, scoreEarned) {
       levelReached = endlessLevelCount.value
     }
     
-    await axios.post(`${API_BASE}/api/game/submit`, {
+    await gameApi.submit({
       game_mode: gameMode,
       vocab_group: gameStore.currentGroup,
       score: scoreEarned,
@@ -1782,7 +1760,7 @@ async function submitGameData(gameMode, wordsCompleted, scoreEarned) {
         grid_size: gameStore.gridSize,
         difficulty: gameStore.currentDifficulty
       }
-    }, { withCredentials: true })
+    })
     
     console.log(`游戏数据提交成功: ${gameMode}, 分数=${scoreEarned}`)
   } catch (error) {
@@ -2013,53 +1991,63 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* 游戏屏幕整体布局 - 使用flex分配空间，键盘固定底部 */
+/* 游戏屏幕整体布局 - 使用flex分配空间，键盘固定底部，满屏显示 */
 .game-screen {
   height: 100vh;
   height: 100dvh;
+  width: 100%;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: clamp(4px, 1vw, 10px);
   padding-bottom: 0;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  margin: 0 auto;
 }
 
-/* 顶部栏 */
+/* 顶部栏 - 全屏宽 */
 .top-bar {
   flex-shrink: 0;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto 8px;
+  max-width: 100%;
+  margin: 0 auto clamp(4px, 1vw, 10px);
+  padding: 0 clamp(2px, 0.5vw, 6px);
+  box-sizing: border-box;
 }
 
-/* 主内容区域 - 占用剩余空间，自动计算高度 */
+/* 主内容区域 - 占用剩余空间，全屏宽 */
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-start;
-  gap: 8px;
+  gap: clamp(6px, 1vw, 12px);
   overflow: hidden;
   min-height: 0; /* 关键：让flex子元素可以缩小 */
+  width: 100%;
+  padding: 0 clamp(2px, 0.5vw, 6px);
+  box-sizing: border-box;
 }
 
-/* 键盘区固定在底部 - 透明风格 */
+/* 键盘区固定在底部 - 透明风格，全屏宽 */
 .keyboard-section {
   flex-shrink: 0;
   width: 100%;
+  max-width: 100%;
   background: rgba(255, 255, 255, 0.70);
   backdrop-filter: blur(15px);
-  padding: 6px 4px;
-  padding-bottom: max(6px, env(safe-area-inset-bottom));
+  padding: clamp(6px, 1vw, 12px) clamp(4px, 0.8vw, 10px);
+  padding-bottom: max(clamp(6px, 1vw, 12px), env(safe-area-inset-bottom));
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
 }
 
-/* 键盘整体包装 - 满屏三行 */
+/* 键盘整体包装 - 全屏宽 */
 .keyboard-wrapper {
   display: flex;
   align-items: stretch;
@@ -2067,24 +2055,25 @@ onUnmounted(() => {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 4px;
+  padding: 0;
 }
 
-/* 道具按钮 - 横向1.5格宽度 */
+/* 道具按钮 - 横向1.5格宽度，更大尺寸 */
 .keyboard-prop-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: clamp(4px, 0.8vw, 8px);
   flex: 1.5;
-  height: 48px;
-  padding: 0 6px;
+  height: clamp(44px, 7vh, 60px);
+  min-height: 42px;
+  padding: 0 clamp(6px, 1.2vw, 12px);
   background: linear-gradient(180deg, #fef3c7, #fde68a);
-  border: 2px solid #fbbf24;
-  border-radius: 8px;
+  border: clamp(2px, 0.4vw, 3px) solid #fbbf24;
+  border-radius: clamp(8px, 1.5vw, 12px);
   cursor: pointer;
   transition: all 0.15s ease;
-  box-shadow: 0 3px 0 #d97706;
+  box-shadow: 0 clamp(3px, 0.5vw, 5px) 0 #d97706;
 }
 
 .keyboard-prop-btn:hover:not(:disabled) {
@@ -2110,18 +2099,18 @@ onUnmounted(() => {
 }
 
 .keyboard-prop-btn .prop-emoji {
-  font-size: 1.1rem;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
 }
 
 .keyboard-prop-btn .prop-num {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 20px;
-  height: 20px;
+  min-width: clamp(22px, 4vw, 28px);
+  height: clamp(22px, 4vw, 28px);
   background: linear-gradient(180deg, #f59e0b, #d97706);
   border-radius: 50%;
-  font-size: 0.7rem;
+  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
   font-weight: 800;
   color: white;
 }
@@ -2145,31 +2134,35 @@ onUnmounted(() => {
   display: contents;
 }
 
-/* 紧凑的顶部卡片 - 透明卡通风格 */
+/* 紧凑的顶部卡片 - 透明卡通风格，全屏宽 */
 .game-card-compact {
-  padding: 6px 10px;
+  padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px);
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(12px);
-  border-radius: 14px;
+  border-radius: clamp(12px, 2vw, 20px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.6);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* 顶部两行布局 */
 .top-row-1 {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: clamp(6px, 1.2vw, 12px);
   padding-bottom: 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   margin-bottom: 4px;
+  justify-content: flex-start;
 }
 
 .top-row-2 {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: clamp(6px, 1vw, 12px);
   flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
 /* 返回按钮图标 */
@@ -2211,48 +2204,52 @@ onUnmounted(() => {
 }
 
 .mini-avatar {
-  font-size: 1.2rem;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
 }
 
 .mini-name {
-  font-size: 0.75rem;
+  font-size: var(--font-md, clamp(0.9rem, 2.2vw, 1.2rem));
   font-weight: 700;
   color: #374151;
-  max-width: 50px;
+  max-width: clamp(60px, 15vw, 120px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/* 迷你状态栏 */
+/* 迷你状态栏 - 右对齐 */
 .mini-stats {
   display: flex;
-  gap: 4px;
+  gap: clamp(6px, 1vw, 12px);
+  flex-shrink: 0;
   margin-left: auto;
 }
 
 .mini-stat {
-  font-size: 0.7rem;
+  font-size: var(--font-sm, clamp(0.85rem, 1.8vw, 1.05rem));
   font-weight: 700;
   color: #4b5563;
   background: linear-gradient(180deg, #f9fafb, #f3f4f6);
-  padding: 2px 6px;
-  border-radius: 8px;
+  padding: clamp(4px, 0.8vw, 8px) clamp(8px, 1.2vw, 14px);
+  border-radius: clamp(6px, 1vw, 10px);
   border: 1px solid #e5e7eb;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, 0.6vw, 6px);
 }
 
 /* 游戏模式标签 */
 .game-mode-badge {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 0.7rem;
+  gap: clamp(3px, 0.5vw, 6px);
+  font-size: var(--font-sm, clamp(0.8rem, 1.6vw, 0.95rem));
   font-weight: 800;
   color: #5b21b6;
   background: linear-gradient(180deg, #ede9fe, #ddd6fe);
-  padding: 3px 8px;
-  border-radius: 8px;
+  padding: clamp(4px, 0.6vw, 7px) clamp(8px, 1.2vw, 12px);
+  border-radius: clamp(6px, 1vw, 10px);
   border: 1px solid #c4b5fd;
   white-space: nowrap;
   flex-shrink: 0;
@@ -2261,25 +2258,28 @@ onUnmounted(() => {
 .level-badge {
   background: linear-gradient(180deg, #fef3c7, #fde68a);
   color: #92400e;
-  padding: 1px 5px;
+  padding: 1px 4px;
   border-radius: 4px;
-  font-size: 0.65rem;
+  font-size: clamp(0.6rem, 1.2vw, 0.75rem);
   border: 1px solid #fbbf24;
   margin-left: 2px;
 }
 
 /* 计时器迷你版 */
 .timer-mini {
-  font-size: 0.75rem;
+  font-size: var(--font-sm, clamp(0.85rem, 1.8vw, 1rem));
   font-weight: 800;
   font-family: 'Nunito', monospace;
   color: #374151;
   background: linear-gradient(180deg, #f9fafb, #f3f4f6);
-  padding: 3px 8px;
-  border-radius: 8px;
+  padding: clamp(4px, 0.6vw, 7px) clamp(8px, 1.2vw, 12px);
+  border-radius: clamp(6px, 1vw, 10px);
   border: 1px solid #e5e7eb;
   white-space: nowrap;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(3px, 0.5vw, 5px);
 }
 
 .timer-mini.warning {
@@ -2291,58 +2291,68 @@ onUnmounted(() => {
 
 /* 分数迷你版 */
 .score-mini {
-  font-size: 0.75rem;
+  font-size: var(--font-sm, clamp(0.85rem, 1.8vw, 1rem));
   font-weight: 800;
   color: #d97706;
   background: linear-gradient(180deg, #fef3c7, #fde68a);
-  padding: 3px 8px;
-  border-radius: 8px;
+  padding: clamp(4px, 0.6vw, 7px) clamp(8px, 1.2vw, 12px);
+  border-radius: clamp(6px, 1vw, 10px);
   border: 1px solid #fbbf24;
   white-space: nowrap;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(3px, 0.5vw, 5px);
 }
 
-/* 进度迷你版 */
+/* 进度迷你版 - 占满右侧剩余空间但不超过中心 */
 .progress-mini {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: clamp(6px, 1vw, 10px);
+  margin-left: auto;
   flex: 1;
   min-width: 0;
+  /* 最大宽度为父容器的50%，确保不超过屏幕中心 */
+  max-width: 50%;
 }
 
 .progress-bar-mini {
   flex: 1;
-  height: 6px;
+  height: clamp(8px, 1.5vw, 12px);
   background: #e5e7eb;
-  border-radius: 3px;
+  border-radius: clamp(4px, 0.8vw, 6px);
   overflow: hidden;
-  min-width: 30px;
+  min-width: 60px;
 }
 
 .progress-fill-mini {
   height: 100%;
   background: linear-gradient(90deg, #34d399, #10b981);
-  border-radius: 3px;
+  border-radius: clamp(4px, 0.8vw, 6px);
   transition: width 0.5s ease;
 }
 
 .progress-text-mini {
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #6b7280;
+  font-size: var(--font-md, clamp(0.9rem, 2vw, 1.15rem));
+  font-weight: 800;
+  color: #374151;
   white-space: nowrap;
   flex-shrink: 0;
+  background: linear-gradient(180deg, #d1fae5, #a7f3d0);
+  padding: clamp(3px, 0.5vw, 6px) clamp(8px, 1.2vw, 12px);
+  border-radius: clamp(6px, 1vw, 10px);
+  border: 1px solid #34d399;
 }
 
 /* 累计分数（计时/PK/无限模式） */
 .session-score-mini {
-  font-size: 0.7rem;
+  font-size: clamp(0.65rem, 1.3vw, 0.8rem);
   font-weight: 800;
   color: #059669;
   background: linear-gradient(180deg, #d1fae5, #a7f3d0);
-  padding: 2px 6px;
-  border-radius: 6px;
+  padding: 2px clamp(4px, 0.8vw, 8px);
+  border-radius: clamp(4px, 0.8vw, 8px);
   border: 1px solid #34d399;
   white-space: nowrap;
   flex-shrink: 0;
@@ -2387,34 +2397,44 @@ onUnmounted(() => {
   margin-left: 4px;
 }
 
-/* 主游戏卡片 - 透明卡通风格 */
+/* 主游戏卡片 - 透明卡通风格，全屏宽 */
 .game-card-main {
-  padding: 14px;
+  padding: clamp(10px, 2vw, 18px);
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(15px);
-  border-radius: 24px;
+  border-radius: clamp(14px, 2.5vw, 24px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
   max-width: 100%;
-  width: auto;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
 }
 
-/* 单词列表区 - 动态高度，自适应剩余空间，透明风格 */
+/* 网格包装容器 - 居中显示 */
+.grid-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* 单词列表区 - 动态高度，全屏宽 */
 .words-section {
   width: 100%;
-  max-width: 420px;
+  max-width: 100%;
   flex: 1;
   min-height: 0; /* 关键：让flex子元素可以缩小 */
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 8px 12px;
+  border-radius: clamp(12px, 2vw, 18px);
+  padding: clamp(8px, 1.2vw, 14px) clamp(10px, 1.8vw, 18px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.5);
   overflow: hidden;
-  margin-bottom: 4px; /* 与键盘区留少量间隔 */
+  margin-bottom: clamp(4px, 0.8vw, 8px);
+  box-sizing: border-box;
 }
 
 .words-list {
@@ -2450,11 +2470,11 @@ onUnmounted(() => {
 .word-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
+  gap: clamp(8px, 1.5vw, 14px);
+  padding: clamp(10px, 1.8vw, 16px) clamp(12px, 2vw, 18px);
   background: rgba(248, 250, 252, 0.7);
-  border-radius: 12px;
-  font-size: 0.85rem;
+  border-radius: clamp(12px, 2vw, 16px);
+  font-size: var(--word-font, 0.95rem);
   cursor: pointer;
   transition: all 0.15s ease;
   border: 1px solid rgba(203, 213, 225, 0.6);
@@ -2485,11 +2505,11 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: clamp(30px, 6vw, 42px);
+  height: clamp(30px, 6vw, 42px);
   background: linear-gradient(180deg, #e0e7ff, #c7d2fe);
   border-radius: 50%;
-  font-size: 0.75rem;
+  font-size: var(--font-md, clamp(0.9rem, 2vw, 1.2rem));
   font-weight: 800;
   color: #4338ca;
   flex-shrink: 0;
@@ -2500,11 +2520,11 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: clamp(22px, 4vw, 30px);
+  height: clamp(22px, 4vw, 30px);
   background: linear-gradient(180deg, #fef3c7, #fde68a);
-  border-radius: 4px;
-  font-size: 0.6rem;
+  border-radius: clamp(4px, 0.8vw, 6px);
+  font-size: var(--font-xs, clamp(0.65rem, 1.5vw, 0.9rem));
   font-weight: 800;
   color: #92400e;
   flex-shrink: 0;
@@ -2521,8 +2541,9 @@ onUnmounted(() => {
   font-weight: 800;
   color: #065f46;
   text-transform: uppercase;
-  min-width: 60px;
+  min-width: clamp(70px, 15vw, 130px);
   font-family: 'Nunito', sans-serif;
+  font-size: var(--font-lg, clamp(1rem, 2.5vw, 1.35rem));
 }
 
 .alt-badge {
@@ -2541,7 +2562,7 @@ onUnmounted(() => {
 .word-definition {
   flex: 1;
   color: #047857;
-  font-size: 0.8rem;
+  font-size: var(--font-md, clamp(0.9rem, 2.2vw, 1.2rem));
   font-weight: 600;
 }
 
@@ -2554,8 +2575,8 @@ onUnmounted(() => {
 .placeholder-char {
   color: #94a3b8;
   font-weight: 800;
-  font-size: 0.9rem;
-  min-width: 12px;
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.25rem));
+  min-width: clamp(14px, 3vw, 20px);
   text-align: center;
 }
 
@@ -2578,7 +2599,7 @@ onUnmounted(() => {
 .word-translation-hint {
   flex: 1;
   color: #dc2626;
-  font-size: 0.8rem;
+  font-size: var(--font-md, clamp(0.9rem, 2vw, 1.15rem));
   font-weight: 700;
 }
 
@@ -2880,9 +2901,9 @@ onUnmounted(() => {
 /* 通关弹窗样式 */
 .complete-modal {
   background: white;
-  border-radius: 28px;
-  padding: 28px 24px;
-  max-width: 360px;
+  border-radius: clamp(24px, 4vw, 32px);
+  padding: clamp(24px, 4vw, 36px) clamp(20px, 3.5vw, 32px);
+  max-width: min(90%, 420px);
   width: 90%;
   text-align: center;
   position: relative;
@@ -2960,20 +2981,20 @@ onUnmounted(() => {
 }
 
 .complete-title {
-  font-size: 1.5rem;
+  font-size: var(--font-2xl, clamp(1.5rem, 4vw, 2rem));
   font-weight: 900;
   color: #5b21b6;
-  margin-bottom: 12px;
+  margin-bottom: clamp(12px, 2vw, 18px);
 }
 
 /* 一行紧凑的统计数据 */
 .stats-inline {
-  font-size: 0.85rem;
+  font-size: var(--font-md, clamp(1rem, 2.5vw, 1.25rem));
   color: #6b7280;
-  margin-bottom: 16px;
-  padding: 6px 12px;
+  margin-bottom: clamp(14px, 2.5vw, 20px);
+  padding: clamp(8px, 1.5vw, 12px) clamp(14px, 2.5vw, 20px);
   background: #f3f4f6;
-  border-radius: 20px;
+  border-radius: clamp(16px, 2.5vw, 24px);
   display: inline-block;
 }
 
@@ -3002,9 +3023,9 @@ onUnmounted(() => {
 }
 
 .modal-btn {
-  padding: 14px 24px;
-  border-radius: 14px;
-  font-size: 1rem;
+  padding: clamp(14px, 2.5vw, 20px) clamp(24px, 4vw, 36px);
+  border-radius: clamp(14px, 2vw, 18px);
+  font-size: var(--font-lg, clamp(1.1rem, 2.5vw, 1.35rem));
   font-weight: 800;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -3012,9 +3033,9 @@ onUnmounted(() => {
 }
 
 .modal-btn.small {
-  padding: 12px 16px;
-  font-size: 0.9rem;
-  border-radius: 12px;
+  padding: clamp(12px, 2vw, 18px) clamp(16px, 3vw, 26px);
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
+  border-radius: clamp(12px, 1.8vw, 16px);
 }
 
 .modal-btn.claimed {
@@ -3098,9 +3119,9 @@ onUnmounted(() => {
 .reward-display {
   background: linear-gradient(180deg, #fef3c7, #fde68a);
   border: 2px solid #fbbf24;
-  border-radius: 14px;
-  padding: 12px 16px;
-  margin-bottom: 16px;
+  border-radius: clamp(14px, 2.5vw, 20px);
+  padding: clamp(14px, 2.5vw, 20px) clamp(18px, 3vw, 26px);
+  margin-bottom: clamp(16px, 2.5vw, 22px);
   animation: rewardPop 0.4s ease-out;
 }
 
@@ -3111,43 +3132,43 @@ onUnmounted(() => {
 }
 
 .reward-title {
-  font-size: 0.9rem;
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.25rem));
   font-weight: 800;
   color: #92400e;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: clamp(10px, 1.8vw, 16px);
 }
 
 .reward-items {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: clamp(14px, 2.5vw, 22px);
 }
 
 .reward-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: 8px 14px;
+  gap: clamp(4px, 0.8vw, 8px);
+  padding: clamp(10px, 1.8vw, 16px) clamp(16px, 3vw, 24px);
   background: white;
-  border-radius: 10px;
+  border-radius: clamp(12px, 2vw, 16px);
   border: 2px solid #f59e0b;
-  box-shadow: 0 2px 0 #d97706;
+  box-shadow: 0 3px 0 #d97706;
 }
 
 .reward-icon {
-  font-size: 1.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
 
 .reward-value {
-  font-size: 1.1rem;
+  font-size: var(--font-lg, clamp(1.2rem, 3vw, 1.5rem));
   font-weight: 900;
   color: #059669;
 }
 
 .reward-name {
-  font-size: 0.7rem;
+  font-size: var(--font-sm, clamp(0.85rem, 1.8vw, 1.05rem));
   color: #92400e;
   font-weight: 600;
 }
@@ -3173,25 +3194,45 @@ onUnmounted(() => {
   animation: pulse 0.5s ease-in-out infinite;
 }
 
-/* 格子样式 - 卡通风格 */
+/* 网格容器 - 居中且紧凑 */
+.grid-container {
+  display: grid;
+  gap: var(--cell-gap, clamp(3px, 0.6vw, 6px));
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* 根据网格尺寸调整格子大小 */
+.grid-container[data-grid-size="5"] .letter-cell-new { width: clamp(42px, 12vw, 64px); height: clamp(42px, 12vw, 64px); }
+.grid-container[data-grid-size="6"] .letter-cell-new { width: clamp(38px, 10vw, 58px); height: clamp(38px, 10vw, 58px); }
+.grid-container[data-grid-size="7"] .letter-cell-new { width: clamp(34px, 9vw, 52px); height: clamp(34px, 9vw, 52px); }
+.grid-container[data-grid-size="8"] .letter-cell-new { width: clamp(32px, 8vw, 48px); height: clamp(32px, 8vw, 48px); }
+.grid-container[data-grid-size="9"] .letter-cell-new { width: clamp(30px, 7.5vw, 44px); height: clamp(30px, 7.5vw, 44px); }
+.grid-container[data-grid-size="10"] .letter-cell-new { width: clamp(28px, 7vw, 40px); height: clamp(28px, 7vw, 40px); }
+
+/* 格子样式 - 卡通风格 + 固定尺寸确保紧凑 */
 .letter-cell-new {
-  width: 40px;
-  height: 40px;
+  /* 固定宽高，由父容器的 data-grid-size 决定具体尺寸 */
+  width: clamp(34px, 9vw, 50px);
+  height: clamp(34px, 9vw, 50px);
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg, #ffffff, #f1f5f9);
-  border: 3px solid #c7d2fe;
-  border-radius: 12px;
-  box-shadow: 0 4px 0 #a5b4fc, inset 0 2px 0 rgba(255,255,255,0.8);
+  border: clamp(2px, 0.4vw, 3px) solid #c7d2fe;
+  border-radius: clamp(8px, 1.5vw, 14px);
+  box-shadow: 0 clamp(2px, 0.5vw, 4px) 0 #a5b4fc, inset 0 2px 0 rgba(255,255,255,0.8);
   cursor: pointer;
   transition: all 0.15s ease;
   user-select: none;
   position: relative;
+  flex-shrink: 0;
 }
 
 .letter-cell-new .cell-letter {
-  font-size: 1.3rem;
+  font-size: var(--font-grid, 1.25rem);
   font-weight: 900;
   color: #4c1d95;
   text-transform: uppercase;
@@ -3255,37 +3296,40 @@ onUnmounted(() => {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* 键盘容器 - 满屏三行 */
+/* 键盘容器 - 全屏三行 */
 .keyboard-container {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 6px;
+  gap: clamp(4px, 0.8vw, 8px);
   width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .keyboard-row {
   display: flex;
   justify-content: stretch;
-  gap: 5px;
+  gap: clamp(3px, 0.6vw, 6px);
   flex-wrap: nowrap;
   width: 100%;
 }
 
-/* 键盘按键样式 - 满屏对齐，更大按键 */
+/* 键盘按键样式 - 全屏对齐，更大尺寸 */
 .keyboard-key-new {
   flex: 1;
-  height: 48px;
+  height: clamp(44px, 7vh, 60px);
+  min-height: 42px;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: var(--font-key, 1rem);
   font-weight: 800;
   background: linear-gradient(180deg, #ffffff, #e2e8f0);
-  border: 2px solid #cbd5e1;
-  border-radius: 8px;
-  box-shadow: 0 3px 0 #94a3b8;
+  border: clamp(2px, 0.4vw, 3px) solid #cbd5e1;
+  border-radius: clamp(8px, 1.5vw, 12px);
+  box-shadow: 0 clamp(3px, 0.5vw, 5px) 0 #94a3b8;
   color: #374151;
   cursor: pointer;
   transition: all 0.1s ease;
@@ -3337,9 +3381,9 @@ onUnmounted(() => {
 /* 体力不足弹窗样式 */
 .energy-modal {
   background: white;
-  border-radius: 24px;
-  padding: 28px 24px;
-  max-width: 320px;
+  border-radius: clamp(24px, 4vw, 32px);
+  padding: clamp(24px, 4vw, 36px) clamp(20px, 3.5vw, 32px);
+  max-width: min(85%, 400px);
   width: 85%;
   text-align: center;
   box-shadow: 0 12px 0 rgba(0, 0, 0, 0.1), 0 25px 60px rgba(0, 0, 0, 0.25);
@@ -3347,8 +3391,8 @@ onUnmounted(() => {
 }
 
 .energy-modal-icon {
-  font-size: 4rem;
-  margin-bottom: 12px;
+  font-size: clamp(3.5rem, 8vw, 5rem);
+  margin-bottom: clamp(12px, 2vw, 18px);
   animation: sleepy 2s ease-in-out infinite;
 }
 
@@ -3358,29 +3402,29 @@ onUnmounted(() => {
 }
 
 .energy-modal-title {
-  font-size: 1.5rem;
+  font-size: var(--font-2xl, clamp(1.5rem, 4vw, 2rem));
   font-weight: 900;
   color: #dc2626;
-  margin-bottom: 10px;
+  margin-bottom: clamp(10px, 1.8vw, 16px);
 }
 
 .energy-modal-text {
-  font-size: 1rem;
+  font-size: var(--font-md, clamp(1rem, 2.5vw, 1.3rem));
   color: #4b5563;
-  margin-bottom: 16px;
+  margin-bottom: clamp(14px, 2.5vw, 22px);
 }
 
 .energy-modal-info {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 12px;
+  gap: clamp(12px, 2vw, 20px);
+  margin-bottom: clamp(12px, 2vw, 18px);
 }
 
 .energy-current, .energy-need {
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-size: 0.85rem;
+  padding: clamp(8px, 1.5vw, 12px) clamp(14px, 2.5vw, 20px);
+  border-radius: clamp(12px, 2vw, 16px);
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
   font-weight: 700;
 }
 
@@ -3399,17 +3443,17 @@ onUnmounted(() => {
 .energy-modal-buttons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: clamp(12px, 2vw, 18px);
+  margin-top: clamp(18px, 3vw, 26px);
 }
 
 .energy-modal-btn {
   width: 100%;
-  padding: 14px 24px;
+  padding: clamp(14px, 2.5vw, 20px) clamp(24px, 4vw, 36px);
   color: white;
   border: none;
-  border-radius: 14px;
-  font-size: 1rem;
+  border-radius: clamp(14px, 2.5vw, 20px);
+  font-size: var(--font-lg, clamp(1.1rem, 2.5vw, 1.35rem));
   font-weight: 800;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -3443,185 +3487,217 @@ onUnmounted(() => {
   box-shadow: 0 1px 0 #4b5563;
 }
 
-/* 移动端优化 */
-@media (max-width: 480px) {
+/* 小屏幕手机优化 (iPhone SE, 小屏Android) */
+@media (max-width: 375px) {
+  .game-screen {
+    padding: 3px;
+    padding-bottom: 0;
+  }
+  
+  .letter-cell-new {
+    width: clamp(28px, 9vw, 34px);
+    height: clamp(28px, 9vw, 34px);
+    border-radius: 8px;
+    border-width: 2px;
+  }
+  
+  .letter-cell-new .cell-letter {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+  
+  .keyboard-key-new {
+    height: clamp(38px, 7vh, 44px);
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+  
+  .keyboard-prop-btn {
+    height: clamp(38px, 7vh, 44px);
+  }
+}
+
+/* 普通手机优化 */
+@media (min-width: 376px) and (max-width: 480px) {
   .game-screen {
     padding: 4px;
     padding-bottom: 0;
   }
   
   .letter-cell-new {
-    width: 34px;
-    height: 34px;
+    width: clamp(32px, 8.5vw, 40px);
+    height: clamp(32px, 8.5vw, 40px);
     border-radius: 10px;
     border-width: 2px;
   }
   
   .letter-cell-new .cell-letter {
-    font-size: 1.1rem;
-  }
-  
-  .keyboard-wrapper {
-    padding: 0 2px;
-  }
-  
-  .keyboard-container {
-    gap: 5px;
-  }
-  
-  .keyboard-row {
-    gap: 4px;
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
   }
   
   .keyboard-key-new {
-    height: 44px;
-    font-size: 1rem;
+    height: clamp(42px, 6.5vh, 48px);
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
     border-radius: 6px;
-    box-shadow: 0 2px 0 #94a3b8;
-  }
-  
-  .keyboard-key-new.delete-key {
-    font-size: 1.1rem;
   }
   
   .keyboard-prop-btn {
-    height: 44px;
+    height: clamp(42px, 6.5vh, 48px);
     border-radius: 6px;
-    gap: 3px;
-    box-shadow: 0 2px 0 #d97706;
   }
   
-  .keyboard-prop-btn .prop-emoji {
-    font-size: 1rem;
-  }
-  
-  .keyboard-prop-btn .prop-num {
-    min-width: 18px;
-    height: 18px;
-    font-size: 0.65rem;
-  }
-  
-  /* 移动端单词列表不设最大高度，由flex自动计算 */
   .word-item {
-    padding: 8px 10px;
-    font-size: 0.75rem;
-  }
-  
-  .word-index {
-    width: 22px;
-    height: 22px;
-    font-size: 0.6rem;
-  }
-  
-  .words-section {
-    padding: 6px 10px;
-    border-radius: 14px;
-  }
-  
-  .game-card-compact {
-    padding: 4px 8px;
-  }
-  
-  .game-card-main {
-    padding: 10px;
-    border-radius: 20px;
-    flex-shrink: 0;
-  }
-  
-  /* 移动端顶部栏优化 */
-  .top-row-1, .top-row-2 {
-    gap: 6px;
-  }
-  
-  .back-btn-icon {
-    width: 26px;
-    height: 26px;
-    font-size: 0.9rem;
-  }
-  
-  .mini-avatar {
-    font-size: 1rem;
-  }
-  
-  .mini-name {
-    font-size: 0.7rem;
-    max-width: 40px;
-  }
-  
-  .mini-stat {
-    font-size: 0.65rem;
-    padding: 2px 4px;
-  }
-  
-  .game-mode-badge {
-    font-size: 0.65rem;
-    padding: 2px 6px;
-  }
-  
-  .level-badge {
-    font-size: 0.6rem;
-    padding: 1px 4px;
-  }
-  
-  .timer-mini, .score-mini {
-    font-size: 0.7rem;
-    padding: 2px 6px;
-  }
-  
-  .progress-text-mini {
-    font-size: 0.6rem;
+    padding: clamp(6px, 1.2vw, 10px) clamp(8px, 1.5vw, 12px);
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
   }
 }
 
-/* 大屏幕优化 */
-@media (min-width: 768px) {
+/* iPad Mini / 小平板 (竖屏) */
+@media (min-width: 481px) and (max-width: 768px) {
   .letter-cell-new {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
+    width: clamp(40px, 7vw, 50px);
+    height: clamp(40px, 7vw, 50px);
+    border-radius: 12px;
+    border-width: 3px;
   }
   
   .letter-cell-new .cell-letter {
-    font-size: 1.5rem;
-  }
-  
-  .keyboard-wrapper {
-    max-width: 600px;
-    padding: 0 8px;
-  }
-  
-  .keyboard-container {
-    gap: 8px;
-  }
-  
-  .keyboard-row {
-    gap: 6px;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
   }
   
   .keyboard-key-new {
-    height: 54px;
-    font-size: 1.2rem;
-    border-radius: 10px;
+    height: clamp(48px, 6vh, 56px);
+    font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+    border-radius: 9px;
   }
   
   .keyboard-prop-btn {
-    height: 54px;
-    border-radius: 10px;
-    gap: 6px;
-  }
-  
-  .keyboard-prop-btn .prop-emoji {
-    font-size: 1.3rem;
-  }
-  
-  .keyboard-prop-btn .prop-num {
-    min-width: 22px;
-    height: 22px;
-    font-size: 0.8rem;
+    height: clamp(48px, 6vh, 56px);
+    border-radius: 9px;
   }
   
   .words-section {
-    max-width: 500px;
+    max-width: 450px;
+  }
+}
+
+/* iPad / iPad Air (竖屏) - 使用全局CSS变量 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .keyboard-key-new {
+    height: clamp(54px, 6vh, 66px);
+    border-radius: 12px;
+  }
+  
+  .keyboard-prop-btn {
+    height: clamp(54px, 6vh, 66px);
+    border-radius: 12px;
+    gap: 10px;
+  }
+  
+  .keyboard-prop-btn .prop-emoji {
+    font-size: var(--font-xl);
+  }
+  
+  .keyboard-prop-btn .prop-num {
+    min-width: 28px;
+    height: 28px;
+    font-size: var(--font-sm);
+  }
+  
+  .word-item {
+    padding: clamp(12px, 2vw, 18px) clamp(14px, 2.5vw, 22px);
+  }
+  
+  .word-index {
+    width: clamp(30px, 5vw, 38px);
+    height: clamp(30px, 5vw, 38px);
+  }
+  
+  /* 格子在iPad上更大 */
+  .grid-container[data-grid-size="5"] .letter-cell-new { width: clamp(52px, 10vw, 70px); height: clamp(52px, 10vw, 70px); }
+  .grid-container[data-grid-size="6"] .letter-cell-new { width: clamp(48px, 9vw, 64px); height: clamp(48px, 9vw, 64px); }
+  .grid-container[data-grid-size="7"] .letter-cell-new { width: clamp(44px, 8vw, 58px); height: clamp(44px, 8vw, 58px); }
+  .grid-container[data-grid-size="8"] .letter-cell-new { width: clamp(40px, 7vw, 54px); height: clamp(40px, 7vw, 54px); }
+  .grid-container[data-grid-size="9"] .letter-cell-new { width: clamp(38px, 6.5vw, 50px); height: clamp(38px, 6.5vw, 50px); }
+  .grid-container[data-grid-size="10"] .letter-cell-new { width: clamp(36px, 6vw, 46px); height: clamp(36px, 6vw, 46px); }
+}
+
+/* iPad Pro / 大平板 / 桌面端 - 使用全局CSS变量 */
+@media (min-width: 1025px) {
+  .keyboard-key-new {
+    height: clamp(58px, 6vh, 70px);
+    border-radius: 14px;
+  }
+  
+  .keyboard-prop-btn {
+    height: clamp(58px, 6vh, 70px);
+    border-radius: 14px;
+    gap: 12px;
+  }
+  
+  .keyboard-prop-btn .prop-emoji {
+    font-size: var(--font-2xl);
+  }
+  
+  .keyboard-prop-btn .prop-num {
+    min-width: 30px;
+    height: 30px;
+    font-size: var(--font-md);
+  }
+  
+  .word-item {
+    padding: 16px 22px;
+  }
+  
+  .word-index {
+    width: 36px;
+    height: 36px;
+  }
+  
+  /* 格子在iPad Pro上更大 */
+  .grid-container[data-grid-size="5"] .letter-cell-new { width: clamp(56px, 9vw, 76px); height: clamp(56px, 9vw, 76px); }
+  .grid-container[data-grid-size="6"] .letter-cell-new { width: clamp(52px, 8vw, 70px); height: clamp(52px, 8vw, 70px); }
+  .grid-container[data-grid-size="7"] .letter-cell-new { width: clamp(48px, 7vw, 64px); height: clamp(48px, 7vw, 64px); }
+  .grid-container[data-grid-size="8"] .letter-cell-new { width: clamp(44px, 6.5vw, 58px); height: clamp(44px, 6.5vw, 58px); }
+  .grid-container[data-grid-size="9"] .letter-cell-new { width: clamp(42px, 6vw, 54px); height: clamp(42px, 6vw, 54px); }
+  .grid-container[data-grid-size="10"] .letter-cell-new { width: clamp(40px, 5.5vw, 50px); height: clamp(40px, 5.5vw, 50px); }
+}
+
+/* 横屏模式优化 - 防止内容过大 */
+@media (orientation: landscape) and (max-height: 500px) {
+  .game-screen {
+    padding: 2px;
+  }
+  
+  .letter-cell-new {
+    width: clamp(28px, 6vh, 38px);
+    height: clamp(28px, 6vh, 38px);
+  }
+  
+  .keyboard-key-new {
+    height: clamp(36px, 9vh, 46px);
+  }
+  
+  .keyboard-prop-btn {
+    height: clamp(36px, 9vh, 46px);
+  }
+  
+  .words-section {
+    max-height: 30vh;
+  }
+}
+
+/* iPad 横屏 */
+@media (orientation: landscape) and (min-width: 1024px) and (max-height: 834px) {
+  .letter-cell-new {
+    width: clamp(38px, 5vh, 50px);
+    height: clamp(38px, 5vh, 50px);
+  }
+  
+  .keyboard-key-new {
+    height: clamp(46px, 6vh, 56px);
+  }
+  
+  .keyboard-prop-btn {
+    height: clamp(46px, 6vh, 56px);
   }
 }
 </style>

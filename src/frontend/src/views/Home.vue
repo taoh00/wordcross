@@ -64,8 +64,8 @@
           </button>
         </div>
         
-        <!-- 测试模式和重置按钮并排 -->
-        <div class="test-reset-row">
+        <!-- 测试模式和重置按钮并排（仅开发环境显示） -->
+        <div v-if="showDevOptions" class="test-reset-row">
           <router-link to="/test-mode" class="test-mode-card">
             <span class="test-mode-icon">🧪</span>
             <span class="test-mode-text">测试模式</span>
@@ -303,7 +303,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '../stores/game'
 import { useUserStore } from '../stores/user'
-import axios from 'axios'
+import { energyApi, propsApi, staticApi, trackApi } from '../api/index.js'
 
 const router = useRouter()
 const gameStore = useGameStore()
@@ -354,12 +354,7 @@ async function loadUserData() {
           
           // 同步到服务器
           try {
-            await fetch('/api/user/energy', {
-              method: 'PUT',
-              headers: { 'Content-Type': 'application/json' },
-              credentials: 'include',
-              body: JSON.stringify({ energy: currentEnergy })
-            })
+            await energyApi.update(currentEnergy)
           } catch (e) {
             console.error('同步恢复的体力到服务器失败:', e)
           }
@@ -615,6 +610,10 @@ function getLevelStatus(level) {
 
 function selectMode(mode) {
   selectedMode.value = mode
+  
+  // 埋点：记录模式选择事件
+  trackApi.trackEvent('select_mode', { mode }, 'web')
+  
   // 计时/PK模式先选时间，无限模式直接选难度，闯关模式直接选词库
   if (mode === 'timed' || mode === 'pk') {
     currentStep.value = 'duration'
@@ -687,11 +686,22 @@ function startGame() {
     localStorage.setItem('current_group', selectedGroup.value)
   }
   
+  // 埋点：记录游戏开始事件
+  trackApi.trackEvent('start_game', { 
+    mode: selectedMode.value, 
+    vocab_group: selectedGroup.value,
+    difficulty: selectedDifficulty.value,
+    duration: selectedDuration.value
+  }, 'web')
+  
   router.push(`/game/${selectedMode.value}`)
 }
 
 // Debug模式 - 可以在设置中开启
 const debugMode = ref(false)
+
+// 是否显示开发者选项（根据环境变量控制）
+const showDevOptions = import.meta.env.VITE_SHOW_DEV_OPTIONS === 'true'
 
 // 关卡数据加载状态
 const loadingLevels = ref(false)
@@ -709,11 +719,10 @@ function loadDebugMode() {
 // 加载每个分类的关卡数量（从静态数据）
 async function loadGroupLevelCounts() {
   try {
-    const response = await fetch('/data/levels_summary.json')
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`)
+    const data = await staticApi.getLevelsSummary()
+    if (!data) {
+      throw new Error('无法加载关卡汇总')
     }
-    const data = await response.json()
     
     if (data && data.groups) {
       // 将分类关卡数存入groupLevelCounts
@@ -790,22 +799,8 @@ async function resetAllData() {
   
   // 同步到服务器
   try {
-    await fetch('/api/user/energy', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({ energy: 200 })
-    })
-    
-    await fetch('/api/user/props', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({
-        hintLetterCount: 20,
-        showTranslationCount: 20
-      })
-    })
+    await energyApi.update(200)
+    await propsApi.update(20, 20)
     console.log('重置数据已同步到服务器')
   } catch (e) {
     console.error('同步重置数据到服务器失败:', e)
@@ -858,35 +853,38 @@ function goBack() {
 </script>
 
 <style scoped>
-/* 首页整体布局 - 确保一屏显示 */
+/* 首页整体布局 - 确保一屏显示，满屏自适应 */
 .home-screen {
   min-height: 100vh;
   min-height: 100dvh;
+  width: 100%;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: clamp(8px, 2vw, 20px);
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  margin: 0 auto;
 }
 
-/* 标题区 - 卡通风格 */
+/* 标题区 - 卡通风格，响应式 */
 .header-section {
   flex-shrink: 0;
   text-align: center;
-  padding: 24px 20px 16px;
+  padding: clamp(12px, 3vw, 32px) clamp(12px, 3vw, 24px) clamp(8px, 2vw, 20px);
 }
 
 .logo-area {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 6px;
+  gap: clamp(8px, 2vw, 16px);
+  margin-bottom: clamp(4px, 1vw, 10px);
 }
 
 .stars-left, .stars-right {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   animation: bounce 2s ease-in-out infinite;
 }
 
@@ -900,24 +898,24 @@ function goBack() {
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 6vw, 3.5rem);
   font-weight: 900;
   color: white;
   text-shadow: 
     0 4px 0 rgba(0,0,0,0.15),
     0 6px 20px rgba(0, 0, 0, 0.25);
   margin: 0;
-  letter-spacing: 3px;
+  letter-spacing: clamp(3px, 0.8vw, 8px);
   font-family: 'Nunito', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   white-space: nowrap;
 }
 
 .subtitle {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
   color: rgba(255, 255, 255, 0.95);
-  margin: 6px 0 0;
+  margin: clamp(6px, 1.5vw, 14px) 0 0;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   white-space: nowrap;
 }
 
@@ -950,31 +948,36 @@ function goBack() {
   border-radius: 2px;
 }
 
-/* 用户信息栏 */
+/* 用户信息栏 - 与主卡片宽度一致 */
 .user-info-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-top: 12px;
-  padding: 8px 16px;
+  gap: clamp(10px, 2vw, 20px);
+  margin-top: clamp(12px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 16px) clamp(16px, 3vw, 32px);
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: clamp(20px, 4vw, 32px);
   border: 2px solid rgba(255, 255, 255, 0.4);
+  width: calc(100% - clamp(24px, 6vw, 64px));
+  max-width: calc(100% - clamp(24px, 6vw, 64px));
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .user-avatar {
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
 .user-name {
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 700;
   color: white;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-  max-width: 80px;
+  max-width: clamp(80px, 15vw, 150px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -982,52 +985,53 @@ function goBack() {
 
 .user-stats {
   display: flex;
-  gap: 8px;
-  margin-left: 6px;
+  gap: clamp(8px, 1.5vw, 16px);
+  margin-left: clamp(6px, 1vw, 12px);
 }
 
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 2px;
-  font-size: 0.8rem;
+  gap: clamp(2px, 0.5vw, 6px);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-weight: 700;
   color: white;
   background: rgba(0, 0, 0, 0.2);
-  padding: 4px 8px;
-  border-radius: 12px;
+  padding: clamp(6px, 1vw, 10px) clamp(10px, 1.5vw, 16px);
+  border-radius: clamp(12px, 2vw, 20px);
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-/* 主卡片 - 卡通风格 */
+/* 主卡片 - 卡通风格，响应式，全屏宽自适应 */
 .main-card {
   flex: 1;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
-  border-radius: 28px;
-  padding: 18px;
+  border-radius: clamp(18px, 4vw, 32px);
+  padding: clamp(16px, 3vw, 32px);
   box-shadow: 
     0 10px 0 rgba(0, 0, 0, 0.08),
     0 15px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  max-width: 420px;
+  /* 移除硬编码最大宽度，使用百分比实现全屏自适应 */
   width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  border: 3px solid rgba(255, 255, 255, 0.9);
+  border: clamp(2px, 0.4vw, 4px) solid rgba(255, 255, 255, 0.9);
 }
 
 .section-title {
-  font-size: 1.1rem;
+  font-size: var(--font-xl, 1.25rem);
   font-weight: 800;
   color: #5b21b6;
-  margin: 0 0 14px;
+  margin: 0 0 clamp(12px, 2.5vw, 24px);
   text-align: center;
   font-family: 'Nunito', sans-serif;
 }
 
-/* 模式选择 - 卡通风格 */
+/* 模式选择 - 卡通风格，响应式 */
 .mode-selection {
   flex: 1;
   display: flex;
@@ -1037,20 +1041,20 @@ function goBack() {
 .mode-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: clamp(8px, 1.5vw, 16px);
 }
 
 .mode-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 12px;
+  gap: clamp(10px, 2vw, 20px);
+  padding: clamp(14px, 3vw, 28px) clamp(12px, 2.5vw, 24px);
   border: none;
-  border-radius: 18px;
+  border-radius: clamp(14px, 3vw, 28px);
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: left;
-  box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 clamp(4px, 0.8vw, 8px) 0 rgba(0,0,0,0.15);
   position: relative;
   overflow: hidden;
 }
@@ -1093,7 +1097,7 @@ function goBack() {
 }
 
 .mode-icon {
-  font-size: 1.6rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   filter: drop-shadow(0 2px 2px rgba(0,0,0,0.15));
 }
 
@@ -1102,13 +1106,13 @@ function goBack() {
 }
 
 .mode-name {
-  font-size: 0.95rem;
+  font-size: var(--font-lg, 1.125rem);
   font-weight: 800;
   text-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
 .mode-desc {
-  font-size: 0.7rem;
+  font-size: var(--font-sm, 0.875rem);
   opacity: 0.9;
   margin-top: 2px;
   font-weight: 600;
@@ -1390,12 +1394,12 @@ function goBack() {
 }
 
 .duration-icon {
-  font-size: 1.8rem;
+  font-size: var(--font-2xl, 1.5rem);
   filter: drop-shadow(0 2px 2px rgba(0,0,0,0.15));
 }
 
 .duration-label {
-  font-size: 1.2rem;
+  font-size: var(--font-lg, 1.125rem);
   font-weight: 800;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
@@ -1493,7 +1497,7 @@ function goBack() {
 }
 
 .diff-icon {
-  font-size: 1.8rem;
+  font-size: var(--font-2xl, 1.5rem);
   filter: drop-shadow(0 2px 2px rgba(0,0,0,0.15));
 }
 
@@ -1502,13 +1506,13 @@ function goBack() {
 }
 
 .diff-name {
-  font-size: 1.1rem;
+  font-size: var(--font-lg, 1.125rem);
   font-weight: 800;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .diff-desc {
-  font-size: 0.8rem;
+  font-size: var(--font-sm, 0.875rem);
   opacity: 0.8;
   margin-top: 2px;
   font-weight: 600;
@@ -1527,11 +1531,11 @@ function goBack() {
 }
 
 .hint-icon {
-  font-size: 1.2rem;
+  font-size: var(--font-lg, 1.125rem);
 }
 
 .hint-text {
-  font-size: 0.85rem;
+  font-size: var(--font-sm, 0.875rem);
   font-weight: 600;
   color: #0369a1;
 }
@@ -1592,14 +1596,14 @@ function goBack() {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 14px 8px;
+  gap: clamp(6px, 1vw, 12px);
+  padding: clamp(14px, 2.5vw, 24px) clamp(8px, 1.5vw, 16px);
   background: linear-gradient(180deg, #ffffff, #f1f5f9);
-  border: 3px solid #e2e8f0;
-  border-radius: 16px;
+  border: clamp(2px, 0.4vw, 4px) solid #e2e8f0;
+  border-radius: clamp(14px, 2.5vw, 24px);
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 0 #cbd5e1;
+  box-shadow: 0 clamp(3px, 0.6vw, 6px) 0 #cbd5e1;
 }
 
 .group-btn:hover {
@@ -1615,12 +1619,12 @@ function goBack() {
 }
 
 .group-icon {
-  font-size: 1.5rem;
+  font-size: var(--font-2xl, 1.5rem);
   filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
 }
 
 .group-name {
-  font-size: 0.75rem;
+  font-size: var(--font-sm, 0.875rem);
   font-weight: 700;
   color: #4b5563;
   text-align: center;
@@ -1790,14 +1794,14 @@ function goBack() {
 }
 
 .banner-text {
-  font-size: 0.9rem;
+  font-size: var(--font-md, 1rem);
   font-weight: 700;
   color: #5b21b6;
   flex: 1;
 }
 
 .banner-progress {
-  font-size: 0.8rem;
+  font-size: var(--font-sm, 0.875rem);
   font-weight: 600;
   color: #059669;
   background: #d1fae5;
@@ -1944,15 +1948,15 @@ function goBack() {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1px;
-  padding: 6px 2px;
+  gap: clamp(2px, 0.5vw, 6px);
+  padding: clamp(8px, 1.5vw, 16px) clamp(4px, 1vw, 12px);
   background: linear-gradient(180deg, #ffffff, #f1f5f9);
-  border: 2px solid #e2e8f0;
-  border-radius: 10px;
+  border: clamp(2px, 0.4vw, 4px) solid #e2e8f0;
+  border-radius: clamp(10px, 2vw, 18px);
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 0 #cbd5e1;
-  min-height: 50px;
+  box-shadow: 0 clamp(3px, 0.6vw, 6px) 0 #cbd5e1;
+  min-height: clamp(55px, 10vw, 100px);
 }
 
 .level-btn:hover:not(.locked) {
@@ -1992,7 +1996,7 @@ function goBack() {
 }
 
 .level-number {
-  font-size: 1.2rem;
+  font-size: var(--font-xl, 1.25rem);
   font-weight: 900;
   color: #4b5563;
   font-family: 'Nunito', sans-serif;
@@ -2011,12 +2015,12 @@ function goBack() {
 }
 
 .level-stars {
-  font-size: 0.65rem;
-  min-height: 14px;
+  font-size: var(--font-sm, 0.875rem);
+  min-height: clamp(14px, 2.5vw, 24px);
 }
 
 .level-status {
-  font-size: 0.65rem;
+  font-size: var(--font-xs, 0.75rem);
   font-weight: 700;
   color: #6b7280;
 }
@@ -2098,76 +2102,240 @@ function goBack() {
   border-radius: 4px;
 }
 
-/* 大屏幕优化 */
-@media (min-width: 768px) {
-  .header-section {
-    padding: 36px 24px 24px;
-  }
-  
-  .title {
-    font-size: 3rem;
-    letter-spacing: 6px;
-  }
-  
-  .stars-left, .stars-right {
-    font-size: 2.2rem;
-  }
-  
-  .subtitle {
-    font-size: 1.1rem;
-    margin-top: 10px;
-  }
-  
-  .main-card {
-    max-width: 480px;
-  }
-  
-  .mode-btn {
-    padding: 18px 16px;
-  }
-  
-  .mode-icon {
-    font-size: 1.8rem;
-  }
-  
-  .mode-name {
-    font-size: 1rem;
+/* iPad Mini / 小平板 (600-768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+  .mode-grid {
+    gap: clamp(12px, 2vw, 20px);
   }
   
   .group-grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .leaderboard-card {
-    padding: 16px 20px;
+    gap: clamp(12px, 2vw, 18px);
   }
   
   .level-grid {
-    grid-template-columns: repeat(4, 1fr);  /* 大屏幕保持每行4个，每屏20关 */
-    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(10px, 1.5vw, 16px);
   }
   
   .level-scroll-container {
-    max-height: 48vh;
+    max-height: 50vh;
+  }
+}
+
+/* iPad / iPad Air / iPad Pro (769px+) - 全屏宽自适应 */
+@media (min-width: 769px) {
+  .home-screen {
+    padding: clamp(16px, 3vw, 40px);
+  }
+  
+  .header-section {
+    padding: clamp(20px, 4vw, 48px) clamp(16px, 3vw, 32px);
+  }
+  
+  .title {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    letter-spacing: clamp(4px, 1vw, 10px);
+  }
+  
+  .subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  }
+  
+  .stars-left, .stars-right {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  
+  .user-info-bar {
+    padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 40px);
+  }
+  
+  .user-avatar {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  
+  .user-name {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    max-width: clamp(100px, 20vw, 200px);
+  }
+  
+  .stat-item {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    padding: clamp(8px, 1.5vw, 14px) clamp(12px, 2vw, 20px);
+  }
+  
+  .main-card {
+    padding: clamp(20px, 3.5vw, 40px);
+  }
+  
+  .section-title {
+    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+    margin-bottom: clamp(16px, 3vw, 32px);
+  }
+  
+  .mode-grid {
+    gap: clamp(16px, 2.5vw, 28px);
+  }
+  
+  .mode-btn {
+    padding: clamp(18px, 3.5vw, 36px) clamp(16px, 3vw, 32px);
+    border-radius: clamp(18px, 3.5vw, 32px);
+    gap: clamp(14px, 2.5vw, 28px);
+  }
+  
+  .mode-icon {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+  
+  .mode-name {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+  }
+  
+  .mode-desc {
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+  }
+  
+  .group-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(14px, 2.5vw, 24px);
+  }
+  
+  .group-btn {
+    padding: clamp(16px, 2.5vw, 28px) clamp(12px, 2vw, 20px);
+    border-radius: clamp(16px, 3vw, 28px);
+  }
+  
+  .group-icon {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  
+  .group-name {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+  }
+  
+  .leaderboard-card, .settings-card {
+    padding: clamp(16px, 2.5vw, 24px) clamp(20px, 3vw, 32px);
+    border-radius: clamp(18px, 3vw, 28px);
+    margin-top: clamp(16px, 2.5vw, 28px);
+  }
+  
+  .leaderboard-icon, .settings-icon {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  }
+  
+  .leaderboard-text, .settings-text {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  }
+  
+  .leaderboard-arrow, .settings-arrow {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+  }
+  
+  .level-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(14px, 2vw, 24px);
+  }
+  
+  .level-scroll-container {
+    max-height: 55vh;
   }
   
   .level-btn {
-    min-height: 70px;
-    padding: 10px 6px;
+    min-height: clamp(80px, 12vw, 120px);
+    padding: clamp(12px, 2vw, 20px) clamp(8px, 1.5vw, 16px);
+    border-radius: clamp(14px, 2.5vw, 22px);
   }
   
   .level-number {
-    font-size: 1.4rem;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+  }
+  
+  .level-stars {
+    font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+  }
+  
+  .level-status {
+    font-size: clamp(0.85rem, 1.6vw, 1.1rem);
+  }
+  
+  .level-info-banner {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    padding: clamp(14px, 2.5vw, 24px) clamp(18px, 3vw, 32px);
+    border-radius: clamp(14px, 2.5vw, 22px);
+  }
+  
+  .banner-icon {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
   }
   
   .page-nav-btn {
-    width: 36px;
-    font-size: 1.8rem;
+    width: clamp(36px, 5vw, 56px);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    border-radius: clamp(12px, 2vw, 18px);
+  }
+  
+  .range-pagination {
+    padding: clamp(8px, 1.5vw, 14px) clamp(12px, 2vw, 20px);
+    margin-top: clamp(12px, 2vw, 20px);
+  }
+  
+  .range-label {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    padding: clamp(4px, 0.8vw, 8px) clamp(10px, 1.5vw, 16px);
   }
   
   .range-btn {
-    padding: 5px 10px;
-    font-size: 0.7rem;
+    padding: clamp(8px, 1.2vw, 14px) clamp(12px, 2vw, 20px);
+    font-size: clamp(0.8rem, 1.4vw, 1rem);
+  }
+  
+  .back-btn {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    padding: clamp(10px, 1.5vw, 16px) clamp(14px, 2vw, 24px);
+    border-radius: clamp(12px, 2vw, 18px);
+  }
+  
+  .footer-icon {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  }
+}
+
+/* 超大屏幕 (1200px+) - 5列词库 */
+@media (min-width: 1200px) {
+  .group-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .level-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* 横屏模式优化 */
+@media (orientation: landscape) and (max-height: 500px) {
+  .header-section {
+    padding: 8px 16px 6px;
+  }
+  
+  .title {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+  }
+  
+  .stars-left, .stars-right {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+  }
+  
+  .user-info-bar {
+    margin-top: 6px;
+    padding: 4px 12px;
+  }
+  
+  .mode-btn {
+    padding: clamp(8px, 1.5vw, 12px) clamp(8px, 1.5vw, 12px);
+  }
+  
+  .level-scroll-container {
+    max-height: 35vh;
   }
 }
 

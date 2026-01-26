@@ -8,12 +8,27 @@
       <p class="subtitle">看看谁是单词达人！</p>
     </div>
 
-    <!-- 主卡片 -->
-    <div class="main-card">
-      <!-- 返回按钮 -->
-      <div class="nav-row">
-        <router-link to="/" class="back-btn">← 返回首页</router-link>
+    <!-- Tab切换 + 返回按钮 -->
+    <div class="tab-header">
+      <router-link to="/" class="back-btn">← 返回</router-link>
+      <div class="tab-buttons">
+        <button 
+          @click="activeTab = 'leaderboard'" 
+          :class="['tab-btn', { active: activeTab === 'leaderboard' }]"
+        >
+          📊 排行榜
+        </button>
+        <button 
+          @click="activeTab = 'mystats'" 
+          :class="['tab-btn', { active: activeTab === 'mystats' }]"
+        >
+          📈 我的记录
+        </button>
       </div>
+    </div>
+
+    <!-- 排行榜Tab内容 -->
+    <div v-show="activeTab === 'leaderboard'" class="main-card">
 
       <!-- 榜单类型选择 -->
       <div class="selection-section">
@@ -123,9 +138,9 @@
       </div>
     </div>
 
-    <!-- 我的记录 -->
-    <div class="my-stats-card">
-      <h3 class="stats-title">📊 我的记录</h3>
+    <!-- 我的记录Tab内容 -->
+    <div v-show="activeTab === 'mystats'" class="my-stats-card">
+      <h3 class="stats-title">📊 我的统计</h3>
       
       <div class="stats-grid">
         <div class="stat-item purple">
@@ -148,16 +163,23 @@
       
       <!-- 我的排名 -->
       <div v-if="myRankings" class="my-rankings">
-        <h4 class="rankings-title">我的排名</h4>
+        <h4 class="rankings-title">🏅 我的排名</h4>
         <div class="rankings-list">
           <div v-for="(ranking, typeCode) in myRankings" :key="typeCode" class="ranking-item">
             <span class="ranking-type">{{ ranking.name }}</span>
             <span v-if="ranking.groups && ranking.groups.all" class="ranking-rank">
-              第{{ ranking.groups.all.rank }}名 / {{ ranking.groups.all.total }}人
+              第{{ ranking.groups.all.rank }}/{{ ranking.groups.all.total }}名
             </span>
-            <span v-else class="ranking-rank">暂无</span>
+            <span v-else class="ranking-rank">暂无排名</span>
           </div>
         </div>
+      </div>
+      
+      <!-- 刷新按钮 -->
+      <div class="action-row">
+        <button @click="refreshMyStats" :disabled="loadingStats" class="refresh-btn">
+          🔄 刷新记录
+        </button>
       </div>
     </div>
 
@@ -172,12 +194,14 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import axios from 'axios'
+import { leaderboardApi, userApi } from '../api/index.js'
 
-const API_BASE = import.meta.env.VITE_API_BASE || ''
+// API使用 api/index.js 中的服务
 
 // 状态
 const loading = ref(false)
+const loadingStats = ref(false)
+const activeTab = ref('leaderboard')
 const selectedType = ref('campaign_level')
 const selectedGroup = ref('all')
 const selectedGroupCategory = ref(null)
@@ -290,13 +314,8 @@ const myStats = ref({
 async function loadLeaderboard() {
   loading.value = true
   try {
-    const response = await axios.get(`${API_BASE}/api/leaderboard/${selectedType.value}`, {
-      params: {
-        group: selectedGroup.value,
-        limit: 50
-      }
-    })
-    leaderboard.value = response.data.entries || []
+    const data = await leaderboardApi.get(selectedType.value, selectedGroup.value, 50)
+    leaderboard.value = data.entries || []
   } catch (error) {
     console.error('加载排行榜失败:', error)
     // 显示空列表
@@ -311,8 +330,8 @@ async function loadMyRankings() {
     const userId = getUserId()
     if (!userId) return
     
-    const response = await axios.get(`${API_BASE}/api/leaderboard/user/${userId}`)
-    myRankings.value = response.data.rankings
+    const data = await leaderboardApi.getUserRankings(userId)
+    myRankings.value = data.rankings
   } catch (error) {
     console.error('加载我的排名失败:', error)
   }
@@ -359,12 +378,10 @@ function selectGroupCategory(category) {
 async function loadMyStats() {
   try {
     // 优先从API获取真实统计
-    const response = await axios.get(`${API_BASE}/api/user/stats`, {
-      withCredentials: true
-    })
+    const data = await userApi.getStats()
     
-    if (response.data.registered && response.data.stats) {
-      const stats = response.data.stats
+    if (data.registered && data.stats) {
+      const stats = data.stats
       myStats.value.campaignLevel = stats.campaign?.max_level || 1
       myStats.value.totalScore = (stats.campaign?.total_score || 0) + 
                                   (stats.endless?.total_score || 0) + 
@@ -413,6 +430,16 @@ async function loadMyStats() {
   }
 }
 
+// 刷新我的记录
+async function refreshMyStats() {
+  loadingStats.value = true
+  try {
+    await Promise.all([loadMyStats(), loadMyRankings()])
+  } finally {
+    loadingStats.value = false
+  }
+}
+
 // 监听筛选条件变化
 watch([selectedType, selectedGroup], () => {
   loadLeaderboard()
@@ -427,32 +454,39 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* 整体布局 */
+/* 整体布局 - flex布局，底部固定 */
 .leaderboard-screen {
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  align-items: center;
+  padding: clamp(8px, 1.5vw, 16px);
+  padding-bottom: 0;
   box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 /* 标题区 */
 .header-section {
   flex-shrink: 0;
   text-align: center;
-  padding: 20px 16px 12px;
+  padding: clamp(8px, 1.5vw, 14px) clamp(12px, 2vw, 16px) clamp(6px, 1vw, 10px);
+  width: 100%;
 }
 
 .logo-area {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4px;
+  margin-bottom: clamp(4px, 0.8vw, 8px);
 }
 
 .title {
-  font-size: 2rem;
+  font-size: var(--font-3xl, clamp(2rem, 6vw, 3.2rem));
   font-weight: 900;
   color: white;
   text-shadow: 0 4px 0 rgba(0,0,0,0.15), 0 6px 20px rgba(0,0,0,0.25);
@@ -460,82 +494,142 @@ onMounted(() => {
 }
 
 .subtitle {
-  font-size: 0.9rem;
+  font-size: var(--font-md, clamp(1rem, 2.5vw, 1.3rem));
   color: rgba(255,255,255,0.9);
-  margin: 4px 0 0;
+  margin: clamp(4px, 0.8vw, 8px) 0 0;
   font-weight: 600;
 }
 
-/* 主卡片 */
-.main-card {
-  flex: 1;
-  background: rgba(255,255,255,0.98);
-  border-radius: 24px;
-  padding: 16px;
-  box-shadow: 0 8px 0 rgba(0,0,0,0.08), 0 12px 30px rgba(0,0,0,0.15);
-  max-width: 480px;
-  width: 100%;
-  margin: 0 auto;
+/* Tab切换头部 */
+.tab-header {
+  flex-shrink: 0;
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  align-items: center;
+  gap: clamp(10px, 2vw, 16px);
+  width: 100%;
+  padding: clamp(8px, 1.5vw, 12px) 0;
 }
 
-.nav-row {
-  margin-bottom: 12px;
+.tab-buttons {
+  display: flex;
+  gap: clamp(6px, 1vw, 10px);
+  flex: 1;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: clamp(10px, 1.8vw, 14px) clamp(12px, 2vw, 18px);
+  background: rgba(255,255,255,0.3);
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: clamp(12px, 2vw, 16px);
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: rgba(255,255,255,0.98);
+  border-color: white;
+  color: #7c3aed;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tab-btn:not(.active):hover {
+  background: rgba(255,255,255,0.5);
+}
+
+/* 主卡片 - 占满剩余空间，支持滚动 */
+.main-card {
+  flex: 1;
+  min-height: 0;
+  background: rgba(255,255,255,0.98);
+  border-radius: clamp(16px, 2.5vw, 24px);
+  padding: clamp(16px, 3vw, 28px);
+  box-shadow: 0 8px 0 rgba(0,0,0,0.08), 0 12px 30px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* 自定义滚动条 */
+  scrollbar-width: thin;
+  scrollbar-color: #c4b5fd #f3f4f6;
+}
+
+.main-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-card::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.main-card::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 3px;
+}
+
+.main-card::-webkit-scrollbar-thumb:hover {
+  background: #a78bfa;
 }
 
 .back-btn {
   display: inline-flex;
   align-items: center;
-  padding: 8px 14px;
-  background: linear-gradient(180deg, #f3f4f6, #e5e7eb);
+  flex-shrink: 0;
+  padding: clamp(10px, 1.8vw, 14px) clamp(12px, 2vw, 18px);
+  background: rgba(255,255,255,0.98);
   border: none;
-  border-radius: 10px;
-  font-size: 0.85rem;
+  border-radius: clamp(10px, 1.5vw, 14px);
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
   font-weight: 700;
   color: #6b7280;
   text-decoration: none;
-  box-shadow: 0 2px 0 #d1d5db;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
   transition: all 0.15s ease;
 }
 
 .back-btn:active {
   transform: translateY(2px);
-  box-shadow: 0 0 0 #d1d5db;
+  box-shadow: 0 0 0 rgba(0,0,0,0.1);
 }
 
 /* 选择区域 */
 .selection-section {
-  margin-bottom: 12px;
+  margin-bottom: clamp(14px, 2.5vw, 20px);
 }
 
 .section-label {
-  font-size: 0.85rem;
+  font-size: var(--font-lg, clamp(1.1rem, 2.5vw, 1.4rem));
   font-weight: 700;
   color: #5b21b6;
-  margin: 0 0 8px;
+  margin: 0 0 clamp(8px, 1.5vw, 14px);
 }
 
 /* 类型网格 */
 .type-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
+  gap: clamp(6px, 1.2vw, 10px);
 }
 
 .type-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: 8px 4px;
+  gap: clamp(3px, 0.6vw, 6px);
+  padding: clamp(10px, 1.8vw, 16px) clamp(6px, 1vw, 10px);
   background: linear-gradient(180deg, #f9fafb, #f3f4f6);
   border: 2px solid #e5e7eb;
-  border-radius: 10px;
+  border-radius: clamp(10px, 1.5vw, 14px);
   cursor: pointer;
   transition: all 0.15s ease;
-  box-shadow: 0 2px 0 #d1d5db;
+  box-shadow: 0 3px 0 #d1d5db;
 }
 
 .type-btn:active {
@@ -546,7 +640,7 @@ onMounted(() => {
 .type-btn.active {
   background: linear-gradient(180deg, #a78bfa, #8b5cf6);
   border-color: #7c3aed;
-  box-shadow: 0 2px 0 #6d28d9;
+  box-shadow: 0 3px 0 #6d28d9;
 }
 
 .type-btn.active .type-name {
@@ -554,11 +648,11 @@ onMounted(() => {
 }
 
 .type-icon {
-  font-size: 1.2rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
 }
 
 .type-name {
-  font-size: 0.65rem;
+  font-size: var(--font-sm, clamp(0.85rem, 1.8vw, 1.1rem));
   font-weight: 700;
   color: #6b7280;
   text-align: center;
@@ -568,16 +662,16 @@ onMounted(() => {
 /* 分组标签 */
 .group-tabs {
   display: flex;
-  gap: 6px;
+  gap: clamp(6px, 1.2vw, 10px);
   flex-wrap: wrap;
 }
 
 .group-tab {
-  padding: 6px 12px;
+  padding: clamp(8px, 1.5vw, 12px) clamp(14px, 2.5vw, 20px);
   background: linear-gradient(180deg, #f9fafb, #f3f4f6);
   border: 2px solid #e5e7eb;
-  border-radius: 16px;
-  font-size: 0.8rem;
+  border-radius: clamp(14px, 2vw, 20px);
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
   font-weight: 700;
   color: #6b7280;
   cursor: pointer;
@@ -592,20 +686,20 @@ onMounted(() => {
 
 .subgroup-row {
   display: flex;
-  gap: 4px;
+  gap: clamp(6px, 1vw, 10px);
   flex-wrap: wrap;
-  margin-top: 8px;
-  padding: 8px;
+  margin-top: clamp(8px, 1.5vw, 14px);
+  padding: clamp(10px, 1.5vw, 14px);
   background: #f9fafb;
-  border-radius: 10px;
+  border-radius: clamp(10px, 1.5vw, 14px);
 }
 
 .subgroup-btn {
-  padding: 4px 10px;
+  padding: clamp(6px, 1vw, 10px) clamp(12px, 2vw, 18px);
   background: white;
   border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  font-size: 0.75rem;
+  border-radius: clamp(12px, 1.8vw, 16px);
+  font-size: var(--font-sm, clamp(0.9rem, 2vw, 1.1rem));
   font-weight: 600;
   color: #6b7280;
   cursor: pointer;
@@ -618,12 +712,10 @@ onMounted(() => {
   color: white;
 }
 
-/* 排行榜区域 */
+/* 排行榜区域 - 不限制高度，跟随页面滚动 */
 .leaderboard-section {
-  flex: 1;
-  overflow-y: auto;
-  min-height: 200px;
-  max-height: 35vh;
+  flex-shrink: 0;
+  min-height: 100px;
 }
 
 .loading-state, .empty-state {
@@ -673,10 +765,10 @@ onMounted(() => {
 .leaderboard-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
+  gap: clamp(10px, 2vw, 16px);
+  padding: clamp(12px, 2vw, 18px) clamp(14px, 2.5vw, 20px);
   background: linear-gradient(135deg, #f9fafb, #f3f4f6);
-  border-radius: 12px;
+  border-radius: clamp(12px, 2vw, 16px);
   border: 2px solid #e5e7eb;
 }
 
@@ -696,16 +788,16 @@ onMounted(() => {
 }
 
 .rank-col {
-  width: 36px;
+  width: clamp(36px, 7vw, 50px);
   text-align: center;
 }
 
 .rank-medal {
-  font-size: 1.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
 
 .rank-num {
-  font-size: 1rem;
+  font-size: var(--font-lg, clamp(1.1rem, 2.5vw, 1.4rem));
   font-weight: 900;
   color: #6b7280;
 }
@@ -714,12 +806,12 @@ onMounted(() => {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: clamp(8px, 1.5vw, 14px);
   min-width: 0;
 }
 
 .user-avatar {
-  font-size: 1.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   flex-shrink: 0;
 }
 
@@ -728,7 +820,7 @@ onMounted(() => {
 }
 
 .user-name {
-  font-size: 0.9rem;
+  font-size: var(--font-lg, clamp(1.1rem, 2.5vw, 1.4rem));
   font-weight: 700;
   color: #374151;
   white-space: nowrap;
@@ -737,43 +829,44 @@ onMounted(() => {
 }
 
 .user-group {
-  font-size: 0.7rem;
+  font-size: var(--font-sm, clamp(0.85rem, 1.8vw, 1.05rem));
   color: #9ca3af;
 }
 
 .value-col {
   text-align: right;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .value-main {
-  font-size: 1.1rem;
+  font-size: var(--font-xl, clamp(1.3rem, 3vw, 1.7rem));
   font-weight: 900;
   color: #7c3aed;
 }
 
 .value-label {
-  font-size: 0.65rem;
+  font-size: var(--font-sm, clamp(0.8rem, 1.6vw, 1rem));
   color: #9ca3af;
 }
 
 .value-extra {
-  font-size: 0.65rem;
+  font-size: var(--font-sm, clamp(0.8rem, 1.6vw, 1rem));
   color: #6b7280;
 }
 
 /* 操作按钮 */
 .action-row {
-  margin-top: 12px;
+  margin-top: clamp(14px, 2.5vw, 20px);
   text-align: center;
 }
 
 .refresh-btn {
-  padding: 10px 24px;
+  padding: clamp(12px, 2vw, 16px) clamp(28px, 5vw, 40px);
   background: linear-gradient(180deg, #a78bfa, #8b5cf6);
   border: none;
-  border-radius: 14px;
-  font-size: 0.9rem;
+  border-radius: clamp(14px, 2vw, 18px);
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.25rem));
   font-weight: 700;
   color: white;
   cursor: pointer;
@@ -791,36 +884,58 @@ onMounted(() => {
   cursor: not-allowed;
 }
 
-/* 我的记录卡片 */
+/* 我的记录卡片 - 作为独立Tab，可滚动 */
 .my-stats-card {
+  flex: 1;
+  min-height: 0;
   background: rgba(255,255,255,0.98);
-  border-radius: 20px;
-  padding: 16px;
-  margin-top: 12px;
-  max-width: 480px;
+  border-radius: clamp(16px, 2.5vw, 24px);
+  padding: clamp(16px, 3vw, 28px);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 6px 0 rgba(0,0,0,0.08), 0 10px 25px rgba(0,0,0,0.12);
+  max-width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.08), 0 12px 30px rgba(0,0,0,0.15);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #c4b5fd #f3f4f6;
+}
+
+.my-stats-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.my-stats-card::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.my-stats-card::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 3px;
+}
+
+.my-stats-card::-webkit-scrollbar-thumb:hover {
+  background: #a78bfa;
 }
 
 .stats-title {
-  font-size: 1rem;
+  font-size: var(--font-xl, clamp(1.2rem, 3vw, 1.6rem));
   font-weight: 800;
   color: #374151;
-  margin: 0 0 12px;
+  margin: 0 0 clamp(12px, 2.5vw, 20px);
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  gap: clamp(8px, 1.5vw, 14px);
 }
 
 .stat-item {
   text-align: center;
-  padding: 10px 6px;
-  border-radius: 12px;
+  padding: clamp(12px, 2vw, 18px) clamp(8px, 1.5vw, 12px);
+  border-radius: clamp(12px, 2vw, 16px);
 }
 
 .stat-item.purple { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
@@ -829,104 +944,87 @@ onMounted(() => {
 .stat-item.blue { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
 
 .stat-value {
-  font-size: 1.3rem;
+  font-size: var(--font-2xl, clamp(1.5rem, 4vw, 2.2rem));
   font-weight: 900;
   color: #374151;
 }
 
 .stat-label {
-  font-size: 0.65rem;
+  font-size: var(--font-sm, clamp(0.9rem, 2vw, 1.1rem));
   font-weight: 600;
   color: #6b7280;
-  margin-top: 2px;
+  margin-top: clamp(4px, 0.8vw, 8px);
 }
 
 /* 我的排名 */
 .my-rankings {
-  margin-top: 12px;
-  padding-top: 12px;
+  margin-top: clamp(14px, 2.5vw, 20px);
+  padding-top: clamp(14px, 2.5vw, 20px);
   border-top: 2px dashed #e5e7eb;
 }
 
 .rankings-title {
-  font-size: 0.85rem;
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.25rem));
   font-weight: 700;
   color: #6b7280;
-  margin: 0 0 8px;
+  margin: 0 0 clamp(10px, 1.8vw, 14px);
 }
 
 .rankings-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: clamp(6px, 1vw, 10px);
 }
 
 .ranking-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 10px;
+  padding: clamp(10px, 1.8vw, 14px) clamp(14px, 2.5vw, 20px);
   background: #f9fafb;
-  border-radius: 8px;
+  border-radius: clamp(10px, 1.5vw, 14px);
 }
 
 .ranking-type {
-  font-size: 0.8rem;
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
   font-weight: 600;
   color: #374151;
 }
 
 .ranking-rank {
-  font-size: 0.75rem;
+  font-size: var(--font-md, clamp(0.95rem, 2vw, 1.15rem));
   font-weight: 700;
   color: #7c3aed;
 }
 
-/* 底部装饰 */
+/* 底部装饰 - 隐藏，因为底部固定了我的记录卡片 */
 .footer-decoration {
-  flex-shrink: 0;
-  text-align: center;
-  padding: 12px 0;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.footer-icon {
-  font-size: 1.5rem;
-  animation: bounce 2s ease-in-out infinite;
-}
-
-.footer-icon:nth-child(2) { animation-delay: 0.5s; }
-.footer-icon:nth-child(3) { animation-delay: 1s; }
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  display: none;
 }
 
 /* 小屏幕优化 */
 @media (max-height: 700px) {
-  .header-section { padding: 12px 12px 8px; }
-  .title { font-size: 1.6rem; }
+  .header-section { padding: 6px 10px 4px; }
+  .tab-header { padding: 6px 0; }
+  .tab-btn { padding: 8px 10px; }
   .main-card { padding: 12px; }
-  .type-grid { gap: 4px; }
-  .type-btn { padding: 6px 2px; }
-  .type-icon { font-size: 1rem; }
-  .type-name { font-size: 0.6rem; }
-  .leaderboard-section { max-height: 30vh; }
+  .my-stats-card { padding: 12px; }
   .stats-grid { gap: 6px; }
-  .stat-item { padding: 8px 4px; }
-  .stat-value { font-size: 1.1rem; }
+  .stat-item { padding: 8px 6px; }
+  .stat-value { font-size: clamp(1.2rem, 3vw, 1.6rem); }
+  .stat-label { font-size: clamp(0.75rem, 1.5vw, 0.9rem); margin-top: 2px; }
+  .stats-title { margin-bottom: 8px; }
+}
+
+/* iPad竖屏优化 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-card { max-width: 100%; }
+  .my-stats-card { max-width: 100%; }
 }
 
 /* 大屏幕优化 */
-@media (min-width: 768px) {
-  .main-card { max-width: 560px; }
-  .type-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
-  .type-btn { padding: 10px 8px; }
-  .type-icon { font-size: 1.4rem; }
-  .type-name { font-size: 0.75rem; }
-  .leaderboard-section { max-height: 40vh; }
+@media (min-width: 1025px) {
+  .main-card { max-width: 800px; }
+  .my-stats-card { max-width: 800px; }
 }
 </style>

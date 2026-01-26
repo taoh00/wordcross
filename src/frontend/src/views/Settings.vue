@@ -141,8 +141,8 @@
         </div>
       </div>
 
-      <!-- 开发者选项 -->
-      <div class="settings-section">
+      <!-- 开发者选项（仅开发环境显示） -->
+      <div v-if="showDevOptions" class="settings-section">
         <div class="section-title">🔧 开发者选项</div>
         
         <!-- Debug模式 -->
@@ -223,6 +223,9 @@ const showEditNickname = ref(false)
 const newNickname = ref('')
 const debugMode = ref(false)
 
+// 是否显示开发者选项（根据环境变量控制）
+const showDevOptions = import.meta.env.VITE_SHOW_DEV_OPTIONS === 'true'
+
 // 加载debug模式设置
 onMounted(() => {
   try {
@@ -263,18 +266,23 @@ function saveNickname() {
 .settings-screen {
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 16px;
+  width: 100%;
+  max-width: 100vw;
+  padding: clamp(12px, 2vw, 24px);
+  padding-bottom: clamp(30px, 5vw, 60px);
   box-sizing: border-box;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .settings-header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: clamp(12px, 2vw, 20px);
+  margin-bottom: clamp(16px, 3vw, 28px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .back-btn {
@@ -296,7 +304,7 @@ function saveNickname() {
 }
 
 .settings-title {
-  font-size: 1.5rem;
+  font-size: var(--font-2xl, clamp(1.5rem, 4vw, 2.2rem));
   font-weight: 900;
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -305,12 +313,38 @@ function saveNickname() {
 
 .settings-card {
   background: rgba(255, 255, 255, 0.98);
-  border-radius: 24px;
-  padding: 20px;
-  max-width: 500px;
-  margin: 0 auto;
+  border-radius: clamp(18px, 3vw, 28px);
+  padding: clamp(16px, 3vw, 28px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 8px 0 rgba(0, 0, 0, 0.08), 0 15px 40px rgba(0, 0, 0, 0.12);
-  border: 3px solid rgba(255, 255, 255, 0.9);
+  border: clamp(2px, 0.4vw, 4px) solid rgba(255, 255, 255, 0.9);
+  max-height: calc(100vh - 150px);
+  max-height: calc(100dvh - 150px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* 自定义滚动条 */
+  scrollbar-width: thin;
+  scrollbar-color: #c4b5fd #f3f4f6;
+}
+
+.settings-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.settings-card::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.settings-card::-webkit-scrollbar-thumb {
+  background: #c4b5fd;
+  border-radius: 3px;
+}
+
+.settings-card::-webkit-scrollbar-thumb:hover {
+  background: #a78bfa;
 }
 
 .settings-section {
@@ -322,11 +356,11 @@ function saveNickname() {
 }
 
 .section-title {
-  font-size: 1rem;
+  font-size: var(--font-lg, clamp(1rem, 2.5vw, 1.3rem));
   font-weight: 800;
   color: #5b21b6;
-  margin-bottom: 14px;
-  padding-bottom: 8px;
+  margin-bottom: clamp(12px, 2vw, 18px);
+  padding-bottom: clamp(6px, 1vw, 12px);
   border-bottom: 2px dashed #e5e7eb;
 }
 
@@ -370,14 +404,14 @@ function saveNickname() {
 }
 
 .setting-name {
-  font-size: 0.95rem;
+  font-size: var(--font-md, clamp(0.95rem, 2.2vw, 1.2rem));
   font-weight: 700;
   color: #374151;
   margin-bottom: 2px;
 }
 
 .setting-desc {
-  font-size: 0.75rem;
+  font-size: var(--font-sm, clamp(0.8rem, 1.8vw, 1rem));
   color: #6b7280;
 }
 
@@ -584,26 +618,27 @@ function saveNickname() {
 .about-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .about-item {
   display: flex;
   justify-content: space-between;
-  padding: 10px 14px;
+  padding: 12px 16px;
   background: #f9fafb;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .about-label {
   color: #6b7280;
-  font-size: 0.9rem;
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
+  font-weight: 600;
 }
 
 .about-value {
   color: #374151;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
 }
 
 /* 弹窗 */

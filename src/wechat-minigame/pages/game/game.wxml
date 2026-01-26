@@ -1,0 +1,254 @@
+<!--pages/game/game.wxml-->
+<view class="game-screen">
+  <!-- 顶部信息栏 -->
+  <view class="top-bar">
+    <view class="game-card-compact">
+      <!-- 第一行：用户信息 + 返回 -->
+      <view class="top-row-1">
+        <view class="back-btn-icon" bindtap="goBack">←</view>
+        <view class="user-info-mini">
+          <text class="mini-avatar">{{ userAvatar }}</text>
+          <text class="mini-name">{{ userName }}</text>
+        </view>
+        <view class="mini-stats">
+          <text class="mini-stat">⚡{{ energy }}</text>
+          <text class="mini-stat">💡{{ hintCount }}</text>
+          <text class="mini-stat">🔊{{ speakCount }}</text>
+        </view>
+      </view>
+      
+      <!-- 第二行：游戏状态 -->
+      <view class="top-row-2">
+        <view class="game-mode-badge">
+          <text>{{ modeIcon }} {{ modeName }}</text>
+          <text wx:if="{{ mode === 'campaign' }}" class="level-badge">L{{ currentLevel }}</text>
+        </view>
+        <view class="timer-mini {{ isTimeWarning ? 'warning' : '' }}">
+          <text>⏱️{{ formattedTimer }}</text>
+        </view>
+        <view class="score-mini">
+          <text>🌟{{ score }}</text>
+        </view>
+        <view class="progress-mini">
+          <text wx:if="{{ showSessionScore }}" class="session-score-mini">+{{ sessionScore }}</text>
+          <view class="progress-bar-mini">
+            <view class="progress-fill-mini" style="width: {{ progress }}%;"></view>
+          </view>
+          <text class="progress-text-mini">{{ completedWordsCount }}/{{ wordsCount }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 主内容区域 -->
+  <view class="main-content">
+    <!-- 游戏网格区 -->
+    <view class="game-card-main">
+      <view class="grid-container" style="max-width: {{ gridSize * 80 }}rpx;">
+        <view class="grid" style="grid-template-columns: repeat({{ gridSize }}, 1fr);">
+          <view 
+            wx:for="{{ cells }}" 
+            wx:for-item="row" 
+            wx:for-index="rowIndex"
+            wx:key="rowIndex"
+            class="grid-row"
+          >
+            <view
+              wx:for="{{ row }}"
+              wx:for-item="cell"
+              wx:for-index="colIndex"
+              wx:key="colIndex"
+              class="letter-cell {{ getCellClass(rowIndex, colIndex, cell) }}"
+              bindtap="handleCellClick"
+              data-row="{{ rowIndex }}"
+              data-col="{{ colIndex }}"
+            >
+              <!-- 线索编号 -->
+              <text wx:if="{{ getClueNumber(rowIndex, colIndex) }}" class="clue-number">
+                {{ getClueNumber(rowIndex, colIndex) }}
+              </text>
+              <text wx:if="{{ cell !== null }}" class="cell-letter">
+                {{ getAnswer(rowIndex, colIndex) }}
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 单词列表 -->
+    <scroll-view class="words-section" scroll-y>
+      <view class="words-list">
+        <view 
+          wx:for="{{ sortedWords }}" 
+          wx:key="id"
+          class="word-item {{ isWordCompleted(item.id) ? 'completed' : '' }} {{ selectedWord && selectedWord.id === item.id ? 'selected' : '' }}"
+          bindtap="selectWord"
+          data-word="{{ item }}"
+        >
+          <text class="word-index">{{ item.clue_number || (index + 1) }}</text>
+          <text class="word-direction-badge">{{ item.direction === 'across' ? '横' : '竖' }}</text>
+          
+          <!-- 已完成 -->
+          <block wx:if="{{ isWordCompleted(item.id) }}">
+            <text class="word-text" bindtap="openWordDetail" data-word="{{ item }}">{{ item.word }}</text>
+            <text class="word-definition">{{ item.definition }}</text>
+            <view class="speak-btn" catchtap="speakWord" data-word="{{ item.word }}">🔊</view>
+          </block>
+          
+          <!-- 未完成 -->
+          <block wx:else>
+            <view class="word-placeholder">
+              <text 
+                wx:for="{{ getWordHint(item) }}" 
+                wx:for-item="char"
+                wx:key="*this"
+                class="placeholder-char {{ char !== '_' ? 'hint-letter' : '' }}"
+              >{{ char }}</text>
+            </view>
+            <text class="word-translation-hint">{{ item.definition }}</text>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 底部键盘区 -->
+  <view class="keyboard-section">
+    <view class="keyboard-container">
+      <!-- 第一行：QWERTYUIOP -->
+      <view class="keyboard-row">
+        <view 
+          wx:for="{{ 'QWERTYUIOP'.split('') }}" 
+          wx:key="*this"
+          class="keyboard-key {{ isLetterNeeded(item) ? 'key-highlight' : '' }}"
+          bindtap="inputLetter"
+          data-letter="{{ item }}"
+        >{{ item }}</view>
+      </view>
+      <!-- 第二行：ASDFGHJKL + 删除 -->
+      <view class="keyboard-row">
+        <view 
+          wx:for="{{ 'ASDFGHJKL'.split('') }}" 
+          wx:key="*this"
+          class="keyboard-key {{ isLetterNeeded(item) ? 'key-highlight' : '' }}"
+          bindtap="inputLetter"
+          data-letter="{{ item }}"
+        >{{ item }}</view>
+        <view class="keyboard-key delete-key" bindtap="deleteLetter">⌫</view>
+      </view>
+      <!-- 第三行：ZXCVBNM + 道具 -->
+      <view class="keyboard-row">
+        <view 
+          wx:for="{{ 'ZXCVBNM'.split('') }}" 
+          wx:key="*this"
+          class="keyboard-key {{ isLetterNeeded(item) ? 'key-highlight' : '' }}"
+          bindtap="inputLetter"
+          data-letter="{{ item }}"
+        >{{ item }}</view>
+        <view 
+          class="keyboard-prop-btn {{ hintActive ? 'active' : '' }}"
+          bindtap="useHintProp"
+        >
+          <text class="prop-emoji">💡</text>
+          <text class="prop-num">{{ hintCount }}</text>
+        </view>
+        <view 
+          class="keyboard-prop-btn {{ speakActive ? 'active' : '' }}"
+          bindtap="useSpeakProp"
+        >
+          <text class="prop-emoji">🔊</text>
+          <text class="prop-num">{{ speakCount }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 加载中 -->
+  <view wx:if="{{ loading }}" class="overlay">
+    <view class="loading-card">
+      <text class="loading-icon">⏳</text>
+      <text class="loading-text">正在加载关卡...</text>
+    </view>
+  </view>
+
+  <!-- 通关弹窗 -->
+  <view wx:if="{{ showCompleteModal }}" class="overlay">
+    <view class="complete-modal">
+      <!-- 计时/PK/无限模式结束 -->
+      <block wx:if="{{ timedModeEnded }}">
+        <view class="trophy-area">
+          <text class="trophy-emoji">{{ mode === 'endless' ? '♾️' : '⏰' }}</text>
+          <view class="timed-result">
+            <text class="timed-count">{{ sessionLevelCount }}</text>
+            <text class="timed-label">关</text>
+            <text class="timed-count" style="margin-left: 24rpx;">{{ sessionWordsCount }}</text>
+            <text class="timed-label">词</text>
+          </view>
+        </view>
+        
+        <text class="complete-title">⏱️ 时间到！</text>
+        <text class="stats-inline">🌟{{ sessionScore }}分 · 📝{{ sessionWordsCount }}词 · 🎯{{ sessionLevelCount }}关</text>
+      </block>
+      
+      <!-- 正常通关 -->
+      <block wx:else>
+        <view class="trophy-area">
+          <text class="trophy-emoji">{{ isLastLevel ? '🏆' : '🎉' }}</text>
+          <view class="stars-row">
+            <text class="star {{ currentStars >= 1 ? 'earned' : '' }}">{{ currentStars >= 1 ? '⭐' : '☆' }}</text>
+            <text class="star big {{ currentStars >= 2 ? 'earned' : '' }}">{{ currentStars >= 2 ? '⭐' : '☆' }}</text>
+            <text class="star {{ currentStars >= 3 ? 'earned' : '' }}">{{ currentStars >= 3 ? '⭐' : '☆' }}</text>
+          </view>
+          <text class="stars-hint">{{ currentStars === 3 ? '完美！' : currentStars === 2 ? '很棒！' : '继续加油！' }}</text>
+        </view>
+        
+        <text class="complete-title">{{ isLastLevel ? '恭喜全部通关！' : '第' + currentLevel + '关 通关！' }}</text>
+        <text class="stats-inline">⏱️{{ formattedTimer }} · 🌟{{ score }}分 · 📝{{ completedWordsCount }}词</text>
+      </block>
+      
+      <!-- 奖励展示 -->
+      <view wx:if="{{ earnedRewards.length > 0 }}" class="reward-display">
+        <text class="reward-title">🎁 获得奖励</text>
+        <view class="reward-items">
+          <view wx:for="{{ earnedRewards }}" wx:key="type" class="reward-item">
+            <text class="reward-icon">{{ item.icon }}</text>
+            <text class="reward-value">+{{ item.value }}</text>
+            <text class="reward-name">{{ item.name }}</text>
+          </view>
+        </view>
+      </view>
+      
+      <!-- 按钮 -->
+      <view class="modal-btns">
+        <view class="modal-btn secondary" bindtap="goBack">返回</view>
+        <view 
+          wx:if="{{ earnedRewards.length > 0 }}"
+          class="modal-btn reward {{ rewardClaimed ? 'claimed' : '' }}" 
+          bindtap="claimRewards"
+        >{{ rewardClaimed ? '已领取' : '领奖' }}</view>
+        <view wx:if="{{ !isLastLevel }}" class="modal-btn primary" bindtap="goNextLevel">
+          {{ timedModeEnded ? '再玩一次' : '下一关' }}
+        </view>
+        <view wx:else class="modal-btn success" bindtap="replayLevel">再玩一次</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 体力不足弹窗 -->
+  <view wx:if="{{ showEnergyModal }}" class="overlay">
+    <view class="energy-modal">
+      <text class="energy-modal-icon">😴</text>
+      <text class="energy-modal-title">体力不足</text>
+      <text class="energy-modal-text">当前体力不足以开始游戏</text>
+      <view class="energy-modal-info">
+        <text class="energy-current">当前体力: ⚡{{ energy }}</text>
+        <text class="energy-need">需要: ⚡{{ energyRequired }}</text>
+      </view>
+      <view class="energy-modal-buttons">
+        <view class="energy-modal-btn claim" bindtap="claimFreeEnergy">🎁 领取体力 +30</view>
+        <view class="energy-modal-btn rest" bindtap="closeEnergyModalAndGoBack">休息一下</view>
+      </view>
+    </view>
+  </view>
+</view>

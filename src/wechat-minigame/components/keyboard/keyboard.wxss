@@ -1,0 +1,4 @@
+/* components/keyboard/keyboard.wxss */
+.keyboard-wrapper {
+  width: 100%;
+}

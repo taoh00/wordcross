@@ -135,8 +135,8 @@ start_backend() {
     cd "$BACKEND_DIR"
     nohup python3 main.py > "$PROJECT_ROOT/logs/backend.log" 2>&1 &
     
-    # 等待启动
-    sleep 2
+    # 等待启动（后端需要更多时间加载）
+    sleep 5
     
     if check_port $BACKEND_PORT; then
         log_info "后端服务启动成功 ✓ (http://localhost:$BACKEND_PORT)"

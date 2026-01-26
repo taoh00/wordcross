@@ -1,0 +1,5 @@
+<!--components/keyboard/keyboard.wxml-->
+<view class="keyboard-wrapper">
+  <!-- 键盘组件占位符 - 当前游戏页使用内联键盘 -->
+  <slot></slot>
+</view>

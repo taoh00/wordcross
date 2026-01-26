@@ -161,7 +161,7 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import axios from 'axios'
+import { staticApi } from '../api/index.js'
 
 const router = useRouter()
 
@@ -231,11 +231,7 @@ async function loadLevelsSummary() {
   summaryLoading.value = true
   
   try {
-    const response = await fetch('/data/levels_summary.json')
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`)
-    }
-    const data = await response.json()
+    const data = await staticApi.getLevelsSummary()
     
     if (data && data.groups) {
       levelsSummary.value = { available: true, ...data }
@@ -278,11 +274,10 @@ async function loadGroupLevels(code) {
   
   try {
     // 先从meta.json获取关卡数量
-    const metaResponse = await fetch(`/data/levels/${code}/meta.json`)
-    if (!metaResponse.ok) {
-      throw new Error(`HTTP ${metaResponse.status}`)
+    const meta = await staticApi.getLevelMeta(code)
+    if (!meta) {
+      throw new Error('无法加载词库元数据')
     }
-    const meta = await metaResponse.json()
     const levelCount = meta.level_count || 0
     
     // 为每个关卡创建占位对象，包含基本信息
@@ -328,11 +323,10 @@ async function loadCurrentPageLevels(code) {
 // 加载单关详情
 async function loadSingleLevelDetail(code, levelNum, index) {
   try {
-    const response = await fetch(`/data/levels/${code}/${levelNum}.json`)
-    if (!response.ok) return
+    const data = await staticApi.getLevelData(code, levelNum)
+    if (!data) return
     
-    const data = await response.json()
-    if (data && currentLevels.value[index]) {
+    if (currentLevels.value[index]) {
       // 转换数据格式：将 cells/words 转换为模板期望的格式
       const gridSize = data.grid_size || 0
       const words = data.words || []

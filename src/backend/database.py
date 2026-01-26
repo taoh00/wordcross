@@ -126,6 +126,90 @@ def init_database():
         )
         """)
         
+        # 用户行为事件表（记录关键操作）
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS user_events (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id TEXT NOT NULL,
+            event_type TEXT NOT NULL,
+            event_data TEXT,
+            platform TEXT DEFAULT 'web',
+            device_info TEXT,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        """)
+        
+        # 用户会话表（记录登录会话）
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS user_sessions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id TEXT NOT NULL,
+            session_id TEXT NOT NULL,
+            platform TEXT DEFAULT 'web',
+            device_type TEXT,
+            browser TEXT,
+            os TEXT,
+            screen_width INTEGER,
+            screen_height INTEGER,
+            ip_address TEXT,
+            start_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+            end_time DATETIME,
+            duration_seconds INTEGER DEFAULT 0,
+            UNIQUE(session_id)
+        )
+        """)
+        
+        # 体力领取记录表
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS energy_claims (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id TEXT NOT NULL,
+            claim_type TEXT NOT NULL,
+            amount INTEGER NOT NULL,
+            platform TEXT DEFAULT 'web',
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        """)
+        
+        # 道具使用记录表
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS prop_usage (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id TEXT NOT NULL,
+            prop_type TEXT NOT NULL,
+            game_mode TEXT,
+            vocab_group TEXT,
+            level INTEGER,
+            platform TEXT DEFAULT 'web',
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        """)
+        
+        # 关卡完成记录表（用于分析留存率）
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS level_completions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id TEXT NOT NULL,
+            vocab_group TEXT NOT NULL,
+            level INTEGER NOT NULL,
+            stars INTEGER DEFAULT 0,
+            score INTEGER DEFAULT 0,
+            duration_seconds INTEGER,
+            platform TEXT DEFAULT 'web',
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            UNIQUE(user_id, vocab_group, level)
+        )
+        """)
+        
+        # 系统配置表
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS system_config (
+            key TEXT PRIMARY KEY,
+            value TEXT NOT NULL,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        """)
+        
         # 创建索引
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_game_records_user ON game_records(user_id)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_game_records_mode ON game_records(game_mode)")
@@ -133,6 +217,13 @@ def init_database():
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_game_records_created ON game_records(created_at)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_user_stats_user ON user_stats(user_id)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_leaderboard_cache_type ON leaderboard_cache(lb_type, vocab_group)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_user_events_user ON user_events(user_id)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_user_events_type ON user_events(event_type)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_user_events_created ON user_events(created_at)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_user_sessions_user ON user_sessions(user_id)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_energy_claims_user ON energy_claims(user_id)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_prop_usage_user ON prop_usage(user_id)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_level_completions_user ON level_completions(user_id)")
         
         conn.commit()
         print(f"数据库初始化完成: {DB_PATH}")
@@ -799,6 +890,536 @@ def get_overview_stats() -> Dict:
             "total_score": total_score,
             "total_words": total_words
         }
+
+
+# ============ 用户行为事件 ============
+
+def record_user_event(user_id: str, event_type: str, event_data: dict = None,
+                      platform: str = "web", device_info: str = None):
+    """记录用户行为事件"""
+    now = datetime.now().isoformat()
+    event_json = json.dumps(event_data) if event_data else None
+    
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO user_events (user_id, event_type, event_data, platform, device_info, created_at)
+            VALUES (?, ?, ?, ?, ?, ?)
+        """, (user_id, event_type, event_json, platform, device_info, now))
+        return cursor.lastrowid
+
+
+def get_event_stats(event_type: str = None, days: int = 30) -> List[Dict]:
+    """获取事件统计"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        if event_type:
+            cursor.execute("""
+                SELECT 
+                    DATE(created_at) as date,
+                    COUNT(*) as count,
+                    COUNT(DISTINCT user_id) as user_count
+                FROM user_events
+                WHERE event_type = ? AND created_at >= DATE('now', ?)
+                GROUP BY DATE(created_at)
+                ORDER BY date DESC
+            """, (event_type, f'-{days} days'))
+        else:
+            cursor.execute("""
+                SELECT 
+                    event_type,
+                    COUNT(*) as total_count,
+                    COUNT(DISTINCT user_id) as user_count
+                FROM user_events
+                WHERE created_at >= DATE('now', ?)
+                GROUP BY event_type
+                ORDER BY total_count DESC
+            """, (f'-{days} days',))
+        return [dict(row) for row in cursor.fetchall()]
+
+
+# ============ 用户会话管理 ============
+
+def create_session(user_id: str, session_id: str, platform: str = "web",
+                   device_type: str = None, browser: str = None, os: str = None,
+                   screen_width: int = None, screen_height: int = None,
+                   ip_address: str = None) -> int:
+    """创建用户会话"""
+    now = datetime.now().isoformat()
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT OR REPLACE INTO user_sessions 
+            (user_id, session_id, platform, device_type, browser, os, 
+             screen_width, screen_height, ip_address, start_time)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (user_id, session_id, platform, device_type, browser, os,
+              screen_width, screen_height, ip_address, now))
+        return cursor.lastrowid
+
+
+def end_session(session_id: str):
+    """结束会话并计算时长"""
+    now = datetime.now().isoformat()
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        # 先获取开始时间
+        cursor.execute("SELECT start_time FROM user_sessions WHERE session_id = ?", (session_id,))
+        row = cursor.fetchone()
+        if row:
+            start_time = datetime.fromisoformat(row[0])
+            duration = int((datetime.now() - start_time).total_seconds())
+            cursor.execute("""
+                UPDATE user_sessions 
+                SET end_time = ?, duration_seconds = ?
+                WHERE session_id = ?
+            """, (now, duration, session_id))
+
+
+def get_platform_stats(days: int = 30) -> List[Dict]:
+    """获取平台分布统计"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT 
+                platform,
+                COUNT(*) as session_count,
+                COUNT(DISTINCT user_id) as user_count,
+                AVG(duration_seconds) as avg_duration
+            FROM user_sessions
+            WHERE start_time >= DATE('now', ?)
+            GROUP BY platform
+        """, (f'-{days} days',))
+        return [dict(row) for row in cursor.fetchall()]
+
+
+def get_device_stats(days: int = 30) -> List[Dict]:
+    """获取设备类型统计"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT 
+                device_type,
+                COUNT(*) as count,
+                COUNT(DISTINCT user_id) as user_count
+            FROM user_sessions
+            WHERE start_time >= DATE('now', ?) AND device_type IS NOT NULL
+            GROUP BY device_type
+            ORDER BY count DESC
+        """, (f'-{days} days',))
+        return [dict(row) for row in cursor.fetchall()]
+
+
+def get_browser_stats(days: int = 30) -> List[Dict]:
+    """获取浏览器统计"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT 
+                browser,
+                COUNT(*) as count,
+                COUNT(DISTINCT user_id) as user_count
+            FROM user_sessions
+            WHERE start_time >= DATE('now', ?) AND browser IS NOT NULL
+            GROUP BY browser
+            ORDER BY count DESC
+        """, (f'-{days} days',))
+        return [dict(row) for row in cursor.fetchall()]
+
+
+def get_os_stats(days: int = 30) -> List[Dict]:
+    """获取操作系统统计"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT 
+                os,
+                COUNT(*) as count,
+                COUNT(DISTINCT user_id) as user_count
+            FROM user_sessions
+            WHERE start_time >= DATE('now', ?) AND os IS NOT NULL
+            GROUP BY os
+            ORDER BY count DESC
+        """, (f'-{days} days',))
+        return [dict(row) for row in cursor.fetchall()]
+
+
+# ============ 体力领取记录 ============
+
+def record_energy_claim(user_id: str, claim_type: str, amount: int, platform: str = "web"):
+    """记录体力领取"""
+    now = datetime.now().isoformat()
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO energy_claims (user_id, claim_type, amount, platform, created_at)
+            VALUES (?, ?, ?, ?, ?)
+        """, (user_id, claim_type, amount, platform, now))
+        return cursor.lastrowid
+
+
+def get_energy_claim_stats(days: int = 30) -> Dict:
+    """获取体力领取统计"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        
+        # 总体统计
+        cursor.execute("""
+            SELECT 
+                claim_type,
+                COUNT(*) as claim_count,
+                SUM(amount) as total_amount,
+                COUNT(DISTINCT user_id) as user_count
+            FROM energy_claims
+            WHERE created_at >= DATE('now', ?)
+            GROUP BY claim_type
+        """, (f'-{days} days',))
+        by_type = [dict(row) for row in cursor.fetchall()]
+        
+        # 每日统计
+        cursor.execute("""
+            SELECT 
+                DATE(created_at) as date,
+                COUNT(*) as claim_count,
+                SUM(amount) as total_amount
+            FROM energy_claims
+            WHERE created_at >= DATE('now', ?)
+            GROUP BY DATE(created_at)
+            ORDER BY date DESC
+        """, (f'-{days} days',))
+        daily = [dict(row) for row in cursor.fetchall()]
+        
+        return {"by_type": by_type, "daily": daily}
+
+
+# ============ 道具使用记录 ============
+
+def record_prop_usage(user_id: str, prop_type: str, game_mode: str = None,
+                      vocab_group: str = None, level: int = None, platform: str = "web"):
+    """记录道具使用"""
+    now = datetime.now().isoformat()
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO prop_usage (user_id, prop_type, game_mode, vocab_group, level, platform, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        """, (user_id, prop_type, game_mode, vocab_group, level, platform, now))
+        return cursor.lastrowid
+
+
+def get_prop_usage_stats(days: int = 30) -> Dict:
+    """获取道具使用统计"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        
+        # 按类型统计
+        cursor.execute("""
+            SELECT 
+                prop_type,
+                COUNT(*) as usage_count,
+                COUNT(DISTINCT user_id) as user_count
+            FROM prop_usage
+            WHERE created_at >= DATE('now', ?)
+            GROUP BY prop_type
+        """, (f'-{days} days',))
+        by_type = [dict(row) for row in cursor.fetchall()]
+        
+        # 按游戏模式统计
+        cursor.execute("""
+            SELECT 
+                game_mode,
+                prop_type,
+                COUNT(*) as usage_count
+            FROM prop_usage
+            WHERE created_at >= DATE('now', ?) AND game_mode IS NOT NULL
+            GROUP BY game_mode, prop_type
+        """, (f'-{days} days',))
+        by_mode = [dict(row) for row in cursor.fetchall()]
+        
+        # 每日统计
+        cursor.execute("""
+            SELECT 
+                DATE(created_at) as date,
+                prop_type,
+                COUNT(*) as usage_count
+            FROM prop_usage
+            WHERE created_at >= DATE('now', ?)
+            GROUP BY DATE(created_at), prop_type
+            ORDER BY date DESC
+        """, (f'-{days} days',))
+        daily = [dict(row) for row in cursor.fetchall()]
+        
+        return {"by_type": by_type, "by_mode": by_mode, "daily": daily}
+
+
+# ============ 关卡完成记录 ============
+
+def record_level_completion(user_id: str, vocab_group: str, level: int,
+                            stars: int = 0, score: int = 0, duration_seconds: int = None,
+                            platform: str = "web"):
+    """记录关卡完成"""
+    now = datetime.now().isoformat()
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT OR REPLACE INTO level_completions 
+            (user_id, vocab_group, level, stars, score, duration_seconds, platform, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        """, (user_id, vocab_group, level, stars, score, duration_seconds, platform, now))
+        return cursor.lastrowid
+
+
+def get_level_retention_stats(vocab_group: str = None, max_level: int = 50) -> List[Dict]:
+    """获取关卡留存率统计（分析哪些关卡流失最多）"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        
+        if vocab_group:
+            cursor.execute("""
+                SELECT 
+                    level,
+                    COUNT(DISTINCT user_id) as player_count,
+                    AVG(stars) as avg_stars,
+                    AVG(duration_seconds) as avg_duration
+                FROM level_completions
+                WHERE vocab_group = ? AND level <= ?
+                GROUP BY level
+                ORDER BY level
+            """, (vocab_group, max_level))
+        else:
+            cursor.execute("""
+                SELECT 
+                    level,
+                    COUNT(DISTINCT user_id) as player_count,
+                    AVG(stars) as avg_stars,
+                    AVG(duration_seconds) as avg_duration
+                FROM level_completions
+                WHERE level <= ?
+                GROUP BY level
+                ORDER BY level
+            """, (max_level,))
+        
+        return [dict(row) for row in cursor.fetchall()]
+
+
+def get_level_dropoff_analysis(vocab_group: str = None) -> List[Dict]:
+    """分析关卡流失点"""
+    retention = get_level_retention_stats(vocab_group)
+    if len(retention) < 2:
+        return []
+    
+    dropoff = []
+    for i in range(1, len(retention)):
+        prev = retention[i-1]
+        curr = retention[i]
+        if prev['player_count'] > 0:
+            retention_rate = curr['player_count'] / prev['player_count']
+            dropoff.append({
+                "from_level": prev['level'],
+                "to_level": curr['level'],
+                "from_players": prev['player_count'],
+                "to_players": curr['player_count'],
+                "retention_rate": round(retention_rate * 100, 1),
+                "dropoff_rate": round((1 - retention_rate) * 100, 1)
+            })
+    
+    # 按流失率排序，找出流失最严重的关卡
+    dropoff.sort(key=lambda x: x['dropoff_rate'], reverse=True)
+    return dropoff
+
+
+# ============ 用户成就统计 ============
+
+def get_user_achievements(user_id: str) -> Dict:
+    """获取用户成就统计"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        
+        # 闯关成就
+        cursor.execute("""
+            SELECT 
+                vocab_group,
+                MAX(level) as max_level,
+                COUNT(*) as completed_levels,
+                SUM(CASE WHEN stars = 3 THEN 1 ELSE 0 END) as three_star_count,
+                SUM(score) as total_score
+            FROM level_completions
+            WHERE user_id = ?
+            GROUP BY vocab_group
+        """, (user_id,))
+        campaign_achievements = [dict(row) for row in cursor.fetchall()]
+        
+        # 游戏统计
+        stats = get_user_all_stats_summary(user_id)
+        
+        # 功能使用
+        features = get_user_feature_usage(user_id)
+        
+        # 最近游戏
+        cursor.execute("""
+            SELECT * FROM game_records
+            WHERE user_id = ?
+            ORDER BY created_at DESC
+            LIMIT 10
+        """, (user_id,))
+        recent_games = [dict(row) for row in cursor.fetchall()]
+        
+        return {
+            "campaign_achievements": campaign_achievements,
+            "stats": stats,
+            "features": features,
+            "recent_games": recent_games
+        }
+
+
+# ============ 高级统计查询 ============
+
+def get_hourly_activity(days: int = 7) -> List[Dict]:
+    """获取每小时活跃度分布"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT 
+                strftime('%H', created_at) as hour,
+                COUNT(*) as game_count,
+                COUNT(DISTINCT user_id) as user_count
+            FROM game_records
+            WHERE created_at >= DATE('now', ?)
+            GROUP BY strftime('%H', created_at)
+            ORDER BY hour
+        """, (f'-{days} days',))
+        return [dict(row) for row in cursor.fetchall()]
+
+
+def get_retention_analysis(days: int = 30) -> Dict:
+    """获取用户留存分析"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        
+        # 新用户数（按日）
+        cursor.execute("""
+            SELECT 
+                DATE(created_at) as date,
+                COUNT(*) as new_users
+            FROM users
+            WHERE created_at >= DATE('now', ?)
+            GROUP BY DATE(created_at)
+            ORDER BY date DESC
+        """, (f'-{days} days',))
+        new_users = [dict(row) for row in cursor.fetchall()]
+        
+        # 次日留存
+        cursor.execute("""
+            SELECT 
+                u.date as register_date,
+                COUNT(DISTINCT g.user_id) as returned_users
+            FROM (
+                SELECT DATE(created_at) as date, id
+                FROM users
+                WHERE created_at >= DATE('now', ?)
+            ) u
+            LEFT JOIN game_records g ON u.id = g.user_id 
+                AND DATE(g.created_at) = DATE(u.date, '+1 day')
+            GROUP BY u.date
+        """, (f'-{days} days',))
+        day1_retention = {row[0]: row[1] for row in cursor.fetchall()}
+        
+        # 7日留存
+        cursor.execute("""
+            SELECT 
+                u.date as register_date,
+                COUNT(DISTINCT g.user_id) as returned_users
+            FROM (
+                SELECT DATE(created_at) as date, id
+                FROM users
+                WHERE created_at >= DATE('now', ?)
+            ) u
+            LEFT JOIN game_records g ON u.id = g.user_id 
+                AND DATE(g.created_at) BETWEEN DATE(u.date, '+1 day') AND DATE(u.date, '+7 day')
+            GROUP BY u.date
+        """, (f'-{days} days',))
+        day7_retention = {row[0]: row[1] for row in cursor.fetchall()}
+        
+        return {
+            "new_users": new_users,
+            "day1_retention": day1_retention,
+            "day7_retention": day7_retention
+        }
+
+
+def get_top_players(limit: int = 20) -> List[Dict]:
+    """获取顶级玩家列表"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT 
+                u.id,
+                u.nickname,
+                u.avatar,
+                u.total_play_count,
+                u.created_at,
+                COALESCE(SUM(gr.score), 0) as total_score,
+                COALESCE(SUM(gr.words_count), 0) as total_words,
+                COUNT(gr.id) as game_count
+            FROM users u
+            LEFT JOIN game_records gr ON u.id = gr.user_id
+            GROUP BY u.id
+            ORDER BY total_score DESC
+            LIMIT ?
+        """, (limit,))
+        return [dict(row) for row in cursor.fetchall()]
+
+
+def get_vocab_group_analysis() -> List[Dict]:
+    """获取词库使用分析"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT 
+                vocab_group,
+                COUNT(DISTINCT user_id) as unique_players,
+                COUNT(*) as total_games,
+                SUM(score) as total_score,
+                SUM(words_count) as total_words,
+                AVG(duration_seconds) as avg_duration,
+                MAX(level_reached) as max_level_reached
+            FROM game_records
+            GROUP BY vocab_group
+            ORDER BY total_games DESC
+        """)
+        return [dict(row) for row in cursor.fetchall()]
+
+
+# ============ 系统配置 ============
+
+def get_config(key: str, default: str = None) -> Optional[str]:
+    """获取系统配置"""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT value FROM system_config WHERE key = ?", (key,))
+        row = cursor.fetchone()
+        return row[0] if row else default
+
+
+def set_config(key: str, value: str):
+    """设置系统配置"""
+    now = datetime.now().isoformat()
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT OR REPLACE INTO system_config (key, value, updated_at)
+            VALUES (?, ?, ?)
+        """, (key, value, now))
+
+
+def get_admin_password_hash() -> Optional[str]:
+    """获取管理员密码哈希"""
+    return get_config("admin_password_hash")
+
+
+def set_admin_password_hash(password_hash: str):
+    """设置管理员密码哈希"""
+    set_config("admin_password_hash", password_hash)
 
 
 # 初始化数据库

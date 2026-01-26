@@ -1,0 +1,4 @@
+/* components/word-list/word-list.wxss */
+.word-list-wrapper {
+  width: 100%;
+}

@@ -1,0 +1,401 @@
+/**
+ * 我爱填单词 - 全局样式
+ * 卡通萌系设计风格
+ * 响应式适配：支持iPad、各种手机型号
+ */
+
+/* ========== 响应式基准配置 ========== */
+/* 小程序使用 rpx 单位，自动根据屏幕宽度 750rpx 基准换算 */
+/* 但对于iPad等大屏设备，需要限制最大尺寸以保持美观 */
+
+/* 页面背景 - 满屏显示 */
+page {
+  background: linear-gradient(180deg, #c4b5fd 0%, #a78bfa 50%, #8b5cf6 100%);
+  min-height: 100vh;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: #374151;
+  box-sizing: border-box;
+  /* 禁止页面滚动弹性效果 */
+  overflow: hidden;
+}
+
+/* 卡片样式 */
+.card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 28rpx;
+  padding: 32rpx;
+  box-shadow: 0 20rpx 0 rgba(0, 0, 0, 0.08), 0 30rpx 80rpx rgba(0, 0, 0, 0.15);
+  border: 6rpx solid rgba(255, 255, 255, 0.9);
+}
+
+.card-compact {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(24rpx);
+  border-radius: 28rpx;
+  padding: 16rpx 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+  border: 2rpx solid rgba(255, 255, 255, 0.6);
+}
+
+/* 按钮基础样式 */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx 32rpx;
+  border-radius: 24rpx;
+  font-size: 32rpx;
+  font-weight: 800;
+  transition: all 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.3), transparent);
+  border-radius: 24rpx 24rpx 0 0;
+  pointer-events: none;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #c4b5fd, #8b5cf6);
+  color: white;
+  box-shadow: 0 8rpx 0 rgba(109, 40, 217, 0.5);
+}
+
+.btn-success {
+  background: linear-gradient(180deg, #6ee7b7, #10b981);
+  color: white;
+  box-shadow: 0 8rpx 0 rgba(5, 150, 105, 0.5);
+}
+
+.btn-warning {
+  background: linear-gradient(180deg, #fde68a, #fbbf24);
+  color: #92400e;
+  box-shadow: 0 8rpx 0 rgba(217, 119, 6, 0.5);
+}
+
+.btn-danger {
+  background: linear-gradient(180deg, #fca5a5, #f87171);
+  color: white;
+  box-shadow: 0 8rpx 0 rgba(220, 38, 38, 0.5);
+}
+
+.btn-gray {
+  background: linear-gradient(180deg, #f3f4f6, #e5e7eb);
+  color: #6b7280;
+  box-shadow: 0 8rpx 0 rgba(156, 163, 175, 0.5);
+}
+
+.btn:active {
+  transform: translateY(6rpx);
+  box-shadow: 0 2rpx 0;
+}
+
+/* 标签样式 */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8rpx 16rpx;
+  border-radius: 16rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.badge-purple {
+  background: linear-gradient(180deg, #ede9fe, #ddd6fe);
+  color: #5b21b6;
+  border: 2rpx solid #c4b5fd;
+}
+
+.badge-green {
+  background: linear-gradient(180deg, #d1fae5, #a7f3d0);
+  color: #065f46;
+  border: 2rpx solid #34d399;
+}
+
+.badge-yellow {
+  background: linear-gradient(180deg, #fef3c7, #fde68a);
+  color: #92400e;
+  border: 2rpx solid #fbbf24;
+}
+
+.badge-blue {
+  background: linear-gradient(180deg, #dbeafe, #bfdbfe);
+  color: #1e40af;
+  border: 2rpx solid #60a5fa;
+}
+
+/* 标题样式 */
+.title-lg {
+  font-size: 44rpx;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 8rpx 0 rgba(0,0,0,0.15), 0 12rpx 40rpx rgba(0, 0, 0, 0.25);
+  letter-spacing: 6rpx;
+}
+
+.title-md {
+  font-size: 36rpx;
+  font-weight: 800;
+  color: #5b21b6;
+}
+
+.title-sm {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+/* 文本样式 */
+.text-muted {
+  color: #6b7280;
+  font-size: 26rpx;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 布局工具类 */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.gap-sm {
+  gap: 16rpx;
+}
+
+.gap-md {
+  gap: 24rpx;
+}
+
+.gap-lg {
+  gap: 32rpx;
+}
+
+/* 边距工具类 */
+.m-0 { margin: 0; }
+.mt-sm { margin-top: 16rpx; }
+.mt-md { margin-top: 24rpx; }
+.mt-lg { margin-top: 32rpx; }
+.mb-sm { margin-bottom: 16rpx; }
+.mb-md { margin-bottom: 24rpx; }
+.mb-lg { margin-bottom: 32rpx; }
+
+.p-sm { padding: 16rpx; }
+.p-md { padding: 24rpx; }
+.p-lg { padding: 32rpx; }
+
+/* 动画 */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-16rpx) rotate(10deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12rpx); }
+}
+
+.animate-bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 安全区域适配 */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* ========== 响应式容器 ========== */
+/* 用于限制iPad等大屏设备的最大宽度 */
+.responsive-container {
+  width: 100%;
+  max-width: 750rpx;
+  margin: 0 auto;
+}
+
+/* iPad 适配：屏幕宽度超过750px时限制内容宽度 */
+@media screen and (min-width: 750px) {
+  .responsive-container {
+    max-width: 680rpx;
+  }
+  
+  /* 大屏幕字体稍微减小（因为rpx会放大） */
+  page {
+    font-size: 28rpx;
+  }
+}
+
+/* ========== 响应式工具类 ========== */
+/* 根据屏幕尺寸调整字体 */
+.text-responsive-sm {
+  font-size: 24rpx;
+}
+
+.text-responsive-md {
+  font-size: 28rpx;
+}
+
+.text-responsive-lg {
+  font-size: 32rpx;
+}
+
+.text-responsive-xl {
+  font-size: 40rpx;
+}
+
+/* 响应式间距 */
+.gap-responsive-sm {
+  gap: 12rpx;
+}
+
+.gap-responsive-md {
+  gap: 20rpx;
+}
+
+.gap-responsive-lg {
+  gap: 28rpx;
+}
+
+/* 响应式内边距 */
+.p-responsive {
+  padding: 24rpx;
+}
+
+/* 满屏高度容器 */
+.full-height {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+/* 弹性布局容器 */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 遮罩层 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* 模态框 */
+.modal {
+  background: white;
+  border-radius: 48rpx;
+  padding: 48rpx;
+  width: 85%;
+  max-width: 600rpx;
+  text-align: center;
+  box-shadow: 0 24rpx 0 rgba(0, 0, 0, 0.1), 0 50rpx 120rpx rgba(0, 0, 0, 0.25);
+  border: 8rpx solid #fbbf24;
+}
+
+/* 图标大小 */
+.icon-sm { font-size: 32rpx; }
+.icon-md { font-size: 48rpx; }
+.icon-lg { font-size: 64rpx; }
+.icon-xl { font-size: 96rpx; }
+
+/* 圆形容器 */
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.circle-sm {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.circle-md {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.circle-lg {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 分隔线 */
+.divider {
+  height: 2rpx;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+  margin: 24rpx 0;
+}
+
+/* 滚动条隐藏 */
+::-webkit-scrollbar {
+  display: none;
+}

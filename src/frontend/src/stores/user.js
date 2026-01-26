@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import axios from 'axios'
+import { userApi } from '../api/client.js'
 
 export const useUserStore = defineStore('user', () => {
   // 用户状态
@@ -12,9 +12,6 @@ export const useUserStore = defineStore('user', () => {
 
   // 可选头像列表
   const avatarOptions = ['😊', '😎', '🤓', '😺', '🐶', '🦊', '🐰', '🐼', '🦄', '🌟']
-
-  // API基础路径
-  const API_BASE = import.meta.env.VITE_API_BASE || ''
 
   // 是否已注册
   const isRegistered = computed(() => {
@@ -58,15 +55,13 @@ export const useUserStore = defineStore('user', () => {
   async function loadUser() {
     loading.value = true
     try {
-      const response = await axios.get(`${API_BASE}/api/user/info`, {
-        withCredentials: true
-      })
+      const data = await userApi.getInfo()
       
-      if (response.data.registered) {
-        id.value = response.data.id
-        nickname.value = response.data.nickname
-        avatar.value = response.data.avatar || '😊'
-        createdAt.value = response.data.created_at || ''
+      if (data.registered) {
+        id.value = data.id
+        nickname.value = data.nickname
+        avatar.value = data.avatar || '😊'
+        createdAt.value = data.created_at || ''
         saveUserToLocal()  // 缓存到本地
         loading.value = false
         return true
@@ -85,18 +80,13 @@ export const useUserStore = defineStore('user', () => {
   async function register(name, selectedAvatar = '😊') {
     loading.value = true
     try {
-      const response = await axios.post(`${API_BASE}/api/user/register`, {
-        nickname: name.trim(),
-        avatar: selectedAvatar
-      }, {
-        withCredentials: true
-      })
+      const data = await userApi.register(name.trim(), selectedAvatar)
       
       // 后端返回用户信息（包含生成的ID）
-      id.value = response.data.id
-      nickname.value = response.data.nickname
-      avatar.value = response.data.avatar
-      createdAt.value = response.data.created_at
+      id.value = data.id
+      nickname.value = data.nickname
+      avatar.value = data.avatar
+      createdAt.value = data.created_at
       
       // 缓存到本地
       saveUserToLocal()
@@ -122,12 +112,7 @@ export const useUserStore = defineStore('user', () => {
     
     // 尝试同步到后端
     try {
-      await axios.put(`${API_BASE}/api/user/update`, {
-        nickname: nickname.value,
-        avatar: newAvatar
-      }, {
-        withCredentials: true
-      })
+      await userApi.update(nickname.value, newAvatar)
     } catch (e) {
       console.warn('同步头像到后端失败:', e)
     }
@@ -140,12 +125,7 @@ export const useUserStore = defineStore('user', () => {
     
     // 尝试同步到后端
     try {
-      await axios.put(`${API_BASE}/api/user/update`, {
-        nickname: newName.trim(),
-        avatar: avatar.value
-      }, {
-        withCredentials: true
-      })
+      await userApi.update(newName.trim(), avatar.value)
     } catch (e) {
       console.warn('同步昵称到后端失败:', e)
     }
@@ -154,9 +134,7 @@ export const useUserStore = defineStore('user', () => {
   // 退出登录
   async function logout() {
     try {
-      await axios.delete(`${API_BASE}/api/user/logout`, {
-        withCredentials: true
-      })
+      await userApi.logout()
     } catch (e) {
       console.warn('退出登录API调用失败:', e)
     }

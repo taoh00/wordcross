@@ -1,9 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import axios from 'axios'
-
-// API基础路径
-const API_BASE = import.meta.env.VITE_API_BASE || ''
+import { gameApi, staticApi, buildUrl } from '../api/index.js'
 
 export const useGameStore = defineStore('game', () => {
   // 状态
@@ -115,13 +112,7 @@ export const useGameStore = defineStore('game', () => {
     
     try {
       console.log(`加载关卡: ${group}/${levelNum}`)
-      const response = await fetch(`/data/levels/${group}/${levelNum}.json`)
-      
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`)
-      }
-      
-      const levelData = await response.json()
+      const levelData = await staticApi.getLevelData(group, levelNum)
       
       if (levelData && levelData.words) {
         // 缓存该关卡
@@ -159,13 +150,12 @@ export const useGameStore = defineStore('game', () => {
     }
     
     try {
-      const response = await fetch('/data/levels_summary.json')
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`)
+      const data = await staticApi.getLevelsSummary()
+      if (data) {
+        cachedLevelsSummary.value = data
+        return data
       }
-      const data = await response.json()
-      cachedLevelsSummary.value = data
-      return data
+      return null
     } catch (error) {
       console.error('加载关卡汇总失败:', error)
       return null
@@ -234,24 +224,20 @@ export const useGameStore = defineStore('game', () => {
           throw new Error(`关卡 ${level} 数据不存在`)
         }
       } else {
-        // 其他模式：使用原有API
-        let url = ''
+        // 其他模式：使用API服务层
         switch (mode) {
           case 'endless':
-            url = `${API_BASE}/api/endless/puzzle?group=${group}&difficulty=${userDifficulty}`
+            data = await gameApi.getEndlessPuzzle(group, userDifficulty)
             break
           case 'timed':
-            url = `${API_BASE}/api/timed/puzzle?group=${group}&duration=180&difficulty=${userDifficulty}`
+            data = await gameApi.getTimedPuzzle(group, 180, userDifficulty)
             break
           case 'pk':
-            url = `${API_BASE}/api/endless/puzzle?group=${group}&difficulty=${userDifficulty}`
+            data = await gameApi.getEndlessPuzzle(group, userDifficulty)
             break
           default:
-            url = `${API_BASE}/api/endless/puzzle?group=${group}&difficulty=${userDifficulty}`
+            data = await gameApi.getEndlessPuzzle(group, userDifficulty)
         }
-        
-        const response = await axios.get(url)
-        data = response.data
       }
       
       // 验证数据格式

@@ -387,9 +387,13 @@ class VocabularyManager:
             # 如果没有指定或指定的不存在，使用primary作为默认
             groups_to_use = ["primary"]
         
-        # 只加载指定词库
+        # 只加载指定词库 - 优先从年级词库获取，其次从主词库
         for group in groups_to_use:
-            words = self._vocabulary_cache.get(group, [])
+            # 优先检查年级词库缓存（从levels目录加载的，词汇更完整）
+            words = self._grade_vocabulary_cache.get(group, [])
+            if not words:
+                # 如果年级词库没有，再从主词库获取
+                words = self._vocabulary_cache.get(group, [])
             for w in words:
                 word_upper = w["word"].upper()
                 if word_upper not in word_set and len(word_upper) >= 2:

@@ -56,14 +56,16 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useUserStore } from './stores/user'
+import { trackApi } from './api/index.js'
 
 const userStore = useUserStore()
 
 const showRegisterModal = ref(false)
 const registerNickname = ref('')
 const selectedAvatar = ref('😊')
+const sessionId = ref(null)
 
 const avatarOptions = ['😊', '😎', '🤓', '😺', '🐶', '🦊', '🐰', '🐼', '🦄', '🌟']
 
@@ -74,6 +76,18 @@ onMounted(async () => {
   // 加载完成后检查是否已注册
   if (!hasUser && !userStore.isRegistered) {
     showRegisterModal.value = true
+  }
+  
+  // 启动会话追踪
+  sessionId.value = trackApi.generateSessionId()
+  const deviceInfo = trackApi.getDeviceInfo()
+  trackApi.startSession(sessionId.value, deviceInfo)
+})
+
+onUnmounted(() => {
+  // 结束会话追踪
+  if (sessionId.value) {
+    trackApi.endSession(sessionId.value)
   }
 })
 

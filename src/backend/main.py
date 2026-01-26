@@ -1,7 +1,7 @@
 """
 我爱填单词 WordCross - FastAPI Backend
 """
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, HTTPException, Request, Response, Cookie
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, HTTPException, Request, Response, Cookie, Header, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
@@ -12,6 +12,7 @@ import random
 import os
 import uuid
 import time
+import hashlib
 
 from puzzle_generator import CrosswordGenerator
 from csp_puzzle_generator import CSPPuzzleGenerator
@@ -116,6 +117,24 @@ class LeaderboardEntry(BaseModel):
 users_db: Dict[str, dict] = {}
 
 
+# ============ 统一认证函数（支持 Cookie 和 Header 两种方式） ============
+
+def get_user_id_from_request(
+    user_id_cookie: Optional[str] = Cookie(default=None, alias="user_id"),
+    x_user_id: Optional[str] = Header(default=None, alias="X-User-Id")
+) -> Optional[str]:
+    """
+    从请求中获取用户 ID
+    
+    支持两种认证方式：
+    1. Cookie: 网页版使用，cookie 名为 "user_id"
+    2. Header: 小程序/App 使用，header 名为 "X-User-Id"
+    
+    优先级：Cookie > Header（兼容旧版网页）
+    """
+    return user_id_cookie or x_user_id
+
+
 # ============ 用户相关数据模型 ============
 
 class UserRegister(BaseModel):
@@ -167,7 +186,7 @@ async def register_user(user: UserRegister, response: Response):
 
 
 @app.get("/api/user/info")
-async def get_user_info(user_id: Optional[str] = Cookie(default=None)):
+async def get_user_info(user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     获取当前用户信息（通过cookie中的user_id）
     """
@@ -196,7 +215,7 @@ async def get_user_info(user_id: Optional[str] = Cookie(default=None)):
 
 
 @app.put("/api/user/update")
-async def update_user(user: UserRegister, user_id: Optional[str] = Cookie(default=None)):
+async def update_user(user: UserRegister, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     更新用户信息
     """
@@ -249,7 +268,7 @@ class PropsUpdate(BaseModel):
 
 
 @app.get("/api/user/energy")
-async def get_user_energy(user_id: Optional[str] = Cookie(default=None)):
+async def get_user_energy(user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     获取用户体力值
     """
@@ -264,7 +283,7 @@ async def get_user_energy(user_id: Optional[str] = Cookie(default=None)):
 
 
 @app.post("/api/user/energy/consume")
-async def consume_energy(mode: str, user_id: Optional[str] = Cookie(default=None)):
+async def consume_energy(mode: str, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     记录体力消耗（仅用于日志记录，不实际扣除体力）
     
@@ -296,7 +315,7 @@ async def consume_energy(mode: str, user_id: Optional[str] = Cookie(default=None
 
 
 @app.put("/api/user/energy")
-async def update_user_energy(data: EnergyUpdate, user_id: Optional[str] = Cookie(default=None)):
+async def update_user_energy(data: EnergyUpdate, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     更新用户体力值（用于同步前端状态）
     """
@@ -316,7 +335,7 @@ class FreeEnergyRequest(BaseModel):
 
 
 @app.post("/api/user/energy/claim-free")
-async def claim_free_energy(data: FreeEnergyRequest, user_id: Optional[str] = Cookie(default=None)):
+async def claim_free_energy(data: FreeEnergyRequest, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     领取免费体力（看广告、每日奖励等场景）
     
@@ -346,7 +365,7 @@ async def claim_free_energy(data: FreeEnergyRequest, user_id: Optional[str] = Co
 
 
 @app.get("/api/user/props")
-async def get_user_props(user_id: Optional[str] = Cookie(default=None)):
+async def get_user_props(user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     获取用户道具数量
     """
@@ -361,7 +380,7 @@ async def get_user_props(user_id: Optional[str] = Cookie(default=None)):
 
 
 @app.put("/api/user/props")
-async def update_user_props(data: PropsUpdate, user_id: Optional[str] = Cookie(default=None)):
+async def update_user_props(data: PropsUpdate, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     更新用户道具数量
     """
@@ -387,7 +406,7 @@ class ScoreSync(BaseModel):
 
 
 @app.post("/api/game/score")
-async def sync_game_score(data: ScoreSync, user_id: Optional[str] = Cookie(default=None)):
+async def sync_game_score(data: ScoreSync, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     同步游戏积分到用户账户
     """
@@ -419,7 +438,7 @@ async def sync_game_score(data: ScoreSync, user_id: Optional[str] = Cookie(defau
 
 
 @app.get("/api/game/score")
-async def get_game_score(user_id: Optional[str] = Cookie(default=None)):
+async def get_game_score(user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     获取用户总积分
     """
@@ -434,15 +453,22 @@ async def get_game_score(user_id: Optional[str] = Cookie(default=None)):
 
 # ============ 关卡奖励 API ============
 
+class RewardItem(BaseModel):
+    type: str  # "energy", "hint", "speak"
+    name: str
+    icon: str
+    value: int
+
 class RewardClaimRequest(BaseModel):
     level: int
     vocab_group: str
     stars: int = 1  # 星级 1-3
     time_seconds: int = 0  # 通关时间
+    rewards: Optional[List[RewardItem]] = None  # 前端传入的奖励列表（必须使用这个，不能重新生成）
 
 
 @app.post("/api/game/generate-reward")
-async def generate_level_reward(user_id: Optional[str] = Cookie(default=None)):
+async def generate_level_reward(user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     生成关卡通关奖励（后端随机生成，防止前端篡改）
     
@@ -491,56 +517,41 @@ async def generate_level_reward(user_id: Optional[str] = Cookie(default=None)):
 
 
 @app.post("/api/game/claim-reward")
-async def claim_level_reward(data: RewardClaimRequest, user_id: Optional[str] = Cookie(default=None)):
+async def claim_level_reward(data: RewardClaimRequest, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
-    领取关卡奖励并更新用户数据
+    记录关卡奖励领取（仅记录日志，不更新体力/道具）
+    
+    重要说明：
+    - 体力更新由前端通过 PUT /api/user/energy 单独同步，避免重复增加
+    - 道具更新由前端本地管理（暂不需要后端同步）
+    - 本接口仅用于记录奖励领取日志，供后续统计分析使用
     
     Args:
-        data: 关卡信息（用于验证和记录）
+        data: 关卡信息和奖励列表
     """
     if not user_id:
         user_id = "anonymous"
     
-    # 生成奖励（每次领取都重新生成，确保公平）
-    reward_response = await generate_level_reward(user_id)
-    rewards = reward_response["rewards"]
+    # 将 Pydantic 模型转换为字典列表（仅用于记录）
+    rewards = []
+    if data.rewards:
+        rewards = [r.dict() for r in data.rewards]
     
-    # 更新用户数据
-    energy_added = 0
-    hint_added = 0
-    speak_added = 0
+    # 记录奖励领取日志（可用于统计分析）
+    # TODO: 可以将此记录写入数据库供后续分析
+    energy_claimed = sum(r["value"] for r in rewards if r["type"] == "energy")
+    hint_claimed = sum(r["value"] for r in rewards if r["type"] == "hint")
+    speak_claimed = sum(r["value"] for r in rewards if r["type"] == "speak")
     
-    for reward in rewards:
-        if reward["type"] == "energy":
-            energy_added = reward["value"]
-            # 更新体力
-            if user_id not in user_energy_db:
-                user_energy_db[user_id] = {"energy": 100, "max_energy": 100}
-            current_energy = user_energy_db[user_id].get("energy", 100)
-            user_energy_db[user_id]["energy"] = min(current_energy + energy_added, 200)
-        
-        elif reward["type"] == "hint":
-            hint_added = reward["value"]
-            # 更新提示道具
-            if user_id not in user_props_db:
-                user_props_db[user_id] = {"hintLetterCount": 20, "showTranslationCount": 20}
-            user_props_db[user_id]["hintLetterCount"] = user_props_db[user_id].get("hintLetterCount", 20) + hint_added
-        
-        elif reward["type"] == "speak":
-            speak_added = reward["value"]
-            # 更新发音道具
-            if user_id not in user_props_db:
-                user_props_db[user_id] = {"hintLetterCount": 20, "showTranslationCount": 20}
-            user_props_db[user_id]["showTranslationCount"] = user_props_db[user_id].get("showTranslationCount", 20) + speak_added
+    print(f"[奖励领取] 用户={user_id}, 关卡={data.level}, 词库={data.vocab_group}, "
+          f"星级={data.stars}, 用时={data.time_seconds}秒, "
+          f"体力+{energy_claimed}, 提示+{hint_claimed}, 发音+{speak_claimed}")
     
-    # 返回领取结果和更新后的数据
+    # 返回成功（不返回 updated_data，前端已经正确更新了本地状态）
     return {
         "success": True,
         "rewards": rewards,
-        "updated_data": {
-            "energy": user_energy_db.get(user_id, {}).get("energy", 100),
-            "props": user_props_db.get(user_id, {"hintLetterCount": 20, "showTranslationCount": 20})
-        }
+        "message": "奖励领取已记录"
     }
 
 
@@ -1575,7 +1586,7 @@ class PKResultSubmitNew(BaseModel):
 
 
 @app.post("/api/game/submit")
-async def submit_game_data(data: GameSubmit, user_id: Optional[str] = Cookie(default=None)):
+async def submit_game_data(data: GameSubmit, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     提交一局游戏数据
     
@@ -1643,7 +1654,7 @@ async def submit_game_data(data: GameSubmit, user_id: Optional[str] = Cookie(def
 
 
 @app.post("/api/game/pk-result")
-async def submit_pk_result_new(data: PKResultSubmitNew, user_id: Optional[str] = Cookie(default=None)):
+async def submit_pk_result_new(data: PKResultSubmitNew, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     提交PK对战结果（简化版）
     """
@@ -1702,7 +1713,7 @@ async def submit_pk_result_new(data: PKResultSubmitNew, user_id: Optional[str] =
 # ============ 用户统计 API ============
 
 @app.get("/api/user/stats")
-async def get_user_stats_api(user_id: Optional[str] = Cookie(default=None)):
+async def get_user_stats_api(user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     获取当前用户的游戏统计
     """
@@ -1723,7 +1734,7 @@ async def get_user_stats_api(user_id: Optional[str] = Cookie(default=None)):
 
 
 @app.get("/api/user/stats/{game_mode}")
-async def get_user_mode_stats(game_mode: str, user_id: Optional[str] = Cookie(default=None)):
+async def get_user_mode_stats(game_mode: str, user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     获取用户特定模式的统计
     """
@@ -1738,7 +1749,7 @@ async def get_user_mode_stats(game_mode: str, user_id: Optional[str] = Cookie(de
 
 
 @app.get("/api/user/feature-usage")
-async def get_user_feature_usage_api(user_id: Optional[str] = Cookie(default=None)):
+async def get_user_feature_usage_api(user_id: Optional[str] = Depends(get_user_id_from_request)):
     """
     获取用户功能使用统计
     """
@@ -1755,7 +1766,7 @@ async def get_user_feature_usage_api(user_id: Optional[str] = Cookie(default=Non
 async def get_user_game_records_api(
     game_mode: Optional[str] = None,
     limit: int = 50,
-    user_id: Optional[str] = Cookie(default=None)
+    user_id: Optional[str] = Depends(get_user_id_from_request)
 ):
     """
     获取用户游戏记录
@@ -2236,14 +2247,86 @@ async def refresh_leaderboards_api():
 
 # ============ 后台管理 API ============
 
-# 简单的管理员验证 (生产环境应使用更安全的认证方式)
-ADMIN_TOKEN = "wordcross_admin_2026"
+# 默认管理员密码（仅在数据库没有设置密码时使用）
+DEFAULT_ADMIN_PASSWORD = "wordcross_admin_2026"
+
+
+def hash_password(password: str) -> str:
+    """对密码进行哈希"""
+    return hashlib.sha256(password.encode()).hexdigest()
 
 
 def verify_admin(token: str = None):
     """验证管理员权限"""
-    if token != ADMIN_TOKEN:
+    if not token:
         raise HTTPException(status_code=403, detail="无管理员权限")
+    
+    # 优先从数据库获取密码哈希
+    stored_hash = db.get_admin_password_hash()
+    
+    if stored_hash:
+        # 数据库有密码，验证哈希
+        if hash_password(token) != stored_hash:
+            raise HTTPException(status_code=403, detail="密码错误")
+    else:
+        # 数据库没有密码，使用默认密码
+        if token != DEFAULT_ADMIN_PASSWORD:
+            raise HTTPException(status_code=403, detail="无管理员权限")
+
+
+class ChangePasswordRequest(BaseModel):
+    old_password: str
+    new_password: str
+
+
+@app.post("/api/admin/change-password")
+async def change_admin_password(data: ChangePasswordRequest, token: Optional[str] = None):
+    """
+    修改管理员密码
+    
+    Args:
+        data: 包含旧密码和新密码
+        token: 当前管理员密码（用于验证）
+    """
+    # 验证当前密码
+    stored_hash = db.get_admin_password_hash()
+    
+    if stored_hash:
+        # 数据库有密码，验证旧密码
+        if hash_password(data.old_password) != stored_hash:
+            raise HTTPException(status_code=403, detail="当前密码错误")
+    else:
+        # 数据库没有密码，验证默认密码
+        if data.old_password != DEFAULT_ADMIN_PASSWORD:
+            raise HTTPException(status_code=403, detail="当前密码错误")
+    
+    # 验证新密码
+    if len(data.new_password) < 6:
+        raise HTTPException(status_code=400, detail="新密码至少6位")
+    
+    if data.new_password == data.old_password:
+        raise HTTPException(status_code=400, detail="新密码不能与旧密码相同")
+    
+    # 保存新密码哈希
+    new_hash = hash_password(data.new_password)
+    db.set_admin_password_hash(new_hash)
+    
+    return {
+        "success": True,
+        "message": "密码修改成功"
+    }
+
+
+@app.get("/api/admin/password-status")
+async def get_password_status():
+    """
+    获取密码状态（是否已设置自定义密码）
+    """
+    stored_hash = db.get_admin_password_hash()
+    return {
+        "has_custom_password": stored_hash is not None,
+        "message": "已设置自定义密码" if stored_hash else "使用默认密码"
+    }
 
 
 @app.get("/api/admin/users")
@@ -2329,13 +2412,343 @@ async def admin_get_user_detail(user_id: str, token: Optional[str] = None):
     stats = db.get_user_all_stats_summary(user_id)
     feature_usage = db.get_user_feature_usage(user_id)
     recent_records = db.get_user_game_records(user_id, limit=20)
+    achievements = db.get_user_achievements(user_id)
     
     return {
         "user": user,
         "stats": stats,
         "feature_usage": feature_usage,
-        "recent_records": recent_records
+        "recent_records": recent_records,
+        "achievements": achievements
     }
+
+
+# ============ 新增管理后台API ============
+
+@app.get("/api/admin/stats/platform")
+async def admin_get_platform_stats(days: int = 30, token: Optional[str] = None):
+    """
+    获取平台分布统计（后台管理）
+    """
+    verify_admin(token)
+    
+    platform_stats = db.get_platform_stats(days)
+    device_stats = db.get_device_stats(days)
+    browser_stats = db.get_browser_stats(days)
+    os_stats = db.get_os_stats(days)
+    
+    return {
+        "platform": platform_stats,
+        "device": device_stats,
+        "browser": browser_stats,
+        "os": os_stats
+    }
+
+
+@app.get("/api/admin/stats/events")
+async def admin_get_event_stats(event_type: Optional[str] = None, days: int = 30, token: Optional[str] = None):
+    """
+    获取用户行为事件统计（后台管理）
+    """
+    verify_admin(token)
+    
+    event_stats = db.get_event_stats(event_type, days)
+    
+    return {
+        "event_type": event_type,
+        "days": days,
+        "stats": event_stats
+    }
+
+
+@app.get("/api/admin/stats/energy")
+async def admin_get_energy_stats(days: int = 30, token: Optional[str] = None):
+    """
+    获取体力领取统计（后台管理）
+    """
+    verify_admin(token)
+    
+    energy_stats = db.get_energy_claim_stats(days)
+    
+    return {
+        "days": days,
+        **energy_stats
+    }
+
+
+@app.get("/api/admin/stats/props")
+async def admin_get_props_stats(days: int = 30, token: Optional[str] = None):
+    """
+    获取道具使用统计（后台管理）
+    """
+    verify_admin(token)
+    
+    prop_stats = db.get_prop_usage_stats(days)
+    
+    return {
+        "days": days,
+        **prop_stats
+    }
+
+
+@app.get("/api/admin/stats/retention")
+async def admin_get_retention_stats(vocab_group: Optional[str] = None, token: Optional[str] = None):
+    """
+    获取关卡留存率分析（后台管理）
+    """
+    verify_admin(token)
+    
+    retention = db.get_level_retention_stats(vocab_group)
+    dropoff = db.get_level_dropoff_analysis(vocab_group)
+    
+    return {
+        "vocab_group": vocab_group,
+        "retention": retention,
+        "dropoff_analysis": dropoff[:10]  # 返回流失最严重的10个关卡
+    }
+
+
+@app.get("/api/admin/stats/hourly")
+async def admin_get_hourly_stats(days: int = 7, token: Optional[str] = None):
+    """
+    获取每小时活跃度分布（后台管理）
+    """
+    verify_admin(token)
+    
+    hourly = db.get_hourly_activity(days)
+    
+    return {
+        "days": days,
+        "hourly": hourly
+    }
+
+
+@app.get("/api/admin/stats/user-retention")
+async def admin_get_user_retention(days: int = 30, token: Optional[str] = None):
+    """
+    获取用户留存分析（后台管理）
+    """
+    verify_admin(token)
+    
+    retention = db.get_retention_analysis(days)
+    
+    return {
+        "days": days,
+        **retention
+    }
+
+
+@app.get("/api/admin/stats/top-players")
+async def admin_get_top_players(limit: int = 20, token: Optional[str] = None):
+    """
+    获取顶级玩家列表（后台管理）
+    """
+    verify_admin(token)
+    
+    players = db.get_top_players(limit)
+    
+    return {
+        "limit": limit,
+        "players": players
+    }
+
+
+@app.get("/api/admin/stats/vocab-analysis")
+async def admin_get_vocab_analysis(token: Optional[str] = None):
+    """
+    获取词库使用分析（后台管理）
+    """
+    verify_admin(token)
+    
+    analysis = db.get_vocab_group_analysis()
+    
+    return {
+        "vocab_groups": analysis
+    }
+
+
+# ============ 用户行为追踪API ============
+
+class SessionStart(BaseModel):
+    session_id: str
+    platform: str = "web"
+    device_type: Optional[str] = None
+    browser: Optional[str] = None
+    os: Optional[str] = None
+    screen_width: Optional[int] = None
+    screen_height: Optional[int] = None
+
+
+class UserEvent(BaseModel):
+    event_type: str
+    event_data: Optional[dict] = None
+    platform: str = "web"
+
+
+@app.post("/api/track/session/start")
+async def track_session_start(
+    data: SessionStart, 
+    request: Request,
+    user_id: Optional[str] = Depends(get_user_id_from_request)
+):
+    """
+    记录会话开始
+    """
+    if not user_id:
+        user_id = "anonymous"
+    
+    # 获取IP地址
+    ip_address = request.client.host if request.client else None
+    
+    session_id = db.create_session(
+        user_id=user_id,
+        session_id=data.session_id,
+        platform=data.platform,
+        device_type=data.device_type,
+        browser=data.browser,
+        os=data.os,
+        screen_width=data.screen_width,
+        screen_height=data.screen_height,
+        ip_address=ip_address
+    )
+    
+    return {"success": True, "session_id": data.session_id}
+
+
+@app.post("/api/track/session/end")
+async def track_session_end(session_id: str):
+    """
+    记录会话结束
+    """
+    db.end_session(session_id)
+    return {"success": True}
+
+
+@app.post("/api/track/event")
+async def track_user_event(
+    data: UserEvent,
+    user_id: Optional[str] = Depends(get_user_id_from_request)
+):
+    """
+    记录用户行为事件
+    """
+    if not user_id:
+        user_id = "anonymous"
+    
+    event_id = db.record_user_event(
+        user_id=user_id,
+        event_type=data.event_type,
+        event_data=data.event_data,
+        platform=data.platform
+    )
+    
+    return {"success": True, "event_id": event_id}
+
+
+# 增强现有API：在领取体力时记录
+@app.post("/api/user/energy/claim-free-tracked")
+async def claim_free_energy_tracked(
+    data: FreeEnergyRequest, 
+    platform: str = "web",
+    user_id: Optional[str] = Depends(get_user_id_from_request)
+):
+    """
+    领取免费体力（带追踪）
+    """
+    if not user_id:
+        user_id = "anonymous"
+    
+    if user_id not in user_energy_db:
+        user_energy_db[user_id] = {"energy": 200, "max_energy": 200}
+    
+    current_energy = user_energy_db[user_id]["energy"]
+    new_energy = min(current_energy + data.amount, 200)
+    user_energy_db[user_id]["energy"] = new_energy
+    
+    # 记录领取事件
+    db.record_energy_claim(user_id, "free_claim", data.amount, platform)
+    db.record_user_event(user_id, "claim_energy", {"amount": data.amount}, platform)
+    
+    return {
+        "energy": new_energy,
+        "max_energy": 200,
+        "added": new_energy - current_energy
+    }
+
+
+class PropUsage(BaseModel):
+    prop_type: str
+    game_mode: Optional[str] = None
+    vocab_group: Optional[str] = None
+    level: Optional[int] = None
+    platform: str = "web"
+
+
+@app.post("/api/track/prop-usage")
+async def track_prop_usage(
+    data: PropUsage,
+    user_id: Optional[str] = Depends(get_user_id_from_request)
+):
+    """
+    记录道具使用
+    """
+    if not user_id:
+        user_id = "anonymous"
+    
+    db.record_prop_usage(
+        user_id=user_id,
+        prop_type=data.prop_type,
+        game_mode=data.game_mode,
+        vocab_group=data.vocab_group,
+        level=data.level,
+        platform=data.platform
+    )
+    
+    db.record_user_event(user_id, f"use_prop_{data.prop_type}", {
+        "game_mode": data.game_mode,
+        "level": data.level
+    }, data.platform)
+    
+    return {"success": True}
+
+
+class LevelComplete(BaseModel):
+    vocab_group: str
+    level: int
+    stars: int = 0
+    score: int = 0
+    duration_seconds: Optional[int] = None
+    platform: str = "web"
+
+
+@app.post("/api/track/level-complete")
+async def track_level_complete(
+    data: LevelComplete,
+    user_id: Optional[str] = Depends(get_user_id_from_request)
+):
+    """
+    记录关卡完成
+    """
+    if not user_id:
+        user_id = "anonymous"
+    
+    db.record_level_completion(
+        user_id=user_id,
+        vocab_group=data.vocab_group,
+        level=data.level,
+        stars=data.stars,
+        score=data.score,
+        duration_seconds=data.duration_seconds,
+        platform=data.platform
+    )
+    
+    db.record_user_event(user_id, "complete_level", {
+        "vocab_group": data.vocab_group,
+        "level": data.level,
+        "stars": data.stars
+    }, data.platform)
+    
+    return {"success": True}
 
 
 # ============ PK模式 WebSocket ============

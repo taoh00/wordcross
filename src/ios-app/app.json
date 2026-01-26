@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "填单词",
+    "slug": "wordcross",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "wordcross",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4F46E5"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wordcross.app",
+      "buildNumber": "1"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#4F46E5"
+      },
+      "package": "com.wordcross.app"
+    },
+    "plugins": [
+      "expo-av"
+    ],
+    "extra": {
+      "apiBaseUrl": "https://superhe.art:10010"
+    }
+  }
+}
