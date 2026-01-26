@@ -1,0 +1,12 @@
+{
+  "name": "五年级上册",
+  "group_code": "grade5_1",
+  "category": "小学",
+  "is_primary": true,
+  "level_count": 92,
+  "word_count": 331,
+  "vocab_size": 389,
+  "coverage": 85.1,
+  "success_count": 92,
+  "fail_count": 0
+}

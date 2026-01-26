@@ -1,0 +1,12 @@
+{
+  "name": "八年级下册",
+  "group_code": "junior8_2",
+  "category": "初中",
+  "is_primary": false,
+  "level_count": 359,
+  "word_count": 1186,
+  "vocab_size": 1412,
+  "coverage": 84.0,
+  "success_count": 339,
+  "fail_count": 20
+}

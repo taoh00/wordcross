@@ -1,0 +1,12 @@
+{
+  "name": "高中全部",
+  "group_code": "senior_all",
+  "category": "高中",
+  "is_primary": false,
+  "level_count": 872,
+  "word_count": 4345,
+  "vocab_size": 5270,
+  "coverage": 82.4,
+  "success_count": 872,
+  "fail_count": 0
+}

@@ -1,0 +1,13 @@
+# 我爱填单词 - 生产环境依赖 (精简版)
+# FastAPI Web Framework
+fastapi==0.109.0
+uvicorn==0.27.0
+
+# Data validation
+pydantic==2.5.3
+
+# WebSocket for PK mode
+websockets==12.0
+
+# HTTP client (可选，用于某些功能)
+httpx==0.26.0

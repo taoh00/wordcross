@@ -1,0 +1,32 @@
+# 我爱填单词 - Backend Dependencies
+# FastAPI Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+
+# Database
+sqlalchemy==2.0.25
+aiosqlite==0.19.0
+
+# Utilities
+# 重要: pydantic 和 pydantic-settings 必须版本匹配！
+# pydantic-settings 2.x 需要 pydantic 2.x 的对应版本
+pydantic>=2.10.0
+pydantic-settings>=2.10.0
+requests>=2.31.0  # 用于词库构建脚本
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# CORS
+python-dotenv==1.0.0
+
+# WebSocket for PK mode
+websockets==12.0
+
+# Redis (optional, for caching)
+redis==5.0.1
+
+# Testing
+pytest==7.4.4
+pytest-asyncio==0.23.3
+httpx==0.26.0

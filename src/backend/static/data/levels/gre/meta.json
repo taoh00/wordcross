@@ -1,0 +1,12 @@
+{
+  "name": "GRE",
+  "group_code": "gre",
+  "category": "考试",
+  "is_primary": false,
+  "level_count": 1343,
+  "word_count": 7251,
+  "vocab_size": 8585,
+  "coverage": 84.5,
+  "success_count": 1343,
+  "fail_count": 0
+}

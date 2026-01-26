@@ -1,0 +1,12 @@
+{
+  "name": "高中词汇",
+  "group_code": "senior",
+  "category": "高中",
+  "is_primary": false,
+  "level_count": 861,
+  "word_count": 4334,
+  "vocab_size": 5270,
+  "coverage": 82.2,
+  "success_count": 861,
+  "fail_count": 0
+}

@@ -1,0 +1,860 @@
+{
+  "campaign_level": {
+    "grade3_1": [
+      {
+        "user_id": "11358b3d-aab0-4f37-ba3f-50ca3e6fa234",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 10,
+        "extra": {
+          "time": 10,
+          "level": 10
+        },
+        "timestamp": "2026-01-25 18:56:16"
+      },
+      {
+        "user_id": "602cb4e1-6208-4adb-8575-af32f9b3ac8f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 7,
+        "extra": {
+          "time": 15,
+          "level": 7
+        },
+        "timestamp": "2026-01-25 19:12:44"
+      },
+      {
+        "user_id": "124bd67d-2956-4523-ba21-909a8ef7d30d",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 9,
+        "extra": {
+          "time": 9,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 20:39:48"
+      },
+      {
+        "user_id": "77e33f32-7eb9-485e-9abf-e3212276ee27",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 9,
+        "extra": {
+          "time": 50,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 21:13:54"
+      },
+      {
+        "user_id": "54985b75-29da-4389-ba05-2b898122b43e",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 2,
+        "extra": {
+          "time": 15,
+          "level": 2
+        },
+        "timestamp": "2026-01-25 22:06:46"
+      },
+      {
+        "user_id": "3e8b5f4f-0a2f-47ec-a3e3-133a7137a1a6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 11,
+        "extra": {
+          "time": 22,
+          "level": 11
+        },
+        "timestamp": "2026-01-25 22:09:56"
+      },
+      {
+        "user_id": "29acbdfd-ad22-44fd-8d8b-f8a87723ba73",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 25,
+        "extra": {
+          "time": 45,
+          "level": 25
+        },
+        "timestamp": "2026-01-25 22:20:01"
+      },
+      {
+        "user_id": "eb96c222-1bf0-429c-87d8-bd19a62ac561",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 17,
+        "extra": {
+          "time": 236,
+          "level": 17
+        },
+        "timestamp": "2026-01-25 22:24:20"
+      },
+      {
+        "user_id": "b7aee844-022e-4010-a8dc-b983653f7a88",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 38,
+        "extra": {
+          "time": 16,
+          "level": 38
+        },
+        "timestamp": "2026-01-25 22:45:52"
+      }
+    ],
+    "grade3_2": [],
+    "grade4_1": [],
+    "grade4_2": [],
+    "grade5_1": [],
+    "grade5_2": [],
+    "grade6_1": [],
+    "grade6_2": [],
+    "junior": [],
+    "senior": [],
+    "ket": [
+      {
+        "user_id": "7dea1c9a-e9cb-42bf-b797-7b7b29b52eb6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "ket",
+        "value": 1,
+        "extra": {
+          "time": 22,
+          "level": 1
+        },
+        "timestamp": "2026-01-26 00:34:14"
+      }
+    ],
+    "pet": [],
+    "cet4": [],
+    "cet6": [
+      {
+        "user_id": "e373cdef-abe0-42d8-86af-4e2bf9369997",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 2,
+        "extra": {
+          "time": 31,
+          "level": 2
+        },
+        "timestamp": "2026-01-25 21:50:26"
+      },
+      {
+        "user_id": "7dea1c9a-e9cb-42bf-b797-7b7b29b52eb6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 2,
+        "extra": {
+          "time": 66,
+          "level": 2
+        },
+        "timestamp": "2026-01-26 00:32:15"
+      }
+    ],
+    "postgrad": [],
+    "ielts": [],
+    "toefl": [],
+    "gre": [
+      {
+        "user_id": "124bd67d-2956-4523-ba21-909a8ef7d30d",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "gre",
+        "value": 4,
+        "extra": {
+          "time": 27,
+          "level": 4
+        },
+        "timestamp": "2026-01-25 20:47:42"
+      }
+    ],
+    "all": [
+      {
+        "user_id": "11358b3d-aab0-4f37-ba3f-50ca3e6fa234",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 10,
+        "extra": {
+          "time": 10,
+          "level": 10
+        },
+        "timestamp": "2026-01-25 18:56:16"
+      },
+      {
+        "user_id": "602cb4e1-6208-4adb-8575-af32f9b3ac8f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 7,
+        "extra": {
+          "time": 15,
+          "level": 7
+        },
+        "timestamp": "2026-01-25 19:12:44"
+      },
+      {
+        "user_id": "124bd67d-2956-4523-ba21-909a8ef7d30d",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 9,
+        "extra": {
+          "time": 9,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 20:39:48"
+      },
+      {
+        "user_id": "77e33f32-7eb9-485e-9abf-e3212276ee27",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 9,
+        "extra": {
+          "time": 50,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 21:13:54"
+      },
+      {
+        "user_id": "e373cdef-abe0-42d8-86af-4e2bf9369997",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 2,
+        "extra": {
+          "time": 31,
+          "level": 2
+        },
+        "timestamp": "2026-01-25 21:50:26"
+      },
+      {
+        "user_id": "54985b75-29da-4389-ba05-2b898122b43e",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 2,
+        "extra": {
+          "time": 15,
+          "level": 2
+        },
+        "timestamp": "2026-01-25 22:06:46"
+      },
+      {
+        "user_id": "3e8b5f4f-0a2f-47ec-a3e3-133a7137a1a6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 11,
+        "extra": {
+          "time": 22,
+          "level": 11
+        },
+        "timestamp": "2026-01-25 22:09:56"
+      },
+      {
+        "user_id": "29acbdfd-ad22-44fd-8d8b-f8a87723ba73",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 25,
+        "extra": {
+          "time": 45,
+          "level": 25
+        },
+        "timestamp": "2026-01-25 22:20:01"
+      },
+      {
+        "user_id": "eb96c222-1bf0-429c-87d8-bd19a62ac561",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 17,
+        "extra": {
+          "time": 236,
+          "level": 17
+        },
+        "timestamp": "2026-01-25 22:24:20"
+      },
+      {
+        "user_id": "b7aee844-022e-4010-a8dc-b983653f7a88",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 38,
+        "extra": {
+          "time": 16,
+          "level": 38
+        },
+        "timestamp": "2026-01-25 22:45:52"
+      },
+      {
+        "user_id": "7dea1c9a-e9cb-42bf-b797-7b7b29b52eb6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 2,
+        "extra": {
+          "time": 66,
+          "level": 2
+        },
+        "timestamp": "2026-01-26 00:32:15"
+      }
+    ]
+  },
+  "campaign_score": {
+    "grade3_1": [
+      {
+        "user_id": "11358b3d-aab0-4f37-ba3f-50ca3e6fa234",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 60,
+        "extra": {
+          "time": 10,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 18:55:43"
+      },
+      {
+        "user_id": "602cb4e1-6208-4adb-8575-af32f9b3ac8f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 30,
+        "extra": {
+          "time": 15,
+          "level": 4
+        },
+        "timestamp": "2026-01-25 19:12:08"
+      },
+      {
+        "user_id": "124bd67d-2956-4523-ba21-909a8ef7d30d",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 50,
+        "extra": {
+          "time": 9,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 20:39:49"
+      },
+      {
+        "user_id": "77e33f32-7eb9-485e-9abf-e3212276ee27",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 50,
+        "extra": {
+          "time": 50,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 21:13:54"
+      },
+      {
+        "user_id": "54985b75-29da-4389-ba05-2b898122b43e",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 30,
+        "extra": {
+          "time": 34,
+          "level": 1
+        },
+        "timestamp": "2026-01-25 22:06:26"
+      },
+      {
+        "user_id": "3e8b5f4f-0a2f-47ec-a3e3-133a7137a1a6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 30,
+        "extra": {
+          "time": 22,
+          "level": 11
+        },
+        "timestamp": "2026-01-25 22:09:57"
+      },
+      {
+        "user_id": "29acbdfd-ad22-44fd-8d8b-f8a87723ba73",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 40,
+        "extra": {
+          "time": 23,
+          "level": 16
+        },
+        "timestamp": "2026-01-25 22:14:29"
+      },
+      {
+        "user_id": "eb96c222-1bf0-429c-87d8-bd19a62ac561",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 40,
+        "extra": {
+          "time": 119,
+          "level": 16
+        },
+        "timestamp": "2026-01-25 22:20:05"
+      },
+      {
+        "user_id": "b7aee844-022e-4010-a8dc-b983653f7a88",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 60,
+        "extra": {
+          "time": 29,
+          "level": 37
+        },
+        "timestamp": "2026-01-25 22:45:30"
+      }
+    ],
+    "grade3_2": [],
+    "grade4_1": [],
+    "grade4_2": [],
+    "grade5_1": [],
+    "grade5_2": [],
+    "grade6_1": [],
+    "grade6_2": [],
+    "junior": [],
+    "senior": [],
+    "ket": [
+      {
+        "user_id": "7dea1c9a-e9cb-42bf-b797-7b7b29b52eb6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "ket",
+        "value": 30,
+        "extra": {
+          "time": 22,
+          "level": 1
+        },
+        "timestamp": "2026-01-26 00:34:14"
+      }
+    ],
+    "pet": [],
+    "cet4": [],
+    "cet6": [
+      {
+        "user_id": "e373cdef-abe0-42d8-86af-4e2bf9369997",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 20,
+        "extra": {
+          "time": 9,
+          "level": 1
+        },
+        "timestamp": "2026-01-25 21:48:58"
+      },
+      {
+        "user_id": "7dea1c9a-e9cb-42bf-b797-7b7b29b52eb6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 30,
+        "extra": {
+          "time": 30,
+          "level": 1
+        },
+        "timestamp": "2026-01-26 00:31:04"
+      }
+    ],
+    "postgrad": [],
+    "ielts": [],
+    "toefl": [],
+    "gre": [
+      {
+        "user_id": "124bd67d-2956-4523-ba21-909a8ef7d30d",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "gre",
+        "value": 30,
+        "extra": {
+          "time": 27,
+          "level": 4
+        },
+        "timestamp": "2026-01-25 20:47:42"
+      }
+    ],
+    "all": [
+      {
+        "user_id": "11358b3d-aab0-4f37-ba3f-50ca3e6fa234",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 60,
+        "extra": {
+          "time": 10,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 18:55:43"
+      },
+      {
+        "user_id": "602cb4e1-6208-4adb-8575-af32f9b3ac8f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 30,
+        "extra": {
+          "time": 15,
+          "level": 4
+        },
+        "timestamp": "2026-01-25 19:12:08"
+      },
+      {
+        "user_id": "124bd67d-2956-4523-ba21-909a8ef7d30d",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 50,
+        "extra": {
+          "time": 9,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 20:39:49"
+      },
+      {
+        "user_id": "77e33f32-7eb9-485e-9abf-e3212276ee27",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 50,
+        "extra": {
+          "time": 50,
+          "level": 9
+        },
+        "timestamp": "2026-01-25 21:13:54"
+      },
+      {
+        "user_id": "e373cdef-abe0-42d8-86af-4e2bf9369997",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 20,
+        "extra": {
+          "time": 9,
+          "level": 1
+        },
+        "timestamp": "2026-01-25 21:48:58"
+      },
+      {
+        "user_id": "54985b75-29da-4389-ba05-2b898122b43e",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 30,
+        "extra": {
+          "time": 34,
+          "level": 1
+        },
+        "timestamp": "2026-01-25 22:06:26"
+      },
+      {
+        "user_id": "3e8b5f4f-0a2f-47ec-a3e3-133a7137a1a6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 30,
+        "extra": {
+          "time": 22,
+          "level": 11
+        },
+        "timestamp": "2026-01-25 22:09:57"
+      },
+      {
+        "user_id": "29acbdfd-ad22-44fd-8d8b-f8a87723ba73",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 40,
+        "extra": {
+          "time": 23,
+          "level": 16
+        },
+        "timestamp": "2026-01-25 22:14:29"
+      },
+      {
+        "user_id": "eb96c222-1bf0-429c-87d8-bd19a62ac561",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 40,
+        "extra": {
+          "time": 119,
+          "level": 16
+        },
+        "timestamp": "2026-01-25 22:20:05"
+      },
+      {
+        "user_id": "b7aee844-022e-4010-a8dc-b983653f7a88",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 60,
+        "extra": {
+          "time": 29,
+          "level": 37
+        },
+        "timestamp": "2026-01-25 22:45:30"
+      },
+      {
+        "user_id": "7dea1c9a-e9cb-42bf-b797-7b7b29b52eb6",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 30,
+        "extra": {
+          "time": 30,
+          "level": 1
+        },
+        "timestamp": "2026-01-26 00:31:04"
+      }
+    ]
+  },
+  "endless_level": {
+    "grade3_1": [
+      {
+        "user_id": "390eaf54-9d8e-4357-8bb3-845e53d7bb16",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 2,
+        "extra": {
+          "time": 25,
+          "level": 2
+        },
+        "timestamp": "2026-01-26 01:00:37"
+      }
+    ],
+    "grade3_2": [],
+    "grade4_1": [],
+    "grade4_2": [],
+    "grade5_1": [],
+    "grade5_2": [],
+    "grade6_1": [],
+    "grade6_2": [],
+    "junior": [],
+    "senior": [],
+    "ket": [],
+    "pet": [],
+    "cet4": [],
+    "cet6": [],
+    "postgrad": [],
+    "ielts": [],
+    "toefl": [],
+    "gre": [],
+    "all": [
+      {
+        "user_id": "390eaf54-9d8e-4357-8bb3-845e53d7bb16",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 2,
+        "extra": {
+          "time": 25,
+          "level": 2
+        },
+        "timestamp": "2026-01-26 01:00:37"
+      }
+    ]
+  },
+  "endless_score": {
+    "grade3_1": [
+      {
+        "user_id": "390eaf54-9d8e-4357-8bb3-845e53d7bb16",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 20,
+        "extra": {
+          "time": 25,
+          "level": 2
+        },
+        "timestamp": "2026-01-26 01:00:37"
+      }
+    ],
+    "grade3_2": [],
+    "grade4_1": [],
+    "grade4_2": [],
+    "grade5_1": [],
+    "grade5_2": [],
+    "grade6_1": [],
+    "grade6_2": [],
+    "junior": [],
+    "senior": [],
+    "ket": [],
+    "pet": [],
+    "cet4": [],
+    "cet6": [],
+    "postgrad": [],
+    "ielts": [],
+    "toefl": [],
+    "gre": [],
+    "all": [
+      {
+        "user_id": "390eaf54-9d8e-4357-8bb3-845e53d7bb16",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 20,
+        "extra": {
+          "time": 25,
+          "level": 2
+        },
+        "timestamp": "2026-01-26 01:00:37"
+      }
+    ]
+  },
+  "timed_words": {
+    "grade3_1": [],
+    "grade3_2": [],
+    "grade4_1": [],
+    "grade4_2": [],
+    "grade5_1": [],
+    "grade5_2": [],
+    "grade6_1": [],
+    "grade6_2": [],
+    "junior": [],
+    "senior": [],
+    "ket": [],
+    "pet": [],
+    "cet4": [],
+    "cet6": [],
+    "postgrad": [
+      {
+        "user_id": "3f1c27a6-764b-48ed-91c9-23c82c2f544a",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "postgrad",
+        "value": 7,
+        "extra": {
+          "time": 71,
+          "level": 1
+        },
+        "timestamp": "2026-01-25 23:35:52"
+      }
+    ],
+    "ielts": [],
+    "toefl": [],
+    "gre": [],
+    "all": [
+      {
+        "user_id": "3f1c27a6-764b-48ed-91c9-23c82c2f544a",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "postgrad",
+        "value": 7,
+        "extra": {
+          "time": 71,
+          "level": 1
+        },
+        "timestamp": "2026-01-25 23:35:52"
+      }
+    ]
+  },
+  "timed_score": {
+    "grade3_1": [],
+    "grade3_2": [],
+    "grade4_1": [],
+    "grade4_2": [],
+    "grade5_1": [],
+    "grade5_2": [],
+    "grade6_1": [],
+    "grade6_2": [],
+    "junior": [],
+    "senior": [],
+    "ket": [],
+    "pet": [],
+    "cet4": [],
+    "cet6": [],
+    "postgrad": [
+      {
+        "user_id": "3f1c27a6-764b-48ed-91c9-23c82c2f544a",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "postgrad",
+        "value": 70,
+        "extra": {
+          "time": 71,
+          "level": 1
+        },
+        "timestamp": "2026-01-25 23:35:53"
+      }
+    ],
+    "ielts": [],
+    "toefl": [],
+    "gre": [],
+    "all": [
+      {
+        "user_id": "3f1c27a6-764b-48ed-91c9-23c82c2f544a",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "postgrad",
+        "value": 70,
+        "extra": {
+          "time": 71,
+          "level": 1
+        },
+        "timestamp": "2026-01-25 23:35:53"
+      }
+    ]
+  },
+  "pk_wins": {
+    "grade3_1": [],
+    "grade3_2": [],
+    "grade4_1": [],
+    "grade4_2": [],
+    "grade5_1": [],
+    "grade5_2": [],
+    "grade6_1": [],
+    "grade6_2": [],
+    "junior": [],
+    "senior": [],
+    "ket": [],
+    "pet": [],
+    "cet4": [],
+    "cet6": [],
+    "postgrad": [],
+    "ielts": [],
+    "toefl": [],
+    "gre": [],
+    "all": []
+  },
+  "pk_score": {
+    "grade3_1": [],
+    "grade3_2": [],
+    "grade4_1": [],
+    "grade4_2": [],
+    "grade5_1": [],
+    "grade5_2": [],
+    "grade6_1": [],
+    "grade6_2": [],
+    "junior": [],
+    "senior": [],
+    "ket": [],
+    "pet": [],
+    "cet4": [],
+    "cet6": [],
+    "postgrad": [],
+    "ielts": [],
+    "toefl": [],
+    "gre": [],
+    "all": []
+  }
+}

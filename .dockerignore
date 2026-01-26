@@ -1,0 +1,55 @@
+# 我爱填单词 - Docker忽略文件
+
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+.cursor
+.cursor_history
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.eggs
+*.egg-info
+dist
+build
+venv
+.venv
+.pytest_cache
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+.npm
+
+# 开发文件
+*.md
+!README.md
+*.log
+*.tmp
+.env.local
+.env.development
+
+# 测试和开发脚本
+scripts/
+_bmad/
+_bmad-output/
+.image/
+
+# 大型备份文件
+src/data/backup_*
+
+# 临时文件
+*.bak
+*~

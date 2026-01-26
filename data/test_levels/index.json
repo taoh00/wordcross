@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-01-25 00:57:50",
+  "note": "样例数据，仅供测试",
+  "categories": {
+    "grade3_1": {
+      "name": "三年级上册",
+      "level_count": 10,
+      "word_count": 63
+    },
+    "grade4_1": {
+      "name": "四年级上册",
+      "level_count": 10,
+      "word_count": 75
+    },
+    "cet4": {
+      "name": "大学四级",
+      "level_count": 14,
+      "word_count": 2390
+    },
+    "ielts": {
+      "name": "雅思词汇",
+      "level_count": 14,
+      "word_count": 3113
+    }
+  }
+}

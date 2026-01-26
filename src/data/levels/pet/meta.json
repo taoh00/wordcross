@@ -1,0 +1,12 @@
+{
+  "name": "PET考试",
+  "group_code": "pet",
+  "category": "考试",
+  "is_primary": false,
+  "level_count": 116,
+  "word_count": 420,
+  "vocab_size": 490,
+  "coverage": 85.7,
+  "success_count": 116,
+  "fail_count": 0
+}

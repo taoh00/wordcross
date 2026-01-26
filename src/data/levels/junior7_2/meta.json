@@ -1,0 +1,12 @@
+{
+  "name": "七年级下册",
+  "group_code": "junior7_2",
+  "category": "初中",
+  "is_primary": false,
+  "level_count": 119,
+  "word_count": 631,
+  "vocab_size": 742,
+  "coverage": 85.0,
+  "success_count": 119,
+  "fail_count": 0
+}

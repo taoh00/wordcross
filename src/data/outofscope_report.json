@@ -1,0 +1,246 @@
+{
+  "total_groups": 18,
+  "total_outofscope_words": 0,
+  "groups_with_issues": 0,
+  "results": [
+    {
+      "group_code": "grade3_1",
+      "group_name": "三年级上册",
+      "vocab_names": [
+        "primary"
+      ],
+      "vocab_size": 1108,
+      "total_levels": 117,
+      "total_words": 364,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "grade3_2",
+      "group_name": "三年级下册",
+      "vocab_names": [
+        "primary"
+      ],
+      "vocab_size": 1108,
+      "total_levels": 117,
+      "total_words": 352,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "grade4_1",
+      "group_name": "四年级上册",
+      "vocab_names": [
+        "primary"
+      ],
+      "vocab_size": 1108,
+      "total_levels": 117,
+      "total_words": 400,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "grade4_2",
+      "group_name": "四年级下册",
+      "vocab_names": [
+        "primary"
+      ],
+      "vocab_size": 1108,
+      "total_levels": 117,
+      "total_words": 399,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "grade5_1",
+      "group_name": "五年级上册",
+      "vocab_names": [
+        "primary"
+      ],
+      "vocab_size": 1108,
+      "total_levels": 117,
+      "total_words": 393,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "grade5_2",
+      "group_name": "五年级下册",
+      "vocab_names": [
+        "primary"
+      ],
+      "vocab_size": 1108,
+      "total_levels": 117,
+      "total_words": 381,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "grade6_1",
+      "group_name": "六年级上册",
+      "vocab_names": [
+        "primary"
+      ],
+      "vocab_size": 1108,
+      "total_levels": 117,
+      "total_words": 391,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "grade6_2",
+      "group_name": "六年级下册",
+      "vocab_names": [
+        "primary"
+      ],
+      "vocab_size": 1108,
+      "total_levels": 117,
+      "total_words": 393,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "junior",
+      "group_name": "初中词汇",
+      "vocab_names": [
+        "junior"
+      ],
+      "vocab_size": 584,
+      "total_levels": 180,
+      "total_words": 662,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "senior",
+      "group_name": "高中词汇",
+      "vocab_names": [
+        "senior"
+      ],
+      "vocab_size": 312,
+      "total_levels": 180,
+      "total_words": 635,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "ket",
+      "group_name": "KET考试",
+      "vocab_names": [
+        "ket"
+      ],
+      "vocab_size": 531,
+      "total_levels": 180,
+      "total_words": 719,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "pet",
+      "group_name": "PET考试",
+      "vocab_names": [
+        "pet"
+      ],
+      "vocab_size": 514,
+      "total_levels": 180,
+      "total_words": 667,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "cet4",
+      "group_name": "大学四级",
+      "vocab_names": [
+        "cet4"
+      ],
+      "vocab_size": 563,
+      "total_levels": 180,
+      "total_words": 668,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "cet6",
+      "group_name": "大学六级",
+      "vocab_names": [
+        "cet6",
+        "cet4"
+      ],
+      "vocab_size": 632,
+      "total_levels": 180,
+      "total_words": 685,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "postgrad",
+      "group_name": "考研词汇",
+      "vocab_names": [
+        "postgrad",
+        "cet4"
+      ],
+      "vocab_size": 658,
+      "total_levels": 180,
+      "total_words": 683,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "ielts",
+      "group_name": "雅思",
+      "vocab_names": [
+        "ielts",
+        "cet4"
+      ],
+      "vocab_size": 574,
+      "total_levels": 180,
+      "total_words": 667,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "toefl",
+      "group_name": "托福",
+      "vocab_names": [
+        "toefl",
+        "cet4"
+      ],
+      "vocab_size": 576,
+      "total_levels": 180,
+      "total_words": 626,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    },
+    {
+      "group_code": "gre",
+      "group_name": "GRE",
+      "vocab_names": [
+        "gre",
+        "cet4"
+      ],
+      "vocab_size": 657,
+      "total_levels": 180,
+      "total_words": 697,
+      "outofscope_words_count": 0,
+      "outofscope_levels_count": 0,
+      "outofscope_levels": []
+    }
+  ]
+}

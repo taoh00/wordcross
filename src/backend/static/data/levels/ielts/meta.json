@@ -1,0 +1,12 @@
+{
+  "name": "雅思",
+  "group_code": "ielts",
+  "category": "考试",
+  "is_primary": false,
+  "level_count": 835,
+  "word_count": 4152,
+  "vocab_size": 4708,
+  "coverage": 88.2,
+  "success_count": 835,
+  "fail_count": 0
+}

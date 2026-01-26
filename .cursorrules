@@ -1,0 +1,386 @@
+# 填单词游戏项目规则
+
+## 关卡生成规则
+
+### 覆盖度要求
+- 目标覆盖度: ≥85%（所有词库统一目标）
+- 如果基础关卡覆盖度不足85%，继续用最大网格的困难模式补齐
+
+**技术限制说明**：填字游戏要求单词之间有共同字母才能交叉。大词库中8-10字母的长词比例高，这些词在10x10网格中难以有效交叉，因此覆盖率受限于算法而非关卡数量。
+
+### 三级难度系统
+每个网格尺寸包含三种难度：
+- **简单(easy)**: 单词长度2-4字母，预填字母多（40%），单词数少
+- **中等(medium)**: 单词长度3-6字母，预填字母适中（25%），单词数适中
+- **困难(hard)**: 单词长度5-10字母，预填字母少（15%），单词数多
+
+注：如果词库中对应长度的词不足，会自动放宽长度限制以确保关卡能正常生成。
+
+### 阶梯难度规则
+
+#### 小学词库（最大8×8）- 从5×5开始
+基础关卡共81关：
+- 5×5: 9关 (1-9) - 简单3关 + 中3关 + 难3关
+- 6×6: 18关 (10-27) - 每个难度6关
+- 7×7: 27关 (28-54) - 每个难度9关
+- 8×8: 27关 (55-81) - 每个难度9关
+- 第82关起：如果覆盖度<85%，继续用8×8困难模式补齐
+
+#### 其他词库（最大10×10）- 从6×6开始
+基础关卡共108关：
+- 6×6: 9关 (1-9) - 简单3关 + 中3关 + 难3关
+- 7×7: 18关 (10-27) - 每个难度6关
+- 8×8: 27关 (28-54) - 每个难度9关
+- 9×9: 27关 (55-81) - 每个难度9关
+- 10×10: 27关 (82-108) - 每个难度9关
+- 第109关起：如果覆盖度<85%，继续用10×10困难模式补齐
+
+### 多样性规则
+- 每关优先使用未使用过的单词
+- 从不同长度的单词中轮流选取，保证多样性
+- 前后关卡使用不同的单词子集，减少重复
+- 超过10字母的单词自动跳过（不适合10×10网格）
+
+### 当前覆盖度统计（2026-01-25 20:25 更新）
+
+**全部31个词库均达到85%覆盖率目标！**
+
+#### 小学词库
+| 词库 | 关卡数 | 词汇量 | 覆盖度 |
+|------|--------|--------|--------|
+| grade3_1 三年级上册 | 81 | 63 | 98.4% |
+| grade3_2 三年级下册 | 81 | 131 | 91.6% |
+| grade4_1 四年级上册 | 81 | 205 | 88.3% |
+| grade4_2 四年级下册 | 81 | 283 | 88.3% |
+| grade5_1 五年级上册 | 84 | 389 | 85.3% |
+| grade5_2 五年级下册 | 107 | 505 | 85.1% |
+| grade6_1 六年级上册 | 117 | 608 | 85.0% |
+| grade6_2 六年级下册 | 125 | 696 | 85.2% |
+| primary_all 小学全部 | 130 | 696 | 85.1% |
+
+#### 初中词库
+| 词库 | 关卡数 | 词汇量 | 覆盖度 |
+|------|--------|--------|--------|
+| junior7_1 七年级上册 | 108 | 350 | 97.7% |
+| junior7_2 七年级下册 | 109 | 742 | 85.4% |
+| junior8_1 八年级上册 | 143 | 1064 | 85.6% |
+| junior8_2 八年级下册 | 181 | 1412 | 85.4% |
+| junior9 九年级全册 | 234 | 1862 | 85.2% |
+| junior 初中词汇 | 289 | 2390 | 85.1% |
+| junior_all 初中全部 | 291 | 2390 | 85.0% |
+
+#### 高中词库
+| 词库 | 关卡数 | 词汇量 | 覆盖度 |
+|------|--------|--------|--------|
+| senior1 必修1 | 108 | 239 | 94.1% |
+| senior2 必修2 | 108 | 492 | 90.4% |
+| senior3 必修3 | 124 | 773 | 85.1% |
+| senior4 必修4 | 156 | 1003 | 85.5% |
+| senior5 必修5 | 192 | 1280 | 85.4% |
+| senior 高中词汇 | 649 | 5270 | 85.0% |
+| senior_all 高中全部 | 641 | 5270 | 85.1% |
+
+#### 考试词库
+| 词库 | 关卡数 | 词汇量 | 覆盖度 |
+|------|--------|--------|--------|
+| ket KET考试 | 108 | 524 | 96.0% |
+| pet PET考试 | 108 | 490 | 94.3% |
+| cet4 大学四级 | 514 | 4198 | 85.1% |
+| cet6 大学六级 | 482 | 3543 | 85.0% |
+| postgrad 考研词汇 | 594 | 4755 | 85.0% |
+| ielts 雅思 | 632 | 4708 | 85.0% |
+| toefl 托福 | 1146 | 8918 | 85.0% |
+| gre GRE | 1150 | 8585 | 85.1% |
+
+**总计**: 8954关，100%成功率
+
+## 技术说明
+
+### 文件结构（2026-01-25 更新：每关一个文件）
+```
+src/data/levels/
+├── levels_summary.json          # 所有词库的汇总统计
+├── grade3_1/                    # 每个词库一个目录
+│   ├── meta.json               # 词库元数据（关卡数、覆盖率等）
+│   ├── 1.json                  # 第1关数据（约2KB）
+│   ├── 2.json                  # 第2关数据
+│   └── ...
+├── gre/                         # GRE词库目录（1343关）
+│   ├── meta.json
+│   ├── 1.json
+│   └── ...
+└── ...
+```
+
+**优势**：
+- 每关独立文件（约2KB），加载速度从几秒变为毫秒级
+- 不再需要一次性加载整个词库（如GRE之前是12MB）
+- 前端按需加载，首屏加载更快
+
+### 生成命令
+```bash
+# 生成所有词库（每关单独文件）
+python src/backend/generate_all_levels.py --all
+
+# 生成单个词库
+python src/backend/generate_all_levels.py -g junior
+
+# 列出所有词库
+python src/backend/generate_all_levels.py --list
+```
+
+### 前端加载方式
+```javascript
+// 加载单关数据（毫秒级）
+const response = await fetch(`/data/levels/${group}/${levelNum}.json`)
+const levelData = await response.json()
+
+// 加载词库元数据
+const metaResponse = await fetch(`/data/levels/${group}/meta.json`)
+const meta = await metaResponse.json()
+```
+
+### 算法限制说明
+1. **10x10网格最大限制**：单词最长10字母
+2. **交叉要求**：单词必须有共同字母才能交叉
+3. **长词覆盖难题**：8-10字母的长词（如 BACKGROUND, PROFESSIONAL）在10x10网格中难以找到足够的交叉机会
+4. **解决方案**：未来可考虑使用更大网格（12x12或15x15）来提高大词库覆盖率
+
+---
+
+## 编译环境说明
+
+### 技术栈
+
+| 组件 | 技术 | 版本 |
+|------|------|------|
+| 前端框架 | Vue 3 + Vite | Vue 3.4, Vite 5.0 |
+| 状态管理 | Pinia | 2.1.7 |
+| 路由 | Vue Router | 4.2.5 |
+| 样式 | Tailwind CSS | 3.4.1 |
+| HTTP客户端 | Axios | 1.6.5 |
+| 后端框架 | FastAPI | 0.109.0 |
+| ASGI服务器 | Uvicorn | 0.27.0 |
+| 数据验证 | Pydantic | 2.5.3 |
+| WebSocket | websockets | 12.0 |
+
+### 项目结构
+
+```
+project_2_我爱填单词/
+├── src/
+│   ├── frontend/              # Vue 3 前端
+│   │   ├── src/              # 源代码
+│   │   ├── public/           # 静态资源（含关卡数据）
+│   │   ├── package.json      # 依赖配置
+│   │   ├── vite.config.js    # Vite配置
+│   │   ├── nginx.conf        # Nginx配置
+│   │   └── Dockerfile        # 前端镜像
+│   ├── backend/              # FastAPI 后端
+│   │   ├── main.py           # 主入口
+│   │   ├── requirements.prod.txt
+│   │   └── Dockerfile.prod   # 后端镜像
+│   └── data/                 # 数据文件
+│       └── levels/           # 关卡数据（JSON）
+├── data/
+│   └── audio/                # 音频文件（MP3）
+├── docker-compose.yml        # Docker编排
+└── deploy.sh                 # 部署脚本
+```
+
+### 开发环境启动
+
+```bash
+# 1. 前端开发服务器（端口10010）
+cd src/frontend
+npm install
+npm run dev
+
+# 2. 后端服务器（端口10012）
+cd src/backend
+pip install -r requirements.prod.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+python main.py
+```
+
+### 生产部署（Docker）
+
+```bash
+# 构建并启动（自动同步关卡数据）
+./deploy.sh build && ./deploy.sh start
+
+# 其他命令
+./deploy.sh stop      # 停止服务
+./deploy.sh restart   # 重启服务
+./deploy.sh logs      # 查看日志
+./deploy.sh status    # 查看状态
+./deploy.sh clean     # 清理镜像
+```
+
+### 端口分配
+
+| 服务 | 开发端口 | 生产端口 |
+|------|----------|----------|
+| 前端 (Vite/Nginx) | 10010 | 10010 |
+| 后端 (FastAPI) | 10012 | 内部 10012 |
+| API代理 | - | 10010/api/ |
+| WebSocket | - | 10010/ws/ |
+
+### 镜像国内源配置
+
+**npm (前端)**:
+```bash
+npm config set registry https://registry.npmmirror.com
+```
+
+**pip (后端)**:
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+### 关卡数据同步
+
+生产部署时，`deploy.sh build` 会自动执行以下同步：
+1. 复制 `src/data/levels/*` → `src/frontend/public/data/levels/`
+2. 复制 `src/data/levels_summary.json` → `src/frontend/public/data/levels_summary.json`
+
+关卡数据随前端静态资源一起分发，无需后端加载，实现毫秒级加载。
+
+### Nginx 路由规则
+
+| 路径 | 处理方式 |
+|------|----------|
+| `/api/*` | 反向代理到后端 |
+| `/ws/*` | WebSocket代理 |
+| `/data/levels/*` | 静态文件（1天缓存） |
+| `/data/audio/*` | 代理到后端 |
+| `/assets/*` | 静态资源（1年缓存） |
+| `/*` | SPA回退到 index.html |
+
+### 常见问题
+
+1. **关卡加载慢**：确保关卡数据已同步到前端 public 目录
+2. **API 404**：检查后端服务是否启动，端口是否正确
+3. **音频无法播放**：确认 data/audio 目录挂载正确
+4. **Docker构建失败**：检查国内镜像源配置
+
+---
+
+## 部署规则
+
+### 部署脚本分离
+
+项目使用两个独立的部署脚本，分别管理开发环境和生产环境：
+
+| 脚本 | 用途 | 目标 |
+|------|------|------|
+| `deploy-dev.sh` | 开发环境 | 本地 (localhost) |
+| `deploy-prod.sh` | 生产环境 | superhe.art |
+
+### 开发环境部署 (`deploy-dev.sh`)
+
+用于本地开发，直接启动 Node.js 和 Python 进程（不使用 Docker）。
+
+```bash
+# 启动开发环境
+./deploy-dev.sh start
+
+# 停止服务
+./deploy-dev.sh stop
+
+# 查看状态
+./deploy-dev.sh status
+
+# 查看日志
+./deploy-dev.sh logs           # 全部日志
+./deploy-dev.sh logs frontend  # 前端日志
+./deploy-dev.sh logs backend   # 后端日志
+```
+
+**特点**：
+- 自动安装依赖（npm、pip）
+- 自动同步关卡数据到前端
+- 支持热更新（Vite）
+- 日志输出到 `logs/` 目录
+
+### 生产环境部署 (`deploy-prod.sh`)
+
+用于部署到远程服务器 `superhe.art`，使用 Docker 容器化部署。
+
+```bash
+# 完整部署（首次，含音频检查）
+./deploy-prod.sh all
+
+# 快速更新（日常，不含音频）
+./deploy-prod.sh quick
+
+# 分步操作
+./deploy-prod.sh build          # 构建镜像
+./deploy-prod.sh export         # 导出镜像
+./deploy-prod.sh transfer       # 传输到服务器
+./deploy-prod.sh load           # 远程加载镜像
+./deploy-prod.sh start          # 远程启动
+
+# 远程管理
+./deploy-prod.sh status         # 查看状态
+./deploy-prod.sh logs           # 查看日志
+./deploy-prod.sh restart        # 重启服务
+./deploy-prod.sh stop           # 停止服务
+
+# 音频相关（首次或更新音频时）
+./deploy-prod.sh pack-audio     # 打包音频
+./deploy-prod.sh transfer-audio # 传输音频
+```
+
+### 生产环境配置
+
+| 配置项 | 值 |
+|--------|-----|
+| 目标服务器 | root@superhe.art |
+| 远程目录 | /opt/wordcross |
+| 访问地址 | http://superhe.art:10010 |
+| 前端端口 | 10010（避免与80冲突） |
+| 后端端口 | 10012（内部） |
+
+### 部署流程
+
+#### 首次部署
+```bash
+# 1. 完整部署（自动处理所有步骤）
+./deploy-prod.sh all
+
+# 或分步执行：
+./deploy-prod.sh build           # 构建镜像
+./deploy-prod.sh pack-audio      # 打包音频（首次必需）
+./deploy-prod.sh export          # 导出镜像
+./deploy-prod.sh transfer        # 传输代码
+./deploy-prod.sh transfer-audio  # 传输音频
+./deploy-prod.sh load            # 加载镜像
+./deploy-prod.sh start           # 启动服务
+```
+
+#### 日常更新（代码变更）
+```bash
+# 快速更新（约2-3分钟）
+./deploy-prod.sh quick
+```
+
+#### 仅重启服务
+```bash
+./deploy-prod.sh restart
+```
+
+### 文件大小参考
+
+| 文件 | 大小 | 说明 |
+|------|------|------|
+| wordcross-frontend.tar.gz | ~15MB | 前端镜像 |
+| wordcross-backend.tar.gz | ~23MB | 后端镜像 |
+| levels.tar.gz | ~5MB | 关卡数据 |
+| wordcross-audio.tar.gz | ~578MB | 音频文件（首次） |
+
+### 注意事项
+
+1. **SSH密钥**：确保已配置 SSH 密钥访问 superhe.art
+2. **端口冲突**：生产环境使用 10010 端口，避免与其他服务冲突
+3. **音频分离**：音频文件独立打包，更新代码时无需重传
+4. **国内源**：构建时自动使用国内镜像源（npm、pip）

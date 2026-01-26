@@ -1,0 +1,6086 @@
+[
+  {
+    "word": "garden",
+    "definition": "花园",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "gather",
+    "definition": "聚集",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "global",
+    "definition": "全球的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "golden",
+    "definition": "金色的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "gotten",
+    "definition": "得到(过去分词)",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "grapes",
+    "definition": "葡萄",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "greens",
+    "definition": "绿色蔬菜",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "ground",
+    "definition": "地面",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "groups",
+    "definition": "群组",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "growth",
+    "definition": "成长",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "guides",
+    "definition": "指南",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "guitar",
+    "definition": "吉他",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "habits",
+    "definition": "习惯",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "handle",
+    "definition": "处理",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "happen",
+    "definition": "发生",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "harbor",
+    "definition": "港口",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "hardly",
+    "definition": "几乎不",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "health",
+    "definition": "健康",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "hearts",
+    "definition": "心脏",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "heaven",
+    "definition": "天堂",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "height",
+    "definition": "高度",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "helper",
+    "definition": "帮助者",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "heroes",
+    "definition": "英雄",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "hidden",
+    "definition": "隐藏的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "higher",
+    "definition": "更高的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "hiking",
+    "definition": "徒步",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "honest",
+    "definition": "诚实的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "honors",
+    "definition": "荣誉",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "hoping",
+    "definition": "希望",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "horses",
+    "definition": "马",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "hotels",
+    "definition": "酒店",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "houses",
+    "definition": "房屋",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "hungry",
+    "definition": "饥饿的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "hunter",
+    "definition": "猎人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ignore",
+    "definition": "忽视",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "images",
+    "definition": "图像",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "impact",
+    "definition": "影响",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "import",
+    "definition": "进口",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "income",
+    "definition": "收入",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "indeed",
+    "definition": "确实",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "indoor",
+    "definition": "室内的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "infant",
+    "definition": "婴儿",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "inform",
+    "definition": "通知",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "inject",
+    "definition": "注射",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "injure",
+    "definition": "伤害",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "insect",
+    "definition": "昆虫",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "inside",
+    "definition": "在里面",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "insist",
+    "definition": "坚持",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "intent",
+    "definition": "意图",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "invent",
+    "definition": "发明",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "invest",
+    "definition": "投资",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "invite",
+    "definition": "邀请",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "island",
+    "definition": "岛屿",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "itself",
+    "definition": "它自己",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "jacket",
+    "definition": "夹克",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "jailed",
+    "definition": "监禁",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "jersey",
+    "definition": "运动衫",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "jingle",
+    "definition": "叮当声",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "joking",
+    "definition": "开玩笑",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "judges",
+    "definition": "法官",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "juggle",
+    "definition": "杂耍",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "jumped",
+    "definition": "跳跃",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "jungle",
+    "definition": "丛林",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "junior",
+    "definition": "初级的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "karate",
+    "definition": "空手道",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "keeper",
+    "definition": "守护者",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "kettle",
+    "definition": "水壶",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "kicked",
+    "definition": "踢",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "kinder",
+    "definition": "更友善的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "kindle",
+    "definition": "点燃",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "kindly",
+    "definition": "和蔼地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "kitten",
+    "definition": "小猫",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "knight",
+    "definition": "骑士",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "labels",
+    "definition": "标签",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ladder",
+    "definition": "梯子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "ladies",
+    "definition": "女士们",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "landed",
+    "definition": "着陆",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "laptop",
+    "definition": "笔记本电脑",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "larger",
+    "definition": "更大的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "lasted",
+    "definition": "持续",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "latest",
+    "definition": "最新的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "latter",
+    "definition": "后者",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "launch",
+    "definition": "发射",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "lawyer",
+    "definition": "律师",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "layers",
+    "definition": "层次",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "leader",
+    "definition": "领导者",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "league",
+    "definition": "联盟",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "learns",
+    "definition": "学习",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "leaves",
+    "definition": "树叶",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "legend",
+    "definition": "传说",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "lemon",
+    "definition": "柠檬",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "length",
+    "definition": "长度",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "lesson",
+    "definition": "课程",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "letter",
+    "definition": "信",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "levels",
+    "definition": "水平",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "lights",
+    "definition": "灯光",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "limits",
+    "definition": "限制",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "linked",
+    "definition": "链接",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "liquid",
+    "definition": "液体",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "listen",
+    "definition": "听",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "little",
+    "definition": "小的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "living",
+    "definition": "生活",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "locate",
+    "definition": "定位",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "locked",
+    "definition": "锁定",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "lonely",
+    "definition": "孤独的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "longer",
+    "definition": "更长的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "looked",
+    "definition": "看",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "losing",
+    "definition": "失去",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "lovely",
+    "definition": "可爱的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "lovers",
+    "definition": "恋人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "lowest",
+    "definition": "最低的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "mainly",
+    "definition": "主要地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "makers",
+    "definition": "制造者",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "making",
+    "definition": "制作",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "manage",
+    "definition": "管理",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "manner",
+    "definition": "方式",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "manual",
+    "definition": "手册",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "mapped",
+    "definition": "绘制地图",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "marble",
+    "definition": "大理石",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "marked",
+    "definition": "标记",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "market",
+    "definition": "市场",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "master",
+    "definition": "大师",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "matter",
+    "definition": "物质",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "medals",
+    "definition": "奖牌",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "medium",
+    "definition": "中等",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "member",
+    "definition": "成员",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "memory",
+    "definition": "记忆",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "mental",
+    "definition": "精神的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "mentor",
+    "definition": "导师",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "merged",
+    "definition": "合并",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "metals",
+    "definition": "金属",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "method",
+    "definition": "方法",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "middle",
+    "definition": "中间",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "mighty",
+    "definition": "强大的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "miller",
+    "definition": "磨坊主",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "minute",
+    "definition": "分钟",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "mirror",
+    "definition": "镜子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "missed",
+    "definition": "错过",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "misses",
+    "definition": "小姐们",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "mister",
+    "definition": "先生",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "mixing",
+    "definition": "混合",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "mobile",
+    "definition": "移动的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "models",
+    "definition": "模型",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "modern",
+    "definition": "现代的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "modify",
+    "definition": "修改",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "moment",
+    "definition": "时刻",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "monkey",
+    "definition": "猴子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "months",
+    "definition": "月份",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "morale",
+    "definition": "士气",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "mostly",
+    "definition": "主要地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "mother",
+    "definition": "母亲",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "motion",
+    "definition": "运动",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "motors",
+    "definition": "发动机",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "moving",
+    "definition": "移动",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "muscle",
+    "definition": "肌肉",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "museum",
+    "definition": "博物馆",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "myself",
+    "definition": "我自己",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "narrow",
+    "definition": "狭窄的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "nation",
+    "definition": "国家",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "native",
+    "definition": "本地的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "nature",
+    "definition": "自然",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "nearby",
+    "definition": "附近的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "nearly",
+    "definition": "几乎",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "neatly",
+    "definition": "整洁地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "needed",
+    "definition": "需要",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "needle",
+    "definition": "针",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "nephew",
+    "definition": "侄子",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "nerves",
+    "definition": "神经",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "nested",
+    "definition": "嵌套的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "neural",
+    "definition": "神经的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "nights",
+    "definition": "夜晚",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "nobody",
+    "definition": "没有人",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "nodded",
+    "definition": "点头",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "normal",
+    "definition": "正常的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "notice",
+    "definition": "注意",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "notify",
+    "definition": "通知",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "novels",
+    "definition": "小说",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "number",
+    "definition": "数字",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "object",
+    "definition": "物体",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "obtain",
+    "definition": "获得",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "occupy",
+    "definition": "占据",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "occurs",
+    "definition": "发生",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "oceans",
+    "definition": "海洋",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "offers",
+    "definition": "提供",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "office",
+    "definition": "办公室",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "oldest",
+    "definition": "最老的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "online",
+    "definition": "在线的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "opened",
+    "definition": "打开",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "openly",
+    "definition": "公开地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "option",
+    "definition": "选项",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "orange",
+    "definition": "橙子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "orders",
+    "definition": "订单",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "organs",
+    "definition": "器官",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "origin",
+    "definition": "起源",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "others",
+    "definition": "其他人",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "outfit",
+    "definition": "装备",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "output",
+    "definition": "输出",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "owners",
+    "definition": "所有者",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "packed",
+    "definition": "打包",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "palace",
+    "definition": "宫殿",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "panels",
+    "definition": "面板",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "papers",
+    "definition": "纸张",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "parade",
+    "definition": "游行",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "parent",
+    "definition": "父母",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "parked",
+    "definition": "停放",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "partly",
+    "definition": "部分地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "passed",
+    "definition": "通过",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "patent",
+    "definition": "专利",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "patrol",
+    "definition": "巡逻",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "patron",
+    "definition": "赞助人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "paying",
+    "definition": "支付",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "people",
+    "definition": "人们",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "pepper",
+    "definition": "胡椒",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "period",
+    "definition": "时期",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "permit",
+    "definition": "许可",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "person",
+    "definition": "人",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "phases",
+    "definition": "阶段",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "phones",
+    "definition": "电话",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "photos",
+    "definition": "照片",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "phrase",
+    "definition": "短语",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "picked",
+    "definition": "挑选",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "picnic",
+    "definition": "野餐",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "pieces",
+    "definition": "碎片",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "pillow",
+    "definition": "枕头",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "pilots",
+    "definition": "飞行员",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "pirate",
+    "definition": "海盗",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "places",
+    "definition": "地方",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "plains",
+    "definition": "平原",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "planes",
+    "definition": "飞机",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "planet",
+    "definition": "行星",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "plants",
+    "definition": "植物",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "plates",
+    "definition": "盘子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "played",
+    "definition": "玩",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "player",
+    "definition": "玩家",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "please",
+    "definition": "请",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "plenty",
+    "definition": "充足",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "plural",
+    "definition": "复数",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "pocket",
+    "definition": "口袋",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "poetry",
+    "definition": "诗歌",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "points",
+    "definition": "积分",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "poison",
+    "definition": "毒药",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "police",
+    "definition": "警察",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "polish",
+    "definition": "抛光",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "polite",
+    "definition": "有礼貌的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "pollen",
+    "definition": "花粉",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ported",
+    "definition": "移植",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "portal",
+    "definition": "入口",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "posted",
+    "definition": "发布",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "poster",
+    "definition": "海报",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "potato",
+    "definition": "土豆",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "pounds",
+    "definition": "英镑",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "powder",
+    "definition": "粉末",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "powers",
+    "definition": "力量",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "prayer",
+    "definition": "祈祷",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "prefer",
+    "definition": "更喜欢",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "pretty",
+    "definition": "漂亮的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "priced",
+    "definition": "定价",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "prices",
+    "definition": "价格",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "prince",
+    "definition": "王子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "prints",
+    "definition": "打印",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "prison",
+    "definition": "监狱",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "prizes",
+    "definition": "奖品",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "profit",
+    "definition": "利润",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "proper",
+    "definition": "适当的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "proven",
+    "definition": "证明",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "public",
+    "definition": "公共的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "pulled",
+    "definition": "拉",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "purely",
+    "definition": "纯粹地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "purple",
+    "definition": "紫色的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "pushed",
+    "definition": "推",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "puzzle",
+    "definition": "谜题",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "queens",
+    "definition": "女王们",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "quoted",
+    "definition": "引用",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rabbit",
+    "definition": "兔子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "racing",
+    "definition": "赛车",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "radius",
+    "definition": "半径",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "raised",
+    "definition": "提高",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "random",
+    "definition": "随机的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ranges",
+    "definition": "范围",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ranked",
+    "definition": "排名",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rapids",
+    "definition": "急流",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rarely",
+    "definition": "很少",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rather",
+    "definition": "宁愿",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "rating",
+    "definition": "评级",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ratios",
+    "definition": "比率",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "reader",
+    "definition": "读者",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "really",
+    "definition": "真的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "reason",
+    "definition": "原因",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "recall",
+    "definition": "召回",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "recent",
+    "definition": "最近的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "recipe",
+    "definition": "食谱",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "record",
+    "definition": "记录",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "reduce",
+    "definition": "减少",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "reform",
+    "definition": "改革",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "refuse",
+    "definition": "拒绝",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "regard",
+    "definition": "关于",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "region",
+    "definition": "地区",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "regret",
+    "definition": "后悔",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "relate",
+    "definition": "关联",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "relief",
+    "definition": "救济",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "remain",
+    "definition": "保持",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "remark",
+    "definition": "评论",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "remind",
+    "definition": "提醒",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "remote",
+    "definition": "远程",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "remove",
+    "definition": "移除",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "render",
+    "definition": "渲染",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rental",
+    "definition": "租金",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "repair",
+    "definition": "修理",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "repeat",
+    "definition": "重复",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "report",
+    "definition": "报告",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "rescue",
+    "definition": "救援",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "resort",
+    "definition": "度假村",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "result",
+    "definition": "结果",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "retail",
+    "definition": "零售",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "retain",
+    "definition": "保留",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "retire",
+    "definition": "退休",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "return",
+    "definition": "返回",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "reveal",
+    "definition": "揭示",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "review",
+    "definition": "评论",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "revolt",
+    "definition": "反抗",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "reward",
+    "definition": "奖励",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rhythm",
+    "definition": "节奏",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ribbon",
+    "definition": "丝带",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "richer",
+    "definition": "更富的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "riders",
+    "definition": "骑手",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rights",
+    "definition": "权利",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "rivers",
+    "definition": "河流",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "robots",
+    "definition": "机器人",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "rocket",
+    "definition": "火箭",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "rolled",
+    "definition": "滚动",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "romans",
+    "definition": "罗马人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rooted",
+    "definition": "扎根",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "rubber",
+    "definition": "橡皮",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "ruling",
+    "definition": "裁决",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "runner",
+    "definition": "跑者",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "rushed",
+    "definition": "冲",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sacred",
+    "definition": "神圣的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "saddle",
+    "definition": "马鞍",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "safely",
+    "definition": "安全地",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "safety",
+    "definition": "安全",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sailed",
+    "definition": "航行",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sailor",
+    "definition": "水手",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "saints",
+    "definition": "圣人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "salary",
+    "definition": "工资",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sample",
+    "definition": "样本",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "saving",
+    "definition": "节省",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "scales",
+    "definition": "天平",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "scared",
+    "definition": "害怕的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "scenes",
+    "definition": "场景",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "scheme",
+    "definition": "方案",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "school",
+    "definition": "学校",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "scores",
+    "definition": "分数",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "screen",
+    "definition": "屏幕",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "script",
+    "definition": "脚本",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sealed",
+    "definition": "密封",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "search",
+    "definition": "搜索",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "season",
+    "definition": "季节",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "seated",
+    "definition": "就座",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "second",
+    "definition": "第二",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "secret",
+    "definition": "秘密",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sector",
+    "definition": "部门",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "secure",
+    "definition": "安全的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "seeing",
+    "definition": "看见",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "seemed",
+    "definition": "似乎",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "select",
+    "definition": "选择",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "seller",
+    "definition": "卖家",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "senate",
+    "definition": "参议院",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "senior",
+    "definition": "高级的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sensor",
+    "definition": "传感器",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "series",
+    "definition": "系列",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sermon",
+    "definition": "布道",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "server",
+    "definition": "服务器",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "serves",
+    "definition": "服务",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "settle",
+    "definition": "解决",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "severe",
+    "definition": "严重的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "shadow",
+    "definition": "影子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shaken",
+    "definition": "动摇",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "shaped",
+    "definition": "成形",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "shapes",
+    "definition": "形状",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shared",
+    "definition": "共享",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shares",
+    "definition": "股份",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sheets",
+    "definition": "床单",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shield",
+    "definition": "盾牌",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "shifts",
+    "definition": "班次",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "shines",
+    "definition": "发光",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shirts",
+    "definition": "衬衫",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shoes",
+    "definition": "鞋子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shorts",
+    "definition": "短裤",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "showed",
+    "definition": "展示",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shower",
+    "definition": "淋浴",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "shrine",
+    "definition": "神殿",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "signal",
+    "definition": "信号",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "signed",
+    "definition": "签署",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "silent",
+    "definition": "安静的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "silver",
+    "definition": "银",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "simple",
+    "definition": "简单的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "simply",
+    "definition": "简单地",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "singer",
+    "definition": "歌手",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "single",
+    "definition": "单一的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sister",
+    "definition": "姐妹",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sketch",
+    "definition": "草图",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "skills",
+    "definition": "技能",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "slaves",
+    "definition": "奴隶",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sleeps",
+    "definition": "睡觉",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "slices",
+    "definition": "切片",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "slight",
+    "definition": "轻微的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "slowly",
+    "definition": "缓慢地",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "smalls",
+    "definition": "小件",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "smells",
+    "definition": "气味",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "smiled",
+    "definition": "微笑",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "smiles",
+    "definition": "微笑",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "smooth",
+    "definition": "光滑的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "snakes",
+    "definition": "蛇",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "soccer",
+    "definition": "足球",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "social",
+    "definition": "社会的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "socket",
+    "definition": "插座",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sodium",
+    "definition": "钠",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "softer",
+    "definition": "更柔软",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "softly",
+    "definition": "温柔地",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "solely",
+    "definition": "单独地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "solved",
+    "definition": "解决",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sounds",
+    "definition": "声音",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "source",
+    "definition": "来源",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "spaces",
+    "definition": "空间",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "speaks",
+    "definition": "说话",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "speech",
+    "definition": "演讲",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "speeds",
+    "definition": "速度",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "spells",
+    "definition": "拼写",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "spends",
+    "definition": "花费",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sphere",
+    "definition": "球体",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "spider",
+    "definition": "蜘蛛",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "spirit",
+    "definition": "精神",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "splash",
+    "definition": "飞溅",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "spoken",
+    "definition": "口语",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sports",
+    "definition": "运动",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "spread",
+    "definition": "传播",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "spring",
+    "definition": "春天",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "square",
+    "definition": "正方形",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "stable",
+    "definition": "稳定的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stages",
+    "definition": "阶段",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stairs",
+    "definition": "楼梯",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "stamps",
+    "definition": "邮票",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "stands",
+    "definition": "站立",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "starts",
+    "definition": "开始",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "stated",
+    "definition": "陈述",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "states",
+    "definition": "州",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "statue",
+    "definition": "雕像",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "status",
+    "definition": "状态",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stayed",
+    "definition": "停留",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "steady",
+    "definition": "稳定的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "steals",
+    "definition": "偷窃",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stereo",
+    "definition": "立体声",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sticky",
+    "definition": "粘的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stocks",
+    "definition": "股票",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stolen",
+    "definition": "被盗的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stones",
+    "definition": "石头",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "stored",
+    "definition": "存储",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "stores",
+    "definition": "商店",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "storms",
+    "definition": "风暴",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "strain",
+    "definition": "拉伤",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "strand",
+    "definition": "线",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "straps",
+    "definition": "带子",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stream",
+    "definition": "溪流",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "street",
+    "definition": "街道",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "stress",
+    "definition": "压力",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "strict",
+    "definition": "严格的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "strike",
+    "definition": "罢工",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "string",
+    "definition": "字符串",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "strips",
+    "definition": "条",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stroke",
+    "definition": "中风",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "strong",
+    "definition": "强壮的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "struck",
+    "definition": "击打",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "studio",
+    "definition": "工作室",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "stupid",
+    "definition": "愚蠢的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "styles",
+    "definition": "风格",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "submit",
+    "definition": "提交",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "suburb",
+    "definition": "郊区",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sudden",
+    "definition": "突然的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "suffer",
+    "definition": "遭受",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sugars",
+    "definition": "糖",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "suited",
+    "definition": "适合",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "summer",
+    "definition": "夏天",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "summit",
+    "definition": "峰会",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "sunday",
+    "definition": "星期日",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "sunset",
+    "definition": "日落",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "supper",
+    "definition": "晚餐",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "supply",
+    "definition": "供应",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "surely",
+    "definition": "当然",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "survey",
+    "definition": "调查",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "switch",
+    "definition": "开关",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "symbol",
+    "definition": "符号",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "syntax",
+    "definition": "语法",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "system",
+    "definition": "系统",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tables",
+    "definition": "桌子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tablet",
+    "definition": "平板",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tackle",
+    "definition": "处理",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tailed",
+    "definition": "尾随",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tailor",
+    "definition": "裁缝",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "talent",
+    "definition": "天赋",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "talked",
+    "definition": "谈话",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "taller",
+    "definition": "更高的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tangle",
+    "definition": "纠缠",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "target",
+    "definition": "目标",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tasted",
+    "definition": "品尝",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "taught",
+    "definition": "教",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "taxes",
+    "definition": "税",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "teamed",
+    "definition": "组队",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "temple",
+    "definition": "寺庙",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tender",
+    "definition": "温柔的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tennis",
+    "definition": "网球",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "termed",
+    "definition": "称为",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "terror",
+    "definition": "恐怖",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tested",
+    "definition": "测试",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "thanks",
+    "definition": "感谢",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "themes",
+    "definition": "主题",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "theory",
+    "definition": "理论",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "theres",
+    "definition": "那里有",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "theses",
+    "definition": "论文",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "things",
+    "definition": "事物",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "thinks",
+    "definition": "认为",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "thirty",
+    "definition": "三十",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "though",
+    "definition": "虽然",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "threat",
+    "definition": "威胁",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "thrill",
+    "definition": "激动",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "thrive",
+    "definition": "繁荣",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "throne",
+    "definition": "王座",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "thrown",
+    "definition": "扔",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "thumbs",
+    "definition": "拇指",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "ticket",
+    "definition": "票",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tigers",
+    "definition": "老虎",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tights",
+    "definition": "紧身裤",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "timing",
+    "definition": "定时",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tissue",
+    "definition": "组织",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "titled",
+    "definition": "命名",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "titles",
+    "definition": "标题",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "todays",
+    "definition": "今天的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "toilet",
+    "definition": "厕所",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tongue",
+    "definition": "舌头",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "topics",
+    "definition": "话题",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "topped",
+    "definition": "顶部",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "torque",
+    "definition": "扭矩",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "totally",
+    "definition": "完全地",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "toward",
+    "definition": "向",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "towers",
+    "definition": "塔",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tracks",
+    "definition": "轨道",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "trades",
+    "definition": "交易",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trails",
+    "definition": "小径",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trains",
+    "definition": "火车",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "traits",
+    "definition": "特点",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "travel",
+    "definition": "旅行",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "treats",
+    "definition": "对待",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "trends",
+    "definition": "趋势",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trials",
+    "definition": "试验",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tribal",
+    "definition": "部落的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tribes",
+    "definition": "部落",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tricks",
+    "definition": "把戏",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "triple",
+    "definition": "三倍",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "troops",
+    "definition": "军队",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trophy",
+    "definition": "奖杯",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trucks",
+    "definition": "卡车",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "truest",
+    "definition": "最真实",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trumps",
+    "definition": "胜过",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trunks",
+    "definition": "树干",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trusts",
+    "definition": "信任",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "truths",
+    "definition": "真理",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "trying",
+    "definition": "尝试",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "tubing",
+    "definition": "管道",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tucked",
+    "definition": "塞入",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tumble",
+    "definition": "跌倒",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "tunnel",
+    "definition": "隧道",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "turkey",
+    "definition": "火鸡",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "turned",
+    "definition": "转",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "turtle",
+    "definition": "海龟",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "twelve",
+    "definition": "十二",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "twenty",
+    "definition": "二十",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "typing",
+    "definition": "打字",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "unable",
+    "definition": "不能的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "uncles",
+    "definition": "叔叔们",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "unique",
+    "definition": "独特的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "united",
+    "definition": "联合的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "unlock",
+    "definition": "解锁",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "unsafe",
+    "definition": "不安全",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "update",
+    "definition": "更新",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "uphill",
+    "definition": "上坡",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "upload",
+    "definition": "上传",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "upward",
+    "definition": "向上",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "urgent",
+    "definition": "紧急的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "useful",
+    "definition": "有用的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "valley",
+    "definition": "山谷",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "valued",
+    "definition": "有价值的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "values",
+    "definition": "价值",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "vendor",
+    "definition": "供应商",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "venues",
+    "definition": "地点",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "verbal",
+    "definition": "口头的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "versus",
+    "definition": "对",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "victim",
+    "definition": "受害者",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "videos",
+    "definition": "视频",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "viewed",
+    "definition": "观看",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "viewer",
+    "definition": "观众",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "violin",
+    "definition": "小提琴",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "virtue",
+    "definition": "美德",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "visits",
+    "definition": "访问",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "visual",
+    "definition": "视觉的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "voices",
+    "definition": "声音",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "volume",
+    "definition": "音量",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "voters",
+    "definition": "选民",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "waited",
+    "definition": "等待",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "waiter",
+    "definition": "服务员",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "waking",
+    "definition": "醒来",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "walked",
+    "definition": "走",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "walker",
+    "definition": "步行者",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "wallet",
+    "definition": "钱包",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "walnut",
+    "definition": "核桃",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wander",
+    "definition": "漫步",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wanted",
+    "definition": "想要",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "warden",
+    "definition": "看守人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "warmed",
+    "definition": "温暖",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "warmer",
+    "definition": "更温暖",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "warmth",
+    "definition": "温暖",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "warned",
+    "definition": "警告",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "washed",
+    "definition": "洗",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "washer",
+    "definition": "洗衣机",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wasted",
+    "definition": "浪费",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "waters",
+    "definition": "水域",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "waving",
+    "definition": "挥手",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "wealth",
+    "definition": "财富",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "weapon",
+    "definition": "武器",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "weekly",
+    "definition": "每周的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "weight",
+    "definition": "重量",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "weirdo",
+    "definition": "怪人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wheels",
+    "definition": "轮子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "wholly",
+    "definition": "完全地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wicked",
+    "definition": "邪恶的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "widely",
+    "definition": "广泛地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "widens",
+    "definition": "加宽",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "willed",
+    "definition": "意志",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "winded",
+    "definition": "气喘",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "window",
+    "definition": "窗户",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "winner",
+    "definition": "赢家",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "winter",
+    "definition": "冬天",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "wisdom",
+    "definition": "智慧",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wished",
+    "definition": "希望",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "wishes",
+    "definition": "愿望",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "within",
+    "definition": "在里面",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "wonder",
+    "definition": "奇迹",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "wooden",
+    "definition": "木制的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "worked",
+    "definition": "工作",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "worker",
+    "definition": "工人",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "worlds",
+    "definition": "世界",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "worsen",
+    "definition": "恶化",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "worthy",
+    "definition": "值得的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wounds",
+    "definition": "伤口",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wrapup",
+    "definition": "总结",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "wright",
+    "definition": "制作者",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "writes",
+    "definition": "写",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "writer",
+    "definition": "作家",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "wrongs",
+    "definition": "错误",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "yields",
+    "definition": "产量",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "yogurt",
+    "definition": "酸奶",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "youths",
+    "definition": "青年",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "zeroes",
+    "definition": "零",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "zoning",
+    "definition": "分区",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "accept",
+    "definition": "接受",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "access",
+    "definition": "接近",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "across",
+    "definition": "穿过",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "acting",
+    "definition": "表演",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "action",
+    "definition": "行动",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "active",
+    "definition": "活跃的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "actors",
+    "definition": "演员",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "actual",
+    "definition": "实际的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "adding",
+    "definition": "添加",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "adjust",
+    "definition": "调整",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "admits",
+    "definition": "承认",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "adults",
+    "definition": "成年人",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "advice",
+    "definition": "建议",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "advise",
+    "definition": "劝告",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "afford",
+    "definition": "负担得起",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "afraid",
+    "definition": "害怕的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "agency",
+    "definition": "机构",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "agenda",
+    "definition": "议程",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "agents",
+    "definition": "代理人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "agrees",
+    "definition": "同意",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "albums",
+    "definition": "相册",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "alerts",
+    "definition": "警报",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "aliens",
+    "definition": "外星人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "allows",
+    "definition": "允许",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "almost",
+    "definition": "几乎",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "amazed",
+    "definition": "惊讶的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "amount",
+    "definition": "数量",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "animal",
+    "definition": "动物",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "answer",
+    "definition": "回答",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "anyone",
+    "definition": "任何人",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "anyway",
+    "definition": "无论如何",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "appeal",
+    "definition": "吸引",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "appear",
+    "definition": "出现",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "apples",
+    "definition": "苹果",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "Arctic",
+    "definition": "北极的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "argued",
+    "definition": "争论",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "around",
+    "definition": "周围",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "arrest",
+    "definition": "逮捕",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "arrive",
+    "definition": "到达",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "artist",
+    "definition": "艺术家",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "asking",
+    "definition": "询问",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "assets",
+    "definition": "资产",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "assign",
+    "definition": "分配",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "assist",
+    "definition": "帮助",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "assume",
+    "definition": "假设",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "attack",
+    "definition": "攻击",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "attend",
+    "definition": "参加",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "August",
+    "definition": "八月",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "author",
+    "definition": "作者",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "avatar",
+    "definition": "头像",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "avenue",
+    "definition": "大道",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "awards",
+    "definition": "奖项",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "babies",
+    "definition": "婴儿",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "backed",
+    "definition": "支持",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "backup",
+    "definition": "备份",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "badges",
+    "definition": "徽章",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "baking",
+    "definition": "烘焙",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "banana",
+    "definition": "香蕉",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "banned",
+    "definition": "禁止",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "banner",
+    "definition": "横幅",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "barely",
+    "definition": "仅仅",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "barrel",
+    "definition": "桶",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "basics",
+    "definition": "基础",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "basket",
+    "definition": "篮子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "battle",
+    "definition": "战斗",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "beaker",
+    "definition": "烧杯",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "beauty",
+    "definition": "美丽",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "became",
+    "definition": "成为",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "become",
+    "definition": "成为",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "before",
+    "definition": "之前",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "begins",
+    "definition": "开始",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "behind",
+    "definition": "后面",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "belief",
+    "definition": "信念",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "belong",
+    "definition": "属于",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "beside",
+    "definition": "在旁边",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "better",
+    "definition": "更好的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "beyond",
+    "definition": "超越",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "bigger",
+    "definition": "更大的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bishop",
+    "definition": "主教",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "blacks",
+    "definition": "黑色",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "blanks",
+    "definition": "空白",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "blocks",
+    "definition": "街区",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bloods",
+    "definition": "血液",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "boards",
+    "definition": "木板",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bodies",
+    "definition": "身体",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "boiled",
+    "definition": "煮沸",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "boiler",
+    "definition": "锅炉",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "border",
+    "definition": "边界",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "boring",
+    "definition": "无聊的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "borrow",
+    "definition": "借",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bottle",
+    "definition": "瓶子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bottom",
+    "definition": "底部",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bought",
+    "definition": "买",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bounce",
+    "definition": "弹跳",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "bounds",
+    "definition": "边界",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "brains",
+    "definition": "大脑",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "branch",
+    "definition": "分支",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "brands",
+    "definition": "品牌",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "breach",
+    "definition": "违反",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "breaks",
+    "definition": "打破",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "breath",
+    "definition": "呼吸",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bridge",
+    "definition": "桥",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "brings",
+    "definition": "带来",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "broken",
+    "definition": "破碎的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "broker",
+    "definition": "经纪人",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "bronze",
+    "definition": "青铜",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "bubble",
+    "definition": "气泡",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bucket",
+    "definition": "桶",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "budget",
+    "definition": "预算",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "buffer",
+    "definition": "缓冲",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "builds",
+    "definition": "建造",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "bundle",
+    "definition": "捆",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "bureau",
+    "definition": "局",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "buried",
+    "definition": "埋葬",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "burned",
+    "definition": "燃烧",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "butter",
+    "definition": "黄油",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "button",
+    "definition": "按钮",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "buyers",
+    "definition": "买家",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "buying",
+    "definition": "购买",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cables",
+    "definition": "电缆",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "called",
+    "definition": "称为",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "caller",
+    "definition": "呼叫者",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "camera",
+    "definition": "相机",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "campus",
+    "definition": "校园",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "cancel",
+    "definition": "取消",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "cancer",
+    "definition": "癌症",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "candle",
+    "definition": "蜡烛",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cannot",
+    "definition": "不能",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "carbon",
+    "definition": "碳",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "career",
+    "definition": "职业",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "caring",
+    "definition": "关心",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "castle",
+    "definition": "城堡",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "casual",
+    "definition": "休闲的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "caught",
+    "definition": "抓住",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "caused",
+    "definition": "导致",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "causes",
+    "definition": "原因",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "center",
+    "definition": "中心",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "chains",
+    "definition": "链条",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "chairs",
+    "definition": "椅子",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "chance",
+    "definition": "机会",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "change",
+    "definition": "改变",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "chapel",
+    "definition": "小教堂",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "charge",
+    "definition": "收费",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "charts",
+    "definition": "图表",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "checks",
+    "definition": "检查",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cheeks",
+    "definition": "脸颊",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "cheese",
+    "definition": "奶酪",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cherry",
+    "definition": "樱桃",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "choose",
+    "definition": "选择",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "chosen",
+    "definition": "选定的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "church",
+    "definition": "教堂",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "circle",
+    "definition": "圆圈",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cities",
+    "definition": "城市",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "claims",
+    "definition": "声称",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "clears",
+    "definition": "清除",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "clicks",
+    "definition": "点击",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "client",
+    "definition": "客户",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "climbs",
+    "definition": "攀爬",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "clocks",
+    "definition": "时钟",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "closed",
+    "definition": "关闭",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "closer",
+    "definition": "更近",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "closes",
+    "definition": "关闭",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cloths",
+    "definition": "布料",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "clouds",
+    "definition": "云",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cloudy",
+    "definition": "多云的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "clutch",
+    "definition": "离合器",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "coasts",
+    "definition": "海岸",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "coffee",
+    "definition": "咖啡",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "coined",
+    "definition": "创造",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "collar",
+    "definition": "衣领",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "colony",
+    "definition": "殖民地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "colors",
+    "definition": "颜色",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "column",
+    "definition": "列",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "combat",
+    "definition": "战斗",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "coming",
+    "definition": "来",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "commit",
+    "definition": "提交",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "common",
+    "definition": "普通的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "comply",
+    "definition": "遵守",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "config",
+    "definition": "配置",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "cookie",
+    "definition": "饼干",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cooler",
+    "definition": "冷却器",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "copied",
+    "definition": "复制",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "copies",
+    "definition": "副本",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "copper",
+    "definition": "铜",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "corner",
+    "definition": "角落",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "cotton",
+    "definition": "棉花",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "counts",
+    "definition": "计数",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "county",
+    "definition": "县",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "couple",
+    "definition": "夫妻",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "course",
+    "definition": "课程",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "courts",
+    "definition": "法院",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "covers",
+    "definition": "覆盖",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "create",
+    "definition": "创建",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "credit",
+    "definition": "信用",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "crisis",
+    "definition": "危机",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "custom",
+    "definition": "自定义",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "damage",
+    "definition": "损坏",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "danced",
+    "definition": "跳舞",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "dancer",
+    "definition": "舞者",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "dances",
+    "definition": "舞蹈",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "danger",
+    "definition": "危险",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "darker",
+    "definition": "更暗的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "dating",
+    "definition": "约会",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "dealer",
+    "definition": "经销商",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "deaths",
+    "definition": "死亡",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "debate",
+    "definition": "辩论",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "decade",
+    "definition": "十年",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "decent",
+    "definition": "体面的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "decide",
+    "definition": "决定",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "defeat",
+    "definition": "击败",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "defend",
+    "definition": "防守",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "define",
+    "definition": "定义",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "degree",
+    "definition": "学位",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "delays",
+    "definition": "延迟",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "demand",
+    "definition": "需求",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "denied",
+    "definition": "拒绝",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "denies",
+    "definition": "否认",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "depend",
+    "definition": "依赖",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "depths",
+    "definition": "深度",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "deputy",
+    "definition": "副手",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "derive",
+    "definition": "派生",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "desert",
+    "definition": "沙漠",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "design",
+    "definition": "设计",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "desire",
+    "definition": "愿望",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "detail",
+    "definition": "细节",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "detect",
+    "definition": "检测",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "device",
+    "definition": "设备",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "dialog",
+    "definition": "对话框",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "differ",
+    "definition": "不同",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "dinner",
+    "definition": "晚餐",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "direct",
+    "definition": "直接的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "dollar",
+    "definition": "美元",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "domain",
+    "definition": "域",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "donate",
+    "definition": "捐赠",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "donkey",
+    "definition": "驴",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "double",
+    "definition": "双倍",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "doubts",
+    "definition": "怀疑",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "dozens",
+    "definition": "许多",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "dragon",
+    "definition": "龙",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "drawer",
+    "definition": "抽屉",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "dreams",
+    "definition": "梦想",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "drinks",
+    "definition": "饮料",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "driven",
+    "definition": "驱动",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "driver",
+    "definition": "司机",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "drives",
+    "definition": "驱动器",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "during",
+    "definition": "在...期间",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "eagles",
+    "definition": "鹰",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "earned",
+    "definition": "赚取",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "easier",
+    "definition": "更容易",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "easily",
+    "definition": "容易地",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "eating",
+    "definition": "吃",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "editor",
+    "definition": "编辑器",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "effect",
+    "definition": "效果",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "effort",
+    "definition": "努力",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "eighth",
+    "definition": "第八",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "either",
+    "definition": "任一",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "elders",
+    "definition": "长辈",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "eldest",
+    "definition": "最年长的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "emails",
+    "definition": "电子邮件",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "emerge",
+    "definition": "出现",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "empire",
+    "definition": "帝国",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "employ",
+    "definition": "雇用",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "enable",
+    "definition": "启用",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ending",
+    "definition": "结束",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "energy",
+    "definition": "能量",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "engage",
+    "definition": "从事",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "engine",
+    "definition": "引擎",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "enjoys",
+    "definition": "享受",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "enough",
+    "definition": "足够",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "ensure",
+    "definition": "确保",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "enters",
+    "definition": "进入",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "entire",
+    "definition": "全部的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "entity",
+    "definition": "实体",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "equals",
+    "definition": "等于",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "errors",
+    "definition": "错误",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "escape",
+    "definition": "逃跑",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "essays",
+    "definition": "论文",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "estate",
+    "definition": "房产",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "ethnic",
+    "definition": "种族的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "events",
+    "definition": "事件",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "exceed",
+    "definition": "超过",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "except",
+    "definition": "除了",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "excess",
+    "definition": "过量",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "excuse",
+    "definition": "借口",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "exists",
+    "definition": "存在",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "expand",
+    "definition": "扩展",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "expect",
+    "definition": "期望",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "expert",
+    "definition": "专家",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "expire",
+    "definition": "到期",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "export",
+    "definition": "出口",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "expose",
+    "definition": "暴露",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "extend",
+    "definition": "延伸",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "extent",
+    "definition": "程度",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "extras",
+    "definition": "额外",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fabric",
+    "definition": "织物",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "facial",
+    "definition": "面部的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "facing",
+    "definition": "面对",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "factor",
+    "definition": "因素",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "failed",
+    "definition": "失败",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "fairly",
+    "definition": "相当",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fallen",
+    "definition": "落下",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "family",
+    "definition": "家庭",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "famous",
+    "definition": "著名的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "farmer",
+    "definition": "农民",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "faster",
+    "definition": "更快",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "father",
+    "definition": "父亲",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "faults",
+    "definition": "错误",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "feared",
+    "definition": "害怕",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fellow",
+    "definition": "伙伴",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "female",
+    "definition": "女性",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "fences",
+    "definition": "栅栏",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fields",
+    "definition": "田野",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "figure",
+    "definition": "数字",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "filled",
+    "definition": "填充",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "filter",
+    "definition": "过滤器",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "finals",
+    "definition": "决赛",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "finder",
+    "definition": "查找器",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "finger",
+    "definition": "手指",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "finish",
+    "definition": "完成",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "firing",
+    "definition": "开火",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "firmly",
+    "definition": "坚定地",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fiscal",
+    "definition": "财政的",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fitted",
+    "definition": "安装",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fixing",
+    "definition": "修理",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "flavor",
+    "definition": "风味",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "flight",
+    "definition": "飞行",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "floors",
+    "definition": "地板",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "flower",
+    "definition": "花",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "flying",
+    "definition": "飞行",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "folder",
+    "definition": "文件夹",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "follow",
+    "definition": "跟随",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "forced",
+    "definition": "强迫",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "forces",
+    "definition": "力量",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "forest",
+    "definition": "森林",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "forget",
+    "definition": "忘记",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "format",
+    "definition": "格式",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "formed",
+    "definition": "形成",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "former",
+    "definition": "前者",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "forums",
+    "definition": "论坛",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fossil",
+    "definition": "化石",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "foster",
+    "definition": "促进",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fought",
+    "definition": "战斗",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "fourth",
+    "definition": "第四",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "frames",
+    "definition": "框架",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "freeze",
+    "definition": "冻结",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "french",
+    "definition": "法语",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "friend",
+    "definition": "朋友",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "frozen",
+    "definition": "冷冻的",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "fruits",
+    "definition": "水果",
+    "difficulty": 1,
+    "csp_helper": true
+  },
+  {
+    "word": "funded",
+    "definition": "资助",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "fusion",
+    "definition": "融合",
+    "difficulty": 2,
+    "csp_helper": true
+  },
+  {
+    "word": "future",
+    "definition": "未来",
+    "difficulty": 1,
+    "csp_helper": true
+  }
+]

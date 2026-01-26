@@ -1,0 +1,12 @@
+{
+  "name": "必修3",
+  "group_code": "senior3",
+  "category": "高中",
+  "is_primary": false,
+  "level_count": 143,
+  "word_count": 662,
+  "vocab_size": 773,
+  "coverage": 85.6,
+  "success_count": 143,
+  "fail_count": 0
+}

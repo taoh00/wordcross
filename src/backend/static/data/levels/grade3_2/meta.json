@@ -1,0 +1,12 @@
+{
+  "name": "三年级下册",
+  "group_code": "grade3_2",
+  "category": "小学",
+  "is_primary": true,
+  "level_count": 81,
+  "word_count": 116,
+  "vocab_size": 131,
+  "coverage": 88.5,
+  "success_count": 81,
+  "fail_count": 0
+}

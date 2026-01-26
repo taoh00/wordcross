@@ -1,0 +1,12 @@
+{
+  "name": "大学六级",
+  "group_code": "cet6",
+  "category": "考试",
+  "is_primary": false,
+  "level_count": 533,
+  "word_count": 3012,
+  "vocab_size": 3543,
+  "coverage": 85.0,
+  "success_count": 533,
+  "fail_count": 0
+}

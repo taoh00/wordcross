@@ -1,0 +1,44 @@
+{
+  "overall_score": 90.83333333333333,
+  "all_passed": true,
+  "passed_count": 6,
+  "total_tests": 6,
+  "results": [
+    {
+      "name": "词库覆盖度",
+      "passed": true,
+      "score": 60.0,
+      "message": "各词库在目标长度上的覆盖情况"
+    },
+    {
+      "name": "稀疏布局引擎",
+      "passed": true,
+      "score": 85.0,
+      "message": "成功率 85.0%, 阈值 85.0%"
+    },
+    {
+      "name": "密集布局引擎",
+      "passed": true,
+      "score": 100.0,
+      "message": "成功率 100.0%, 阈值 70.0%"
+    },
+    {
+      "name": "双引擎协同",
+      "passed": true,
+      "score": 100.0,
+      "message": "关卡覆盖率 100.0%"
+    },
+    {
+      "name": "性能基准",
+      "passed": true,
+      "score": 100,
+      "message": "生成P95: 50.0ms"
+    },
+    {
+      "name": "CSP收敛性",
+      "passed": true,
+      "score": 100.0,
+      "message": "平均收敛率 100.0%"
+    }
+  ]
+}

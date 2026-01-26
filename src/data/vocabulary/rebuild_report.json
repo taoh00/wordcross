@@ -1,0 +1,375 @@
+{
+  "primary": {
+    "name": "小学词汇",
+    "count": 819,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "PEPXiaoXue3_1.json",
+        "total": 64,
+        "new": 64
+      },
+      {
+        "file": "PEPXiaoXue3_2.json",
+        "total": 72,
+        "new": 70
+      },
+      {
+        "file": "PEPXiaoXue4_1.json",
+        "total": 84,
+        "new": 83
+      },
+      {
+        "file": "PEPXiaoXue4_2.json",
+        "total": 104,
+        "new": 102
+      },
+      {
+        "file": "PEPXiaoXue5_1.json",
+        "total": 131,
+        "new": 128
+      },
+      {
+        "file": "PEPXiaoXue5_2.json",
+        "total": 156,
+        "new": 149
+      },
+      {
+        "file": "PEPXiaoXue6_1.json",
+        "total": 130,
+        "new": 125
+      },
+      {
+        "file": "PEPXiaoXue6_2.json",
+        "total": 108,
+        "new": 98
+      }
+    ]
+  },
+  "junior": {
+    "name": "初中词汇",
+    "count": 3119,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "ChuZhong_3.json",
+        "total": 1803,
+        "new": 1803
+      },
+      {
+        "file": "ChuZhongluan_2.json",
+        "total": 1420,
+        "new": 184
+      },
+      {
+        "file": "PEPChuZhong7_1.json",
+        "total": 392,
+        "new": 68
+      },
+      {
+        "file": "PEPChuZhong7_2.json",
+        "total": 492,
+        "new": 133
+      },
+      {
+        "file": "PEPChuZhong8_1.json",
+        "total": 419,
+        "new": 135
+      },
+      {
+        "file": "PEPChuZhong8_2.json",
+        "total": 466,
+        "new": 171
+      },
+      {
+        "file": "PEPChuZhong9_1.json",
+        "total": 551,
+        "new": 228
+      },
+      {
+        "file": "WaiYanSheChuZhong_1.json",
+        "total": 629,
+        "new": 74
+      },
+      {
+        "file": "WaiYanSheChuZhong_2.json",
+        "total": 438,
+        "new": 66
+      },
+      {
+        "file": "WaiYanSheChuZhong_3.json",
+        "total": 320,
+        "new": 53
+      },
+      {
+        "file": "WaiYanSheChuZhong_4.json",
+        "total": 266,
+        "new": 60
+      },
+      {
+        "file": "WaiYanSheChuZhong_5.json",
+        "total": 381,
+        "new": 114
+      },
+      {
+        "file": "WaiYanSheChuZhong_6.json",
+        "total": 128,
+        "new": 30
+      }
+    ]
+  },
+  "senior": {
+    "name": "高中词汇",
+    "count": 6555,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "GaoZhong_3.json",
+        "total": 2340,
+        "new": 2340
+      },
+      {
+        "file": "GaoZhongluan_2.json",
+        "total": 3668,
+        "new": 1403
+      },
+      {
+        "file": "PEPGaoZhong_1.json",
+        "total": 311,
+        "new": 145
+      },
+      {
+        "file": "PEPGaoZhong_10.json",
+        "total": 361,
+        "new": 171
+      },
+      {
+        "file": "PEPGaoZhong_11.json",
+        "total": 309,
+        "new": 172
+      },
+      {
+        "file": "PEPGaoZhong_2.json",
+        "total": 319,
+        "new": 141
+      },
+      {
+        "file": "PEPGaoZhong_3.json",
+        "total": 366,
+        "new": 169
+      },
+      {
+        "file": "PEPGaoZhong_4.json",
+        "total": 307,
+        "new": 124
+      },
+      {
+        "file": "PEPGaoZhong_5.json",
+        "total": 357,
+        "new": 137
+      },
+      {
+        "file": "PEPGaoZhong_6.json",
+        "total": 391,
+        "new": 172
+      },
+      {
+        "file": "PEPGaoZhong_7.json",
+        "total": 384,
+        "new": 140
+      },
+      {
+        "file": "PEPGaoZhong_8.json",
+        "total": 420,
+        "new": 161
+      },
+      {
+        "file": "PEPGaoZhong_9.json",
+        "total": 352,
+        "new": 153
+      },
+      {
+        "file": "BeiShiGaoZhong_1.json",
+        "total": 226,
+        "new": 54
+      },
+      {
+        "file": "BeiShiGaoZhong_10.json",
+        "total": 267,
+        "new": 231
+      },
+      {
+        "file": "BeiShiGaoZhong_11.json",
+        "total": 330,
+        "new": 279
+      },
+      {
+        "file": "BeiShiGaoZhong_2.json",
+        "total": 244,
+        "new": 54
+      },
+      {
+        "file": "BeiShiGaoZhong_3.json",
+        "total": 295,
+        "new": 58
+      },
+      {
+        "file": "BeiShiGaoZhong_4.json",
+        "total": 336,
+        "new": 29
+      },
+      {
+        "file": "BeiShiGaoZhong_5.json",
+        "total": 327,
+        "new": 29
+      },
+      {
+        "file": "BeiShiGaoZhong_6.json",
+        "total": 271,
+        "new": 73
+      },
+      {
+        "file": "BeiShiGaoZhong_7.json",
+        "total": 334,
+        "new": 49
+      },
+      {
+        "file": "BeiShiGaoZhong_8.json",
+        "total": 364,
+        "new": 65
+      },
+      {
+        "file": "BeiShiGaoZhong_9.json",
+        "total": 299,
+        "new": 206
+      }
+    ]
+  },
+  "cet4": {
+    "name": "四级词汇",
+    "count": 4543,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "CET4_3.json",
+        "total": 2607,
+        "new": 2607
+      },
+      {
+        "file": "CET4luan_1.json",
+        "total": 1162,
+        "new": 428
+      },
+      {
+        "file": "CET4luan_2.json",
+        "total": 3739,
+        "new": 1508
+      }
+    ]
+  },
+  "cet6": {
+    "name": "六级词汇",
+    "count": 3991,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "CET6_2.json",
+        "total": 2078,
+        "new": 2078
+      },
+      {
+        "file": "CET6_3.json",
+        "total": 2345,
+        "new": 1397
+      },
+      {
+        "file": "CET6luan_1.json",
+        "total": 1228,
+        "new": 516
+      }
+    ]
+  },
+  "postgrad": {
+    "name": "考研词汇",
+    "count": 5047,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "KaoYan_2.json",
+        "total": 4533,
+        "new": 4533
+      },
+      {
+        "file": "KaoYanluan_1.json",
+        "total": 1341,
+        "new": 165
+      },
+      {
+        "file": "KaoYan_3.json",
+        "total": 3728,
+        "new": 349
+      }
+    ]
+  },
+  "gre": {
+    "name": "GRE词汇",
+    "count": 9984,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "GRE_2.json",
+        "total": 7199,
+        "new": 7199
+      },
+      {
+        "file": "GRE_3.json",
+        "total": 6515,
+        "new": 2785
+      }
+    ]
+  },
+  "toefl": {
+    "name": "托福词汇",
+    "count": 10367,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "TOEFL_2.json",
+        "total": 9213,
+        "new": 9212
+      },
+      {
+        "file": "TOEFL_3.json",
+        "total": 4264,
+        "new": 1155
+      }
+    ]
+  },
+  "ielts": {
+    "name": "雅思词汇",
+    "count": 5275,
+    "status": "已更新",
+    "sources": [
+      {
+        "file": "IELTSluan_2.json",
+        "total": 3427,
+        "new": 3427
+      },
+      {
+        "file": "IELTS_3.json",
+        "total": 3575,
+        "new": 1848
+      }
+    ]
+  },
+  "ket": {
+    "name": "KET词汇",
+    "count": 531,
+    "status": "保留现有"
+  },
+  "pet": {
+    "name": "PET词汇",
+    "count": 514,
+    "status": "保留现有"
+  }
+}

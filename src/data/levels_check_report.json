@@ -1,0 +1,1003 @@
+{
+  "check_time": "2026-01-25T01:15:02.217162",
+  "total_groups": 18,
+  "total_levels": 180,
+  "total_words": 604,
+  "issues_by_severity": {
+    "critical": 0,
+    "warning": 55,
+    "info": 4
+  },
+  "groups": [
+    {
+      "group_code": "grade3_1",
+      "group_name": "三年级上册",
+      "level_count": 10,
+      "word_count": 34,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "grade3_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "grade3_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "grade3_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 5,
+          "group": "grade3_1"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "grade3_2",
+      "group_name": "三年级下册",
+      "level_count": 10,
+      "word_count": 25,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "grade3_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "grade3_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "grade3_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 4,
+          "group": "grade3_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 5,
+          "group": "grade3_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 6,
+          "group": "grade3_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 7,
+          "group": "grade3_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 8,
+          "group": "grade3_2"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "grade4_1",
+      "group_name": "四年级上册",
+      "level_count": 10,
+      "word_count": 36,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "grade4_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "grade4_1"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "grade4_2",
+      "group_name": "四年级下册",
+      "level_count": 10,
+      "word_count": 36,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "grade4_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "grade4_2"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "grade5_1",
+      "group_name": "五年级上册",
+      "level_count": 10,
+      "word_count": 33,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "grade5_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "grade5_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "grade5_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 4,
+          "group": "grade5_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 5,
+          "group": "grade5_1"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "grade5_2",
+      "group_name": "五年级下册",
+      "level_count": 10,
+      "word_count": 32,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "grade5_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "grade5_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 4,
+          "group": "grade5_2"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "grade6_1",
+      "group_name": "六年级上册",
+      "level_count": 10,
+      "word_count": 35,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "grade6_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "grade6_1"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 5,
+          "group": "grade6_1"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "grade6_2",
+      "group_name": "六年级下册",
+      "level_count": 10,
+      "word_count": 33,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "grade6_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "grade6_2"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "grade6_2"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "junior",
+      "group_name": "初中词汇",
+      "level_count": 10,
+      "word_count": 31,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "junior"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "junior"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "junior"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "senior",
+      "group_name": "高中词汇",
+      "level_count": 10,
+      "word_count": 34,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "senior"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "senior"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "senior"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "ket",
+      "group_name": "KET考试",
+      "level_count": 10,
+      "word_count": 33,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "ket"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "ket"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "ket"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "pet",
+      "group_name": "PET考试",
+      "level_count": 10,
+      "word_count": 35,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "pet"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "pet"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 4,
+          "group": "pet"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "cet4",
+      "group_name": "大学四级",
+      "level_count": 10,
+      "word_count": 34,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "cet4"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "cet4"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "cet4"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "cet6",
+      "group_name": "大学六级",
+      "level_count": 10,
+      "word_count": 35,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "cet6"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "cet6"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "postgrad",
+      "group_name": "考研词汇",
+      "level_count": 10,
+      "word_count": 32,
+      "issues": [
+        {
+          "type": "no_prefilled",
+          "severity": "info",
+          "message": "没有预填字母",
+          "level": 1,
+          "group": "postgrad"
+        },
+        {
+          "type": "no_prefilled",
+          "severity": "info",
+          "message": "没有预填字母",
+          "level": 2,
+          "group": "postgrad"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "postgrad"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 4,
+          "group": "postgrad"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "ielts",
+      "group_name": "雅思",
+      "level_count": 10,
+      "word_count": 36,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "ielts"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "ielts"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "toefl",
+      "group_name": "托福",
+      "level_count": 10,
+      "word_count": 35,
+      "issues": [
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 1,
+          "group": "toefl"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 2,
+          "group": "toefl"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "toefl"
+        }
+      ],
+      "status": "warning"
+    },
+    {
+      "group_code": "gre",
+      "group_name": "GRE",
+      "level_count": 10,
+      "word_count": 35,
+      "issues": [
+        {
+          "type": "no_prefilled",
+          "severity": "info",
+          "message": "没有预填字母",
+          "level": 1,
+          "group": "gre"
+        },
+        {
+          "type": "no_prefilled",
+          "severity": "info",
+          "message": "没有预填字母",
+          "level": 2,
+          "group": "gre"
+        },
+        {
+          "type": "word_count",
+          "severity": "warning",
+          "message": "单词数量偏少: 只有2个",
+          "level": 3,
+          "group": "gre"
+        }
+      ],
+      "status": "warning"
+    }
+  ],
+  "all_issues": [
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "grade3_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "grade3_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "grade3_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 5,
+      "group": "grade3_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "grade3_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "grade3_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "grade3_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 4,
+      "group": "grade3_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 5,
+      "group": "grade3_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 6,
+      "group": "grade3_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 7,
+      "group": "grade3_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 8,
+      "group": "grade3_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "grade4_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "grade4_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "grade4_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "grade4_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "grade5_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "grade5_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "grade5_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 4,
+      "group": "grade5_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 5,
+      "group": "grade5_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "grade5_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "grade5_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 4,
+      "group": "grade5_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "grade6_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "grade6_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 5,
+      "group": "grade6_1"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "grade6_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "grade6_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "grade6_2"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "junior"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "junior"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "junior"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "senior"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "senior"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "senior"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "ket"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "ket"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "ket"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "pet"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "pet"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 4,
+      "group": "pet"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "cet4"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "cet4"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "cet4"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "cet6"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "cet6"
+    },
+    {
+      "type": "no_prefilled",
+      "severity": "info",
+      "message": "没有预填字母",
+      "level": 1,
+      "group": "postgrad"
+    },
+    {
+      "type": "no_prefilled",
+      "severity": "info",
+      "message": "没有预填字母",
+      "level": 2,
+      "group": "postgrad"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "postgrad"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 4,
+      "group": "postgrad"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "ielts"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "ielts"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 1,
+      "group": "toefl"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 2,
+      "group": "toefl"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "toefl"
+    },
+    {
+      "type": "no_prefilled",
+      "severity": "info",
+      "message": "没有预填字母",
+      "level": 1,
+      "group": "gre"
+    },
+    {
+      "type": "no_prefilled",
+      "severity": "info",
+      "message": "没有预填字母",
+      "level": 2,
+      "group": "gre"
+    },
+    {
+      "type": "word_count",
+      "severity": "warning",
+      "message": "单词数量偏少: 只有2个",
+      "level": 3,
+      "group": "gre"
+    }
+  ]
+}

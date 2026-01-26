@@ -1,0 +1,4363 @@
+[
+  {
+    "grid_size": 5,
+    "cells": [
+      [
+        null,
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 194,
+        "word": "ROW",
+        "definition": "排",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 2,
+        "length": 3,
+        "clue_number": 1
+      },
+      {
+        "id": 655,
+        "word": "NEWS",
+        "definition": "新闻",
+        "direction": "across",
+        "start_row": 2,
+        "start_col": 0,
+        "length": 4,
+        "clue_number": 2
+      }
+    ],
+    "prefilled": {
+      "2-2": "W",
+      "2-3": "S",
+      "2-1": "E",
+      "0-2": "R"
+    },
+    "clue_numbers": [
+      [
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 1,
+    "difficulty": "easy",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 5,
+    "cells": [
+      [
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 978,
+        "word": "WORD",
+        "definition": "单词",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 0,
+        "length": 4,
+        "clue_number": 1
+      },
+      {
+        "id": 735,
+        "word": "RAIL",
+        "definition": "铁轨",
+        "direction": "across",
+        "start_row": 2,
+        "start_col": 0,
+        "length": 4,
+        "clue_number": 2
+      }
+    ],
+    "prefilled": {
+      "2-0": "R",
+      "2-3": "L",
+      "2-1": "A",
+      "0-0": "W",
+      "1-0": "O"
+    },
+    "clue_numbers": [
+      [
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 2,
+    "difficulty": "easy",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 5,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 696,
+        "word": "PIER",
+        "definition": "码头",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 1,
+        "length": 4,
+        "clue_number": 1
+      },
+      {
+        "id": 1010,
+        "word": "WINDY",
+        "definition": "有风的",
+        "direction": "across",
+        "start_row": 2,
+        "start_col": 0,
+        "length": 5,
+        "clue_number": 2
+      }
+    ],
+    "prefilled": {
+      "2-1": "I",
+      "2-2": "N",
+      "2-4": "Y",
+      "1-1": "P",
+      "4-1": "R"
+    },
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      [
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 3,
+    "difficulty": "easy",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 5,
+    "cells": [
+      [
+        null,
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        "",
+        null
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 922,
+        "word": "TWIN",
+        "definition": "双胞胎",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 1,
+        "length": 4,
+        "clue_number": 1
+      },
+      {
+        "id": 116,
+        "word": "JET",
+        "definition": "喷气式飞机",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 3,
+        "length": 3,
+        "clue_number": 2
+      },
+      {
+        "id": 555,
+        "word": "KITE",
+        "definition": "风筝",
+        "direction": "across",
+        "start_row": 2,
+        "start_col": 0,
+        "length": 4,
+        "clue_number": 3
+      }
+    ],
+    "prefilled": {
+      "2-3": "E",
+      "2-1": "I",
+      "2-2": "T",
+      "0-1": "T",
+      "3-1": "N",
+      "1-3": "J"
+    },
+    "clue_numbers": [
+      [
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        2,
+        null
+      ],
+      [
+        3,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 4,
+    "difficulty": "easy",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 6,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "",
+        null,
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        "",
+        null,
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        "",
+        null,
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 594,
+        "word": "LOAD",
+        "definition": "装载",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 0,
+        "length": 4,
+        "clue_number": 1
+      },
+      {
+        "id": 386,
+        "word": "DREW",
+        "definition": "画(过去式)",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 4,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 992,
+        "word": "APPLE",
+        "definition": "苹果",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 0,
+        "length": 5,
+        "clue_number": 3
+      }
+    ],
+    "prefilled": {
+      "3-4": "E",
+      "3-0": "A",
+      "1-0": "L",
+      "1-4": "D"
+    },
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        1,
+        null,
+        null,
+        null,
+        2,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        3,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 5,
+    "difficulty": "medium",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 6,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "",
+        null,
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        "",
+        null,
+        null,
+        null,
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        "",
+        null,
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 972,
+        "word": "WISH",
+        "definition": "希望",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 0,
+        "length": 4,
+        "clue_number": 1
+      },
+      {
+        "id": 1103,
+        "word": "CATCH",
+        "definition": "抓住",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 4,
+        "length": 5,
+        "clue_number": 2
+      },
+      {
+        "id": 2,
+        "word": "AN",
+        "definition": "一个(元音前)",
+        "direction": "across",
+        "start_row": 2,
+        "start_col": 4,
+        "length": 2,
+        "clue_number": 3
+      },
+      {
+        "id": 1084,
+        "word": "SPORT",
+        "definition": "运动",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 0,
+        "length": 5,
+        "clue_number": 4
+      }
+    ],
+    "prefilled": {
+      "3-4": "T",
+      "3-0": "S",
+      "3-3": "R",
+      "2-4": "A",
+      "1-0": "W"
+    },
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        1,
+        null,
+        null,
+        null,
+        2,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        3,
+        null
+      ],
+      [
+        4,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 6,
+    "difficulty": "medium",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 469,
+        "word": "GIRL",
+        "definition": "女孩",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 3,
+        "length": 4,
+        "clue_number": 1
+      },
+      {
+        "id": 1105,
+        "word": "CLIMB",
+        "definition": "爬",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 5,
+        "clue_number": 2
+      },
+      {
+        "id": 341,
+        "word": "COME",
+        "definition": "来",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 606,
+        "word": "LOUD",
+        "definition": "大声的",
+        "direction": "across",
+        "start_row": 5,
+        "start_col": 3,
+        "length": 4,
+        "clue_number": 3
+      },
+      {
+        "id": 101,
+        "word": "HER",
+        "definition": "她的",
+        "direction": "across",
+        "start_row": 6,
+        "start_col": 0,
+        "length": 3,
+        "clue_number": 4
+      }
+    ],
+    "prefilled": {
+      "3-3": "I",
+      "3-1": "C",
+      "5-3": "L",
+      "6-1": "E",
+      "6-2": "R",
+      "5-5": "U"
+    },
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        3,
+        null,
+        null,
+        null
+      ],
+      [
+        4,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 7,
+    "difficulty": "medium",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 8,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "",
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        "",
+        "",
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 689,
+        "word": "PAVE",
+        "definition": "铺设",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 3,
+        "length": 4,
+        "clue_number": 1
+      },
+      {
+        "id": 1032,
+        "word": "CLASS",
+        "definition": "班级",
+        "direction": "across",
+        "start_row": 4,
+        "start_col": 1,
+        "length": 5,
+        "clue_number": 2
+      },
+      {
+        "id": 213,
+        "word": "SIX",
+        "definition": "六",
+        "direction": "down",
+        "start_row": 4,
+        "start_col": 5,
+        "length": 3,
+        "clue_number": 3
+      },
+      {
+        "id": 231,
+        "word": "TOE",
+        "definition": "脚趾",
+        "direction": "across",
+        "start_row": 6,
+        "start_col": 1,
+        "length": 3,
+        "clue_number": 4
+      }
+    ],
+    "prefilled": {
+      "4-5": "S",
+      "4-3": "A",
+      "6-3": "E",
+      "6-2": "O",
+      "6-5": "X"
+    },
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        2,
+        null,
+        null,
+        null,
+        3,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        4,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 8,
+    "difficulty": "medium",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 8,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null,
+        ""
+      ],
+      [
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        null,
+        ""
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        "",
+        null,
+        null,
+        ""
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 519,
+        "word": "HOME",
+        "definition": "家",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 2,
+        "length": 4,
+        "clue_number": 1
+      },
+      {
+        "id": 964,
+        "word": "WIND",
+        "definition": "风",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 7,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 671,
+        "word": "ONTO",
+        "definition": "到...上",
+        "direction": "across",
+        "start_row": 4,
+        "start_col": 2,
+        "length": 4,
+        "clue_number": 3
+      },
+      {
+        "id": 868,
+        "word": "TASK",
+        "definition": "任务",
+        "direction": "down",
+        "start_row": 4,
+        "start_col": 4,
+        "length": 4,
+        "clue_number": 4
+      },
+      {
+        "id": 795,
+        "word": "SHED",
+        "definition": "棚子",
+        "direction": "across",
+        "start_row": 6,
+        "start_col": 4,
+        "length": 4,
+        "clue_number": 5
+      }
+    ],
+    "prefilled": {
+      "4-2": "O",
+      "4-4": "T",
+      "6-4": "S",
+      "6-7": "D",
+      "3-2": "H",
+      "5-7": "N"
+    },
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        2
+      ],
+      [
+        null,
+        null,
+        3,
+        null,
+        4,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        5,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 9,
+    "difficulty": "hard",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 10,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        "",
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        "",
+        "",
+        "",
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "words": [
+      {
+        "id": 1002,
+        "word": "HAPPY",
+        "definition": "快乐的",
+        "direction": "across",
+        "start_row": 1,
+        "start_col": 4,
+        "length": 5,
+        "clue_number": 1
+      },
+      {
+        "id": 679,
+        "word": "PAIN",
+        "definition": "痛苦",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 7,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 934,
+        "word": "VOID",
+        "definition": "空的",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 5,
+        "length": 4,
+        "clue_number": 3
+      },
+      {
+        "id": 929,
+        "word": "VERB",
+        "definition": "动词",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 5,
+        "length": 4,
+        "clue_number": 3
+      },
+      {
+        "id": 731,
+        "word": "RACK",
+        "definition": "架子",
+        "direction": "down",
+        "start_row": 4,
+        "start_col": 2,
+        "length": 4,
+        "clue_number": 4
+      },
+      {
+        "id": 1003,
+        "word": "ANGRY",
+        "definition": "生气的",
+        "direction": "across",
+        "start_row": 5,
+        "start_col": 2,
+        "length": 5,
+        "clue_number": 5
+      }
+    ],
+    "prefilled": {
+      "5-2": "A",
+      "5-5": "R",
+      "3-5": "V",
+      "7-2": "K",
+      "3-7": "I",
+      "1-7": "P",
+      "1-4": "H"
+    },
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        2,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        3,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        4,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        5,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "level": 10,
+    "difficulty": "hard",
+    "group": "primary",
+    "layout_type": "sparse"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        null,
+        null,
+        "S",
+        null
+      ],
+      [
+        null,
+        "E",
+        null,
+        "M",
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        "C",
+        "",
+        "A",
+        "Z",
+        "Y",
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        "",
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        null,
+        "O",
+        null,
+        null
+      ],
+      [
+        "",
+        "E",
+        "",
+        "P",
+        null,
+        null,
+        null
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 2447,
+        "word": "DECADE",
+        "definition": "十年",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 1,
+        "length": 6,
+        "clue_number": 1
+      },
+      {
+        "id": 217,
+        "word": "SPY",
+        "definition": "间谍",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 5,
+        "length": 3,
+        "clue_number": 2
+      },
+      {
+        "id": 135,
+        "word": "MAN",
+        "definition": "男人",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 3,
+        "length": 3,
+        "clue_number": 3
+      },
+      {
+        "id": 1395,
+        "word": "CRAZY",
+        "definition": "疯狂的",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 5,
+        "clue_number": 4
+      },
+      {
+        "id": 271,
+        "word": "ZOO",
+        "definition": "动物园",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 4,
+        "length": 3,
+        "clue_number": 5
+      },
+      {
+        "id": 540,
+        "word": "JEEP",
+        "definition": "吉普车",
+        "direction": "across",
+        "start_row": 6,
+        "start_col": 0,
+        "length": 4,
+        "clue_number": 6
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        1,
+        null,
+        null,
+        null,
+        2,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        3,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        4,
+        null,
+        null,
+        5,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        6,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.3877551020408163,
+    "level": 11,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        "A",
+        "T",
+        "T",
+        "",
+        "",
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        "A",
+        "L",
+        "L",
+        "A",
+        "",
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        "I",
+        "N",
+        null,
+        null
+      ],
+      [
+        null,
+        "E",
+        null,
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "",
+        null,
+        null,
+        null
+      ]
+    ],
+    "revealed": [
+      [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 1734,
+        "word": "ATTACH",
+        "definition": "附上",
+        "direction": "across",
+        "start_row": 0,
+        "start_col": 0,
+        "length": 6,
+        "clue_number": 1
+      },
+      {
+        "id": 901,
+        "word": "TOLL",
+        "definition": "收费",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 2,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 167,
+        "word": "PAN",
+        "definition": "平底锅",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 4,
+        "length": 3,
+        "clue_number": 3
+      },
+      {
+        "id": 4091,
+        "word": "ALLAY",
+        "definition": "减轻",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 5,
+        "clue_number": 4
+      },
+      {
+        "id": 43,
+        "word": "ATE",
+        "definition": "吃(过去式)",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 3,
+        "clue_number": 4
+      },
+      {
+        "id": 592,
+        "word": "LIST",
+        "definition": "列表",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 3,
+        "length": 4,
+        "clue_number": 5
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        1,
+        null,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        3,
+        null,
+        null
+      ],
+      [
+        null,
+        4,
+        null,
+        5,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.40816326530612246,
+    "level": 12,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "Y",
+        "",
+        "W"
+      ],
+      [
+        null,
+        null,
+        "K",
+        null,
+        null,
+        null,
+        ""
+      ],
+      [
+        null,
+        "",
+        "I",
+        "",
+        "H",
+        null,
+        ""
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        "A",
+        "",
+        "D"
+      ],
+      [
+        null,
+        null,
+        "S",
+        "",
+        "S",
+        null,
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 264,
+        "word": "YAW",
+        "definition": "偏航",
+        "direction": "across",
+        "start_row": 1,
+        "start_col": 4,
+        "length": 3,
+        "clue_number": 1
+      },
+      {
+        "id": 1010,
+        "word": "WINDY",
+        "definition": "有风的",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 6,
+        "length": 5,
+        "clue_number": 2
+      },
+      {
+        "id": 121,
+        "word": "KID",
+        "definition": "孩子",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 2,
+        "length": 3,
+        "clue_number": 3
+      },
+      {
+        "id": 804,
+        "word": "SIGH",
+        "definition": "叹息",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 4,
+        "clue_number": 4
+      },
+      {
+        "id": 98,
+        "word": "HAS",
+        "definition": "有",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 4,
+        "length": 3,
+        "clue_number": 5
+      },
+      {
+        "id": 28,
+        "word": "ADD",
+        "definition": "加",
+        "direction": "across",
+        "start_row": 4,
+        "start_col": 4,
+        "length": 3,
+        "clue_number": 6
+      },
+      {
+        "id": 211,
+        "word": "SIS",
+        "definition": "姐妹",
+        "direction": "across",
+        "start_row": 5,
+        "start_col": 2,
+        "length": 3,
+        "clue_number": 7
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        2
+      ],
+      [
+        null,
+        null,
+        3,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        4,
+        null,
+        null,
+        5,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        6,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        7,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.3673469387755102,
+    "level": 13,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        "A",
+        "M"
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        "",
+        "A",
+        "",
+        "",
+        "H",
+        null
+      ],
+      [
+        null,
+        null,
+        "T",
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        "L",
+        "",
+        "T",
+        ""
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 97,
+        "word": "HAM",
+        "definition": "火腿",
+        "direction": "across",
+        "start_row": 1,
+        "start_col": 4,
+        "length": 3,
+        "clue_number": 1
+      },
+      {
+        "id": 3803,
+        "word": "AGHAST",
+        "definition": "惊骇的",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 5,
+        "length": 6,
+        "clue_number": 2
+      },
+      {
+        "id": 243,
+        "word": "VAT",
+        "definition": "大桶",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 2,
+        "length": 3,
+        "clue_number": 3
+      },
+      {
+        "id": 1090,
+        "word": "LAUGH",
+        "definition": "笑",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 5,
+        "clue_number": 4
+      },
+      {
+        "id": 1992,
+        "word": "CLOTH",
+        "definition": "布",
+        "direction": "across",
+        "start_row": 6,
+        "start_col": 2,
+        "length": 5,
+        "clue_number": 5
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null
+      ],
+      [
+        null,
+        null,
+        3,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        4,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        5,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.3673469387755102,
+    "level": 14,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "A",
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        "H",
+        null,
+        "",
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        "A",
+        "",
+        "T",
+        "",
+        "N",
+        "",
+        null
+      ],
+      [
+        "",
+        null,
+        "",
+        null,
+        "K",
+        null,
+        null
+      ],
+      [
+        "",
+        null,
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "",
+        null,
+        "Y",
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 2654,
+        "word": "FANTASY",
+        "definition": "幻想",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 2,
+        "length": 7,
+        "clue_number": 1
+      },
+      {
+        "id": 278,
+        "word": "BANK",
+        "definition": "银行",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 4,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 1002,
+        "word": "HAPPY",
+        "definition": "快乐的",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 0,
+        "length": 5,
+        "clue_number": 3
+      },
+      {
+        "id": 1179,
+        "word": "ATTEND",
+        "definition": "参加",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 0,
+        "length": 6,
+        "clue_number": 4
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        2,
+        null,
+        null
+      ],
+      [
+        3,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        4,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.3877551020408163,
+    "level": 15,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        "H",
+        "O"
+      ],
+      [
+        null,
+        "",
+        null,
+        "S",
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        "A",
+        "",
+        "U",
+        "",
+        "E",
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        "",
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "C",
+        "U",
+        "",
+        null,
+        null,
+        null
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 254,
+        "word": "WHO",
+        "definition": "谁",
+        "direction": "across",
+        "start_row": 1,
+        "start_col": 4,
+        "length": 3,
+        "clue_number": 1
+      },
+      {
+        "id": 506,
+        "word": "HEEL",
+        "definition": "脚跟",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 5,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 1765,
+        "word": "BASIC",
+        "definition": "基本的",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 1,
+        "length": 5,
+        "clue_number": 3
+      },
+      {
+        "id": 218,
+        "word": "SUB",
+        "definition": "潜水艇",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 3,
+        "length": 3,
+        "clue_number": 4
+      },
+      {
+        "id": 3120,
+        "word": "AMUSE",
+        "definition": "使娱乐",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 5,
+        "clue_number": 5
+      },
+      {
+        "id": 64,
+        "word": "CUP",
+        "definition": "杯子",
+        "direction": "across",
+        "start_row": 6,
+        "start_col": 1,
+        "length": 3,
+        "clue_number": 6
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null
+      ],
+      [
+        null,
+        3,
+        null,
+        4,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        5,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        6,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.3673469387755102,
+    "level": 16,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        "",
+        "O",
+        "",
+        "P",
+        "E",
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        "T",
+        "",
+        "",
+        "T",
+        null,
+        null
+      ],
+      [
+        null,
+        "",
+        null,
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        "",
+        "A",
+        "",
+        "",
+        "R",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 3535,
+        "word": "COPPER",
+        "definition": "铜",
+        "direction": "across",
+        "start_row": 0,
+        "start_col": 0,
+        "length": 6,
+        "clue_number": 1
+      },
+      {
+        "id": 2554,
+        "word": "EDITOR",
+        "definition": "编辑",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 4,
+        "length": 6,
+        "clue_number": 2
+      },
+      {
+        "id": 879,
+        "word": "THAT",
+        "definition": "那个",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 4,
+        "clue_number": 3
+      },
+      {
+        "id": 225,
+        "word": "TEA",
+        "definition": "茶",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 3,
+        "clue_number": 3
+      },
+      {
+        "id": 2544,
+        "word": "EAGER",
+        "definition": "渴望的",
+        "direction": "across",
+        "start_row": 5,
+        "start_col": 0,
+        "length": 5,
+        "clue_number": 4
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        1,
+        null,
+        null,
+        null,
+        2,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        3,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        4,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.3877551020408163,
+    "level": 17,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        null,
+        "I",
+        "C",
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        "T",
+        null,
+        "",
+        null
+      ],
+      [
+        null,
+        "",
+        "R",
+        "O",
+        "",
+        "N",
+        null
+      ],
+      [
+        null,
+        null,
+        "I",
+        "",
+        null,
+        "T",
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 110,
+        "word": "ICE",
+        "definition": "冰",
+        "direction": "across",
+        "start_row": 0,
+        "start_col": 1,
+        "length": 3,
+        "clue_number": 1
+      },
+      {
+        "id": 1939,
+        "word": "CHARITY",
+        "definition": "慈善",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 2,
+        "length": 7,
+        "clue_number": 2
+      },
+      {
+        "id": 746,
+        "word": "RENT",
+        "definition": "租金",
+        "direction": "down",
+        "start_row": 1,
+        "start_col": 5,
+        "length": 4,
+        "clue_number": 3
+      },
+      {
+        "id": 232,
+        "word": "TON",
+        "definition": "吨",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 3,
+        "length": 3,
+        "clue_number": 4
+      },
+      {
+        "id": 3589,
+        "word": "CROWN",
+        "definition": "皇冠",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 5,
+        "clue_number": 5
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        3,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        4,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        5,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.3673469387755102,
+    "level": 18,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        null,
+        "H",
+        "",
+        "M",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        "B",
+        "",
+        null,
+        null,
+        ""
+      ],
+      [
+        null,
+        "",
+        "Y",
+        "T",
+        "H",
+        null,
+        ""
+      ],
+      [
+        null,
+        null,
+        "",
+        null,
+        "",
+        null,
+        ""
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        null,
+        "E"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "F",
+        "",
+        "R"
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true
+      ]
+    ],
+    "words": [
+      {
+        "id": 97,
+        "word": "HAM",
+        "definition": "火腿",
+        "direction": "across",
+        "start_row": 0,
+        "start_col": 1,
+        "length": 3,
+        "clue_number": 1
+      },
+      {
+        "id": 628,
+        "word": "MEET",
+        "definition": "遇见",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 3,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 1284,
+        "word": "BYE",
+        "definition": "再见",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 2,
+        "length": 3,
+        "clue_number": 3
+      },
+      {
+        "id": 1393,
+        "word": "COVER",
+        "definition": "覆盖",
+        "direction": "down",
+        "start_row": 2,
+        "start_col": 6,
+        "length": 5,
+        "clue_number": 4
+      },
+      {
+        "id": 647,
+        "word": "MYTH",
+        "definition": "神话",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 1,
+        "length": 4,
+        "clue_number": 5
+      },
+      {
+        "id": 493,
+        "word": "HALF",
+        "definition": "一半",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 4,
+        "length": 4,
+        "clue_number": 6
+      },
+      {
+        "id": 79,
+        "word": "FAR",
+        "definition": "远",
+        "direction": "across",
+        "start_row": 6,
+        "start_col": 4,
+        "length": 3,
+        "clue_number": 7
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        null,
+        1,
+        null,
+        2,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        3,
+        null,
+        null,
+        null,
+        4
+      ],
+      [
+        null,
+        5,
+        null,
+        null,
+        6,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        7,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.40816326530612246,
+    "level": 19,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  },
+  {
+    "grid_size": 7,
+    "cells": [
+      [
+        "",
+        "",
+        "",
+        "N",
+        "T",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "",
+        null,
+        null
+      ],
+      [
+        "",
+        "",
+        "",
+        "G",
+        "E",
+        "T",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        "",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "B",
+        "",
+        "A",
+        "",
+        "",
+        "H"
+      ],
+      [
+        null,
+        null,
+        null,
+        "",
+        null,
+        null,
+        null
+      ]
+    ],
+    "revealed": [
+      [
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    ],
+    "words": [
+      {
+        "id": 1632,
+        "word": "FRONT",
+        "definition": "前面",
+        "direction": "across",
+        "start_row": 0,
+        "start_col": 0,
+        "length": 5,
+        "clue_number": 1
+      },
+      {
+        "id": 918,
+        "word": "TUBE",
+        "definition": "管子",
+        "direction": "down",
+        "start_row": 0,
+        "start_col": 4,
+        "length": 4,
+        "clue_number": 2
+      },
+      {
+        "id": 1858,
+        "word": "BUDGET",
+        "definition": "预算",
+        "direction": "across",
+        "start_row": 3,
+        "start_col": 0,
+        "length": 6,
+        "clue_number": 3
+      },
+      {
+        "id": 481,
+        "word": "GRAB",
+        "definition": "抓",
+        "direction": "down",
+        "start_row": 3,
+        "start_col": 3,
+        "length": 4,
+        "clue_number": 4
+      },
+      {
+        "id": 1834,
+        "word": "BRANCH",
+        "definition": "树枝",
+        "direction": "across",
+        "start_row": 5,
+        "start_col": 1,
+        "length": 6,
+        "clue_number": 5
+      }
+    ],
+    "prefilled": {},
+    "clue_numbers": [
+      [
+        1,
+        null,
+        null,
+        null,
+        2,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        3,
+        null,
+        null,
+        4,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        5,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "puzzle_type": "template",
+    "density": 0.42857142857142855,
+    "level": 20,
+    "difficulty": "medium",
+    "group": "primary",
+    "cross_validated": true,
+    "layout_type": "dense"
+  }
+]

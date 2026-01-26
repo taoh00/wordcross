@@ -1,0 +1,88 @@
+# Python 依赖管理规则
+
+## 核心规则
+
+### pydantic 与 pydantic-settings 版本兼容性 ⚠️ 重要
+
+**问题**: pydantic 和 pydantic-settings 是紧密耦合的包，版本必须匹配，否则会导致后端启动失败。
+
+**错误示例**:
+```
+pydantic 2.5.3 + pydantic-settings 2.12.0 = 启动失败
+```
+
+**正确做法**:
+1. 在 `requirements.txt` 中，两者版本必须同步:
+   ```
+   pydantic>=2.10.0
+   pydantic-settings>=2.10.0
+   ```
+
+2. 不要使用过于宽松的版本约束（如 `>=2.0.0`），这会导致两个包独立升级后不兼容
+
+3. 升级时必须同时升级两个包:
+   ```bash
+   pip install --upgrade pydantic pydantic-settings
+   ```
+
+### requirements.txt 版本约束规范
+
+| 约束类型 | 示例 | 说明 | 推荐场景 |
+|---------|------|------|---------|
+| 精确版本 | `==2.10.0` | 锁定具体版本 | 生产环境 |
+| 最小版本 | `>=2.10.0` | 允许升级 | 开发环境（需注意兼容性） |
+| 兼容版本 | `~=2.10.0` | 允许小版本升级 | 平衡稳定与更新 |
+
+### 国内 pip 镜像配置
+
+所有 pip 命令必须使用国内镜像源:
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple PACKAGE_NAME
+```
+
+或配置全局镜像（推荐）:
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+## 常见问题
+
+### 后端启动失败：pydantic 版本错误
+
+**症状**: `ImportError` 或 `ValidationError` 关于 pydantic
+
+**诊断**:
+```bash
+cd /root/AllProjects/project_2_我爱填单词/src/backend
+source venv/bin/activate
+pip show pydantic pydantic-settings
+```
+
+**修复**:
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pydantic pydantic-settings
+```
+
+### 为什么问题会反复出现？
+
+1. `requirements.txt` 使用宽松约束（如 `>=2.0.0`）
+2. pip 安装时不会自动升级已满足约束的包
+3. 新安装的包可能需要更高版本的依赖
+
+**预防措施**:
+1. `requirements.txt` 使用同步的版本约束 (>=2.10.0)
+2. `start.sh` 添加版本兼容性检查和自动修复逻辑
+
+## 依赖更新流程
+
+更新 Python 依赖时，遵循以下步骤:
+
+1. 修改 `requirements.txt`
+2. 删除虚拟环境重建（推荐）或使用 `--upgrade`:
+   ```bash
+   rm -rf venv && python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
+3. 测试后端能否正常启动
+4. 记录变更到 git

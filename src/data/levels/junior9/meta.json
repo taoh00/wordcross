@@ -1,0 +1,12 @@
+{
+  "name": "九年级全册",
+  "group_code": "junior9",
+  "category": "初中",
+  "is_primary": false,
+  "level_count": 425,
+  "word_count": 1535,
+  "vocab_size": 1862,
+  "coverage": 82.4,
+  "success_count": 405,
+  "fail_count": 20
+}

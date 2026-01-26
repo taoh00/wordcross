@@ -1,0 +1,12 @@
+{
+  "name": "大学四级",
+  "group_code": "cet4",
+  "category": "考试",
+  "is_primary": false,
+  "level_count": 755,
+  "word_count": 3557,
+  "vocab_size": 4198,
+  "coverage": 84.7,
+  "success_count": 755,
+  "fail_count": 0
+}

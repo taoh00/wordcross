@@ -1,0 +1,23 @@
+# 后端构建 Docker 忽略文件
+
+# Python缓存
+**/__pycache__
+**/*.pyc
+**/*.pyo
+
+# 测试脚本
+backend/*test*.py
+backend/generate_*.py
+backend/check_*.py
+backend/review_*.py
+backend/architecture_*.py
+
+# 前端源码(后端不需要)
+frontend/
+
+# 大型数据备份
+data/backup_*
+
+# 开发文件
+**/*.md
+**/*.log

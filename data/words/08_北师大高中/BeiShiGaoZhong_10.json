@@ -1,0 +1,6802 @@
+{
+  "id": "BeiShiGaoZhong_10",
+  "name": "选修10",
+  "category": "08_北师大高中",
+  "count": 267,
+  "words": [
+    {
+      "word": "weight-training",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "举重运动"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I used to do weight training years ago.",
+          "cn": "我多年前曾进行过举重训练。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "body-building",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "健身运动"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Since we shared the same body-building class, I have been treating you as one of my good friends.",
+          "cn": "自从我们上了健身俱乐部的课以后，我就一直把你当成好朋友。"
+        },
+        {
+          "en": "People are now attaching greater importance to quality of life, with travel, body-building and beauty treatment becoming an indispensable part of their concerns.",
+          "cn": "人们越来越看重生活品质，旅游、健身、美容等休闲活动已成为人们生活中不可缺少的部分。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "come down with",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "染上(病)"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "It seems like whenever I get into a really good running groove, I come down with a cold that forces me to slow down my training.",
+          "cn": "可以说，在任何时候我都可以进入到一个跑步的最佳状态，可是，我染上了一个感冒让我减低了我的训练力度。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "acupressure",
+      "usphone": "'ækjuprɛʃɚ",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "指压按摩（疗法）"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "massage",
+      "usphone": "mə'sɑʒ",
+      "ukphone": "'mæsɑːʒ; mə'sɑːʒ; -dʒ",
+      "trans": [
+        {
+          "pos": "n& vi",
+          "tranCn": "按摩"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Massage helps ease the pain.",
+          "cn": "按摩有助于缓解疼痛。"
+        },
+        {
+          "en": "Why don’t you have a massage ?",
+          "cn": "你为什么不按摩一下？"
+        },
+        {
+          "en": "Joan gave me a gentle neck massage .",
+          "cn": "琼轻轻地给我做了个颈部按摩。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "foot massage",
+          "cn": "足部按摩；脚底按摩"
+        },
+        {
+          "en": "massage chair",
+          "cn": "按摩椅"
+        },
+        {
+          "en": "massage oil",
+          "cn": "按摩油"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "prone",
+      "usphone": "pron",
+      "ukphone": "prəʊn",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "易于发生（不愉快事）的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "For all her experience as a television reporter, she was still prone to camera nerves.",
+          "cn": "尽管有丰富的做电视记者的经验，她仍然倾向于在镜头前紧张。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "prone position",
+          "cn": "卧姿；伏卧位"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "picky",
+      "usphone": "'pɪki",
+      "ukphone": "'pɪkɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "好挑剔的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He’s a very picky eater .",
+          "cn": "他很挑食。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "out of breath",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "上气不接下气的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "When I finally found my bearings, I was standing on Congress avenue, out of breath, smeared up and down with grass stains and dog shit.",
+          "cn": "当我终于能确定方向时，我发现自己在国会大街上，上气不接下气，草渍和狗屎全身都是。"
+        },
+        {
+          "en": "He exerted preterhuman self-denial in abstaining from finishing him completely; but getting out of breath he finally desisted, and dragged the apparently inanimate body on to the settle.",
+          "cn": "他使出超人的自制力克制自己，才没有送他的命，可是他终于喘不过气来，罢手了，又把那显然已无生气的身体拖到高背椅子旁边。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "stress sb. out",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "使某人紧张、焦虑"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "lose one's appetite",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "没有食欲"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "acupuncture",
+      "usphone": "'ækjupʌŋktʃɚ",
+      "ukphone": "'ækjʊ,pʌŋ(k)tʃə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "针灸"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "the four main acupuncture points",
+          "cn": "四大穴位"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "acupuncture and moxibustion",
+          "cn": "针灸；针灸疗法；针灸科"
+        },
+        {
+          "en": "acupuncture point",
+          "cn": "穴位，穴道"
+        },
+        {
+          "en": "acupuncture needle",
+          "cn": "n. 针灸针"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "well-liked",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "漂亮的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "(It's worth noting that while Bhutto was generally well-liked in India, she was seen there as an ineffective and weak politician).",
+          "cn": "（值得注意的是，虽然贝布托在印度受到爱戴，但她还是被认为是一个低效的孱弱的政治家）。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "sleepless",
+      "usphone": "'slipləs",
+      "ukphone": "'sliːplɪs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "失眠的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She lay sleepless for hours, worrying.",
+          "cn": "她忧心忡忡地躺了几个小时都无法入睡。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "sleepless night",
+          "cn": "不眠之夜"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "laid-back",
+      "usphone": "'leidbæk",
+      "ukphone": "'leidbæk",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "自在的，从容的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I don’t know how you can be so laid-back about your exams.",
+          "cn": "我不明白你对考试怎么会如此不在乎。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "forgetfulness",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "健忘"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "“The bottom line question to ask is, Is your forgetfulness fundamentally interfering with how you function?",
+          "cn": "\"要问的底线问题是,你的健忘是否真的根本性地妨碍了你的行动?\""
+        },
+        {
+          "en": "Health experts say that stress can come with some pretty surprising symptoms—from forgetfulness to nausea to skin rashes.",
+          "cn": "健康专家们认为压力会伴随着许多令人惊讶的征兆而来——从健忘到恶心，甚至是皮疹。"
+        },
+        {
+          "en": "“Most people when they turn 50 begin to look at forgetfulness with more seriousness, ” said Dr. Gene Cohen, the director of the Center for Aging, Health and Humanities at George Washington University.",
+          "cn": "\"大多数人们步入50岁后便开始严肃地看待健忘这个问题了,\"乔治华盛顿大学人类老化,健康及人类研究中心的吉恩柯翰博士说."
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "stress-reducing",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "减轻压力的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Overall they experienced the same stress-reducing effects of the brisk walkers. Better yet, the effects were evident immediately.",
+          "cn": "总的来说他们与轻快步行的那组压力减轻的程度是相同的，但前者的见效更快。"
+        },
+        {
+          "en": "People who are new to wellness usually are introduced to one part of this triangle such as exercise, diet or stress-reducing practices (meditation).",
+          "cn": "刚刚接受健康教育的人们通常是先接触“健康三角”的一个方面，比如：锻炼身体，调节饮食，或者练习减压（默想）。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "energise",
+      "usphone": "'enədʒaiz",
+      "ukphone": "'enədʒaɪz",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "激励，激发"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "disorganisation",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "计划不周，混乱"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Realise you need to be systematic to make it work or you just escalate your disorganisation.",
+          "cn": "必须有系统条理性地让工作进行，不然你只是在加剧工作的混乱度。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "unreasonable",
+      "usphone": "ʌn'riznəbl",
+      "ukphone": "ʌn'riːz(ə)nəb(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不合理的，不讲道理的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I think he’s being unreasonable.",
+          "cn": "我认为他是在无理取闹。"
+        },
+        {
+          "en": "Don’t let your boss make unreasonable demands on you.",
+          "cn": "别让你的老板对你提无理的要求。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "achievable",
+      "usphone": "ə'tʃivəbl",
+      "ukphone": "ə'tʃi:vəbəl",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "可完成的，可有成就的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "A 50% market share is achievable.",
+          "cn": "百分之五十的市场占有率是可实现的。"
+        },
+        {
+          "en": "It is often a good idea to start with smaller, easily achievable goals.",
+          "cn": "以较小的、容易实现的目标来做开端经常是个好主意。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "credit",
+      "usphone": "'krɛdɪt",
+      "ukphone": "'kredɪt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "赞扬，荣誉，功劳"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Credit must go to Fiona for making sure everything ran smoothly.",
+          "cn": "应该感激菲奥娜使一切得以顺利进行。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "credit card",
+          "cn": "信用卡；记帐卡"
+        },
+        {
+          "en": "letter of credit",
+          "cn": "n. [商]（银行发行的）信用证"
+        },
+        {
+          "en": "credit system",
+          "cn": "信用制度；信贷制度；赊购或赊销制度"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "yoga",
+      "usphone": "'joɡə",
+      "ukphone": "'jəʊgə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "瑜伽，瑜伽术"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I do yoga twice a week.",
+          "cn": "我一周做两次瑜伽。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "relieve",
+      "usphone": "rɪ'liv",
+      "ukphone": "rɪ'liːv",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "减轻，解除"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Drugs helped to relieve the pain.",
+          "cn": "药物有助于舒缓疼痛。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "relieve oneself",
+          "cn": "v. 大小便"
+        },
+        {
+          "en": "relieve stress",
+          "cn": "减压，缓解压力"
+        },
+        {
+          "en": "relieve from",
+          "cn": "从…中解除，减轻"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "muscle",
+      "usphone": "'mʌsl",
+      "ukphone": "'mʌs(ə)l",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "肌肉"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Relax your stomach muscles , then stretch again.",
+          "cn": "放松腹部肌肉，然后再绷紧。"
+        },
+        {
+          "en": "Regular exercise will help to strengthen your muscles .",
+          "cn": "经常锻炼有助于强健肌肉。"
+        },
+        {
+          "en": "Rooney has pulled a muscle in his thigh and won’t play tomorrow.",
+          "cn": "鲁尼大腿肌肉拉伤，明天不能参赛了。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "smooth muscle",
+          "cn": "平滑肌"
+        },
+        {
+          "en": "skeletal muscle",
+          "cn": "n. 骨骼肌；骨肌"
+        },
+        {
+          "en": "muscle strength",
+          "cn": "肌肉强度"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "unblock",
+      "usphone": "'ʌn'blɑk",
+      "ukphone": "ʌn'blɒk",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "除去障碍"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Because I want to inspire, motivate, and “unblock” writers so that they can follow their passion with greater ease.",
+          "cn": "因为我想激发，鼓励作者们，解除他们的障碍，以便让他们能够更轻松随性的创作。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "filter",
+      "usphone": "'fɪltɚ",
+      "ukphone": "'fɪltə",
+      "trans": [
+        {
+          "pos": "vt&vi",
+          "tranCn": "过滤"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The water in the tank is constantly filtered.",
+          "cn": "鱼缸里的水在不停地被过滤。"
+        },
+        {
+          "en": "The ozone layer filters harmful UV rays from the sun.",
+          "cn": "臭氧层过滤掉有害的太阳紫外线。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "kalman filter",
+          "cn": "卡尔曼滤波器"
+        },
+        {
+          "en": "air filter",
+          "cn": "空气过滤器"
+        },
+        {
+          "en": "digital filter",
+          "cn": "数字滤波器"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "peacefulness",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "和平，平静，安宁"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "And at last came this inner shift not as a decision of mine but as a spontaneous change of belief about myself, a deep reconciliation and peacefulness.",
+          "cn": "这样的内在转变最后所以发生并非我作出的决定，它是一种自然发生的，自我信念上的转变，是一种深刻的和解与平静。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "soothing",
+      "usphone": "'sʊðɪŋ",
+      "ukphone": "'suːðɪŋ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "抚慰的，使人宽心的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "No one else leant over her, and whispered soothing words to her, or was near enough to hear the flutter of her beating heart.",
+          "cn": "没有其他任何人向她弯下身去，低声地对她说些安慰的话，或跟她挨得很近，可以听到她颤动的心房正在怦怦地跳动。"
+        },
+        {
+          "en": "He offered soothing words about the value of the French model in the recession and its ability to protect the most vulnerable from poverty.",
+          "cn": "对于衰退中法兰西模式的价值，以及保护绝大多数易受伤害的贫困人口的能力，他给予了安慰。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "unwanted",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不必要的，多余的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "an unwanted pregnancy",
+          "cn": "非意愿怀孕"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "overflow",
+      "usphone": ",ovɚ'flo",
+      "ukphone": "əʊvə'fləʊ",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "（使）泛滥，（使）溢出"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The drains flooded and water overflowed down the main street.",
+          "cn": "下水道被淹，水溢到了大街上。"
+        },
+        {
+          "en": "The river had overflowed its banks.",
+          "cn": "河水漫堤了。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "buffer overflow",
+          "cn": "缓冲区溢出"
+        },
+        {
+          "en": "overflow valve",
+          "cn": "溢流阀"
+        },
+        {
+          "en": "overflow weir",
+          "cn": "溢流堰"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "visualise",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使显现，使形象化"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "smooth",
+      "usphone": "smʊð",
+      "ukphone": "smuːð",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "平滑的，平坦的，平稳的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Her skin felt smooth and cool.",
+          "cn": "她的皮肤摸上去又滑又凉。"
+        },
+        {
+          "en": "a smooth pebble",
+          "cn": "光滑的卵石"
+        },
+        {
+          "en": "The stone steps had been worn smooth .",
+          "cn": "石阶被磨得光溜溜的了。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "smooth muscle",
+          "cn": "平滑肌"
+        },
+        {
+          "en": "smooth surface",
+          "cn": "光滑表面；光滑面；平滑面"
+        },
+        {
+          "en": "smooth operation",
+          "cn": "正常运转；平稳运转，稳定运转"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "ruffle",
+      "usphone": "'rʌfl",
+      "ukphone": "'rʌf(ə)l",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "扰乱，使烦恼"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He ruffled her hair affectionately.",
+          "cn": "他亲昵地拨弄她的头发。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "drain",
+      "usphone": "dren",
+      "ukphone": "dreɪn",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "排出，流掉"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The swimming pool is drained and cleaned every winter.",
+          "cn": "每年冬天这座游泳池都要排干清洗。"
+        },
+        {
+          "en": "Can you drain the spaghetti, please (= pour away the water from the pan ) ?",
+          "cn": "你把意大利面滤干好吗？"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "down the drain",
+          "cn": "浪费掉；徒劳；堕落"
+        },
+        {
+          "en": "brain drain",
+          "cn": "人才外流；智囊流失"
+        },
+        {
+          "en": "floor drain",
+          "cn": "地漏；地面排水管；楼面排水"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "facilitator",
+      "usphone": "fə'siliteitə",
+      "ukphone": "fə'sɪlɪteɪtə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "促进者，推动者"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "impractical",
+      "usphone": "ɪm'præktɪkl",
+      "ukphone": "ɪm'præktɪk(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不切实际的，不现实的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The road toll scheme was dismissed as impractical.",
+          "cn": "公路收费计划由于不切实际而遭到否定。"
+        },
+        {
+          "en": "James was a foolish man, full of impractical plans.",
+          "cn": "詹姆斯是个愚蠢的人，满脑子都是不切实际的计划。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "infinite",
+      "usphone": "'ɪnfɪnət",
+      "ukphone": "'ɪnfɪnət",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "无穷的，无限的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The universe is infinite.",
+          "cn": "宇宙是无限的。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "infinite loop",
+          "cn": "无限循环"
+        },
+        {
+          "en": "infinite space",
+          "cn": "无限空间"
+        },
+        {
+          "en": "infinite variety",
+          "cn": "多种多样"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "rumble",
+      "usphone": "'rʌmbl",
+      "ukphone": "'rʌmb(ə)l",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "隆隆声，辘辘声，吵嚷声"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The silence of the night was punctuated by the distant rumble of traffic.",
+          "cn": "夜晚的宁静被远处车辆的隆隆声所打破。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "clutter",
+      "usphone": "'klʌtɚ",
+      "ukphone": "'klʌtə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "混乱"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Could you get rid of some of that clutter in your bedroom?",
+          "cn": "你能把你卧室那些杂物清理掉一些吗？"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "sea clutter",
+          "cn": "海面回波；海面干扰"
+        },
+        {
+          "en": "clutter up",
+          "cn": "使杂乱"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "dispose",
+      "usphone": "dɪ'spoz",
+      "ukphone": "dɪ'spəʊz",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "处理（尤指难处理的东西）"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Chinese vases are disposed around the gallery.",
+          "cn": "中国花瓶摆放在展馆四周。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "dispose of",
+          "cn": "处理；转让；解决；吃光；除掉；卖掉"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "herbal",
+      "usphone": "'ɝbl",
+      "ukphone": "'hɜːb(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "草药的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "herbal remedies",
+          "cn": "草药"
+        },
+        {
+          "en": "herbal tea",
+          "cn": "花草茶"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "herbal medicine",
+          "cn": "草药医学，草药"
+        },
+        {
+          "en": "chinese herbal medicine",
+          "cn": "中药；中草药；中药材"
+        },
+        {
+          "en": "herbal tea",
+          "cn": "花草茶；草药茶（等于herb tea）"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "organic",
+      "usphone": "ɔr'gænɪk",
+      "ukphone": "ɔː'gænɪk",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "有机的；器官的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Organic farming is better for the environment.",
+          "cn": "有机耕作对环境更有利。"
+        },
+        {
+          "en": "organic gardening",
+          "cn": "有机园艺"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "organic matter",
+          "cn": "有机质；有机物；有机物质"
+        },
+        {
+          "en": "organic synthesis",
+          "cn": "[化]有机合成"
+        },
+        {
+          "en": "organic chemistry",
+          "cn": "有机化学"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "desktop",
+      "usphone": "'dɛsk'tɑp",
+      "ukphone": "'desktɒp",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "台式电脑"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We have stopped making desktops because no one is making money from them.",
+          "cn": "我们已经停止生产台式电脑了，因为不赚钱。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "desktop computer",
+          "cn": "台式电脑"
+        },
+        {
+          "en": "desktop publishing",
+          "cn": "台式印刷系统；桌面出版系统"
+        },
+        {
+          "en": "desktop management interface",
+          "cn": "桌面管理界面"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "icepack",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "冰袋"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Also if you are bringing your breast pump on the airplane, remember to take the icepack out first and put it into the luggage that you will check.",
+          "cn": "如果你把吸奶器带上飞机，记得先把冰袋拿出来，把它放到需要进行安检的行李中。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "balmy",
+      "usphone": "'bɑmi",
+      "ukphone": "'bɑːmɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "温和的，令人愉快的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a balmy summer night",
+          "cn": "一个宜人的夏夜"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "balmy on the crumpet",
+          "cn": "[俚语]头脑不正常的；疯疯癫癫的"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "bearable",
+      "usphone": "'bɛrəbl",
+      "ukphone": "'beərəb(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "可忍受的，支持得住的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "His friendship was the one thing that made life bearable.",
+          "cn": "有他的友情在，生活还可以过下去。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "mauve",
+      "usphone": "mov",
+      "ukphone": "məʊv",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "紫红色的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "You’ll find their uniforms tend to be more subdued pastel colours, such as mauve, green or blue.",
+          "cn": "你会发现，他们的制服往往是较柔和的淡色彩，例如淡紫色、绿色或蓝色。"
+        },
+        {
+          "en": "The ladies who you work for, after they sob for hourson end, make them use blue or mauve eyeliner to make their bloodshot eyes lookwhiter.",
+          "cn": "如果你的女雇主一连抽泣了几小时，就让她们用蓝色或是淡紫色的眼线，这能让充了血的眼睛看起来白一点。"
+        },
+        {
+          "en": "It is dangerous and terrifying to behold. It is also a rather interesting shade of mauve.",
+          "cn": "它躲在暗处，到处写满了它的危险和可怕，不过，它呈现的淡紫色到是相当有趣的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "bathe",
+      "usphone": "beð",
+      "ukphone": "beɪð",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "沐浴，洗"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I bathed, washed my hair, and got dressed.",
+          "cn": "我洗了澡，洗了头，然后穿上衣服。"
+        },
+        {
+          "en": "He bathed the children and put them to bed.",
+          "cn": "他给孩子们洗了澡，然后把他们弄上床。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "go for a bathe",
+          "cn": "[主英国英语] 去洗一次海(或河、湖)水浴；去游泳"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "break through",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "突围，突破"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Protesters tried to break through a police cordon.",
+          "cn": "抗议者们试图冲破警察的封锁线。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "breakthrough point",
+          "cn": "突破点；穿透点；贯穿点"
+        },
+        {
+          "en": "make a breakthrough",
+          "cn": "有重大发展或突破"
+        },
+        {
+          "en": "breakthrough technology",
+          "cn": "突破性技术"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "obese",
+      "usphone": "o'bis",
+      "ukphone": "ə(ʊ)'biːs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "肥胖的，肥大的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Obese people tend to have higher blood pressure than lean people.",
+          "cn": "肥胖的人往往比瘦人血压高。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "excess",
+      "usphone": "'ɛk'sɛs",
+      "ukphone": "ɪk'ses; ek-; 'ekses",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "过度的，额外的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Cut any excess fat from the meat.",
+          "cn": "将肉中多余的肥肉切掉。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "in excess",
+          "cn": "过度；过量地"
+        },
+        {
+          "en": "in excess of",
+          "cn": "超过；较…为多"
+        },
+        {
+          "en": "excess capacity",
+          "cn": "超额生产能力；过剩设备"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "naive",
+      "usphone": "naɪ'iv",
+      "ukphone": "naɪ'iːv; nɑː'iːv",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "天真的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a naive young girl",
+          "cn": "天真的小女孩"
+        },
+        {
+          "en": "Jim can be so naive sometimes.",
+          "cn": "吉姆有时候非常幼稚。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "exceptional",
+      "usphone": "ɪk'sɛpʃənl",
+      "ukphone": "ɪk'sepʃ(ə)n(ə)l; ek-",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "杰出的；不寻常的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "an exceptional student",
+          "cn": "出类拔萃的学生"
+        },
+        {
+          "en": "exceptional bravery",
+          "cn": "非凡的勇气"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "exceptional circumstances",
+          "cn": "特殊情况；例外情况"
+        },
+        {
+          "en": "exceptional child",
+          "cn": "n. 特殊（异常）儿童"
+        },
+        {
+          "en": "exceptional performance",
+          "cn": "非同一般的表现"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "poll",
+      "usphone": "pol",
+      "ukphone": "pəʊl",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "投票，民意测验"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "A recent poll found that 80% of Californians support the governor.",
+          "cn": "最近的一项民意调查发现80%的加利福尼亚人支持州长。"
+        },
+        {
+          "en": "Polls indicate that education is the top issue with voters.",
+          "cn": "民意调查显示，教育是选民心中的头等大事。"
+        },
+        {
+          "en": "Labour is ahead in the polls.",
+          "cn": "工党在民意调查中处于领先地位。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "opinion poll",
+          "cn": "民意测验；选举投票"
+        },
+        {
+          "en": "go to the polls",
+          "cn": "去投票处投票"
+        },
+        {
+          "en": "public opinion poll",
+          "cn": "民意测验"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "finalist",
+      "usphone": "'faɪnəlɪst",
+      "ukphone": "'faɪn(ə)lɪst",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "参加决赛的选手"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The twelve finalists will be listed in the Sunday Times.",
+          "cn": "这12位决赛者的名单将刊登在《星期日泰晤士报》上。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "endure",
+      "usphone": "ɪn'dʊr",
+      "ukphone": "ɪn'djʊə; en-; -'djɔː",
+      "trans": [
+        {
+          "pos": "vt&vi",
+          "tranCn": "忍耐，忍受"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "It seemed impossible that anyone could endure such pain.",
+          "cn": "似乎谁都不可能忍受这样的疼痛。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "refuge",
+      "usphone": "'rɛfjʊdʒ",
+      "ukphone": "'refjuːdʒ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "避难处，藏身处"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a wildlife refuge",
+          "cn": "野生动物保护区"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "seek refuge",
+          "cn": "寻求避难；寻求庇护"
+        },
+        {
+          "en": "take refuge",
+          "cn": "避难；躲避"
+        },
+        {
+          "en": "take refuge in",
+          "cn": "避难；求助于"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "overrun",
+      "usphone": "'ovərʌn",
+      "ukphone": "əʊvə'rʌn",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "泛滥；横行"
+        }
+      ],
+      "sentences": [],
+      "phrases": [
+        {
+          "en": "overrun oneself",
+          "cn": "奔跑过度而伤害身体"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "teenage",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "十几岁的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a teenage boy",
+          "cn": "十几岁的少年"
+        },
+        {
+          "en": "my teenage daughter",
+          "cn": "我那十多岁的女儿"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "teenage mutant ninja turtle",
+          "cn": "忍者神龟（美国动画电影）"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "gang",
+      "usphone": "ɡæŋ",
+      "ukphone": "gæŋ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "(一)伙，（一）群"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Several gangs were operating in the area.",
+          "cn": "有好几个犯罪团伙在这个地区活动。"
+        },
+        {
+          "en": "Armed gangs have hijacked lorries.",
+          "cn": "武装犯罪团伙劫持了卡车。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "gang of four",
+          "cn": "四人帮"
+        },
+        {
+          "en": "criminal gang",
+          "cn": "犯罪集团"
+        },
+        {
+          "en": "gang up",
+          "cn": "v. 聚集；联合起来"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "courageous",
+      "usphone": "kə'redʒəs",
+      "ukphone": "kə'reɪdʒəs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "勇敢的，有胆量的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He was wrong, and courageous enough to admit it.",
+          "cn": "他是错了，而且有勇气承认自己错了。"
+        },
+        {
+          "en": "a courageous decision",
+          "cn": "勇敢的决定"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "ex-gangster",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "有前科的歹徒，强盗"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "dealer",
+      "usphone": "'dilɚ",
+      "ukphone": "'diːlə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "经销商，商人"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...an antique dealer.",
+          "cn": "…一位古董商。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "drug dealer",
+          "cn": "贩毒者；毒品走私犯"
+        },
+        {
+          "en": "authorized dealer",
+          "cn": "授权经销商；认可交易商"
+        },
+        {
+          "en": "securities dealer",
+          "cn": "证券交易商"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "coexist",
+      "usphone": ",koɪɡ'zɪst",
+      "ukphone": ",kəʊɪg'zɪst",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "共存"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "But I think both can coexist.",
+          "cn": "但是我认为两者可以共存。"
+        },
+        {
+          "en": "In fact, both do coexist.",
+          "cn": "事实上，两者是共存的。"
+        },
+        {
+          "en": "All of your data can coexist in the same database.",
+          "cn": "你所有的数据都可以在相同的数据库中共存。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "disarm",
+      "usphone": "dɪs'ɑrm",
+      "ukphone": "dɪs'ɑːm",
+      "trans": [
+        {
+          "pos": "vt&vi",
+          "tranCn": "解除武装，放下武器"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Getting the rebels to disarm will not be easy.",
+          "cn": "要让叛乱分子解除武装并非易事。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "sandbank",
+      "usphone": "'sændbæŋk",
+      "ukphone": "'sæn(d)bæŋk",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "沙洲，沙丘"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The ship hit a sandbank.",
+          "cn": "船撞到了沙堤。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "incoming",
+      "usphone": "'ɪnkʌmɪŋ",
+      "ukphone": "'ɪnkʌmɪŋ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "正到达的，正来临的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "incoming flights",
+          "cn": "进港航班"
+        },
+        {
+          "en": "Incoming calls were monitored.",
+          "cn": "来电受到监听。"
+        },
+        {
+          "en": "the incoming tide",
+          "cn": "涨潮"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "incoming inspection",
+          "cn": "质量检验；进货检查；受入检查"
+        },
+        {
+          "en": "incoming call",
+          "cn": "来电；呼入"
+        },
+        {
+          "en": "incoming data",
+          "cn": "输入数据，引入数据"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "tide",
+      "usphone": "taɪd",
+      "ukphone": "taɪd",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "潮，潮汐；潮流"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Is the tide going out or coming in ?",
+          "cn": "现在是退潮还是涨潮？"
+        },
+        {
+          "en": "We went for a walk and got cut off by the tide .",
+          "cn": "我们去散步，结果被潮水困住了。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "spring tide",
+          "cn": "大潮；涨潮"
+        },
+        {
+          "en": "turn the tide",
+          "cn": "扭转局势；转变运气"
+        },
+        {
+          "en": "high tide",
+          "cn": "高潮；满潮；高潮时间"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "coastguard",
+      "usphone": "'kəustga:d",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "海岸警卫队，水上警察"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "the Coastguard station at Stornoway",
+          "cn": "位于斯托诺韦的海岸警卫队驻地"
+        },
+        {
+          "en": "Contact the Coastguard immediately if you see a boat in trouble.",
+          "cn": "如看到船只遇险，请立即通知海岸警卫队。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "quicksand",
+      "usphone": "'kwɪksænd",
+      "ukphone": "'kwɪksænd",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "流沙"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The sandbank was uncertain, like quicksand under his feet.",
+          "cn": "这个沙丘不结实，像他脚下的流沙一样。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "wade",
+      "usphone": "wed",
+      "ukphone": "weɪd",
+      "trans": [
+        {
+          "pos": "vi&vt",
+          "tranCn": "趟水，涉水"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The lake was not frozen sufficiently to bear her; neither was it open, nor low enough that she could wade through it; and across it she must go if she would find her child!",
+          "cn": "湖上还没有足够的厚冰可以托住她，但是水又不够浅，她不能涉水走过去。 不过，假如她要找到她的孩子的话，她必须走过这个湖。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "wade through",
+          "cn": "涉水（泥泞等）；费力地做完；艰难地通过"
+        },
+        {
+          "en": "wade into",
+          "cn": "精神饱满地开始；猛烈攻击"
+        },
+        {
+          "en": "wade in",
+          "cn": "vt. 插手，介入；猛烈攻击"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "prompt",
+      "usphone": "prɑmpt",
+      "ukphone": "prɒm(p)t",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "敏捷的，迅速的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Prompt action must be taken.",
+          "cn": "必须立即采取行动。"
+        },
+        {
+          "en": "Prompt payment is requested.",
+          "cn": "请立即付款。"
+        },
+        {
+          "en": "a prompt response",
+          "cn": "迅速的答复"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "prompt delivery",
+          "cn": "限时专送"
+        },
+        {
+          "en": "command prompt",
+          "cn": "命令提示符"
+        },
+        {
+          "en": "prompt attention",
+          "cn": "从速办理"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "nominee",
+      "usphone": ",nɑmɪ'ni",
+      "ukphone": "nɒmɪ'niː",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "被提名者，被推荐者"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "the Democratic Party presidential nominee",
+          "cn": "民主党被提名的总统候选人"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "layout",
+      "usphone": "'leaʊt",
+      "ukphone": "'leɪaʊt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "(文章的)版式，版面设计"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "All the flats in the building had the same layout.",
+          "cn": "大楼里所有的公寓布局都是一样的。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "layout design",
+          "cn": "布图设计；布局设计；布线设计"
+        },
+        {
+          "en": "general layout",
+          "cn": "总体设计；总布置图"
+        },
+        {
+          "en": "page layout",
+          "cn": "页面布局"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "prose",
+      "usphone": "proz",
+      "ukphone": "prəʊz",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "散文"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Shute's prose is stark and chillingly unsentimental.",
+          "cn": "舒特的散文刻板而冷峻。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "prose poem",
+          "cn": "n. 散文诗"
+        },
+        {
+          "en": "descriptive prose",
+          "cn": "描写性散文"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "illustration",
+      "usphone": ",ɪlə'streʃən",
+      "ukphone": "ɪlə'streɪʃ(ə)n",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "插图，图解"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The book contains 62 pages of illustrations.",
+          "cn": "这本书有62页插图。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "individualised",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "个性化的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We provide a social programme throughout the year and give help and advice through one-to-one tutorials and individualised work.",
+          "cn": "我们全年举办许多联谊活动，并透过一对一的指导和个别练习来提供帮助和建议。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "qualified",
+      "usphone": "'kwɑlə'faɪd",
+      "ukphone": "'kwɒlɪfaɪd",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "有资格的，合格的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a professionally qualified social worker",
+          "cn": "有专业资格的社会工作者"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "qualified for",
+          "cn": "有担任…的资格"
+        },
+        {
+          "en": "qualified personnel",
+          "cn": "人才；合格人员"
+        },
+        {
+          "en": "qualified teachers",
+          "cn": "师资；百分百合格师资"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "ease",
+      "usphone": "iz",
+      "ukphone": "iːz",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使顺利"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The agreement will ease the way for other countries to join the EU.",
+          "cn": "该协议将为其他国家加入欧盟扫除障碍。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "ease oneself",
+          "cn": "◎自我安慰，泄愤，出气；抛弃心头的烦闷"
+        },
+        {
+          "en": "at ease",
+          "cn": "安逸，自由自在；舒适"
+        },
+        {
+          "en": "with ease",
+          "cn": "熟练地；不费力地"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "gently",
+      "usphone": "'dʒɛntli",
+      "ukphone": "'dʒentlɪ",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "和缓地；轻轻地"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "‘You go back to bed now,’ he said gently.",
+          "cn": "“你回去睡觉吧。”他温柔地说道。"
+        },
+        {
+          "en": "She kissed me gently on the cheek.",
+          "cn": "她温柔地亲吻我的脸颊。"
+        },
+        {
+          "en": "Gently cook the peppers for 10-15 minutes.",
+          "cn": "用文火将辣椒煮10到15分钟。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "dietary",
+      "usphone": "'daɪə,tɛri",
+      "ukphone": "'daɪət(ə)rɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "饭食的"
+        },
+        {
+          "pos": "n",
+          "tranCn": "规定的食物"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "special dietary requirements",
+          "cn": "特殊的饮食要求"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "dietary fiber",
+          "cn": "食用纤维；[机]食纤维质"
+        },
+        {
+          "en": "dietary supplement",
+          "cn": "食品强化剂；食物的补充"
+        },
+        {
+          "en": "dietary fibre",
+          "cn": "饮食纤维素"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "aerobics",
+      "usphone": "ɛ'robɪks",
+      "ukphone": "eə'rəʊbɪks",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "有氧运动法，增氧健身法"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Water aerobics can be performed just about anywhere; from health and fitness clubs to public or private swimming pools to even shallow lakes. ",
+          "cn": "水中有氧运动没有地方限制，从健康和健身俱乐部，到公共或私人泳池，甚至浅水湖泊，都可以进行；"
+        },
+        {
+          "en": "They not only do it with great workout equipment and well-designed aerobics classes, but with answers to every detail of the working professional's personal needs.",
+          "cn": "他们不仅有优质的健身器材，精心设计的有氧运动课程，而且对个人专业健身问题和需求也作出详尽的解答。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "physiotherapy",
+      "usphone": ",fɪzɪo'θɛrəpi",
+      "ukphone": ",fɪzɪə(ʊ)'θerəpɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "物理疗法"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He'll need intensive physiotherapy.",
+          "cn": "他需要高强度的理疗。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "sauna",
+      "usphone": "'sɔnə",
+      "ukphone": "'sɔːnə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "桑拿浴，蒸汽浴"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The hotel has a sauna, solarium and heated indoor swimming pool.",
+          "cn": "这家旅馆有一个桑拿浴室、日光浴室和室内温水游泳池。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "refreshment",
+      "usphone": "ri'frɛʃmənt",
+      "ukphone": "rɪ'freʃm(ə)nt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "精力恢复"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "membership",
+      "usphone": "'mɛmbɚʃɪp",
+      "ukphone": "'membəʃɪp",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "成员资格，会员资格"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "You should carry your membership card with you at all times.",
+          "cn": "你应该随身携带会员卡。"
+        },
+        {
+          "en": "Membership fees are being increased this year.",
+          "cn": "会费今年提高了。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "membership function",
+          "cn": "从属函数；属籍函数"
+        },
+        {
+          "en": "membership fee",
+          "cn": "会员费；入会费"
+        },
+        {
+          "en": "degree of membership",
+          "cn": "隶属程度"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "counsel",
+      "usphone": "'kaʊnsl",
+      "ukphone": "'kaʊns(ə)l",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "劝告，忠告"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Yet this book is not a counsel of despair.",
+          "cn": "然而这本书里并非全是让人失望的忠告。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "legal counsel",
+          "cn": "法律顾问；法律指导"
+        },
+        {
+          "en": "take counsel",
+          "cn": "商量；征求意见"
+        },
+        {
+          "en": "general counsel",
+          "cn": "总顾问；法律总顾问；律师事务所；法律咨询公司"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "clinical",
+      "usphone": "'klɪnɪkl",
+      "ukphone": "'klɪnɪk(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "临床的，病房用的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The drug has undergone extensive clinical trials (= tests to see if it is effective in treating people ) .",
+          "cn": "该药已经过大量的临床试验。"
+        },
+        {
+          "en": "The therapy has helped people with clinical depression (= a strong feeling of sadness, for which you need medical help ) .",
+          "cn": "该疗法对临床抑郁症病人有帮助。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "clinical application",
+          "cn": "临床应用"
+        },
+        {
+          "en": "clinical practice",
+          "cn": "临床实践；内科学"
+        },
+        {
+          "en": "clinical data",
+          "cn": "临床资料；临床数据"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "consultation",
+      "usphone": ",kɑnsl'teʃən",
+      "ukphone": "kɒnsəl'teɪʃ(ə)n",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "（专业人士的）建议；咨询"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "A follow-up consultation was arranged for two weeks’ time.",
+          "cn": "复诊安排在两周之后。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "consultation service",
+          "cn": "咨询服务"
+        },
+        {
+          "en": "in consultation with",
+          "cn": "经与…磋商"
+        },
+        {
+          "en": "technical consultation",
+          "cn": "技术咨询"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "adore",
+      "usphone": "ə'dɔr",
+      "ukphone": "ə'dɔː",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "喜爱；崇拜"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She adored her parents and would do anything to please them.",
+          "cn": "她深爱她的父母，愿做任何事来让他们高兴。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "harsh",
+      "usphone": "hɑrʃ",
+      "ukphone": "hɑːʃ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "无情的；粗糙的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The hostages are being held in harsh conditions.",
+          "cn": "人质被拘押在恶劣环境中。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "harsh reality",
+          "cn": "严酷的现实；残酷的现实"
+        },
+        {
+          "en": "harsh terms",
+          "cn": "苛刻的条件"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "distress",
+      "usphone": "dɪ'strɛs",
+      "ukphone": "dɪ'stres",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使痛苦，使忧伤"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The dream had distressed her greatly.",
+          "cn": "这场梦使她深感不安。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "in distress",
+          "cn": "遇难；在困境中"
+        },
+        {
+          "en": "financial distress",
+          "cn": "财务困境，财务危机；金融困顿"
+        },
+        {
+          "en": "respiratory distress",
+          "cn": "[医]呼吸窘迫"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "meow",
+      "usphone": "mɪ'aʊ",
+      "ukphone": "mi'au",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "猫叫声"
+        },
+        {
+          "pos": "vi",
+          "tranCn": "猫叫"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "When the subjects saw each image, they also heard a matching noise—for instance, on seeing a cat, they heard a meow.",
+          "cn": "当受试者观看每张图片时他们将同时听到一个相匹配的声音，例如当看一个猫时，他们会听到一声猫叫。"
+        },
+        {
+          "en": "Student: inside Prof.: if all cats meow then cats should be inside the class of things that meow.",
+          "cn": "学生：内部,教授：如果所有猫都会叫，那么应该是包括猫,在猫叫的种群中。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "innermost",
+      "usphone": "'ɪnɚmost",
+      "ukphone": "'ɪnəməʊst",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "内心的；最里面的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a man who would never share his innermost thoughts with anyone",
+          "cn": "一个永远不会告诉别人自己内心深处想法的人"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "chase",
+      "usphone": "",
+      "ukphone": "tʃeɪs",
+      "trans": [
+        {
+          "pos": "n&vt",
+          "tranCn": "追赶，追逐"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The dogs saw him running and chased him.",
+          "cn": "那些狗看到他在跑就追他。"
+        },
+        {
+          "en": "kids chasing around the house",
+          "cn": "在屋里追逐嬉戏的孩子们"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "chase after",
+          "cn": "追逐；追赶"
+        },
+        {
+          "en": "cut to the chase",
+          "cn": "开门见山；提到关键问题；转入（或切入）正题"
+        },
+        {
+          "en": "jpmorgan chase",
+          "cn": "摩根大通公司"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "trigger",
+      "usphone": "'trɪɡɚ",
+      "ukphone": "'trɪgə",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "引发，引起，触发"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The assassination triggered off a wave of rioting.",
+          "cn": "这次暗杀事件引发了一阵骚乱。"
+        },
+        {
+          "en": "Certain forms of mental illness can be triggered by food allergies.",
+          "cn": "某些精神疾病可能由食物过敏引发。"
+        },
+        {
+          "en": "His action triggered a massive response from the government.",
+          "cn": "他的行动引发了政府的巨大反应。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "trigger circuit",
+          "cn": "[计]触发电路；同步起动电路"
+        },
+        {
+          "en": "trigger pulse",
+          "cn": "触发脉冲"
+        },
+        {
+          "en": "pull the trigger",
+          "cn": "开枪"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "exasperate",
+      "usphone": "ɪɡ'zæspəret",
+      "ukphone": "ɪg'zæsp(ə)reɪt; eg-",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "激怒，触怒"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The sheer futility of it all exasperates her.",
+          "cn": "它的完全无效使她很恼火。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "derange",
+      "usphone": "di'reindʒ",
+      "ukphone": "dɪ'reɪn(d)ʒ",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使错乱，扰乱"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Whatever you do, don't let the stress derange owe head.",
+          "cn": "但无乱咋样，无所不能让压力使得你精神错乱。"
+        },
+        {
+          "en": "To disturb the normal physical or mental health of; derange .",
+          "cn": "使生病，使失调，使错乱打乱正常的身体或智能的健康；使神经错乱。"
+        },
+        {
+          "en": "To unsettle; derange.",
+          "cn": "使混乱，扰乱；"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "prescribe",
+      "usphone": "prɪ'skraɪb",
+      "ukphone": "prɪ'skraɪb",
+      "trans": [
+        {
+          "pos": "vt& vi",
+          "tranCn": "开药方，处方"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The physician examines the patient then diagnoses the disease and prescribes medication.",
+          "cn": "内科医生检查了病人，然后对疾病作出诊断，并开出药方。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "prescribe for",
+          "cn": "开处方，开药方"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "sibling",
+      "usphone": "'sɪblɪŋ",
+      "ukphone": "'sɪblɪŋ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "兄弟，姐妹，同胞"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Most young smokers are influenced by their friends’ and older siblings’ smoking habits.",
+          "cn": "大多数年轻的吸烟者都是因为他们的朋友或者哥哥姐姐有吸烟习惯而受影响的。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "sibling rivalry",
+          "cn": "同胞争宠；手足之争"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "companionship",
+      "usphone": "kəm'pænjən'ʃɪp",
+      "ukphone": "kəm'pænjənʃɪp",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "友谊，交谊"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "When Stan died, I missed his companionship.",
+          "cn": "斯坦去世后，我怀念我们的友情。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "psychologically",
+      "usphone": "saɪkə'lɑdʒɪkli",
+      "ukphone": "saɪ'kɒlədʒɪklɪ",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "心理上地"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "\"Simply being on antipsychotic medications could not have brought about such acceptance, \" she stressed. \"And this acceptance set me free psychologically.",
+          "cn": "“单纯的服用抗精神病药物不能诱使这种接受态度，”她强调“这种接受让我心理上释放了。"
+        },
+        {
+          "en": "The looping structure of the book tries to work that out psychologically in its hearers.",
+          "cn": "这本书的环状结构,试图在听众的心理上达到那种目的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "tertiary",
+      "usphone": "'tɝʃɪ'ɛri",
+      "ukphone": "'tɜːʃ(ə)rɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "第三级的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He must have come to know those philosophers through secondary or tertiary sources.",
+          "cn": "他一定是通过第二手或第三手资料了解那些哲学家的。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "tertiary industry",
+          "cn": "第三产业"
+        },
+        {
+          "en": "tertiary education",
+          "cn": "高等教育，大学教育"
+        },
+        {
+          "en": "tertiary amine",
+          "cn": "[化]叔胺；三级胺"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "undergraduate",
+      "usphone": ",ʌndɚ'ɡrædʒuət",
+      "ukphone": "ʌndə'grædjʊət",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "大学生"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "second-year undergraduates",
+          "cn": "大学二年级学生"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "undergraduate course",
+          "cn": "本科课程"
+        },
+        {
+          "en": "undergraduate education",
+          "cn": "大学本科教育"
+        },
+        {
+          "en": "undergraduate degree",
+          "cn": "学士学位"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "vocational",
+      "usphone": "vo'keʃənl",
+      "ukphone": "və(ʊ)'keɪʃ(ə)n(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "职业的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "vocational qualifications",
+          "cn": "职业资格"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "vocational education",
+          "cn": "职业教育"
+        },
+        {
+          "en": "vocational school",
+          "cn": "n. 职业学校"
+        },
+        {
+          "en": "vocational training",
+          "cn": "职业训练"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "zoology",
+      "usphone": "zəu'ɔlədʒi, zu:-",
+      "ukphone": "zuː'ɒlədʒɪ; zəʊ-",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "动物学"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The scholarship money she won helped her attend Cornell University, where she majored in zoology.",
+          "cn": "她赢得的奖学金帮助她上康奈尔大学，在那里他主修动物学。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "gown",
+      "usphone": "ɡaʊn",
+      "ukphone": "gaʊn",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "长袍，礼服"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The new ball gown was a great success.",
+          "cn": "那件新款长礼服非常成功。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "wedding gown",
+          "cn": "结婚礼服；新娘礼服"
+        },
+        {
+          "en": "evening gown",
+          "cn": "n. 女子夜礼服"
+        },
+        {
+          "en": "dressing gown",
+          "cn": "晨衣，便袍"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "prestigious",
+      "usphone": "prɛ'stɪdʒəs",
+      "ukphone": "pre'stɪdʒəs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "享有声望的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a prestigious literary award",
+          "cn": "享有盛名的文学奖"
+        },
+        {
+          "en": "a highly prestigious university",
+          "cn": "赫赫有名的大学"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "interconnect",
+      "usphone": ",ɪntɚkə'nɛkt",
+      "ukphone": "ɪntəkə'nekt",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使互相连接"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a series of interconnected lakes",
+          "cn": "一连串相互连接的湖泊"
+        },
+        {
+          "en": "interconnecting rooms",
+          "cn": "相连的房间"
+        },
+        {
+          "en": "Our operating system can now interconnect with other networks.",
+          "cn": "我们的操作系统现在能和其他网络相连。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "postgraduate",
+      "usphone": "post'ɡrædjet",
+      "ukphone": "pəʊs(t)'grædjʊət",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "研究生"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "\"Given the level of competition in law, I definitely think that my postgraduate degree helped to distinguish me from the crowd, \" he says.",
+          "cn": "他说，“考虑到在法律行业的竞争水平，我确实认为我的研究生学位让我从众人中脱颖而出”。"
+        },
+        {
+          "en": "Attracted by the greatness of English language, Gu even changed her major from accounting to English in her postgraduate study.",
+          "cn": "顾秋蓓被英语这门语言的魅力所吸引，她甚至将自己的研究生专业从会计转到了英语专业。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "postgraduate student",
+          "cn": "硕士研究生"
+        },
+        {
+          "en": "postgraduate diploma",
+          "cn": "研究生文凭；研究生文凭课程"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "secondary",
+      "usphone": "'sɛkəndɛri",
+      "ukphone": "'sek(ə)nd(ə)rɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "中等教育的；次要的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "the novel’s secondary characters",
+          "cn": "这本小说中的次要人物"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "secondary school",
+          "cn": "中等学校"
+        },
+        {
+          "en": "secondary market",
+          "cn": "二级市场；次级市场"
+        },
+        {
+          "en": "secondary pollution",
+          "cn": "二次污染"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "fountain",
+      "usphone": "'faʊntn",
+      "ukphone": "ˈfaʊntən",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "泉水，喷泉"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...the fountains on the 16th Street Mall.",
+          "cn": "…第16街商业区的喷泉。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "fountain pen",
+          "cn": "n. 钢笔"
+        },
+        {
+          "en": "water fountain",
+          "cn": "饮水器；供应饮用水之处"
+        },
+        {
+          "en": "fountain of youth",
+          "cn": "青春之泉"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "refresher course",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "进修课程"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "This is the first post in an ongoing series I’m calling “back to Basics”, a “refresher course” in personal productivity.",
+          "cn": "这是一篇系列文章的第一篇，我称之“回归基本”，关于个人效率的进修课程。"
+        },
+        {
+          "en": "This is a great place to start in the podcast pool, whether you are a newb or in need of a little refresher course",
+          "cn": "无论你是新手，还是在寻找进修课程，这都是不错的选择。"
+        },
+        {
+          "en": "To help a dog stick with good behaviors, every few years take him for a refresher course.",
+          "cn": "要想让狗狗保持良好的习惯，你应该每年带它参加一些新鲜的训练课程。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "myth",
+      "usphone": "mɪθ",
+      "ukphone": "mɪθ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "神话，虚构的故事"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a book of Greek myths",
+          "cn": "一本关于希腊神话的图书"
+        },
+        {
+          "en": "the giants of myth and fairytale",
+          "cn": "神话和童话里的巨人"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "toddler",
+      "usphone": "'tɑdlɚ",
+      "ukphone": "'tɒdlə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "初学走路的孩子"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I had a toddler at home and two other children at school.",
+          "cn": "我有一个刚学步的孩子在家中，另外两个孩子在学校。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "inheritance",
+      "usphone": "ɪn'hɛrɪtəns",
+      "ukphone": "ɪn'herɪt(ə)ns",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "遗传，遗产"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Lucinda has to fight for her life and her inheritance in this gripping novel.",
+          "cn": "在这部扣人心弦的小说里，露辛达不得不为自己的生命与所继承的遗产进行抗争。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "inheritance tax",
+          "cn": "[美]遗产税，继承税"
+        },
+        {
+          "en": "inheritance hierarchy",
+          "cn": "继承层次；继承体系；继承阶层架构"
+        },
+        {
+          "en": "autosomal dominant inheritance",
+          "cn": "常染色体显性遗传"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "inability",
+      "usphone": ",ɪnə'bɪləti",
+      "ukphone": "ɪnə'bɪlɪtɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "无能"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Her inability to concentrate could cause an accident.",
+          "cn": "她无法集中注意力可能会导致意外。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "dubious",
+      "usphone": "'dubɪəs",
+      "ukphone": "'djuːbɪəs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "可疑的，不确定的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The firm was accused of dubious accounting practices.",
+          "cn": "该公司被指控有不诚实的会计行为。"
+        },
+        {
+          "en": "Many critics regard this argument as dubious or, at best, misleading.",
+          "cn": "许多批评家认为这一论点靠不住，或者说至少有误导性。"
+        },
+        {
+          "en": "The assumption that growth in one country benefits the whole world is highly dubious .",
+          "cn": "一国的经济增长会对全世界有益的假设是很值得怀疑的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "derive",
+      "usphone": "dɪ'raɪv",
+      "ukphone": "dɪ'raɪv",
+      "trans": [
+        {
+          "pos": "vt&vi",
+          "tranCn": "得到，获得；起源"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Mr. Ying is one of those happy people who derive pleasure from helping others.",
+          "cn": "英先生是那种助人为乐的快活人。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "derive from",
+          "cn": "源出，来自，得自；衍生于"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "sustain",
+      "usphone": "sə'sten",
+      "ukphone": "sə'steɪn",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "长期保持"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She found it difficult to sustain the children’s interest.",
+          "cn": "她发现很难保持孩子们的兴趣。"
+        },
+        {
+          "en": "He was incapable of sustaining close relationships with women.",
+          "cn": "他无法和女人维持亲密关系。"
+        },
+        {
+          "en": "the policies necessary to sustain economic growth",
+          "cn": "维持经济增长必需的政策"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "sustain losses",
+          "cn": "蒙受损失"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "questionnaire",
+      "usphone": "ˌkwɛstʃənˈɛr",
+      "ukphone": "ˌkwestʃəˈneə(r)",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "调查表，问卷"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Teachers will be asked to fill in a questionnaire.",
+          "cn": "教师们将被要求填写一份调查问卷。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "questionnaire survey",
+          "cn": "问卷调查"
+        },
+        {
+          "en": "questionnaire method",
+          "cn": "问卷调查法；问卷法"
+        },
+        {
+          "en": "personality questionnaire",
+          "cn": "人格问卷"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "subject",
+      "usphone": "ˈsʌbdʒɪkt;(for adj.)ˈsʌbdʒɪkt;(for v.)səbˈdʒɛkt",
+      "ukphone": "ˈsʌbdʒɪkt;(for adj.)ˈsʌbdʒɪkt;(for v.)səbˈdʒekt",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使遭受（某种经历）"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...the man who had subjected her to four years of beatings and abuse.",
+          "cn": "…那个使她遭受了4年殴打和辱骂的男人。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "on the subject of",
+          "cn": "涉及…时"
+        },
+        {
+          "en": "subject matter",
+          "cn": "主题；主旨"
+        },
+        {
+          "en": "on the subject",
+          "cn": "就某话题"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "agility",
+      "usphone": "ə'dʒiləti",
+      "ukphone": "ə'dʒɪlətɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "敏捷，活泼"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "If for some reason you don't have or cannot adopt these values, then you should not worry about agility.",
+          "cn": "如果因为某些原因您没有或者不能采用这些价值，那么您就不需要为敏捷而操心了。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "frequency agility",
+          "cn": "频率捷变"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "significantly",
+      "usphone": "sɪg'nɪfɪkəntli",
+      "ukphone": "sɪg'nɪfɪk(ə)ntlɪ",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "意味深长地，值得注目地"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The Democrats, significantly, finished well behind the Green Party.",
+          "cn": "值得注意的是，民主党的得票数远远落后于绿党。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "nocturnal",
+      "usphone": "nɑk'tɝnl",
+      "ukphone": "nɒk'tɜːn(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "夜间发生的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Hamsters are nocturnal creatures.",
+          "cn": "仓鼠是夜行动物。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "nocturnal emission",
+          "cn": "[医]梦遗；夜间遗精"
+        },
+        {
+          "en": "nocturnal enuresis",
+          "cn": "夜尿症，\t夜遗尿"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "predator",
+      "usphone": "'prɛdətɚ",
+      "ukphone": "'predətə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "食肉动物"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "With no natural predators on the island, the herd increased rapidly.",
+          "cn": "由于岛上没有天然食肉动物，牧群的数量迅速增加。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "pushy",
+      "usphone": "'pʊʃi",
+      "ukphone": "'pʊʃɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "执意强求的；死缠硬磨的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a pushy salesman",
+          "cn": "纠缠不休的推销员"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "overstimulate",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "过度刺激，过度激励"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "For this reason, policymakers need to be careful not to overstimulate the economy when an oil shock hits.",
+          "cn": "正是由于这个原因，政策制定者们需要小心谨慎，当油价冲击来临时，不要过度刺激经济。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "self-esteem",
+      "usphone": "ˌsɛlfəˈstim",
+      "ukphone": "self ɪ'sti:m",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "自尊"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "students’ sense of self-esteem",
+          "cn": "学生的自尊心"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "rife",
+      "usphone": "raɪf",
+      "ukphone": "raɪf",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "普遍的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Violent crime is rife in our inner cities.",
+          "cn": "暴力犯罪在我们的旧城区非常猖獗。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "expectant",
+      "usphone": "ɪk'spɛktənt",
+      "ukphone": "ɪk'spekt(ə)nt; ek-",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "期待的，预期的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a row of expectant faces",
+          "cn": "一张张满怀期待的面孔"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "self respect",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "自尊，自重"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Work with the best of intentions and gain your self respect from that.",
+          "cn": "带着最好的意图工作并从中获得你的自我尊重吧。"
+        },
+        {
+          "en": "If our self respect is based on the praise of others then our self respect will be very tenuous.",
+          "cn": "如果我们的自我尊重建立在他人的表扬之上，那么这种自我尊重将是非常脆弱的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "enrolment",
+      "usphone": "ɪn'rolmənt",
+      "ukphone": "ɪn'rəʊlm(ə)nt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "入学，登记"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Enrolment will take place in September.",
+          "cn": "注册将于9月进行。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "plethora",
+      "usphone": "'plɛθərə",
+      "ukphone": "'pleθ(ə)rə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "过多，过剩"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a plethora of suggestions",
+          "cn": "一大堆建议"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "arithmetic",
+      "usphone": "ə'rɪθmətɪk",
+      "ukphone": "ə'rɪθmətɪk",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "算术，算法"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...teaching the basics of reading, writing and arithmetic.",
+          "cn": "…教授读、写、算的基本知识。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "arithmetic mean",
+          "cn": "算术均数；等差中项"
+        },
+        {
+          "en": "arithmetic average",
+          "cn": "算术平均数"
+        },
+        {
+          "en": "arithmetic operation",
+          "cn": "算术运算"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "psychiatric",
+      "usphone": ",saɪkɪ'ætrɪk",
+      "ukphone": ",saɪkɪ'ætrɪk",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "精神病学的，精神病治疗的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a psychiatric hospital",
+          "cn": "精神病医院"
+        },
+        {
+          "en": "a psychiatric nurse",
+          "cn": "精神病院护士"
+        },
+        {
+          "en": "Charles was suffering from a psychiatric disorder (= mental illness ) .",
+          "cn": "查尔斯彼时精神错乱。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "psychiatric disorders",
+          "cn": "精神疾病"
+        },
+        {
+          "en": "psychiatric nursing",
+          "cn": "精神病护理"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "Dutch",
+      "usphone": "dʌtʃ",
+      "ukphone": "dʌtʃ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "荷兰的，荷兰人的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "But just like Dutch in Predator before the final battle, you have to be able to answer only one question about your target before you start: where they are.",
+          "cn": "但就像一战之前的荷兰掠夺者一样，在开始工作之前你必须能够回答实现目标的唯一问题：他们在哪里？"
+        },
+        {
+          "en": "Nor would they buy the overpriced textiles that the Dutch brought in from India.",
+          "cn": "他们也不会买荷兰人从印度带来的价格过高的纺织品。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "go dutch",
+          "cn": "各自付帐"
+        },
+        {
+          "en": "in dutch",
+          "cn": "处境困难；失宠"
+        },
+        {
+          "en": "dutch auction",
+          "cn": "荷兰式拍卖；喊价逐步减低的拍卖"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "beset",
+      "usphone": "bɪ'sɛt",
+      "ukphone": "bɪ'set",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "困扰"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "the injuries which have beset the team all season",
+          "cn": "困扰球队整个赛季的伤病问题"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "beset by",
+          "cn": "为…困扰；被包围"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "interact",
+      "usphone": ",ɪntɚ'ækt",
+      "ukphone": "ɪntər'ækt",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "交流；交往；互相作用"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "While the other children interacted and played together, Ted ignored them.",
+          "cn": "当其他孩子们相互交往、一起玩耍时，泰德却不理他们。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "interact with",
+          "cn": "与……相互作用"
+        },
+        {
+          "en": "interact on",
+          "cn": "作用；影响；制约"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "peer",
+      "usphone": "pɪr",
+      "ukphone": "pɪə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "同龄人，同辈"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "American children did less well in math than their peers in Japan.",
+          "cn": "美国儿童的数学成绩不如日本的同龄儿童。"
+        },
+        {
+          "en": "Staff members are trained by their peers.",
+          "cn": "员工由同事培训。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "peer review",
+          "cn": "同业互查"
+        },
+        {
+          "en": "peer to peer",
+          "cn": "对等的；[计]端对端"
+        },
+        {
+          "en": "peer pressure",
+          "cn": "来自同辈的压力"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "internalise",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使……内在化"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "speculate",
+      "usphone": "'spɛkjə'let",
+      "ukphone": "'spekjʊleɪt",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "推测"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She refused to speculate.",
+          "cn": "她拒绝猜测。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "speculate on",
+          "cn": "v. 推测；考虑"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "psychiatrist",
+      "usphone": "saɪ'kaɪətrɪst",
+      "ukphone": "saɪ'kaɪətrɪst",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "精神病医师，精神病学家"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "“The notion that behavior modification can bring about true happiness is as bogus as can be,” says psychiatrist Charles Goodstein, MD, of New York University.",
+          "cn": "纽约大学医学博士、精神病学家查尔斯.古德斯坦说：“行为修正能够带来真正的快乐的观念是相当虚假的。”"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "idiot",
+      "usphone": "'ɪdɪət",
+      "ukphone": "'ɪdɪət",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "白痴，傻瓜"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "‘You are an idiot, ’ he tells them.",
+          "cn": "‘你确实是傻瓜，’他对他们说。"
+        },
+        {
+          "en": "Reader, suppose you were an idiot. And suppose you were a member of Congress. But I repeat myself.",
+          "cn": "亲爱的读者，假设你是一个白痴。再假设你是一名国会成员。不过我的话说重复了。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "idiot box",
+          "cn": "电视机"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "savant",
+      "usphone": "sæ'vɑnt",
+      "ukphone": "'sævənt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "博学之士"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "depict",
+      "usphone": "dɪ'pɪkt",
+      "ukphone": "dɪ'pɪkt",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "描述，描写"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a book depicting life in pre-revolutionary Russia",
+          "cn": "描写革命前俄国人生活的一本书"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "conscious",
+      "usphone": "'kɑnʃəs",
+      "ukphone": "'kɒnʃəs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "有意识的，有知觉的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The driver was still conscious when the ambulance arrived.",
+          "cn": "救护车赶到时，司机仍然神志清醒。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "conscious of",
+          "cn": "意识到"
+        },
+        {
+          "en": "become conscious of",
+          "cn": "观察到"
+        },
+        {
+          "en": "safety conscious",
+          "cn": "adj. 有安全意识的"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "zap",
+      "usphone": "zæp",
+      "ukphone": "zæp",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "毁坏；打击；快速度换频道"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Doctors have tried zapping tumors with high-voltage radiation.",
+          "cn": "医生试过用高压辐射消除肿瘤。"
+        },
+        {
+          "en": "The laser weapons are designed to zap enemy missiles.",
+          "cn": "这些激光武器是用来摧毁敌军导弹的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "zapper",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "遥控器；灭杀器"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "magnetic",
+      "usphone": "mæg'nɛtɪk",
+      "ukphone": "mæg'netɪk",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "磁的，有磁性的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "magnetic forces",
+          "cn": "磁力"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "magnetic field",
+          "cn": "磁场"
+        },
+        {
+          "en": "magnetic resonance",
+          "cn": "磁共振；磁谐振"
+        },
+        {
+          "en": "magnetic separation",
+          "cn": "磁选；磁性分离；磁力分离；磁力选矿"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "stimulation",
+      "usphone": "ˌstɪmjʊ'leʃn",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "刺激；激励；鼓舞"
+        }
+      ],
+      "sentences": [],
+      "phrases": [
+        {
+          "en": "electrical stimulation",
+          "cn": "电刺激"
+        },
+        {
+          "en": "visual stimulation",
+          "cn": "视觉刺激"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "recruit",
+      "usphone": "rɪ'krut",
+      "ukphone": "rɪ'kruːt",
+      "trans": [
+        {
+          "pos": "vt&vi",
+          "tranCn": "劝说；招聘"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We’re having difficulty recruiting enough qualified staff.",
+          "cn": "我们难以招聘到足够的合格职员。"
+        },
+        {
+          "en": "Many government officials were recruited from private industry.",
+          "cn": "很多政府官员是从私营企业招募来的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "inactivity",
+      "usphone": ",ɪnæk'tɪvəti",
+      "ukphone": ",ɪnæk'tɪvɪtɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "静止，休止状态"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "citizenship",
+      "usphone": "'sɪtɪzənʃɪp",
+      "ukphone": "'sɪtɪzən,ʃɪp",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "公民权利，公民身份"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "McGuirk holds dual citizenship (= the legal right of being a citizen in two countries ) in Ireland and the US.",
+          "cn": "麦吉尔克拥有爱尔兰和美国的双重国籍。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "corporate citizenship",
+          "cn": "企业公民；公司公民；公司公民意识（原形是corporate citizen）"
+        },
+        {
+          "en": "citizenship education",
+          "cn": "公民教育；公民资质教育"
+        },
+        {
+          "en": "dual citizenship",
+          "cn": "双重国籍"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "cookery",
+      "usphone": "'kukəri",
+      "ukphone": "'kʊk(ə)rɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "烹调术"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a one-year cookery course",
+          "cn": "为期一年的烹饪课程"
+        },
+        {
+          "en": "French cookery",
+          "cn": "法式烹调"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "cookery book",
+          "cn": "（英）烹饪书；食谱（等于cookbook）"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "DIY",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "abbr",
+          "tranCn": "自己动手做"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "incompetent",
+      "usphone": "ɪn'kɑmpɪtənt",
+      "ukphone": "ɪn'kɒmpɪt(ə)nt",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不合格的，不胜任的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "an incompetent manager",
+          "cn": "不称职的经理"
+        },
+        {
+          "en": "weak incompetent leadership",
+          "cn": "软弱不称职的领导"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "assembly",
+      "usphone": "ə'sɛmbli",
+      "ukphone": "ə'semblɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "集会"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "the General Assembly of the Church of Scotland",
+          "cn": "苏格兰长老会大会"
+        },
+        {
+          "en": "the speaker of the California state assembly",
+          "cn": "加利福尼亚州议会议长"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "assembly line",
+          "cn": "装配线；流水作业线"
+        },
+        {
+          "en": "general assembly",
+          "cn": "联合国大会"
+        },
+        {
+          "en": "assembly language",
+          "cn": "n. 汇编语言"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "fundamentally",
+      "usphone": ",fʌndə'mɛntəli",
+      "ukphone": "fʌndə'mentəlɪ",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "根本上，基本上"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The conclusions of the report are fundamentally wrong .",
+          "cn": "这份报告的结论从根本上来说就是错误的。"
+        },
+        {
+          "en": "The political culture of the US is fundamentally different .",
+          "cn": "美国的政治文化迥然不同。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "flourish",
+      "usphone": "ˈflɜːrɪʃ",
+      "ukphone": "'flʌrɪʃ",
+      "trans": [
+        {
+          "pos": "vi&vt",
+          "tranCn": "繁荣；兴旺；茁壮成长"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The economy is booming and small businesses are flourishing.",
+          "cn": "经济繁荣，小企业蒸蒸日上。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "a flourish of trumpets",
+          "cn": "大肆宣扬"
+        },
+        {
+          "en": "in full flourish",
+          "cn": "在全盛时，盛极一时"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "undue",
+      "usphone": ",ʌn'du",
+      "ukphone": "ʌn'djuː",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不适当的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "De Gaulle felt that America had undue influence in Europe.",
+          "cn": "戴高乐感到美国在欧洲影响力过大。"
+        },
+        {
+          "en": "The kick should be taken without undue delay.",
+          "cn": "应立即开球，不得无故拖延。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "undue influence",
+          "cn": "n. 不正当影响；[律]不正当压力"
+        },
+        {
+          "en": "undue delay",
+          "cn": "不当延误；不应有的延误"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "essentially",
+      "usphone": "ɪ'sɛnʃəli",
+      "ukphone": "ɪ'senʃ(ə)lɪ",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "本质上，本来"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Ballet is essentially a middle-class interest.",
+          "cn": "芭蕾舞基本上是中产阶级感兴趣的东西。"
+        },
+        {
+          "en": "Suicide rates have remained essentially unchanged.",
+          "cn": "自杀率基本上保持不变。"
+        },
+        {
+          "en": "Essentially, we are talking about the cold war period.",
+          "cn": "我们基本上是在谈论冷战时期。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "empathy",
+      "usphone": "'ɛmpəθi",
+      "ukphone": "'empəθɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "同情，同感"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Having begun my life in a children's home, I have great empathy with the little ones.",
+          "cn": "在一家儿童福利院长大使我对这些小孩子们怀有深深的同感。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "tolerance",
+      "usphone": "'tɑlərəns",
+      "ukphone": "'tɒl(ə)r(ə)ns",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "宽容，忍受，容忍"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...his tolerance and understanding of diverse human nature.",
+          "cn": "…他对各种人性的宽容和理解。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "fault tolerance",
+          "cn": "容错，故障容差"
+        },
+        {
+          "en": "glucose tolerance",
+          "cn": "葡萄糖耐量；葡萄糖耐受性"
+        },
+        {
+          "en": "position tolerance",
+          "cn": "位置公差"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "viewpoint",
+      "usphone": "'vjupɔɪnt",
+      "ukphone": "'vjuːpɒɪnt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "观点"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Different viewpoints produce different images.",
+          "cn": "角度不同，产生的画面也不同。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "weave",
+      "usphone": "wiv",
+      "ukphone": "wiːv",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "编；织；编造"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "hand-woven scarves",
+          "cn": "手织围巾"
+        },
+        {
+          "en": "Only a few of the women still weave.",
+          "cn": "只有数量很少的妇女还在编织。"
+        },
+        {
+          "en": "traditional basket weaving",
+          "cn": "传统的编篮技术"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "plain weave",
+          "cn": "平纹梭织，平纹布；平布"
+        },
+        {
+          "en": "twill weave",
+          "cn": "斜纹组织；斜纹织；斜织法"
+        },
+        {
+          "en": "satin weave",
+          "cn": "缎织；缎纹组织"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "overt",
+      "usphone": "o'vɝt",
+      "ukphone": "əʊ'vɜːt; 'əʊvət",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "明显的，公然的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "an overt attempt to silence their political opponents",
+          "cn": "他们想压制政敌言论的明显企图"
+        },
+        {
+          "en": "Overt race discrimination is illegal.",
+          "cn": "公然的种族歧视是非法的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "interpersonal",
+      "usphone": "'ɪntɚ'pɝsnl",
+      "ukphone": "ɪntə'pɜːs(ə)n(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "人与人之间的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "interpersonal skills",
+          "cn": "人际交往技巧"
+        },
+        {
+          "en": "interpersonal communication",
+          "cn": "人际沟通"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "interpersonal relationship",
+          "cn": "人际关系"
+        },
+        {
+          "en": "interpersonal communication",
+          "cn": "人际沟通；人际传播；人际交流"
+        },
+        {
+          "en": "interpersonal skill",
+          "cn": "人际关系技巧，人际交往能力"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "entity",
+      "usphone": "'ɛntəti",
+      "ukphone": "'entɪtɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "独立存在体"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The mind exists as a separate entity.",
+          "cn": "思想作为一个独立的实体存在。"
+        },
+        {
+          "en": "Good design brings a house and garden together as a single entity.",
+          "cn": "优秀的设计能把一所房子和花园合为一体。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "legal entity",
+          "cn": "法人实体"
+        },
+        {
+          "en": "economic entity",
+          "cn": "经济实体；经济单位"
+        },
+        {
+          "en": "business entity",
+          "cn": "营业单位；企业单位"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "interteam",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "团队间的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "When we optimize interpersonal and interteam interactions, we reduce the barriers to getting work accomplished.",
+          "cn": "当我们优化了人与人之间和团队与团队之间的交互时，我们就减少了完成工作的障碍。"
+        },
+        {
+          "en": "If, for making a minor change in the application, the interteam communication is high then revisit the structure.",
+          "cn": "如果在待开发应用中做一个小更改，就会带来大量团队之间的沟通，那么就得好好看看团队结构了。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "intolerance",
+      "usphone": "ɪn'tɑlərəns",
+      "ukphone": "ɪn'tɒl(ə)r(ə)ns; ɪn'tɒl(ə)rəns",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "不能容忍"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...his intolerance of any opinion other than his own.",
+          "cn": "…他对除自己以外任何观点的不容忍。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "lactose intolerance",
+          "cn": "乳糖不耐症"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "homophobia",
+      "usphone": "'homə'fobɪə",
+      "ukphone": ",hɒmə'fəʊbɪə; ,həʊmə-",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "对同性恋的憎恶"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Personally, I think Adams’s collective work on homophobia is terribly important.",
+          "cn": "个人来说，我认为亚当斯关于同性恋憎恶的集体工作极其重要。"
+        },
+        {
+          "en": "Over half of the participants admitted to taking out “red flag” words from their grant submission abstracts and titles, including the words needle-exchange, AIDS, homophobia, lesbian and gay.",
+          "cn": "过半数受访者称将把“有危险的”语言从资金申请摘要和题目中抹去，包括针具交换，艾滋病，对同性恋的憎恶，同性恋者等词汇。"
+        },
+        {
+          "en": "Many feminists claim that homophobia and ignorance are at the heart of people's refusal to label themselves as feminists, even though they agree with the tenets of feminism.",
+          "cn": "许多女权主义者认为，对同性恋的厌恶与无知，在那些拒绝将自己归属为女权人士的心目中根深蒂固--即使他们认同女权主义的主张。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "sexism",
+      "usphone": "'sɛk'sɪzəm",
+      "ukphone": "'seksɪz(ə)m",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "性别歧视"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "sexism in the workplace",
+          "cn": "工作场所的性别歧视"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "expertise",
+      "usphone": "'ɛkspɝ'tiz",
+      "ukphone": ",ekspɜː'tiːz",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "专门技能（知识）"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She was not an accountant and didn't have the expertise to verify all of the financial details.",
+          "cn": "她不是会计，不具有核查所有这些财政细目的专业知识。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "technical expertise",
+          "cn": "专业技术"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "articulate",
+      "usphone": "ɑr'tɪkjulet",
+      "ukphone": "ɑ:'tɪkjʊleɪt",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "清晰地表达"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Many people are unable to articulate the unhappiness they feel.",
+          "cn": "许多人都表达不出内心的痛苦。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "tickle",
+      "usphone": "'tɪkl",
+      "ukphone": "'tɪk(ə)l",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使发痒"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Mommy, this blanket tickles.",
+          "cn": "妈妈，这毛毯扎人。"
+        },
+        {
+          "en": "Mazie’s fur collar was tickling her neck.",
+          "cn": "马齐耶的毛领子扎得她脖子痒痒的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "intake",
+      "usphone": "'ɪn'tek",
+      "ukphone": "'ɪnteɪk",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "吸气"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Your intake of alcohol should not exceed two units per day.",
+          "cn": "你每天酒精摄入量不能超过两个单位。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "water intake",
+          "cn": "进水口，取水口；水摄入（量）"
+        },
+        {
+          "en": "food intake",
+          "cn": "食物摄取，进食"
+        },
+        {
+          "en": "air intake",
+          "cn": "进气口；吸气；吸气管"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "nostril",
+      "usphone": "'nɑstrəl",
+      "ukphone": "'nɒstr(ə)l",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "鼻孔"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The smell of gunpowder filled his nostrils.",
+          "cn": "火药味灌进他的鼻孔。"
+        },
+        {
+          "en": "the horse’s flaring nostrils",
+          "cn": "马儿张大的鼻孔"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "seal",
+      "usphone": "sil",
+      "ukphone": "sil",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "封，密封"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The window was sealed shut.",
+          "cn": "这扇窗户被封了起来。"
+        },
+        {
+          "en": "Dried milk is kept in hermetically sealed (= very tightly closed ) containers.",
+          "cn": "奶粉储藏在完全密封的容器里。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "seal of",
+          "cn": "证明；保证"
+        },
+        {
+          "en": "mechanical seal",
+          "cn": "[机]机械密封"
+        },
+        {
+          "en": "oil seal",
+          "cn": "油封"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "chin",
+      "usphone": "tʃɪn",
+      "ukphone": "tʃɪn",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "下巴，下颚"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He rubbed his chin thoughtfully.",
+          "cn": "他若有所思地抚摸着下巴。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "chin oneself",
+          "cn": "(在单杠上)做引体向上动作"
+        },
+        {
+          "en": "chin up",
+          "cn": "振奋起来；引体向上"
+        },
+        {
+          "en": "double chin",
+          "cn": "n. 双下巴"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "resuscitate",
+      "usphone": "rɪ'sʌsɪtet",
+      "ukphone": "rɪ'sʌsɪteɪt",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "使恢复知觉；使苏醒"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Doctors managed to resuscitate him.",
+          "cn": "医生把他抢救了过来。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "self-preservation",
+      "usphone": "'self,prezə'veiʃən",
+      "ukphone": "'self,prezə'veiʃən",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "自卫本能"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "irreparable",
+      "usphone": "ɪ'rɛpərəbl",
+      "ukphone": "ɪ'rep(ə)rəb(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不能挽回的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Extensive mining will cause irreparable damage to the area.",
+          "cn": "大量采矿会对该地区造成无法弥补的损害。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "straighten",
+      "usphone": "'stretn",
+      "ukphone": "'streɪt(ə)n",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "(使)弄直，伸直"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Can you straighten your leg?",
+          "cn": "你能把腿伸直吗？"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "straighten out",
+          "cn": "清理；使成直线；澄清；改正"
+        },
+        {
+          "en": "straighten up",
+          "cn": "好转；改正；清理"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "pinch",
+      "usphone": "pɪntʃ",
+      "ukphone": "pɪn(t)ʃ",
+      "trans": [
+        {
+          "pos": "v",
+          "tranCn": "捏，拧，掐"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We have to stop her pinching her baby brother.",
+          "cn": "我们不能让她再掐她小弟弟了。"
+        },
+        {
+          "en": "He pinched her cheek.",
+          "cn": "他捏了一下她的脸颊。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "feel the pinch",
+          "cn": "[口]感到经济拮据"
+        },
+        {
+          "en": "a pinch of",
+          "cn": "一撮，少许"
+        },
+        {
+          "en": "pinch roll",
+          "cn": "夹送辊；导正滚轮；拉辊"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "exhale",
+      "usphone": "ɛks'hel",
+      "ukphone": "ɪks'heɪl; eks-",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "呼气"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Take a deep breath, then exhale slowly.",
+          "cn": "深吸一口气，然后慢慢呼出。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "cardiac",
+      "usphone": "'kɑrdɪæk",
+      "ukphone": "'kɑːdɪæk",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "心脏的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "cardiac surgery",
+          "cn": "心脏手术"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "cardiac function",
+          "cn": "心功能，心脏功能"
+        },
+        {
+          "en": "cardiac arrest",
+          "cn": "[医]心搏停止"
+        },
+        {
+          "en": "cardiac surgery",
+          "cn": "心脏外科，心外科；心脏手术"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "irrelevant",
+      "usphone": "ɪ'rɛləvənt",
+      "ukphone": "ɪ'relɪv(ə)nt",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不相关的，不切题的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We’re focussing too much on irrelevant details.",
+          "cn": "我们过于关注不相干的细节。"
+        },
+        {
+          "en": "Students viewed Latin as boring and irrelevant.",
+          "cn": "学生认为拉丁语无聊且无关紧要。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "literacy",
+      "usphone": "'lɪtərəsi",
+      "ukphone": "'lɪt(ə)rəsɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "读写能力"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a new adult literacy campaign",
+          "cn": "新一轮成人识字[扫盲]运动"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "literacy education",
+          "cn": "文化教育；读写教育"
+        },
+        {
+          "en": "computer literacy",
+          "cn": "计算机文化；有使用电脑的能力"
+        },
+        {
+          "en": "visual literacy",
+          "cn": "[计]直观读写；视觉认识能力"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "performance-related pay",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "与工作表现挂钩的工资"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "cramming",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "填鸭式教学"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Such cramming method of teaching is now severely reprobated.",
+          "cn": "这种填鸭式的教学法现在受到严厉的谴责。"
+        },
+        {
+          "en": "Tip：If you’re planning a really long cramming session, break it up with a nap.",
+          "cn": "小贴士：如果你正在计划一个很长的填鸭式的学期，中途可以打个盹。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "cram school",
+          "cn": "补习班；补习学校，强化学校"
+        },
+        {
+          "en": "cram for",
+          "cn": "临时抱佛脚；填鸭式地学习；死记硬背"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "mockery",
+      "usphone": "'mɑkəri",
+      "ukphone": "'mɒk(ə)rɪ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "嘲笑"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "This building plan makes a mockery of the government’s environmental policy.",
+          "cn": "这个建筑规划是对政府环境政策的嘲讽。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "make a mockery of",
+          "cn": "嘲笑；把…作为笑料；愚弄"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "tuition",
+      "usphone": "tʊ'ɪʃən",
+      "ukphone": "tjuː'ɪʃ(ə)n",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "学费"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I had to have extra tuition in maths.",
+          "cn": "我不得不上数学补习课。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "tuition fee",
+          "cn": "学费"
+        },
+        {
+          "en": "tuition waiver",
+          "cn": "学费减免"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "chatty",
+      "usphone": "'tʃæti",
+      "ukphone": "'tʃætɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "饶舌的，爱讲闲话的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He was in an unusually chatty mood.",
+          "cn": "他谈兴特别高。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "grumpy",
+      "usphone": "'ɡrʌmpi",
+      "ukphone": "'grʌmpɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "脾气坏的，性情乖戾的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Mina’s always a bit grumpy first thing in the morning.",
+          "cn": "明娜早上起来总是有点脾气。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "irritable",
+      "usphone": "'ɪrɪtəbl",
+      "ukphone": "'ɪrɪtəb(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "易怒的，急躁的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Jo was tired, irritable, and depressed.",
+          "cn": "乔疲惫暴躁，而且情绪低落。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "irritable bowel syndrome",
+          "cn": "[医]肠道易激综合症"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "fussy",
+      "usphone": "'fʌsi",
+      "ukphone": "'fʌsɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "爱挑剔的，过于讲究的，难以取悦的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "A lot of small children are fussy eaters (= they dislike many types of food ) .",
+          "cn": "许多小孩子挑食。"
+        },
+        {
+          "en": "‘Do you want to go out or just rent a movie?’ ‘I’m not fussy’ (= I don’t mind ) .",
+          "cn": "“你想出去还是租影碟来看？”“随便。”"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "sulk",
+      "usphone": "sʌlk",
+      "ukphone": "sʌlk",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "生闷气，愠怒"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Nicola sulked all morning.",
+          "cn": "尼古拉一早上都在生闷气。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "breezy",
+      "usphone": "'brizi",
+      "ukphone": "'briːzɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "有微风的"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "loathe",
+      "usphone": "loð",
+      "ukphone": "ləʊð",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "厌恶，憎恨"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He loathes their politics.",
+          "cn": "他讨厌他们那一套政治。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "growl",
+      "usphone": "ɡraʊl",
+      "ukphone": "graʊl",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "发牢骚地说"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "‘Get out of my way,’ he growled.",
+          "cn": "“滚开。”他低声咆哮道。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "tidiness",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "整齐，整洁"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "A quill pen on writing paper demands care, attention to grammar, tidiness, controlled thinking.",
+          "cn": "用羽毛笔在写字纸上书写要求你小心翼翼、注意语法、整洁、克制思考。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "fanatically",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "（对某种事物或活动）入迷地"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "tut",
+      "usphone": "tʌt",
+      "ukphone": "tʌt",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "啧啧（表示不赞同）"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The nurse rushed in, tutting with irritation.",
+          "cn": "护士急匆匆地进来，不高兴地咂着嘴。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "moan",
+      "usphone": "mon",
+      "ukphone": "məʊn",
+      "trans": [
+        {
+          "pos": "vi& n",
+          "tranCn": "抱怨；呻吟，呜咽"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "‘I feel seasick already,’ she moaned.",
+          "cn": "“我已经开始晕船了。”她抱怨道。"
+        },
+        {
+          "en": "He moaned and groaned all the way there.",
+          "cn": "他去的一路上抱怨个没完。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "drive sb.mad",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "使……发疯"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "despise",
+      "usphone": "dɪ'spaɪz",
+      "ukphone": "dɪ'spaɪz",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "鄙视"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She despised her neighbours.",
+          "cn": "她看不起她的邻居。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "intrude",
+      "usphone": "ɪn'trʊd",
+      "ukphone": "ɪn'truːd",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "打扰，干涉，侵扰"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Would I be intruding if I came with you?",
+          "cn": "我要是和你一起去，会不会打扰你？"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "intrude upon",
+          "cn": "侵入；打扰"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "extrovert",
+      "usphone": ",ɛkstrə'vɝt",
+      "ukphone": "'ekstrəvɜːt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "性格外向者"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Her sister was always more of an extrovert.",
+          "cn": "她妹妹总是更外向些。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "pry",
+      "usphone": "praɪ",
+      "ukphone": "praɪ",
+      "trans": [
+        {
+          "pos": "vi",
+          "tranCn": "探查"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I don’t want to pry , but I need to ask you one or two questions.",
+          "cn": "我不想唐突，不过我需要问你一两个问题。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "pry into",
+          "cn": "窥探；打听"
+        },
+        {
+          "en": "pry bar",
+          "cn": "撬杆；杠杆"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "suspicious",
+      "usphone": "sə'spɪʃəs",
+      "ukphone": "sə'spɪʃəs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "可疑的，怀疑的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "His reluctance to answer my questions made me suspicious .",
+          "cn": "他不愿回答我的问题，这引起我的怀疑。"
+        },
+        {
+          "en": "She gave him a suspicious glance.",
+          "cn": "她向他投去怀疑的一瞥。"
+        },
+        {
+          "en": "You’ve got a very suspicious mind!",
+          "cn": "你真是疑心太重！"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "suspicious of",
+          "cn": "对…起疑"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "childishly",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "天真地，幼稚地"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "go against",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "反对，违反"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Changes are being made here which go against my principles and I cannot agree with them.",
+          "cn": "这里在被改变，这有悖我的原则，我不能同意。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "shipwreck",
+      "usphone": "'ʃɪprɛk",
+      "ukphone": "'ʃɪprek",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "海难，船只失事"
+        },
+        {
+          "pos": "vt",
+          "tranCn": "使遭海难"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "survivors of the shipwreck",
+          "cn": "此次海难的幸存者"
+        },
+        {
+          "en": "narrowly escaping shipwreck",
+          "cn": "险些遭遇船只失事"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "cameraman",
+      "usphone": "'kæmrəmən",
+      "ukphone": "'kæmrəmən",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "照相师，摄影师"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "An AP cameraman saw a gunman take an unattended laptop and put some other objects into a bag and walk out of the hotel.",
+          "cn": "一名美联社摄影记者看到一个枪手拿走了一台没人照看的笔记本和其他东西以后离开了旅馆。"
+        },
+        {
+          "en": "In order to document this experiment, I travelled with a cameraman, my friend Justin Glow, who shot and edited three webisodes each week for my No Baggage Challenge blog.",
+          "cn": "为了记录这一实验，我和我的朋友，摄影师杰斯汀 格洛同行，他将在每个星期里拍摄并制作三部视频短片，放在我“不带行李去旅行”的博客上。"
+        },
+        {
+          "en": "The first to emerge, Florencio Avalos, 31, is so shy he volunteered to be the cameraman to video-monitor the other miners' health for officials at the surface so he didn't have to be filmed himself.",
+          "cn": "第一个出现的是弗洛伦西奥.阿瓦洛斯，31岁，他是个很害羞的人。 他主动要求做摄影师来为地面上的官员录制其他矿工的健康状况，这样他就可以不被录制。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "call for",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "需要，要求"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "It's a situation that calls for a blend of delicacy and force.",
+          "cn": "这种情况下需要的是刚柔并济。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "shortlist",
+      "usphone": "'ʃɔ:tlist",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "(从初选名单再筛选出的)决选名单"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "If you've been asked for an interview you are probably on a shortlist of no more than six.",
+          "cn": "如果你已经被要求参加面试，你很可能在不超过6人的候选名单上。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "bear in mind",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "记住"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Take a look at the desks around you to see how yours fits in, and bear in mind you can manipulate it to send out a certain message.",
+          "cn": "看一下你周围的桌子来判断你的桌面情况有多高合适度，另外要记住你可以通过巧妙处理你的桌面来发出特定信号。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "rating",
+      "usphone": "'retɪŋ",
+      "ukphone": "'reɪtɪŋ",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "(电影、电视节目的)排行榜"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "CBS will end the series if it continues to drop in the ratings.",
+          "cn": "这部电视连续剧如果收视率排名继续下降，哥伦比亚广播公司就会停播该剧。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "credit rating",
+          "cn": "信用等级；信誉评价"
+        },
+        {
+          "en": "rating system",
+          "cn": "评级系统；评分系统；差饷系统；配给制"
+        },
+        {
+          "en": "rating scale",
+          "cn": "量表；评定量表；等级量表；分等量表"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "prime",
+      "usphone": "praɪm",
+      "ukphone": "praɪm",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "最重要的，首要的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Smoking is the prime cause of lung disease.",
+          "cn": "抽烟是引发肺部疾病的首要原因。"
+        },
+        {
+          "en": "Our prime concern is providing jobs for all young school leavers.",
+          "cn": "我们的头等大事是为所有的年轻毕业生提供工作。"
+        },
+        {
+          "en": "He was named as the prime suspect in the murder investigation.",
+          "cn": "在那宗谋杀案的调查中他被定为主要嫌疑人。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "prime minister",
+          "cn": "首相，总理"
+        },
+        {
+          "en": "prime time",
+          "cn": "黄金时间"
+        },
+        {
+          "en": "deputy prime minister",
+          "cn": "副总理；副首相"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "stiff",
+      "usphone": "stɪf",
+      "ukphone": "stɪf",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "艰难的；严厉的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Beat the egg whites until stiff.",
+          "cn": "把蛋白打到发稠。"
+        },
+        {
+          "en": "a stiff dough",
+          "cn": "硬面团"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "stiff with",
+          "cn": "[俚语]…供应充足的"
+        },
+        {
+          "en": "stiff neck",
+          "cn": "脖子发僵，斜颈；顽固之人"
+        },
+        {
+          "en": "stiff upper lip",
+          "cn": "坚定沉着；不露感情"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "irresponsible",
+      "usphone": ",ɪrɪ'spɑnsəbl",
+      "ukphone": "ˌɪrɪˈspɒnsəbl",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不负责任的，不可靠的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "It was highly irresponsible of him to leave the children on their own in the pool.",
+          "cn": "他把孩子们独自留在游泳池里，真是太不负责任了。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "swimsuit",
+      "usphone": "ˈswɪmˌsut",
+      "ukphone": "'swɪmsuːt; -sjuːt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "(女)游泳衣"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...pictures of models in swimsuits.",
+          "cn": "…泳装模特的照片。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "interaction",
+      "usphone": ",ɪntə'rækʃən",
+      "ukphone": "ɪntər'ækʃ(ə)n",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "交互作用，互动"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "In other situations, there could be more than one interaction between the consumer and provider, each using a different protocol.",
+          "cn": "在另一种情况下，消费者和提供者之间会有超过一种的交互作用，每一种都是用不同的协议。"
+        },
+        {
+          "en": "Note: This is not about how the service is implemented, but rather the interaction between the consumers and providers for this service.",
+          "cn": "请注意：这与服务是如何被执行的并不相关，而是与服务的消费者和提供者之间的相互作用相关。"
+        },
+        {
+          "en": "This indicates that the protocol involves some interaction between these roles.",
+          "cn": "它指出了在这些角色之间涉及某些交互作用的协议。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "interaction with",
+          "cn": "交往；与…相互作用"
+        },
+        {
+          "en": "interaction design",
+          "cn": "交互设计；互动设计"
+        },
+        {
+          "en": "social interaction",
+          "cn": "社会互动；社会干预；社会的相互作用"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "overbearing",
+      "usphone": ",ovɚ'bɛrɪŋ",
+      "ukphone": "əʊvə'beərɪŋ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "专横的，飞扬跋扈的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a bossy overbearing wife",
+          "cn": "专横霸道的妻子"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "loner",
+      "usphone": "'lonɚ",
+      "ukphone": "'ləʊnə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "孤独的人，喜欢独处的人"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Ken’s always been a bit of a loner.",
+          "cn": "肯一直有点孤僻。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "upgrade",
+      "usphone": ",ʌp'ɡred",
+      "ukphone": "ʌp'greɪd",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "提高级别，提升"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The hotel has recently been refurbished and upgraded.",
+          "cn": "这家酒店最近重新装修过，设施更加完善了。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "upgrade oneself",
+          "cn": "提升自我"
+        },
+        {
+          "en": "on the upgrade",
+          "cn": "上升的；进步的"
+        },
+        {
+          "en": "upgrade kit",
+          "cn": "扩充成套"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "distracted",
+      "usphone": "dɪ'stræktɪd",
+      "ukphone": "dɪ'stræktɪd",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "心烦意乱的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She had seemed curiously distracted.",
+          "cn": "她不知为什么显得心不在焉。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "distract from",
+          "cn": "转移；使从…分心"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "campus",
+      "usphone": "'kæmpəs",
+      "ukphone": "'kæmpəs",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "大学校园"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a beautiful campus in New England",
+          "cn": "新英格兰的一个美丽校园"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "on campus",
+          "cn": "adv. 在校内"
+        },
+        {
+          "en": "campus culture",
+          "cn": "校园文化"
+        },
+        {
+          "en": "campus network",
+          "cn": "校园网；园区网"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "pros and cons",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "赞成与反对"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "make use of",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "利用"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "You can make use of the building materials that have been lying by.",
+          "cn": "你们可以利用那些被搁置不用的建筑材料。"
+        },
+        {
+          "en": "This article provided some descriptions of the API, along with some sample code to illustrate how to make use of them.",
+          "cn": "这篇文章提供了应用程序编程接口的一些描述以及一些样本代码来阐明如何使用他们。"
+        },
+        {
+          "en": "The generality of SOAP means that not all systems that make use of SOAP can communicate easily.",
+          "cn": "SOAP 的一般性意味着并非所有使用 SOAP 的系统都可以很容易地进行通信。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "meet up with",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "偶遇"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Hangouts are a whole new way to casually meet up with friends – it’s like Cheers for the web.",
+          "cn": "“视频群聊”是一种偶遇朋友的全新方法——它就像网络上的“欢宴”。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "powder",
+      "usphone": "'paʊdɚ",
+      "ukphone": "'paʊdə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "粉，粉末"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "curry powder",
+          "cn": "咖喱粉"
+        },
+        {
+          "en": "talcum powder",
+          "cn": "滑石[爽身]粉"
+        },
+        {
+          "en": "Grind the sugar into a powder .",
+          "cn": "把糖碾成粉末。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "milk powder",
+          "cn": "n. 奶粉"
+        },
+        {
+          "en": "powder metallurgy",
+          "cn": "粉末冶金"
+        },
+        {
+          "en": "powder coating",
+          "cn": "粉末涂料；粉末涂敷"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "untidy",
+      "usphone": "ʌn'taɪdi",
+      "ukphone": "ʌn'taɪdɪ",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "不整洁的，凌乱的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "an untidy desk",
+          "cn": "乱七八糟的书桌"
+        },
+        {
+          "en": "untidy hair",
+          "cn": "凌乱的头发"
+        },
+        {
+          "en": "Her clothes were in an untidy heap on the floor.",
+          "cn": "她的衣服胡乱堆在地板上。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "hassle",
+      "usphone": "'hæsl",
+      "ukphone": "'hæs(ə)l",
+      "trans": [
+        {
+          "pos": "vt&vi",
+          "tranCn": "烦扰，不断打扰"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Stop hassling me! I said I’ll call them tomorrow.",
+          "cn": "别烦我了！我说过明天会给他们打电话的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "unfriendly",
+      "usphone": "ʌn'frɛndli",
+      "ukphone": "ʌn'fren(d)lɪ",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "不友善地，不利地"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "rejection",
+      "usphone": "rɪ'dʒɛkʃən",
+      "ukphone": "rɪ'dʒekʃ(ə)n",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "拒绝"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "They sent me a rejection letter.",
+          "cn": "他们给我发了一封回绝信。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "rejection rate",
+          "cn": "废品率；报废率"
+        },
+        {
+          "en": "load rejection",
+          "cn": "甩负荷"
+        },
+        {
+          "en": "interference rejection",
+          "cn": "抗干扰能力；干扰抑制；抗干扰度；抗扰性"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "reassurance",
+      "usphone": ",riə'ʃʊrəns",
+      "ukphone": "riːə'ʃʊərəns",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "放心"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Parents are looking for reassurance about their children’s safety.",
+          "cn": "家长们在寻找方法保证他们孩子的安全。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "frustration",
+      "usphone": "frʌ'streʃən",
+      "ukphone": "frʌ'streɪʃn",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "挫折，受挫"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "There are moments when he feels great frustration and it bursts out of him.",
+          "cn": "会有这样的时刻:当他感觉很好挫折和它爆发出来了。"
+        },
+        {
+          "en": "Your frustration could be an indication that you just need some input or assistance.",
+          "cn": "你的挫折可能是在暗示你只是需要一些意见或援助。"
+        },
+        {
+          "en": "But before you give up, I’d like you to ask yourself what your frustration is telling you.",
+          "cn": "但是，在你放弃之前，我希望你能问下自己，你的挫折在向你传达着怎样的讯息。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "enormous",
+      "usphone": "ɪ'nɔrməs",
+      "ukphone": "ɪ'nɔːməs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "巨大的，庞大的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "an enormous bunch of flowers",
+          "cn": "巨大的花束"
+        },
+        {
+          "en": "an enormous amount of money",
+          "cn": "巨款"
+        },
+        {
+          "en": "The team made an enormous effort.",
+          "cn": "该队付出了巨大的努力。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "unhappiness",
+      "usphone": "ʌn'hæpinis",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "忧愁，苦恼"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "overhear",
+      "usphone": ",ovɚ'hɪr",
+      "ukphone": "əʊvə'hɪə",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "无意中听到，偷听"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I overheard part of their conversation.",
+          "cn": "我碰巧听到了他们谈话的部分内容。"
+        },
+        {
+          "en": "I couldn’t help overhearing your argument.",
+          "cn": "我无意中听到了你们的争吵。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "rumour",
+      "usphone": "'ru:mə",
+      "ukphone": "'ruːmə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "谣言，传闻"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "His name has come up in the rumour mill as a possible director for the project.",
+          "cn": "有谣传说他可能出任这个项目的主管。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "turn against",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "(使)与……为敌"
+        }
+      ],
+      "sentences": [],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "syndrome",
+      "usphone": "'sɪndrəm",
+      "ukphone": "'sɪndrəʊm",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "综合病症"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "people who suffer from irritable bowel syndrome",
+          "cn": "患有肠道过敏综合征的人"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "severe acute respiratory syndrome",
+          "cn": "严重急性呼吸系统综合症"
+        },
+        {
+          "en": "irritable bowel syndrome",
+          "cn": "[医]肠道易激综合症"
+        },
+        {
+          "en": "nephrotic syndrome",
+          "cn": "肾病综合征；肾病症候群"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "swing",
+      "usphone": "swɪŋ",
+      "ukphone": "swɪŋ",
+      "trans": [
+        {
+          "pos": "n&vi",
+          "tranCn": "摇摆，摆动"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Let your arms swing as you walk.",
+          "cn": "边走边摆动双臂。"
+        },
+        {
+          "en": "a sign swinging in the wind",
+          "cn": "在风中摇摆的指示牌"
+        },
+        {
+          "en": "He was swinging his bag back and forth .",
+          "cn": "他前后甩动着他的包。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "in full swing",
+          "cn": "活跃；正在全力进行中"
+        },
+        {
+          "en": "full swing",
+          "cn": "达到活动的高潮；全力进行中"
+        },
+        {
+          "en": "go with a swing",
+          "cn": "v. 顺利进行；节奏轻快"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "hormonal",
+      "usphone": "hɔr'monl",
+      "ukphone": "hɔː'məʊn(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "荷尔蒙的，激素的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...our individual hormonal balance.",
+          "cn": "…我们个体的荷尔蒙平衡。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "hormonal balance",
+          "cn": "激素平衡"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "on the heels of",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "紧接着"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Place Louis in front and Brumaire behind, you have the whole destiny of the man, with this significant peculiarity, that the end treads close on the heels of the commencement.",
+          "cn": "你把路易放在它的前面，雾月放在它的后面，①这人的整个命运便全显现在你面前了。 这里又还有这么一个耐人寻味的特点，那就是开场是被结局紧跟着的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "conception",
+      "usphone": "kən'sɛpʃən",
+      "ukphone": "kən'sepʃ(ə)n",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "构思；理解；怀孕"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "the original conception of the book",
+          "cn": "此书最初的构想"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "artistic conception",
+          "cn": "意境"
+        },
+        {
+          "en": "immaculate conception",
+          "cn": "[宗]无沾成胎说；圣灵感孕说"
+        },
+        {
+          "en": "conception rate",
+          "cn": "受胎率；受孕率"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "endurance",
+      "usphone": "ɪn'dʊrəns",
+      "ukphone": "ɪn'djʊər(ə)ns; en-",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "忍耐（力），持久（力），耐久（性）"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She was pushed beyond her powers of endurance.",
+          "cn": "她被逼得忍无可忍。"
+        },
+        {
+          "en": "The marathon is a test of endurance.",
+          "cn": "马拉松赛跑是对耐力的考验。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "endurance test",
+          "cn": "耐久试验，耐力测验；疲劳试验"
+        },
+        {
+          "en": "endurance training",
+          "cn": "耐力训练，耐力练习"
+        },
+        {
+          "en": "heat endurance",
+          "cn": "热稳定性；耐热性"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "gender",
+      "usphone": "'dʒɛndɚ",
+      "ukphone": "'dʒendə",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "性别，性"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "people of the same gender",
+          "cn": "同性别的人"
+        },
+        {
+          "en": "Discrimination on grounds of race or gender is forbidden.",
+          "cn": "严禁种族歧视和性别歧视。"
+        },
+        {
+          "en": "There may be gender differences in attitudes to paid work.",
+          "cn": "对待有偿劳动的态度可能存在着性别差异。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "gender difference",
+          "cn": "性别差异"
+        },
+        {
+          "en": "gender role",
+          "cn": "性别角色"
+        },
+        {
+          "en": "gender discrimination",
+          "cn": "性别歧视"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "roughly",
+      "usphone": "'rʌfli",
+      "ukphone": "'rʌflɪ",
+      "trans": [
+        {
+          "pos": "adv",
+          "tranCn": "概略地，粗糙地"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "There were roughly 200 people there.",
+          "cn": "那儿大约有200人。"
+        },
+        {
+          "en": "Azaleas flower at roughly the same time each year.",
+          "cn": "杜鹃花每年的开花时间大致相同。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "hip",
+      "usphone": "hɪp",
+      "ukphone": "hɪp",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "臀部"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She stood there with her hands on her hips glaring at him.",
+          "cn": "她站在那里，双手叉腰瞪着他。"
+        },
+        {
+          "en": "The old lady had fallen and broken her hip.",
+          "cn": "那老妇人摔了一跤，髋部骨折。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "hip joint",
+          "cn": "髋关节"
+        },
+        {
+          "en": "shoot from the hip",
+          "cn": "鲁莽地做事"
+        },
+        {
+          "en": "hip hop",
+          "cn": "n. 嘻哈文化（由快板歌、涂墙艺术、霹雳舞等构成的亚文化）"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "cosmetic",
+      "usphone": "kɑz'mɛtɪk",
+      "ukphone": "kɒz'metɪk",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "化妆品"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "...the cosmetics counter of a department store.",
+          "cn": "…一个百货商店的化妆品专柜。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "cosmetic surgery",
+          "cn": "整容手术；整容外科"
+        },
+        {
+          "en": "cosmetic industry",
+          "cn": "化妆品工业"
+        },
+        {
+          "en": "cosmetic products",
+          "cn": "化妆品"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "client",
+      "usphone": "'klaɪənt",
+      "ukphone": "'klaɪənt",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "顾客，客户"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "a meeting with an important client",
+          "cn": "与一位重要客户的会面"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "client service",
+          "cn": "客户服务；向委托部门提供服务"
+        },
+        {
+          "en": "client base",
+          "cn": "客户群；基本顾客"
+        },
+        {
+          "en": "client side",
+          "cn": "客户端；使用端"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "youthful",
+      "usphone": "'juθfl",
+      "ukphone": "'juːθfʊl; -f(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "年轻的，青年的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The photo shows a smiling, youthful Burgos.",
+          "cn": "照片上是一个面带微笑、青春洋溢的布尔戈斯。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "anthropologist",
+      "usphone": ",ænθrə'pɑlədʒɪst",
+      "ukphone": ",ænθrə'pɒlədʒɪst",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "人类学家"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "A data manager, media coordinator, and medical anthropologist will also be arriving over the weekend.",
+          "cn": "一名数据管理员、媒体协调员和医学人类学家也将于周末抵达。"
+        },
+        {
+          "en": "“It’s an embarrassment of riches because the preservation is so remarkable,” said Adam T. Smith, an anthropologist at the University of Chicago who has visited the cave.",
+          "cn": "“它让富人们感到难堪，因为储存物是如此得不寻常，”亚当-T-史密斯说，他是芝加哥大学的人类学家，刚刚参观完那个洞穴。"
+        },
+        {
+          "en": "But Peter Wood, an anthropologist, the author of “Diversity: The Invention of a Concept” and a critic of the Grutter decision, argues that the educational value of racial diversity is problematic.",
+          "cn": "但是人类学家彼得·伍德——《多元化——一个概念的创造》的作者，格拉特案裁决的批评者——则争辩说种族多元化的教育价值是有疑问的。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "outstrip",
+      "usphone": ",aʊt'strɪp",
+      "ukphone": "aʊt'strɪp",
+      "trans": [
+        {
+          "pos": "vt",
+          "tranCn": "超过"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We outstripped all our competitors in sales last year.",
+          "cn": "去年我们的销售额超过了所有竞争对手。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "antisocial",
+      "usphone": "'æntɪ'soʃəl",
+      "ukphone": "æntɪ'səʊʃ(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "反社会的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "She was finding it hard to cope with her son’s increasingly antisocial behaviour .",
+          "cn": "她觉得难以应付儿子日益加剧的反社会行为。"
+        },
+        {
+          "en": "Smoking is an antisocial habit.",
+          "cn": "吸烟是一种无视他人利益的行为习惯。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "antisocial personality",
+          "cn": "反社会人格"
+        },
+        {
+          "en": "antisocial behavior",
+          "cn": "反社会行为，反社会举动"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "susceptible",
+      "usphone": "sə'sɛptəbl",
+      "ukphone": "sə'septɪb(ə)l",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "易受影响的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "A lot of TV advertising is aimed at susceptible young children.",
+          "cn": "很多电视广告瞄准了易受影响的幼儿。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "susceptible of",
+          "cn": "容许…的，能…的"
+        },
+        {
+          "en": "susceptible strain",
+          "cn": "易受感染菌株；感性品系"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "infectious",
+      "usphone": "ɪn'fɛkʃəs",
+      "ukphone": "ɪn'fekʃəs",
+      "trans": [
+        {
+          "pos": "adj",
+          "tranCn": "易传染的"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "infectious diseases",
+          "cn": "传染性疾病"
+        },
+        {
+          "en": "Flu is highly infectious.",
+          "cn": "流感传染性很强。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "infectious disease",
+          "cn": "传染病"
+        },
+        {
+          "en": "infectious mononucleosis",
+          "cn": "传染性单核细胞增多"
+        },
+        {
+          "en": "infectious disease hospital",
+          "cn": "传染病院"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "side effect",
+      "usphone": "",
+      "ukphone": "",
+      "trans": [
+        {
+          "pos": "",
+          "tranCn": "(药物等的)副作用"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "That had an interesting and extremely useful side effect.",
+          "cn": "那有一个有趣和非常有用的负作用。"
+        },
+        {
+          "en": "Yet another side effect is that I seem to think much better when I eat this way.",
+          "cn": "而且，还有第三种作用，那就是我的思考能力通过这种饮食法大大提高了。"
+        },
+        {
+          "en": "As a side effect of all this, you can use a stylesheet that doesn't do anything to a document, and simply take one format as input and output that document to any other format.",
+          "cn": "这种方法的另外一个作用是，您可以使用一个不含任何文档操作的样式表，并使用某种格式作为输入，然后将这种格式输出为任意其他的格式。"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "bowel",
+      "usphone": "'baʊəl",
+      "ukphone": "'baʊəl",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "肠，内部"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "cancer of the bowel",
+          "cn": "肠癌"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "bowel movement",
+          "cn": "排便"
+        },
+        {
+          "en": "irritable bowel syndrome",
+          "cn": "[医]肠道易激综合症"
+        },
+        {
+          "en": "small bowel",
+          "cn": "小肠"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "motherhood",
+      "usphone": "'mʌðɚhʊd",
+      "ukphone": "'mʌðəhʊd",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "母性；母亲身份"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "the challenge of combining a career with motherhood",
+          "cn": "既要追求事业又要为人母的挑战"
+        },
+        {
+          "en": "teenagers who are unprepared for motherhood",
+          "cn": "没准备好做母亲的少女"
+        }
+      ],
+      "phrases": [],
+      "synos": []
+    },
+    {
+      "word": "evolve",
+      "usphone": "ɪ'vɑlv",
+      "ukphone": "ɪ'vɒlv",
+      "trans": [
+        {
+          "pos": "vt&vi",
+          "tranCn": "发展"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The school has evolved its own style of teaching.",
+          "cn": "学校逐步形成了自己的教学风格。"
+        },
+        {
+          "en": "Businesses need to evolve rapidly.",
+          "cn": "各项业务需要快速发展。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "evolve into",
+          "cn": "vt. 发展成，进化成"
+        },
+        {
+          "en": "evolve from",
+          "cn": "v. 由…进化"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "rear",
+      "usphone": "rɪr",
+      "ukphone": "rɪə",
+      "trans": [
+        {
+          "pos": "vt&vi",
+          "tranCn": "培养，饲养"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "It’s a good place to rear young children.",
+          "cn": "这地方非常适合抚养小孩子成长。"
+        },
+        {
+          "en": "The birds have been successfully reared in captivity.",
+          "cn": "这些鸟笼养成功。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "front and rear",
+          "cn": "在前后"
+        },
+        {
+          "en": "rear axle",
+          "cn": "后桥；后轴"
+        },
+        {
+          "en": "rear wheel",
+          "cn": "后轮；后车轮"
+        }
+      ],
+      "synos": []
+    },
+    {
+      "word": "parenthood",
+      "usphone": "'pɛrənthʊd",
+      "ukphone": "'peər(ə)nthʊd",
+      "trans": [
+        {
+          "pos": "n",
+          "tranCn": "父母身份"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Story-reading should be one of the great joys of parenthood.",
+          "cn": "读故事是做父母的最大快乐之一。"
+        }
+      ],
+      "phrases": [
+        {
+          "en": "planned parenthood",
+          "cn": "计划生育"
+        }
+      ],
+      "synos": []
+    }
+  ]
+}

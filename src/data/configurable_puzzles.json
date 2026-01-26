@@ -1,0 +1,8142 @@
+{
+  "low_small": [
+    {
+      "grid_size": 5,
+      "cells": [
+        [
+          null,
+          "",
+          "",
+          "R",
+          "E"
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          "A",
+          "I",
+          "D",
+          null
+        ],
+        [
+          null,
+          "I",
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 3250,
+          "word": "BORE",
+          "definition": "使厌烦",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 1
+        },
+        {
+          "id": 186,
+          "word": "RED",
+          "definition": "红色",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 3,
+          "length": 3,
+          "clue_number": 2
+        },
+        {
+          "id": 31,
+          "word": "AID",
+          "definition": "帮助",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 3
+        },
+        {
+          "id": 33,
+          "word": "AIR",
+          "definition": "空气",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 3
+        },
+        {
+          "id": 13,
+          "word": "IS",
+          "definition": "是",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 2,
+          "length": 2,
+          "clue_number": 4
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          1,
+          null,
+          2,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          3,
+          4,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.44,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "small",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 5,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "L",
+          "",
+          "Y"
+        ],
+        [
+          null,
+          "",
+          "E",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "P",
+          "",
+          "T",
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 124,
+          "word": "LAY",
+          "definition": "放置",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 577,
+          "word": "LEFT",
+          "definition": "左边",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 1
+        },
+        {
+          "id": 10,
+          "word": "HE",
+          "definition": "他",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 2,
+          "clue_number": 2
+        },
+        {
+          "id": 23,
+          "word": "UP",
+          "definition": "向上",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 0,
+          "length": 2,
+          "clue_number": 3
+        },
+        {
+          "id": 176,
+          "word": "PIT",
+          "definition": "坑",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 4
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          2,
+          null,
+          null,
+          null
+        ],
+        [
+          3,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          4,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "small",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 4,
+      "cells": [
+        [
+          "",
+          null,
+          null,
+          null
+        ],
+        [
+          "E",
+          null,
+          "",
+          null
+        ],
+        [
+          "W",
+          "I",
+          "T",
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 81,
+          "word": "FEW",
+          "definition": "几个",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 4,
+          "word": "AT",
+          "definition": "在",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 2,
+          "clue_number": 2
+        },
+        {
+          "id": 258,
+          "word": "WIT",
+          "definition": "智慧",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 3
+        },
+        {
+          "id": 12,
+          "word": "IN",
+          "definition": "在...里",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 2,
+          "clue_number": 4
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          1,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          2,
+          null
+        ],
+        [
+          3,
+          4,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4375,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "small",
+      "puzzle_index": 3
+    }
+  ],
+  "low_medium": [
+    {
+      "grid_size": 8,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          "A",
+          "",
+          "L",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          "D",
+          "O"
+        ],
+        [
+          null,
+          null,
+          "",
+          "O",
+          "L",
+          "L",
+          null,
+          "I"
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
+        ],
+        [
+          null,
+          "",
+          "E",
+          "T",
+          null,
+          "O",
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "H",
+          "",
+          "",
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 447,
+          "word": "FOLD",
+          "definition": "折叠",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 6,
+          "length": 4,
+          "clue_number": 1
+        },
+        {
+          "id": 313,
+          "word": "CALL",
+          "definition": "叫",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 4,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 648,
+          "word": "NAIL",
+          "definition": "钉子",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 3
+        },
+        {
+          "id": 8,
+          "word": "DO",
+          "definition": "做",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 6,
+          "length": 2,
+          "clue_number": 4
+        },
+        {
+          "id": 158,
+          "word": "OIL",
+          "definition": "油",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 7,
+          "length": 3,
+          "clue_number": 5
+        },
+        {
+          "id": 379,
+          "word": "DOLL",
+          "definition": "娃娃",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 6
+        },
+        {
+          "id": 665,
+          "word": "OATH",
+          "definition": "誓言",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 7
+        },
+        {
+          "id": 590,
+          "word": "LION",
+          "definition": "狮子",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 5,
+          "length": 4,
+          "clue_number": 8
+        },
+        {
+          "id": 116,
+          "word": "JET",
+          "definition": "喷气式飞机",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 9
+        },
+        {
+          "id": 18,
+          "word": "OF",
+          "definition": "...的",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 5,
+          "length": 2,
+          "clue_number": 10
+        },
+        {
+          "id": 10,
+          "word": "HE",
+          "definition": "他",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 3,
+          "length": 2,
+          "clue_number": 11
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          3,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          5
+        ],
+        [
+          null,
+          null,
+          6,
+          7,
+          null,
+          8,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          9,
+          null,
+          null,
+          null,
+          10,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          11,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.40625,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "medium",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 7,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "C",
+          "",
+          "A",
+          "",
+          null
+        ],
+        [
+          "W",
+          "",
+          "R",
+          "",
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          "Y",
+          "A",
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "T",
+          "E",
+          "",
+          "M"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          ""
+        ],
+        [
+          null,
+          "",
+          "O",
+          "",
+          "E",
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 1943,
+          "word": "CHAT",
+          "definition": "聊天",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 1
+        },
+        {
+          "id": 63,
+          "word": "CRY",
+          "definition": "哭",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 970,
+          "word": "WIRE",
+          "definition": "电线",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 25,
+          "word": "WE",
+          "definition": "我们",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 2,
+          "clue_number": 2
+        },
+        {
+          "id": 264,
+          "word": "YAW",
+          "definition": "偏航",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 3
+        },
+        {
+          "id": 4,
+          "word": "AT",
+          "definition": "在",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 3,
+          "length": 2,
+          "clue_number": 4
+        },
+        {
+          "id": 955,
+          "word": "WERE",
+          "definition": "是(过去式)",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 4,
+          "length": 4,
+          "clue_number": 5
+        },
+        {
+          "id": 875,
+          "word": "TERM",
+          "definition": "术语",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 6
+        },
+        {
+          "id": 16,
+          "word": "MY",
+          "definition": "我的",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 6,
+          "length": 2,
+          "clue_number": 7
+        },
+        {
+          "id": 935,
+          "word": "VOTE",
+          "definition": "投票",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 8
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          3,
+          4,
+          5,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          6,
+          null,
+          null,
+          7
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          8,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4489795918367347,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "medium",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 6,
+      "cells": [
+        [
+          null,
+          "",
+          "A",
+          "P",
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          null,
+          "A",
+          "",
+          "D"
+        ],
+        [
+          null,
+          "",
+          "T",
+          "",
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          "",
+          "S",
+          null,
+          "E"
+        ],
+        [
+          null,
+          "A",
+          "N",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 90,
+          "word": "GAP",
+          "definition": "间隙",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 686,
+          "word": "PASS",
+          "definition": "经过",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 401,
+          "word": "EDGE",
+          "definition": "边缘",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 5,
+          "length": 4,
+          "clue_number": 3
+        },
+        {
+          "id": 28,
+          "word": "ADD",
+          "definition": "加",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 3,
+          "length": 3,
+          "clue_number": 4
+        },
+        {
+          "id": 14,
+          "word": "IT",
+          "definition": "它",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 2,
+          "clue_number": 5
+        },
+        {
+          "id": 229,
+          "word": "TIN",
+          "definition": "锡",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 6
+        },
+        {
+          "id": 13,
+          "word": "IS",
+          "definition": "是",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 2,
+          "length": 2,
+          "clue_number": 7
+        },
+        {
+          "id": 2,
+          "word": "AN",
+          "definition": "一个(元音前)",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 1,
+          "length": 2,
+          "clue_number": 8
+        },
+        {
+          "id": 3,
+          "word": "AM",
+          "definition": "是(I用)",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 1,
+          "length": 2,
+          "clue_number": 8
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          1,
+          null,
+          2,
+          null,
+          3
+        ],
+        [
+          null,
+          null,
+          null,
+          4,
+          null,
+          null
+        ],
+        [
+          null,
+          5,
+          6,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          7,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          8,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4722222222222222,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "medium",
+      "puzzle_index": 3
+    }
+  ],
+  "low_large": [
+    {
+      "grid_size": 10,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "L",
+          "",
+          "V",
+          ""
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "",
+          "H",
+          "E",
+          null,
+          "A",
+          "S"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          null,
+          "L",
+          "",
+          "T",
+          "S",
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          "",
+          "E",
+          null,
+          null,
+          "",
+          null,
+          "B",
+          "E"
+        ],
+        [
+          null,
+          "",
+          "E",
+          "G",
+          "S",
+          null,
+          "T",
+          "",
+          "O",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          null,
+          "W",
+          ""
+        ],
+        [
+          "",
+          "U",
+          "P",
+          null,
+          null,
+          null,
+          "",
+          "L",
+          "L",
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 607,
+          "word": "LOVE",
+          "definition": "爱",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 6,
+          "length": 4,
+          "clue_number": 1
+        },
+        {
+          "id": 129,
+          "word": "LIE",
+          "definition": "躺",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 6,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 245,
+          "word": "VIA",
+          "definition": "通过",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 8,
+          "length": 3,
+          "clue_number": 2
+        },
+        {
+          "id": 227,
+          "word": "THE",
+          "definition": "这个",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 4,
+          "length": 3,
+          "clue_number": 3
+        },
+        {
+          "id": 5,
+          "word": "AS",
+          "definition": "像",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 8,
+          "length": 2,
+          "clue_number": 4
+        },
+        {
+          "id": 803,
+          "word": "SIDE",
+          "definition": "边",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 9,
+          "length": 4,
+          "clue_number": 5
+        },
+        {
+          "id": 4,
+          "word": "AT",
+          "definition": "在",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 5,
+          "length": 2,
+          "clue_number": 6
+        },
+        {
+          "id": 605,
+          "word": "LOTS",
+          "definition": "许多",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 7
+        },
+        {
+          "id": 126,
+          "word": "LEG",
+          "definition": "腿",
+          "direction": "down",
+          "start_row": 5,
+          "start_col": 3,
+          "length": 3,
+          "clue_number": 7
+        },
+        {
+          "id": 199,
+          "word": "SAT",
+          "definition": "坐(过去式)",
+          "direction": "down",
+          "start_row": 5,
+          "start_col": 6,
+          "length": 3,
+          "clue_number": 8
+        },
+        {
+          "id": 10,
+          "word": "HE",
+          "definition": "他",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 2,
+          "length": 2,
+          "clue_number": 9
+        },
+        {
+          "id": 508,
+          "word": "HELP",
+          "definition": "帮助",
+          "direction": "down",
+          "start_row": 6,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 9
+        },
+        {
+          "id": 6,
+          "word": "BE",
+          "definition": "是",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 8,
+          "length": 2,
+          "clue_number": 10
+        },
+        {
+          "id": 306,
+          "word": "BOWL",
+          "definition": "碗",
+          "direction": "down",
+          "start_row": 6,
+          "start_col": 8,
+          "length": 4,
+          "clue_number": 10
+        },
+        {
+          "id": 578,
+          "word": "LEGS",
+          "definition": "腿(复数)",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 11
+        },
+        {
+          "id": 21,
+          "word": "SO",
+          "definition": "所以",
+          "direction": "down",
+          "start_row": 7,
+          "start_col": 4,
+          "length": 2,
+          "clue_number": 12
+        },
+        {
+          "id": 233,
+          "word": "TOO",
+          "definition": "也",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 6,
+          "length": 3,
+          "clue_number": 13
+        },
+        {
+          "id": 25,
+          "word": "WE",
+          "definition": "我们",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 8,
+          "length": 2,
+          "clue_number": 14
+        },
+        {
+          "id": 179,
+          "word": "PUP",
+          "definition": "小狗",
+          "direction": "across",
+          "start_row": 9,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 15
+        },
+        {
+          "id": 111,
+          "word": "ILL",
+          "definition": "生病的",
+          "direction": "across",
+          "start_row": 9,
+          "start_col": 6,
+          "length": 3,
+          "clue_number": 16
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          2,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          3,
+          null,
+          null,
+          null,
+          4,
+          5
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          7,
+          null,
+          null,
+          8,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          9,
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          null
+        ],
+        [
+          null,
+          11,
+          null,
+          null,
+          12,
+          null,
+          13,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          14,
+          null
+        ],
+        [
+          15,
+          null,
+          null,
+          null,
+          null,
+          null,
+          16,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "large",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 9,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          "H",
+          "",
+          "T",
+          null,
+          "L",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "",
+          "",
+          "L",
+          "E",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          "B",
+          "",
+          null,
+          null,
+          "D",
+          ""
+        ],
+        [
+          "A",
+          "M",
+          null,
+          "",
+          "N",
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          "P",
+          "O",
+          "",
+          "",
+          null,
+          null,
+          "W",
+          "E",
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          "D",
+          "A",
+          "",
+          "H",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 379,
+          "word": "DOLL",
+          "definition": "娃娃",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 6,
+          "length": 4,
+          "clue_number": 1
+        },
+        {
+          "id": 1943,
+          "word": "CHAT",
+          "definition": "聊天",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 10,
+          "word": "HE",
+          "definition": "他",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 2,
+          "length": 2,
+          "clue_number": 3
+        },
+        {
+          "id": 881,
+          "word": "THEN",
+          "definition": "然后",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 4,
+          "length": 4,
+          "clue_number": 4
+        },
+        {
+          "id": 517,
+          "word": "HOLE",
+          "definition": "洞",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 4,
+          "length": 4,
+          "clue_number": 5
+        },
+        {
+          "id": 401,
+          "word": "EDGE",
+          "definition": "边缘",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 7,
+          "length": 4,
+          "clue_number": 6
+        },
+        {
+          "id": 136,
+          "word": "MAP",
+          "definition": "地图",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 7
+        },
+        {
+          "id": 6,
+          "word": "BE",
+          "definition": "是",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 3,
+          "length": 2,
+          "clue_number": 8
+        },
+        {
+          "id": 292,
+          "word": "BIRD",
+          "definition": "鸟",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 8
+        },
+        {
+          "id": 8,
+          "word": "DO",
+          "definition": "做",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 7,
+          "length": 2,
+          "clue_number": 9
+        },
+        {
+          "id": 3,
+          "word": "AM",
+          "definition": "是(I用)",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 0,
+          "length": 2,
+          "clue_number": 10
+        },
+        {
+          "id": 143,
+          "word": "MOM",
+          "definition": "妈妈",
+          "direction": "down",
+          "start_row": 5,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 11
+        },
+        {
+          "id": 12,
+          "word": "IN",
+          "definition": "在...里",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 3,
+          "length": 2,
+          "clue_number": 12
+        },
+        {
+          "id": 717,
+          "word": "POOR",
+          "definition": "贫穷的",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 0,
+          "length": 4,
+          "clue_number": 13
+        },
+        {
+          "id": 25,
+          "word": "WE",
+          "definition": "我们",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 6,
+          "length": 2,
+          "clue_number": 14
+        },
+        {
+          "id": 255,
+          "word": "WHY",
+          "definition": "为什么",
+          "direction": "down",
+          "start_row": 6,
+          "start_col": 6,
+          "length": 3,
+          "clue_number": 14
+        },
+        {
+          "id": 357,
+          "word": "DASH",
+          "definition": "冲",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 15
+        },
+        {
+          "id": 5,
+          "word": "AS",
+          "definition": "像",
+          "direction": "down",
+          "start_row": 7,
+          "start_col": 4,
+          "length": 2,
+          "clue_number": 16
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          2,
+          3,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          5,
+          null,
+          null,
+          6,
+          null
+        ],
+        [
+          7,
+          null,
+          null,
+          8,
+          null,
+          null,
+          null,
+          9,
+          null
+        ],
+        [
+          10,
+          11,
+          null,
+          12,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          13,
+          null,
+          null,
+          null,
+          null,
+          null,
+          14,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          15,
+          16,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.43209876543209874,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "large",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 9,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          "O",
+          "W",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          "I",
+          "N",
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          "F",
+          null,
+          "",
+          "I",
+          "R"
+        ],
+        [
+          null,
+          "",
+          "E",
+          "N",
+          null,
+          "T",
+          "",
+          "P",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "",
+          "",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          "",
+          "E",
+          "N",
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          "T",
+          "E",
+          null,
+          "T",
+          "",
+          "",
+          "T",
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 261,
+          "word": "WOW",
+          "definition": "哇",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 3,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 257,
+          "word": "WIN",
+          "definition": "赢",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 5,
+          "length": 3,
+          "clue_number": 2
+        },
+        {
+          "id": 959,
+          "word": "WHIP",
+          "definition": "鞭子",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 7,
+          "length": 4,
+          "clue_number": 3
+        },
+        {
+          "id": 229,
+          "word": "TIN",
+          "definition": "锡",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 3,
+          "length": 3,
+          "clue_number": 4
+        },
+        {
+          "id": 11,
+          "word": "IF",
+          "definition": "如果",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 4,
+          "length": 2,
+          "clue_number": 5
+        },
+        {
+          "id": 18,
+          "word": "OF",
+          "definition": "...的",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 3,
+          "length": 2,
+          "clue_number": 6
+        },
+        {
+          "id": 19,
+          "word": "ON",
+          "definition": "在...上",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 3,
+          "length": 2,
+          "clue_number": 6
+        },
+        {
+          "id": 210,
+          "word": "SIR",
+          "definition": "先生",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 6,
+          "length": 3,
+          "clue_number": 7
+        },
+        {
+          "id": 269,
+          "word": "ZEN",
+          "definition": "禅",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 8
+        },
+        {
+          "id": 398,
+          "word": "EASE",
+          "definition": "轻松",
+          "direction": "down",
+          "start_row": 5,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 9
+        },
+        {
+          "id": 234,
+          "word": "TOP",
+          "definition": "顶部",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 5,
+          "length": 3,
+          "clue_number": 10
+        },
+        {
+          "id": 232,
+          "word": "TON",
+          "definition": "吨",
+          "direction": "down",
+          "start_row": 5,
+          "start_col": 5,
+          "length": 3,
+          "clue_number": 10
+        },
+        {
+          "id": 92,
+          "word": "GET",
+          "definition": "得到",
+          "direction": "down",
+          "start_row": 6,
+          "start_col": 4,
+          "length": 3,
+          "clue_number": 11
+        },
+        {
+          "id": 790,
+          "word": "SEEN",
+          "definition": "看见(过去分词)",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 12
+        },
+        {
+          "id": 43,
+          "word": "ATE",
+          "definition": "吃(过去式)",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 13
+        },
+        {
+          "id": 876,
+          "word": "TEST",
+          "definition": "测试",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 4,
+          "length": 4,
+          "clue_number": 14
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          3,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          4,
+          5,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          6,
+          null,
+          null,
+          7,
+          null,
+          null
+        ],
+        [
+          null,
+          8,
+          9,
+          null,
+          null,
+          10,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          11,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          12,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          13,
+          null,
+          null,
+          null,
+          14,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.41975308641975306,
+      "cross_validated": true,
+      "difficulty": "low",
+      "quantity": "large",
+      "puzzle_index": 3
+    }
+  ],
+  "medium_small": [
+    {
+      "grid_size": 5,
+      "cells": [
+        [
+          null,
+          "R",
+          "",
+          "D",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          "S",
+          "",
+          "",
+          "G",
+          null
+        ],
+        [
+          "E",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 192,
+          "word": "ROD",
+          "definition": "杆",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 69,
+          "word": "DIG",
+          "definition": "挖",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 3,
+          "length": 3,
+          "clue_number": 2
+        },
+        {
+          "id": 241,
+          "word": "USE",
+          "definition": "使用",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 3
+        },
+        {
+          "id": 853,
+          "word": "SUNG",
+          "definition": "唱(过去分词)",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 4,
+          "clue_number": 4
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          1,
+          null,
+          2,
+          null
+        ],
+        [
+          3,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          4,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "small",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 5,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          "W"
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          ""
+        ],
+        [
+          "",
+          "",
+          "E",
+          "",
+          "D"
+        ],
+        [
+          null,
+          null,
+          "L",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 252,
+          "word": "WED",
+          "definition": "结婚",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 4,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 288,
+          "word": "BELT",
+          "definition": "腰带",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 3118,
+          "word": "AMEND",
+          "definition": "修正",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 3
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          1
+        ],
+        [
+          null,
+          null,
+          2,
+          null,
+          null
+        ],
+        [
+          3,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "small",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 4,
+      "cells": [
+        [
+          "W",
+          "",
+          "W",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          "Y",
+          "",
+          "S",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 261,
+          "word": "WOW",
+          "definition": "哇",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 972,
+          "word": "WISH",
+          "definition": "希望",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 265,
+          "word": "YES",
+          "definition": "是",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 3
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          1,
+          null,
+          2,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          3,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.5,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "small",
+      "puzzle_index": 3
+    }
+  ],
+  "medium_medium": [
+    {
+      "grid_size": 8,
+      "cells": [
+        [
+          null,
+          "",
+          "A",
+          "T",
+          null,
+          "R",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "O",
+          "",
+          "A",
+          "",
+          null
+        ],
+        [
+          "F",
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          "G",
+          "Y",
+          "",
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "E",
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "R",
+          "",
+          "L",
+          "",
+          "",
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 74,
+          "word": "EAT",
+          "definition": "吃",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 1022,
+          "word": "TODAY",
+          "definition": "今天",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 3,
+          "length": 5,
+          "clue_number": 2
+        },
+        {
+          "id": 730,
+          "word": "RACE",
+          "definition": "比赛",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 5,
+          "length": 4,
+          "clue_number": 3
+        },
+        {
+          "id": 668,
+          "word": "OKAY",
+          "definition": "好的",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 4
+        },
+        {
+          "id": 1024,
+          "word": "FATHER",
+          "definition": "爸爸",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 6,
+          "clue_number": 5
+        },
+        {
+          "id": 95,
+          "word": "GYM",
+          "definition": "体育馆",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 6
+        },
+        {
+          "id": 474,
+          "word": "GOAL",
+          "definition": "目标",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 6
+        },
+        {
+          "id": 1042,
+          "word": "RULER",
+          "definition": "尺子",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 7
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          1,
+          null,
+          2,
+          null,
+          3,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          7,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.421875,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "medium",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 7,
+      "cells": [
+        [
+          null,
+          null,
+          "",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          "O",
+          "",
+          "L",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "F",
+          "",
+          "T",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
+        ],
+        [
+          null,
+          "",
+          "E",
+          "",
+          "N",
+          null,
+          "A"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "E",
+          "",
+          "G"
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "words": [
+        {
+          "id": 1063,
+          "word": "COFFEE",
+          "definition": "咖啡",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 6,
+          "clue_number": 1
+        },
+        {
+          "id": 716,
+          "word": "POOL",
+          "definition": "游泳池",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 80,
+          "word": "FAT",
+          "definition": "胖的",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 3
+        },
+        {
+          "id": 920,
+          "word": "TUNE",
+          "definition": "曲调",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 4,
+          "length": 4,
+          "clue_number": 4
+        },
+        {
+          "id": 246,
+          "word": "WAG",
+          "definition": "摇摆",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 6,
+          "length": 3,
+          "clue_number": 5
+        },
+        {
+          "id": 539,
+          "word": "JEAN",
+          "definition": "牛仔裤",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 6
+        },
+        {
+          "id": 75,
+          "word": "EGG",
+          "definition": "鸡蛋",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 4,
+          "length": 3,
+          "clue_number": 7
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          3,
+          null,
+          4,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5
+        ],
+        [
+          null,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          7,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.40816326530612246,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "medium",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 6,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          "",
+          "T",
+          "Y",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "A",
+          null
+        ],
+        [
+          "B",
+          "",
+          "I",
+          "",
+          "G",
+          null
+        ],
+        [
+          "A",
+          null,
+          "",
+          null,
+          "",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 329,
+          "word": "CITY",
+          "definition": "城市",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 4,
+          "clue_number": 1
+        },
+        {
+          "id": 884,
+          "word": "THIS",
+          "definition": "这个",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 30,
+          "word": "AGO",
+          "definition": "以前",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 4,
+          "length": 3,
+          "clue_number": 3
+        },
+        {
+          "id": 1102,
+          "word": "BRING",
+          "definition": "带来",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 4
+        },
+        {
+          "id": 46,
+          "word": "BAT",
+          "definition": "蝙蝠",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 4
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          1,
+          null,
+          2,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          3,
+          null
+        ],
+        [
+          4,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4166666666666667,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "medium",
+      "puzzle_index": 3
+    }
+  ],
+  "medium_large": [
+    {
+      "grid_size": 10,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "S",
+          "H",
+          "",
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "C",
+          null,
+          "B",
+          "",
+          "N",
+          "",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          "L",
+          null
+        ],
+        [
+          null,
+          "T",
+          null,
+          "Z",
+          "",
+          "P",
+          null,
+          "",
+          "O",
+          "T"
+        ],
+        [
+          null,
+          "I",
+          "",
+          "E",
+          null,
+          "",
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          null,
+          null,
+          "R",
+          "",
+          "",
+          "E",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          "",
+          "A",
+          "T",
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 801,
+          "word": "SHUT",
+          "definition": "关闭",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 5,
+          "length": 4,
+          "clue_number": 1
+        },
+        {
+          "id": 216,
+          "word": "SON",
+          "definition": "儿子",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 5,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 3722,
+          "word": "ABLAZE",
+          "definition": "着火的",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 3,
+          "length": 6,
+          "clue_number": 2
+        },
+        {
+          "id": 2129,
+          "word": "CRITIC",
+          "definition": "评论家",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 6,
+          "clue_number": 3
+        },
+        {
+          "id": 1795,
+          "word": "BIND",
+          "definition": "绑",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 4
+        },
+        {
+          "id": 1603,
+          "word": "FLOWER",
+          "definition": "花",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 8,
+          "length": 6,
+          "clue_number": 5
+        },
+        {
+          "id": 1702,
+          "word": "APART",
+          "definition": "分开",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 5,
+          "length": 5,
+          "clue_number": 6
+        },
+        {
+          "id": 270,
+          "word": "ZIP",
+          "definition": "拉链",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 3,
+          "length": 3,
+          "clue_number": 7
+        },
+        {
+          "id": 152,
+          "word": "NOT",
+          "definition": "不",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 7,
+          "length": 3,
+          "clue_number": 8
+        },
+        {
+          "id": 110,
+          "word": "ICE",
+          "definition": "冰",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 9
+        },
+        {
+          "id": 741,
+          "word": "RATE",
+          "definition": "比率",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 5,
+          "length": 4,
+          "clue_number": 10
+        },
+        {
+          "id": 1943,
+          "word": "CHAT",
+          "definition": "聊天",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 11
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          3,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          7,
+          null,
+          null,
+          null,
+          8,
+          null,
+          null
+        ],
+        [
+          null,
+          9,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          11,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "large",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 10,
+      "cells": [
+        [
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          null,
+          "B"
+        ],
+        [
+          null,
+          "I",
+          null,
+          null,
+          "N",
+          null,
+          "R",
+          "",
+          "",
+          "L"
+        ],
+        [
+          null,
+          "A",
+          "L",
+          "",
+          "E",
+          "",
+          "E",
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          null,
+          "L",
+          null,
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          "E",
+          "",
+          "",
+          "I",
+          "",
+          "E",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "A",
+          "",
+          "O"
+        ],
+        [
+          null,
+          null,
+          null,
+          "",
+          "",
+          "S",
+          "",
+          "C",
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          "H"
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "words": [
+        {
+          "id": 245,
+          "word": "VIA",
+          "definition": "通过",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 1623,
+          "word": "FREE",
+          "definition": "免费的",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 6,
+          "length": 4,
+          "clue_number": 2
+        },
+        {
+          "id": 2855,
+          "word": "BLAST",
+          "definition": "爆炸",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 9,
+          "length": 5,
+          "clue_number": 3
+        },
+        {
+          "id": 148,
+          "word": "NET",
+          "definition": "网",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 4,
+          "length": 3,
+          "clue_number": 4
+        },
+        {
+          "id": 744,
+          "word": "REAL",
+          "definition": "真实的",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 6,
+          "length": 4,
+          "clue_number": 5
+        },
+        {
+          "id": 3643,
+          "word": "ALLEGE",
+          "definition": "声称",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 6,
+          "clue_number": 6
+        },
+        {
+          "id": 607,
+          "word": "LOVE",
+          "definition": "爱",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 7
+        },
+        {
+          "id": 129,
+          "word": "LIE",
+          "definition": "躺",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 5,
+          "length": 3,
+          "clue_number": 8
+        },
+        {
+          "id": 1507,
+          "word": "ENGINE",
+          "definition": "引擎",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 2,
+          "length": 6,
+          "clue_number": 9
+        },
+        {
+          "id": 2616,
+          "word": "EXACT",
+          "definition": "准确的",
+          "direction": "down",
+          "start_row": 5,
+          "start_col": 7,
+          "length": 5,
+          "clue_number": 10
+        },
+        {
+          "id": 305,
+          "word": "BOTH",
+          "definition": "两者都",
+          "direction": "down",
+          "start_row": 6,
+          "start_col": 9,
+          "length": 4,
+          "clue_number": 11
+        },
+        {
+          "id": 30,
+          "word": "AGO",
+          "definition": "以前",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 7,
+          "length": 3,
+          "clue_number": 12
+        },
+        {
+          "id": 1079,
+          "word": "MUSIC",
+          "definition": "音乐",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 3,
+          "length": 5,
+          "clue_number": 13
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          3
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          4,
+          null,
+          5,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          6,
+          7,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          9,
+          null,
+          null,
+          null,
+          null,
+          10,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          11
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          12,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          13,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.43,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "large",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 9,
+      "cells": [
+        [
+          null,
+          null,
+          "H",
+          "",
+          "S",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          "A",
+          "S",
+          null,
+          "",
+          "I",
+          "G",
+          null,
+          ""
+        ],
+        [
+          null,
+          "",
+          null,
+          "T",
+          null,
+          null,
+          "",
+          null,
+          ""
+        ],
+        [
+          null,
+          "A",
+          "",
+          "R",
+          "",
+          "P",
+          "T",
+          null,
+          "E"
+        ],
+        [
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          "",
+          null,
+          null,
+          null,
+          "A",
+          "",
+          "",
+          "E"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null,
+          null,
+          "R"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 104,
+          "word": "HIS",
+          "definition": "他的",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 98,
+          "word": "HAS",
+          "definition": "有",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 1
+        },
+        {
+          "id": 91,
+          "word": "GAS",
+          "definition": "气体",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 3,
+          "clue_number": 2
+        },
+        {
+          "id": 4021,
+          "word": "ABASH",
+          "definition": "使窘迫",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 5,
+          "clue_number": 3
+        },
+        {
+          "id": 256,
+          "word": "WIG",
+          "definition": "假发",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 4,
+          "length": 3,
+          "clue_number": 4
+        },
+        {
+          "id": 92,
+          "word": "GET",
+          "definition": "得到",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 6,
+          "length": 3,
+          "clue_number": 5
+        },
+        {
+          "id": 1341,
+          "word": "CLEVER",
+          "definition": "聪明的",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 8,
+          "length": 6,
+          "clue_number": 6
+        },
+        {
+          "id": 236,
+          "word": "TRY",
+          "definition": "尝试",
+          "direction": "down",
+          "start_row": 3,
+          "start_col": 3,
+          "length": 3,
+          "clue_number": 7
+        },
+        {
+          "id": 3616,
+          "word": "ABRUPT",
+          "definition": "突然的",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 1,
+          "length": 6,
+          "clue_number": 8
+        },
+        {
+          "id": 723,
+          "word": "PRAY",
+          "definition": "祈祷",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 5,
+          "length": 4,
+          "clue_number": 9
+        },
+        {
+          "id": 3078,
+          "word": "ACRE",
+          "definition": "英亩",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 5,
+          "length": 4,
+          "clue_number": 10
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          2,
+          3,
+          null,
+          null,
+          4,
+          null,
+          5,
+          null,
+          6
+        ],
+        [
+          null,
+          null,
+          null,
+          7,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          8,
+          null,
+          null,
+          null,
+          9,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4074074074074074,
+      "cross_validated": true,
+      "difficulty": "medium",
+      "quantity": "large",
+      "puzzle_index": 3
+    }
+  ],
+  "high_small": [
+    {
+      "grid_size": 5,
+      "cells": [
+        [
+          "F",
+          null,
+          "A",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "A",
+          "",
+          "E",
+          "",
+          ""
+        ],
+        [
+          "",
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          "",
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 2719,
+          "word": "FRANK",
+          "definition": "坦率的",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 1
+        },
+        {
+          "id": 3118,
+          "word": "AMEND",
+          "definition": "修正",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 5,
+          "clue_number": 2
+        },
+        {
+          "id": 2770,
+          "word": "ALERT",
+          "definition": "警觉的",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 3
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          1,
+          null,
+          2,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          3,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.52,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "small",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 5,
+      "cells": [
+        [
+          "",
+          null,
+          null,
+          "T",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          "E",
+          "",
+          "",
+          "R",
+          ""
+        ],
+        [
+          "A",
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          "",
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 1099,
+          "word": "CLEAN",
+          "definition": "清洁",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 1
+        },
+        {
+          "id": 1104,
+          "word": "THROW",
+          "definition": "扔",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 3,
+          "length": 5,
+          "clue_number": 2
+        },
+        {
+          "id": 2595,
+          "word": "ENTRY",
+          "definition": "进入",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 3
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          1,
+          null,
+          null,
+          2,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          3,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.52,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "small",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 5,
+      "cells": [
+        [
+          null,
+          null,
+          "B",
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "L"
+        ],
+        [
+          "",
+          "",
+          "I",
+          "",
+          "E"
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          ""
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          ""
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 1842,
+          "word": "BRICK",
+          "definition": "砖",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 5,
+          "clue_number": 1
+        },
+        {
+          "id": 2561,
+          "word": "ELECT",
+          "definition": "选举",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 4,
+          "length": 5,
+          "clue_number": 2
+        },
+        {
+          "id": 1089,
+          "word": "SMILE",
+          "definition": "微笑",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 3
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          1,
+          null,
+          2
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          3,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.52,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "small",
+      "puzzle_index": 3
+    }
+  ],
+  "high_medium": [
+    {
+      "grid_size": 7,
+      "cells": [
+        [
+          null,
+          "",
+          null,
+          null,
+          null,
+          "C",
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          "C",
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          "E",
+          "",
+          "A",
+          "",
+          "T",
+          null
+        ],
+        [
+          null,
+          "R",
+          null,
+          "",
+          null,
+          "A",
+          null
+        ],
+        [
+          null,
+          "V",
+          null,
+          "",
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          null,
+          null,
+          "",
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 2475,
+          "word": "DESERVE",
+          "definition": "值得",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 7,
+          "clue_number": 1
+        },
+        {
+          "id": 1376,
+          "word": "CONTAIN",
+          "definition": "包含",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 5,
+          "length": 7,
+          "clue_number": 2
+        },
+        {
+          "id": 2116,
+          "word": "CRACK",
+          "definition": "裂缝",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 3,
+          "length": 5,
+          "clue_number": 3
+        },
+        {
+          "id": 2616,
+          "word": "EXACT",
+          "definition": "准确的",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 1,
+          "length": 5,
+          "clue_number": 4
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          1,
+          null,
+          null,
+          null,
+          2,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          3,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.42857142857142855,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "medium",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 8,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          "E",
+          null,
+          null,
+          "",
+          null,
+          null,
+          ""
+        ],
+        [
+          null,
+          "",
+          null,
+          null,
+          "",
+          null,
+          null,
+          "B"
+        ],
+        [
+          null,
+          "",
+          null,
+          null,
+          "",
+          null,
+          null,
+          ""
+        ],
+        [
+          "",
+          "O",
+          "",
+          "T",
+          "I",
+          "",
+          "",
+          "E"
+        ],
+        [
+          null,
+          "R",
+          null,
+          null,
+          "N",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "",
+          null,
+          "A",
+          "G",
+          "",
+          "",
+          ""
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true,
+          true,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 1033,
+          "word": "TABLE",
+          "definition": "桌子",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 7,
+          "length": 5,
+          "clue_number": 1
+        },
+        {
+          "id": 2559,
+          "word": "EFFORT",
+          "definition": "努力",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 1,
+          "length": 6,
+          "clue_number": 2
+        },
+        {
+          "id": 1482,
+          "word": "DURING",
+          "definition": "在...期间",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 4,
+          "length": 6,
+          "clue_number": 3
+        },
+        {
+          "id": 1377,
+          "word": "CONTINUE",
+          "definition": "继续",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 0,
+          "length": 8,
+          "clue_number": 4
+        },
+        {
+          "id": 3641,
+          "word": "AGONY",
+          "definition": "痛苦",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 3,
+          "length": 5,
+          "clue_number": 5
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1
+        ],
+        [
+          null,
+          2,
+          null,
+          null,
+          3,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.40625,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "medium",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 6,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "C",
+          "",
+          "",
+          "U",
+          "",
+          "L"
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "A",
+          "",
+          "",
+          "",
+          "R",
+          "D"
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 1910,
+          "word": "CASUAL",
+          "definition": "随意的",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 6,
+          "clue_number": 1
+        },
+        {
+          "id": 1973,
+          "word": "CLAIM",
+          "definition": "声称",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 1
+        },
+        {
+          "id": 3750,
+          "word": "ACCORD",
+          "definition": "协议",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 0,
+          "length": 6,
+          "clue_number": 2
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4166666666666667,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "medium",
+      "puzzle_index": 3
+    }
+  ],
+  "high_large": [
+    {
+      "grid_size": 10,
+      "cells": [
+        [
+          null,
+          null,
+          "A",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          "D",
+          "I",
+          "",
+          "",
+          "",
+          "",
+          "L",
+          null
+        ],
+        [
+          null,
+          null,
+          "V",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "O",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          null,
+          "",
+          "S",
+          "",
+          "E",
+          "",
+          "B",
+          "",
+          "Y",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "A",
+          "",
+          "",
+          "V",
+          "",
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "F",
+          "",
+          "",
+          "T",
+          "E",
+          ""
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 3787,
+          "word": "ADVERSITY",
+          "definition": "逆境",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 9,
+          "clue_number": 1
+        },
+        {
+          "id": 1009,
+          "word": "CLOUDY",
+          "definition": "多云的",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 8,
+          "length": 6,
+          "clue_number": 2
+        },
+        {
+          "id": 1448,
+          "word": "DIGITAL",
+          "definition": "数字的",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 7,
+          "clue_number": 3
+        },
+        {
+          "id": 2848,
+          "word": "BEHALF",
+          "definition": "代表",
+          "direction": "down",
+          "start_row": 4,
+          "start_col": 4,
+          "length": 6,
+          "clue_number": 4
+        },
+        {
+          "id": 2816,
+          "word": "ASSEMBLY",
+          "definition": "集会",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 1,
+          "length": 8,
+          "clue_number": 5
+        },
+        {
+          "id": 1673,
+          "word": "ALIVE",
+          "definition": "活着的",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 4,
+          "length": 5,
+          "clue_number": 6
+        },
+        {
+          "id": 2657,
+          "word": "FASTEN",
+          "definition": "系紧",
+          "direction": "across",
+          "start_row": 9,
+          "start_col": 4,
+          "length": 6,
+          "clue_number": 7
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          2,
+          null
+        ],
+        [
+          null,
+          null,
+          3,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          7,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "large",
+      "puzzle_index": 1
+    },
+    {
+      "grid_size": 10,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "",
+          null
+        ],
+        [
+          "C",
+          "",
+          "",
+          "",
+          "E",
+          "",
+          "S",
+          "",
+          "S",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "P",
+          null
+        ],
+        [
+          "M",
+          null,
+          null,
+          null,
+          "C",
+          null,
+          "",
+          null,
+          "",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "R",
+          null
+        ],
+        [
+          "E",
+          null,
+          "",
+          "",
+          "A",
+          "",
+          "Y",
+          null,
+          "",
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          "",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "",
+          "",
+          "E",
+          "R",
+          "",
+          "",
+          "H",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 3694,
+          "word": "ASPIRE",
+          "definition": "渴望",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 8,
+          "length": 6,
+          "clue_number": 1
+        },
+        {
+          "id": 2980,
+          "word": "CONSENSUS",
+          "definition": "共识",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 9,
+          "clue_number": 2
+        },
+        {
+          "id": 2033,
+          "word": "COMPETE",
+          "definition": "竞争",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 7,
+          "clue_number": 2
+        },
+        {
+          "id": 2622,
+          "word": "EXCHANGE",
+          "definition": "交换",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 4,
+          "length": 8,
+          "clue_number": 3
+        },
+        {
+          "id": 1011,
+          "word": "SNOWY",
+          "definition": "下雪的",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 6,
+          "length": 5,
+          "clue_number": 4
+        },
+        {
+          "id": 1395,
+          "word": "CRAZY",
+          "definition": "疯狂的",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 2,
+          "length": 5,
+          "clue_number": 5
+        },
+        {
+          "id": 2908,
+          "word": "CHERISH",
+          "definition": "珍惜",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 2,
+          "length": 7,
+          "clue_number": 6
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null
+        ],
+        [
+          2,
+          null,
+          null,
+          null,
+          3,
+          null,
+          4,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "large",
+      "puzzle_index": 2
+    },
+    {
+      "grid_size": 9,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          "",
+          null,
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "S",
+          null,
+          null,
+          "",
+          null,
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          "",
+          null,
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "E",
+          null,
+          "",
+          "W",
+          "",
+          "",
+          "E",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          "S",
+          null,
+          null,
+          "",
+          null,
+          null
+        ],
+        [
+          "B",
+          "",
+          "",
+          "E",
+          "",
+          null,
+          "I",
+          null,
+          null
+        ],
+        [
+          "L",
+          null,
+          null,
+          "",
+          null,
+          null,
+          "T",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null,
+          null,
+          "E",
+          "",
+          "E",
+          "",
+          ""
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false
+        ]
+      ],
+      "words": [
+        {
+          "id": 2816,
+          "word": "ASSEMBLY",
+          "definition": "集会",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 8,
+          "clue_number": 1
+        },
+        {
+          "id": 3271,
+          "word": "BROWSER",
+          "definition": "浏览器",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 3,
+          "length": 7,
+          "clue_number": 2
+        },
+        {
+          "id": 1707,
+          "word": "APPETITE",
+          "definition": "食欲",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 6,
+          "length": 8,
+          "clue_number": 3
+        },
+        {
+          "id": 1750,
+          "word": "AWARE",
+          "definition": "意识到的",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 2,
+          "length": 5,
+          "clue_number": 4
+        },
+        {
+          "id": 1251,
+          "word": "BORED",
+          "definition": "无聊的",
+          "direction": "across",
+          "start_row": 6,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 5
+        },
+        {
+          "id": 1523,
+          "word": "EVENT",
+          "definition": "事件",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 4,
+          "length": 5,
+          "clue_number": 6
+        }
+      ],
+      "prefilled": {},
+      "clue_numbers": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          1,
+          null,
+          null,
+          2,
+          null,
+          null,
+          3,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          6,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "puzzle_type": "configurable",
+      "density": 0.4074074074074074,
+      "cross_validated": true,
+      "difficulty": "high",
+      "quantity": "large",
+      "puzzle_index": 3
+    }
+  ]
+}

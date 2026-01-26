@@ -1,0 +1,63 @@
+# 部署检查规则 - 我爱填单词
+
+## 服务架构
+
+| 服务 | 端口 | 说明 |
+|------|------|------|
+| 前端 | 10010 | Vue 前端静态文件 + API 代理 |
+| 后端 | 10012 | FastAPI 应用 |
+
+## 启动服务
+
+```bash
+cd /root/AllProjects/project_2_我爱填单词
+./scripts/start.sh
+```
+
+## 停止服务
+
+```bash
+./scripts/stop.sh
+```
+
+## 编译前端
+
+```bash
+cd src/frontend
+npm run build
+```
+
+## 常见问题排查
+
+### 502 Bad Gateway / 后端无响应
+
+1. 检查后端服务: `cat scripts/.pids/backend.pid`
+2. 检查日志: `cat scripts/.logs/backend.log`
+3. 检查端口: `netstat -tlnp | grep 10012`
+
+### 前端无法访问
+
+1. 检查服务是否运行: `cat scripts/.pids/frontend.pid`
+2. 检查日志: `cat scripts/.logs/frontend.log`
+3. 检查 dist 目录是否存在: `ls src/frontend/dist`
+
+### 后端启动失败
+
+1. 检查 Python 依赖兼容性（见 python-dependencies.mdc）
+2. 检查虚拟环境: `ls src/backend/venv`
+
+## 注意事项
+
+1. **pydantic 版本兼容性**：pydantic 和 pydantic-settings 必须版本匹配，详见 `python-dependencies.mdc`
+2. **前端依赖 dist 目录**：需先执行 `npm run build`
+3. **后端依赖虚拟环境**：启动脚本会自动创建和安装依赖
+
+## Python 依赖快速修复
+
+如果后端启动失败且报 pydantic 相关错误：
+
+```bash
+cd /root/AllProjects/project_2_我爱填单词/src/backend
+source venv/bin/activate
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pydantic pydantic-settings
+```

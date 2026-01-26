@@ -1,0 +1,4097 @@
+[
+  {
+    "word": "ruler",
+    "definition": "尺子",
+    "difficulty": 1
+  },
+  {
+    "word": "pencil",
+    "definition": "铅笔",
+    "difficulty": 1
+  },
+  {
+    "word": "eraser",
+    "definition": "橡皮",
+    "difficulty": 1
+  },
+  {
+    "word": "crayon",
+    "definition": "蜡笔",
+    "difficulty": 1
+  },
+  {
+    "word": "bag",
+    "definition": "包",
+    "difficulty": 1
+  },
+  {
+    "word": "pen",
+    "definition": "钢笔",
+    "difficulty": 1
+  },
+  {
+    "word": "pencil box",
+    "definition": "铅笔盒",
+    "difficulty": 1
+  },
+  {
+    "word": "book",
+    "definition": "书",
+    "difficulty": 1
+  },
+  {
+    "word": "no",
+    "definition": "不",
+    "difficulty": 1
+  },
+  {
+    "word": "your",
+    "definition": "你（们）的",
+    "difficulty": 1
+  },
+  {
+    "word": "red",
+    "definition": "红色；红色的",
+    "difficulty": 1
+  },
+  {
+    "word": "green",
+    "definition": "绿色；绿色的",
+    "difficulty": 1
+  },
+  {
+    "word": "yellow",
+    "definition": "黄色；黄色的",
+    "difficulty": 1
+  },
+  {
+    "word": "blue",
+    "definition": "蓝色；蓝色的",
+    "difficulty": 1
+  },
+  {
+    "word": "black",
+    "definition": "黑色；黑色的",
+    "difficulty": 1
+  },
+  {
+    "word": "brown",
+    "definition": "棕色；棕色的",
+    "difficulty": 1
+  },
+  {
+    "word": "white",
+    "definition": "白色；白色的",
+    "difficulty": 1
+  },
+  {
+    "word": "orange",
+    "definition": "橙色；橙色的",
+    "difficulty": 1
+  },
+  {
+    "word": "OK",
+    "definition": "好；行",
+    "difficulty": 1
+  },
+  {
+    "word": "mum",
+    "definition": "妈妈",
+    "difficulty": 1
+  },
+  {
+    "word": "face",
+    "definition": "脸",
+    "difficulty": 1
+  },
+  {
+    "word": "ear",
+    "definition": "耳朵",
+    "difficulty": 1
+  },
+  {
+    "word": "eye",
+    "definition": "眼睛",
+    "difficulty": 1
+  },
+  {
+    "word": "nose",
+    "definition": "鼻子",
+    "difficulty": 1
+  },
+  {
+    "word": "mouth",
+    "definition": "嘴",
+    "difficulty": 1
+  },
+  {
+    "word": "arm",
+    "definition": "胳膊",
+    "difficulty": 1
+  },
+  {
+    "word": "hand",
+    "definition": "手",
+    "difficulty": 1
+  },
+  {
+    "word": "head",
+    "definition": "头",
+    "difficulty": 1
+  },
+  {
+    "word": "body",
+    "definition": "身体",
+    "difficulty": 1
+  },
+  {
+    "word": "leg",
+    "definition": "腿",
+    "difficulty": 1
+  },
+  {
+    "word": "foot",
+    "definition": "脚",
+    "difficulty": 1
+  },
+  {
+    "word": "school",
+    "definition": "学校",
+    "difficulty": 1
+  },
+  {
+    "word": "duck",
+    "definition": "鸭子",
+    "difficulty": 1
+  },
+  {
+    "word": "pig",
+    "definition": "猪",
+    "difficulty": 1
+  },
+  {
+    "word": "cat",
+    "definition": "猫",
+    "difficulty": 1
+  },
+  {
+    "word": "bear",
+    "definition": "熊",
+    "difficulty": 1
+  },
+  {
+    "word": "dog",
+    "definition": "狗",
+    "difficulty": 1
+  },
+  {
+    "word": "elephant",
+    "definition": "大象",
+    "difficulty": 1
+  },
+  {
+    "word": "monkey",
+    "definition": "猴子",
+    "difficulty": 1
+  },
+  {
+    "word": "bird",
+    "definition": "鸟",
+    "difficulty": 1
+  },
+  {
+    "word": "tiger",
+    "definition": "老虎",
+    "difficulty": 1
+  },
+  {
+    "word": "panda",
+    "definition": "大熊猫",
+    "difficulty": 1
+  },
+  {
+    "word": "zoo",
+    "definition": "动物园",
+    "difficulty": 1
+  },
+  {
+    "word": "funny",
+    "definition": "滑稽的；好笑的",
+    "difficulty": 1
+  },
+  {
+    "word": "bread",
+    "definition": "面包",
+    "difficulty": 1
+  },
+  {
+    "word": "juice",
+    "definition": "果汁",
+    "difficulty": 1
+  },
+  {
+    "word": "egg",
+    "definition": "蛋",
+    "difficulty": 1
+  },
+  {
+    "word": "milk",
+    "definition": "牛奶",
+    "difficulty": 1
+  },
+  {
+    "word": "water",
+    "definition": "水",
+    "difficulty": 1
+  },
+  {
+    "word": "cake",
+    "definition": "蛋糕",
+    "difficulty": 1
+  },
+  {
+    "word": "fish",
+    "definition": "鱼",
+    "difficulty": 1
+  },
+  {
+    "word": "rice",
+    "definition": "米饭",
+    "difficulty": 1
+  },
+  {
+    "word": "one",
+    "definition": "一",
+    "difficulty": 1
+  },
+  {
+    "word": "two",
+    "definition": "二",
+    "difficulty": 1
+  },
+  {
+    "word": "three",
+    "definition": "三",
+    "difficulty": 1
+  },
+  {
+    "word": "four",
+    "definition": "四",
+    "difficulty": 1
+  },
+  {
+    "word": "five",
+    "definition": "五",
+    "difficulty": 1
+  },
+  {
+    "word": "six",
+    "definition": "六",
+    "difficulty": 1
+  },
+  {
+    "word": "seven",
+    "definition": "七",
+    "difficulty": 1
+  },
+  {
+    "word": "eight",
+    "definition": "八",
+    "difficulty": 1
+  },
+  {
+    "word": "nine",
+    "definition": "九",
+    "difficulty": 1
+  },
+  {
+    "word": "ten",
+    "definition": "十",
+    "difficulty": 1
+  },
+  {
+    "word": "brother",
+    "definition": "兄；弟",
+    "difficulty": 1
+  },
+  {
+    "word": "plate",
+    "definition": "盘子",
+    "difficulty": 1
+  },
+  {
+    "word": "UK",
+    "definition": "英国",
+    "difficulty": 1
+  },
+  {
+    "word": "Canada",
+    "definition": "加拿大",
+    "difficulty": 1
+  },
+  {
+    "word": "USA",
+    "definition": "美国",
+    "difficulty": 1
+  },
+  {
+    "word": "China",
+    "definition": "中国",
+    "difficulty": 1
+  },
+  {
+    "word": "she",
+    "definition": "她；（指雌性动物）它",
+    "difficulty": 1
+  },
+  {
+    "word": "student",
+    "definition": "学生, 学者",
+    "difficulty": 1
+  },
+  {
+    "word": "pupil",
+    "definition": "小学生",
+    "difficulty": 1
+  },
+  {
+    "word": "he",
+    "definition": "他；它（指雄性动物）",
+    "difficulty": 1
+  },
+  {
+    "word": "teacher",
+    "definition": "教师, 老师, 导师",
+    "difficulty": 1
+  },
+  {
+    "word": "boy",
+    "definition": "男孩, 儿子, 孩子气的人, 男仆",
+    "difficulty": 1
+  },
+  {
+    "word": "and",
+    "definition": "和",
+    "difficulty": 1
+  },
+  {
+    "word": "girl",
+    "definition": "女孩, 少女, 女仆, (商店等的)女工作人员",
+    "difficulty": 1
+  },
+  {
+    "word": "new",
+    "definition": "新的，新近的；新来的；不熟悉的",
+    "difficulty": 1
+  },
+  {
+    "word": "friend",
+    "definition": "朋友，友人；支持者，同情者",
+    "difficulty": 1
+  },
+  {
+    "word": "today",
+    "definition": "今天；现在，目前",
+    "difficulty": 1
+  },
+  {
+    "word": "father",
+    "definition": "父亲；爸爸",
+    "difficulty": 1
+  },
+  {
+    "word": "dad",
+    "definition": "（口语）爸爸；爹爹",
+    "difficulty": 1
+  },
+  {
+    "word": "man",
+    "definition": "男人",
+    "difficulty": 1
+  },
+  {
+    "word": "woman",
+    "definition": "女人",
+    "difficulty": 1
+  },
+  {
+    "word": "mother",
+    "definition": "母亲；妈妈",
+    "difficulty": 1
+  },
+  {
+    "word": "sister",
+    "definition": "姐；妹",
+    "difficulty": 1
+  },
+  {
+    "word": "grandmother",
+    "definition": "（外）祖母",
+    "difficulty": 1
+  },
+  {
+    "word": "grandma",
+    "definition": "（口语）（外）祖母",
+    "difficulty": 1
+  },
+  {
+    "word": "grandfather",
+    "definition": "（外）祖父",
+    "difficulty": 1
+  },
+  {
+    "word": "grandpa",
+    "definition": "（口语）（外）祖父",
+    "difficulty": 1
+  },
+  {
+    "word": "family",
+    "definition": "家；家庭",
+    "difficulty": 1
+  },
+  {
+    "word": "thin",
+    "definition": "瘦的",
+    "difficulty": 1
+  },
+  {
+    "word": "fat",
+    "definition": "胖的；肥的",
+    "difficulty": 1
+  },
+  {
+    "word": "tall",
+    "definition": "高的",
+    "difficulty": 1
+  },
+  {
+    "word": "short",
+    "definition": "矮的；短的",
+    "difficulty": 1
+  },
+  {
+    "word": "long",
+    "definition": "长的",
+    "difficulty": 1
+  },
+  {
+    "word": "small",
+    "definition": "小的",
+    "difficulty": 1
+  },
+  {
+    "word": "big",
+    "definition": "大的",
+    "difficulty": 1
+  },
+  {
+    "word": "giraffe",
+    "definition": "长颈鹿",
+    "difficulty": 1
+  },
+  {
+    "word": "so",
+    "definition": "这么；那么",
+    "difficulty": 1
+  },
+  {
+    "word": "children",
+    "definition": "儿童",
+    "difficulty": 1
+  },
+  {
+    "word": "child",
+    "definition": "儿童",
+    "difficulty": 1
+  },
+  {
+    "word": "tail",
+    "definition": "尾巴",
+    "difficulty": 1
+  },
+  {
+    "word": "on",
+    "definition": "在⋯⋯上",
+    "difficulty": 1
+  },
+  {
+    "word": "in",
+    "definition": "在⋯⋯里",
+    "difficulty": 1
+  },
+  {
+    "word": "under",
+    "definition": "在⋯⋯下面",
+    "difficulty": 1
+  },
+  {
+    "word": "chair",
+    "definition": "椅子",
+    "difficulty": 1
+  },
+  {
+    "word": "desk",
+    "definition": "书桌",
+    "difficulty": 1
+  },
+  {
+    "word": "cap",
+    "definition": "帽子",
+    "difficulty": 1
+  },
+  {
+    "word": "ball",
+    "definition": "球",
+    "difficulty": 1
+  },
+  {
+    "word": "car",
+    "definition": "小汽车",
+    "difficulty": 1
+  },
+  {
+    "word": "boat",
+    "definition": "小船",
+    "difficulty": 1
+  },
+  {
+    "word": "map",
+    "definition": "地图",
+    "difficulty": 1
+  },
+  {
+    "word": "toy",
+    "definition": "玩具",
+    "difficulty": 1
+  },
+  {
+    "word": "box",
+    "definition": "盒；箱",
+    "difficulty": 1
+  },
+  {
+    "word": "pear",
+    "definition": "梨　",
+    "difficulty": 1
+  },
+  {
+    "word": "apple",
+    "definition": "苹果　",
+    "difficulty": 1
+  },
+  {
+    "word": "banana",
+    "definition": "香蕉",
+    "difficulty": 1
+  },
+  {
+    "word": "watermelon",
+    "definition": "西瓜",
+    "difficulty": 1
+  },
+  {
+    "word": "strawberry",
+    "definition": "草莓　",
+    "difficulty": 1
+  },
+  {
+    "word": "grape",
+    "definition": "葡萄",
+    "difficulty": 1
+  },
+  {
+    "word": "buy",
+    "definition": "买",
+    "difficulty": 1
+  },
+  {
+    "word": "fruit",
+    "definition": "水果",
+    "difficulty": 1
+  },
+  {
+    "word": "eleven",
+    "definition": "十一",
+    "difficulty": 1
+  },
+  {
+    "word": "twelve",
+    "definition": "十二",
+    "difficulty": 1
+  },
+  {
+    "word": "thirteen",
+    "definition": "十三",
+    "difficulty": 1
+  },
+  {
+    "word": "fourteen",
+    "definition": "十四",
+    "difficulty": 1
+  },
+  {
+    "word": "fifteen",
+    "definition": "十五",
+    "difficulty": 1
+  },
+  {
+    "word": "sixteen",
+    "definition": "十六　",
+    "difficulty": 1
+  },
+  {
+    "word": "seventeen",
+    "definition": "十七",
+    "difficulty": 1
+  },
+  {
+    "word": "eighteen",
+    "definition": "十八",
+    "difficulty": 1
+  },
+  {
+    "word": "nineteen",
+    "definition": "十九",
+    "difficulty": 1
+  },
+  {
+    "word": "twenty",
+    "definition": "二十",
+    "difficulty": 1
+  },
+  {
+    "word": "kite",
+    "definition": "风筝",
+    "difficulty": 1
+  },
+  {
+    "word": "beautiful",
+    "definition": "美丽的",
+    "difficulty": 1
+  },
+  {
+    "word": "classroom",
+    "definition": "教室",
+    "difficulty": 1
+  },
+  {
+    "word": "window",
+    "definition": "窗户",
+    "difficulty": 1
+  },
+  {
+    "word": "blackboard",
+    "definition": "黑板",
+    "difficulty": 1
+  },
+  {
+    "word": "light",
+    "definition": "电灯",
+    "difficulty": 1
+  },
+  {
+    "word": "picture",
+    "definition": "图画",
+    "difficulty": 1
+  },
+  {
+    "word": "door",
+    "definition": "门",
+    "difficulty": 1
+  },
+  {
+    "word": "teacher's desk",
+    "definition": "讲台",
+    "difficulty": 1
+  },
+  {
+    "word": "computer",
+    "definition": "计算机",
+    "difficulty": 1
+  },
+  {
+    "word": "fan",
+    "definition": "风扇",
+    "difficulty": 1
+  },
+  {
+    "word": "wall",
+    "definition": "墙壁",
+    "difficulty": 1
+  },
+  {
+    "word": "floor",
+    "definition": "地板",
+    "difficulty": 1
+  },
+  {
+    "word": "really",
+    "definition": "真的",
+    "difficulty": 1
+  },
+  {
+    "word": "near",
+    "definition": "距离近",
+    "difficulty": 1
+  },
+  {
+    "word": "TV",
+    "definition": "电视",
+    "difficulty": 1
+  },
+  {
+    "word": "clean",
+    "definition": "打扫",
+    "difficulty": 1
+  },
+  {
+    "word": "help",
+    "definition": "帮助",
+    "difficulty": 1
+  },
+  {
+    "word": "schoolbag",
+    "definition": "书包",
+    "difficulty": 1
+  },
+  {
+    "word": "maths book",
+    "definition": "数学书",
+    "difficulty": 1
+  },
+  {
+    "word": "English book",
+    "definition": "英语书",
+    "difficulty": 1
+  },
+  {
+    "word": "Chinese book",
+    "definition": "语文书",
+    "difficulty": 1
+  },
+  {
+    "word": "storybook",
+    "definition": "故事书",
+    "difficulty": 1
+  },
+  {
+    "word": "candy",
+    "definition": "糖果",
+    "difficulty": 1
+  },
+  {
+    "word": "notebook",
+    "definition": "笔记本",
+    "difficulty": 1
+  },
+  {
+    "word": "key",
+    "definition": "钥匙",
+    "difficulty": 1
+  },
+  {
+    "word": "wow",
+    "definition": "呀",
+    "difficulty": 1
+  },
+  {
+    "word": "lost",
+    "definition": "丢失",
+    "difficulty": 1
+  },
+  {
+    "word": "so much",
+    "definition": "非常地",
+    "difficulty": 1
+  },
+  {
+    "word": "cute",
+    "definition": "可爱的",
+    "difficulty": 1
+  },
+  {
+    "word": "strong",
+    "definition": "强壮的",
+    "difficulty": 1
+  },
+  {
+    "word": "friendly",
+    "definition": "友好的",
+    "difficulty": 1
+  },
+  {
+    "word": "quiet",
+    "definition": "安静的",
+    "difficulty": 1
+  },
+  {
+    "word": "hair",
+    "definition": "头发",
+    "difficulty": 1
+  },
+  {
+    "word": "shoe",
+    "definition": "鞋",
+    "difficulty": 1
+  },
+  {
+    "word": "glasses",
+    "definition": "眼镜",
+    "difficulty": 1
+  },
+  {
+    "word": "his",
+    "definition": "他的",
+    "difficulty": 1
+  },
+  {
+    "word": "or",
+    "definition": "或者",
+    "difficulty": 1
+  },
+  {
+    "word": "right",
+    "definition": "对的",
+    "difficulty": 1
+  },
+  {
+    "word": "hat",
+    "definition": "帽子",
+    "difficulty": 1
+  },
+  {
+    "word": "her",
+    "definition": "她的",
+    "difficulty": 1
+  },
+  {
+    "word": "bedroom",
+    "definition": "卧室",
+    "difficulty": 1
+  },
+  {
+    "word": "living room",
+    "definition": "客厅",
+    "difficulty": 1
+  },
+  {
+    "word": "study",
+    "definition": "书房",
+    "difficulty": 1
+  },
+  {
+    "word": "kitchen",
+    "definition": "厨房",
+    "difficulty": 1
+  },
+  {
+    "word": "bathroom",
+    "definition": "浴室",
+    "difficulty": 1
+  },
+  {
+    "word": "bed",
+    "definition": "床",
+    "difficulty": 1
+  },
+  {
+    "word": "phone",
+    "definition": "电话",
+    "difficulty": 1
+  },
+  {
+    "word": "table",
+    "definition": "桌子",
+    "difficulty": 1
+  },
+  {
+    "word": "sofa",
+    "definition": "长沙发",
+    "difficulty": 1
+  },
+  {
+    "word": "fridge",
+    "definition": "冰箱",
+    "difficulty": 1
+  },
+  {
+    "word": "find",
+    "definition": "找到",
+    "difficulty": 1
+  },
+  {
+    "word": "them",
+    "definition": "他们",
+    "difficulty": 1
+  },
+  {
+    "word": "beef",
+    "definition": "牛肉",
+    "difficulty": 1
+  },
+  {
+    "word": "chicken",
+    "definition": "鸡肉",
+    "difficulty": 1
+  },
+  {
+    "word": "noodles",
+    "definition": "面条",
+    "difficulty": 1
+  },
+  {
+    "word": "soup",
+    "definition": "汤",
+    "difficulty": 1
+  },
+  {
+    "word": "vegetable",
+    "definition": "蔬菜",
+    "difficulty": 1
+  },
+  {
+    "word": "chopsticks",
+    "definition": "筷子",
+    "difficulty": 1
+  },
+  {
+    "word": "bowl",
+    "definition": "碗",
+    "difficulty": 1
+  },
+  {
+    "word": "fork",
+    "definition": "餐叉",
+    "difficulty": 1
+  },
+  {
+    "word": "knife",
+    "definition": "刀",
+    "difficulty": 1
+  },
+  {
+    "word": "spoon",
+    "definition": "匙,勺子",
+    "difficulty": 1
+  },
+  {
+    "word": "dinner",
+    "definition": "正餐",
+    "difficulty": 1
+  },
+  {
+    "word": "ready",
+    "definition": "准备好",
+    "difficulty": 1
+  },
+  {
+    "word": "help yourself",
+    "definition": "为（自己）取用",
+    "difficulty": 1
+  },
+  {
+    "word": "pass",
+    "definition": "给",
+    "difficulty": 1
+  },
+  {
+    "word": "try",
+    "definition": "试",
+    "difficulty": 1
+  },
+  {
+    "word": "parents",
+    "definition": "父母",
+    "difficulty": 1
+  },
+  {
+    "word": "cousin",
+    "definition": "同辈表亲",
+    "difficulty": 1
+  },
+  {
+    "word": "uncle",
+    "definition": "叔叔",
+    "difficulty": 1
+  },
+  {
+    "word": "aunt",
+    "definition": "阿姨",
+    "difficulty": 1
+  },
+  {
+    "word": "baby brother",
+    "definition": "小弟弟",
+    "difficulty": 1
+  },
+  {
+    "word": "doctor",
+    "definition": "医生",
+    "difficulty": 1
+  },
+  {
+    "word": "cook",
+    "definition": "厨师",
+    "difficulty": 1
+  },
+  {
+    "word": "driver",
+    "definition": "司机",
+    "difficulty": 1
+  },
+  {
+    "word": "farmer",
+    "definition": "农民",
+    "difficulty": 1
+  },
+  {
+    "word": "nurse",
+    "definition": "护士",
+    "difficulty": 1
+  },
+  {
+    "word": "people",
+    "definition": "人们",
+    "difficulty": 1
+  },
+  {
+    "word": "but",
+    "definition": "但是",
+    "difficulty": 1
+  },
+  {
+    "word": "little",
+    "definition": "小的",
+    "difficulty": 1
+  },
+  {
+    "word": "puppy",
+    "definition": "小狗",
+    "difficulty": 1
+  },
+  {
+    "word": "football player",
+    "definition": "足球运动员",
+    "difficulty": 1
+  },
+  {
+    "word": "job",
+    "definition": "工作",
+    "difficulty": 1
+  },
+  {
+    "word": "basketball",
+    "definition": "篮球",
+    "difficulty": 1
+  },
+  {
+    "word": "first floor",
+    "definition": "一楼（美）；二楼（英）",
+    "difficulty": 1
+  },
+  {
+    "word": "second floor",
+    "definition": "二楼",
+    "difficulty": 1
+  },
+  {
+    "word": "teacher's office",
+    "definition": "教师办公室",
+    "difficulty": 1
+  },
+  {
+    "word": "library",
+    "definition": "图书馆",
+    "difficulty": 1
+  },
+  {
+    "word": "playground",
+    "definition": "操场",
+    "difficulty": 1
+  },
+  {
+    "word": "computer room",
+    "definition": "计算机房",
+    "difficulty": 1
+  },
+  {
+    "word": "art room",
+    "definition": "美术教室",
+    "difficulty": 1
+  },
+  {
+    "word": "music room",
+    "definition": "音乐教室",
+    "difficulty": 1
+  },
+  {
+    "word": "next to",
+    "definition": "紧邻",
+    "difficulty": 1
+  },
+  {
+    "word": "homework",
+    "definition": "作业",
+    "difficulty": 1
+  },
+  {
+    "word": "class",
+    "definition": "班级",
+    "difficulty": 1
+  },
+  {
+    "word": "forty",
+    "definition": "四十",
+    "difficulty": 1
+  },
+  {
+    "word": "way",
+    "definition": "方向",
+    "difficulty": 1
+  },
+  {
+    "word": "breakfast",
+    "definition": "早餐",
+    "difficulty": 1
+  },
+  {
+    "word": "English class",
+    "definition": "英语课",
+    "difficulty": 1
+  },
+  {
+    "word": "lunch",
+    "definition": "午饭",
+    "difficulty": 1
+  },
+  {
+    "word": "music class",
+    "definition": "音乐课",
+    "difficulty": 1
+  },
+  {
+    "word": "PE class",
+    "definition": "体育课",
+    "difficulty": 1
+  },
+  {
+    "word": "get up",
+    "definition": "起床",
+    "difficulty": 1
+  },
+  {
+    "word": "go to school",
+    "definition": "上学",
+    "difficulty": 1
+  },
+  {
+    "word": "go home",
+    "definition": "回家",
+    "difficulty": 1
+  },
+  {
+    "word": "go to bed",
+    "definition": "去睡觉",
+    "difficulty": 1
+  },
+  {
+    "word": "over",
+    "definition": "结束",
+    "difficulty": 1
+  },
+  {
+    "word": "now",
+    "definition": "现在",
+    "difficulty": 1
+  },
+  {
+    "word": "o'clock",
+    "definition": "⋯⋯点钟",
+    "difficulty": 1
+  },
+  {
+    "word": "kid",
+    "definition": "小孩",
+    "difficulty": 1
+  },
+  {
+    "word": "thirty",
+    "definition": "三十",
+    "difficulty": 1
+  },
+  {
+    "word": "hurry up",
+    "definition": "快点",
+    "difficulty": 1
+  },
+  {
+    "word": "come on",
+    "definition": "加油",
+    "difficulty": 1
+  },
+  {
+    "word": "just a minute",
+    "definition": "稍等一会儿",
+    "difficulty": 1
+  },
+  {
+    "word": "cold",
+    "definition": "冷的",
+    "difficulty": 1
+  },
+  {
+    "word": "cool",
+    "definition": "凉的",
+    "difficulty": 1
+  },
+  {
+    "word": "warm",
+    "definition": "温暖的",
+    "difficulty": 1
+  },
+  {
+    "word": "hot",
+    "definition": "热的",
+    "difficulty": 1
+  },
+  {
+    "word": "sunny",
+    "definition": "阳光充足的",
+    "difficulty": 1
+  },
+  {
+    "word": "windy",
+    "definition": "多风的",
+    "difficulty": 1
+  },
+  {
+    "word": "cloudy",
+    "definition": "多云的",
+    "difficulty": 1
+  },
+  {
+    "word": "snowy",
+    "definition": "下雪的",
+    "difficulty": 1
+  },
+  {
+    "word": "rainy",
+    "definition": "阴雨的",
+    "difficulty": 1
+  },
+  {
+    "word": "outside",
+    "definition": "在户外",
+    "difficulty": 1
+  },
+  {
+    "word": "be careful",
+    "definition": "小心",
+    "difficulty": 1
+  },
+  {
+    "word": "weather",
+    "definition": "天气",
+    "difficulty": 1
+  },
+  {
+    "word": "New York",
+    "definition": "纽约",
+    "difficulty": 1
+  },
+  {
+    "word": "how about...",
+    "definition": "怎么样？",
+    "difficulty": 1
+  },
+  {
+    "word": "degree",
+    "definition": "度",
+    "difficulty": 1
+  },
+  {
+    "word": "world",
+    "definition": "世界",
+    "difficulty": 1
+  },
+  {
+    "word": "London",
+    "definition": "伦敦",
+    "difficulty": 1
+  },
+  {
+    "word": "Moscow",
+    "definition": "莫斯科",
+    "difficulty": 1
+  },
+  {
+    "word": "Singapore",
+    "definition": "新加坡城",
+    "difficulty": 1
+  },
+  {
+    "word": "Sydney",
+    "definition": "悉尼",
+    "difficulty": 1
+  },
+  {
+    "word": "fly",
+    "definition": "放（风筝）",
+    "difficulty": 1
+  },
+  {
+    "word": "love",
+    "definition": "爱你的",
+    "difficulty": 1
+  },
+  {
+    "word": "tomato",
+    "definition": "西红柿",
+    "difficulty": 1
+  },
+  {
+    "word": "potato",
+    "definition": "马铃薯",
+    "difficulty": 1
+  },
+  {
+    "word": "green beans",
+    "definition": "豆角",
+    "difficulty": 1
+  },
+  {
+    "word": "carrot",
+    "definition": "胡萝卜",
+    "difficulty": 1
+  },
+  {
+    "word": "horse",
+    "definition": "马",
+    "difficulty": 1
+  },
+  {
+    "word": "cow",
+    "definition": "牛",
+    "difficulty": 1
+  },
+  {
+    "word": "sheep",
+    "definition": "绵羊",
+    "difficulty": 1
+  },
+  {
+    "word": "hen",
+    "definition": "母鸡",
+    "difficulty": 1
+  },
+  {
+    "word": "these",
+    "definition": "这些",
+    "difficulty": 1
+  },
+  {
+    "word": "yum",
+    "definition": "味道好",
+    "difficulty": 1
+  },
+  {
+    "word": "animal",
+    "definition": "动物",
+    "difficulty": 1
+  },
+  {
+    "word": "those",
+    "definition": "那些",
+    "difficulty": 1
+  },
+  {
+    "word": "garden",
+    "definition": "花园",
+    "difficulty": 1
+  },
+  {
+    "word": "farm",
+    "definition": "农场",
+    "difficulty": 1
+  },
+  {
+    "word": "goat",
+    "definition": "山羊",
+    "difficulty": 1
+  },
+  {
+    "word": "eat",
+    "definition": "吃",
+    "difficulty": 1
+  },
+  {
+    "word": "clothes",
+    "definition": "服装",
+    "difficulty": 1
+  },
+  {
+    "word": "pants",
+    "definition": "裤子",
+    "difficulty": 1
+  },
+  {
+    "word": "dress",
+    "definition": "连衣裙",
+    "difficulty": 1
+  },
+  {
+    "word": "skirt",
+    "definition": "女裙",
+    "difficulty": 1
+  },
+  {
+    "word": "coat",
+    "definition": "大衣",
+    "difficulty": 1
+  },
+  {
+    "word": "sweater",
+    "definition": "毛衣",
+    "difficulty": 1
+  },
+  {
+    "word": "sock",
+    "definition": "短袜",
+    "difficulty": 1
+  },
+  {
+    "word": "shorts",
+    "definition": "短裤",
+    "difficulty": 1
+  },
+  {
+    "word": "jacket",
+    "definition": "夹克衫",
+    "difficulty": 1
+  },
+  {
+    "word": "shirt",
+    "definition": "衬衫",
+    "difficulty": 1
+  },
+  {
+    "word": "yours",
+    "definition": "你的",
+    "difficulty": 1
+  },
+  {
+    "word": "whose",
+    "definition": "谁的",
+    "difficulty": 1
+  },
+  {
+    "word": "mine",
+    "definition": "我的",
+    "difficulty": 1
+  },
+  {
+    "word": "pack",
+    "definition": "收拾",
+    "difficulty": 1
+  },
+  {
+    "word": "wait",
+    "definition": "等待",
+    "difficulty": 1
+  },
+  {
+    "word": "glove",
+    "definition": "手套",
+    "difficulty": 1
+  },
+  {
+    "word": "scarf",
+    "definition": "围巾",
+    "difficulty": 1
+  },
+  {
+    "word": "umbrella",
+    "definition": "伞",
+    "difficulty": 1
+  },
+  {
+    "word": "sunglasses",
+    "definition": "太阳镜",
+    "difficulty": 1
+  },
+  {
+    "word": "pretty",
+    "definition": "美丽的",
+    "difficulty": 1
+  },
+  {
+    "word": "expensive",
+    "definition": "贵的",
+    "difficulty": 1
+  },
+  {
+    "word": "cheap",
+    "definition": "便宜的",
+    "difficulty": 1
+  },
+  {
+    "word": "nice",
+    "definition": "好的",
+    "difficulty": 1
+  },
+  {
+    "word": "try on",
+    "definition": "试穿",
+    "difficulty": 1
+  },
+  {
+    "word": "size",
+    "definition": "尺码",
+    "difficulty": 1
+  },
+  {
+    "word": "of course",
+    "definition": "当然",
+    "difficulty": 1
+  },
+  {
+    "word": "too",
+    "definition": "太",
+    "difficulty": 1
+  },
+  {
+    "word": "just",
+    "definition": "正好",
+    "difficulty": 1
+  },
+  {
+    "word": "how much",
+    "definition": "多少钱",
+    "difficulty": 1
+  },
+  {
+    "word": "eighty",
+    "definition": "八十",
+    "difficulty": 1
+  },
+  {
+    "word": "dollar",
+    "definition": "元",
+    "difficulty": 1
+  },
+  {
+    "word": "sale",
+    "definition": "特价销售",
+    "difficulty": 1
+  },
+  {
+    "word": "more",
+    "definition": "更多的",
+    "difficulty": 1
+  },
+  {
+    "word": "us",
+    "definition": "我们",
+    "difficulty": 1
+  },
+  {
+    "word": "old",
+    "definition": "老的",
+    "difficulty": 1
+  },
+  {
+    "word": "young",
+    "definition": "年轻的",
+    "difficulty": 1
+  },
+  {
+    "word": "kind",
+    "definition": "体贴的",
+    "difficulty": 1
+  },
+  {
+    "word": "strict",
+    "definition": "严厉的",
+    "difficulty": 1
+  },
+  {
+    "word": "polite",
+    "definition": "有礼貌的",
+    "difficulty": 1
+  },
+  {
+    "word": "hard-working",
+    "definition": "努力的",
+    "difficulty": 1
+  },
+  {
+    "word": "helpful",
+    "definition": "有用的",
+    "difficulty": 1
+  },
+  {
+    "word": "clever",
+    "definition": "聪明的",
+    "difficulty": 1
+  },
+  {
+    "word": "shy",
+    "definition": "羞怯的",
+    "difficulty": 1
+  },
+  {
+    "word": "know",
+    "definition": "知道",
+    "difficulty": 1
+  },
+  {
+    "word": "our",
+    "definition": "我们的",
+    "difficulty": 1
+  },
+  {
+    "word": "Ms",
+    "definition": "女士",
+    "difficulty": 1
+  },
+  {
+    "word": "will",
+    "definition": "将要",
+    "difficulty": 1
+  },
+  {
+    "word": "sometimes",
+    "definition": "有时",
+    "difficulty": 1
+  },
+  {
+    "word": "robot",
+    "definition": "机器人",
+    "difficulty": 1
+  },
+  {
+    "word": "him",
+    "definition": "他",
+    "difficulty": 1
+  },
+  {
+    "word": "speak",
+    "definition": "会说",
+    "difficulty": 1
+  },
+  {
+    "word": "finish",
+    "definition": "完成",
+    "difficulty": 1
+  },
+  {
+    "word": "Monday",
+    "definition": "星期一",
+    "difficulty": 1
+  },
+  {
+    "word": "Tuesday",
+    "definition": "星期二",
+    "difficulty": 1
+  },
+  {
+    "word": "Wednesday",
+    "definition": "星期三",
+    "difficulty": 1
+  },
+  {
+    "word": "Thursday",
+    "definition": "星期四",
+    "difficulty": 1
+  },
+  {
+    "word": "Friday",
+    "definition": "星期五",
+    "difficulty": 1
+  },
+  {
+    "word": "Saturday",
+    "definition": "星期六",
+    "difficulty": 1
+  },
+  {
+    "word": "Sunday",
+    "definition": "星期日",
+    "difficulty": 1
+  },
+  {
+    "word": "weekend",
+    "definition": "周末",
+    "difficulty": 1
+  },
+  {
+    "word": "wash",
+    "definition": "洗",
+    "difficulty": 1
+  },
+  {
+    "word": "wash my clothes",
+    "definition": "洗我的衣服",
+    "difficulty": 1
+  },
+  {
+    "word": "watch",
+    "definition": "看",
+    "difficulty": 1
+  },
+  {
+    "word": "watch TV",
+    "definition": "看电视",
+    "difficulty": 1
+  },
+  {
+    "word": "do",
+    "definition": "做",
+    "difficulty": 1
+  },
+  {
+    "word": "do homework",
+    "definition": "做作业",
+    "difficulty": 1
+  },
+  {
+    "word": "read",
+    "definition": "看",
+    "difficulty": 1
+  },
+  {
+    "word": "read books",
+    "definition": "看书",
+    "difficulty": 1
+  },
+  {
+    "word": "play",
+    "definition": "玩",
+    "difficulty": 1
+  },
+  {
+    "word": "play football",
+    "definition": "踢足球",
+    "difficulty": 1
+  },
+  {
+    "word": "cooking",
+    "definition": "烹饪",
+    "difficulty": 1
+  },
+  {
+    "word": "often",
+    "definition": "时常",
+    "difficulty": 1
+  },
+  {
+    "word": "park",
+    "definition": "公园",
+    "difficulty": 1
+  },
+  {
+    "word": "tired",
+    "definition": "疲倦的",
+    "difficulty": 1
+  },
+  {
+    "word": "sport",
+    "definition": "体育运动",
+    "difficulty": 1
+  },
+  {
+    "word": "play sports",
+    "definition": "做体育运动",
+    "difficulty": 1
+  },
+  {
+    "word": "should",
+    "definition": "应该",
+    "difficulty": 1
+  },
+  {
+    "word": "every",
+    "definition": "每一个",
+    "difficulty": 1
+  },
+  {
+    "word": "day",
+    "definition": "一天",
+    "difficulty": 1
+  },
+  {
+    "word": "schedule",
+    "definition": "工作计划",
+    "difficulty": 1
+  },
+  {
+    "word": "sandwich",
+    "definition": "三明治",
+    "difficulty": 1
+  },
+  {
+    "word": "salad",
+    "definition": "沙拉",
+    "difficulty": 1
+  },
+  {
+    "word": "hamburger",
+    "definition": "汉堡包",
+    "difficulty": 1
+  },
+  {
+    "word": "ice cream",
+    "definition": "冰淇淋",
+    "difficulty": 1
+  },
+  {
+    "word": "tea",
+    "definition": "茶",
+    "difficulty": 1
+  },
+  {
+    "word": "fresh",
+    "definition": "新鲜的",
+    "difficulty": 1
+  },
+  {
+    "word": "healthy",
+    "definition": "健康的",
+    "difficulty": 1
+  },
+  {
+    "word": "delicious",
+    "definition": "美味的",
+    "difficulty": 1
+  },
+  {
+    "word": "sweet",
+    "definition": "甜的",
+    "difficulty": 1
+  },
+  {
+    "word": "drink",
+    "definition": "喝",
+    "difficulty": 1
+  },
+  {
+    "word": "thirsty",
+    "definition": "渴的",
+    "difficulty": 1
+  },
+  {
+    "word": "favourite",
+    "definition": "特别喜欢的",
+    "difficulty": 1
+  },
+  {
+    "word": "food",
+    "definition": "食物",
+    "difficulty": 1
+  },
+  {
+    "word": "Dear",
+    "definition": "亲爱的",
+    "difficulty": 1
+  },
+  {
+    "word": "onion",
+    "definition": "洋葱",
+    "difficulty": 1
+  },
+  {
+    "word": "sing",
+    "definition": "唱",
+    "difficulty": 1
+  },
+  {
+    "word": "song",
+    "definition": "歌曲",
+    "difficulty": 1
+  },
+  {
+    "word": "sing English songs",
+    "definition": "唱英文歌曲",
+    "difficulty": 1
+  },
+  {
+    "word": "play the pipa",
+    "definition": "弹琵琶",
+    "difficulty": 1
+  },
+  {
+    "word": "kung fu",
+    "definition": "功夫",
+    "difficulty": 1
+  },
+  {
+    "word": "do kung fu",
+    "definition": "练武术",
+    "difficulty": 1
+  },
+  {
+    "word": "dance",
+    "definition": "跳舞",
+    "difficulty": 1
+  },
+  {
+    "word": "draw",
+    "definition": "画",
+    "difficulty": 1
+  },
+  {
+    "word": "cartoon",
+    "definition": "漫画",
+    "difficulty": 1
+  },
+  {
+    "word": "draw cartoons",
+    "definition": "画漫画",
+    "difficulty": 1
+  },
+  {
+    "word": "swim",
+    "definition": "游泳",
+    "difficulty": 1
+  },
+  {
+    "word": "play basketball",
+    "definition": "打篮球",
+    "difficulty": 1
+  },
+  {
+    "word": "ping-pong",
+    "definition": "乒乓球",
+    "difficulty": 1
+  },
+  {
+    "word": "play ping-pong",
+    "definition": "打乒乓球",
+    "difficulty": 1
+  },
+  {
+    "word": "speak English",
+    "definition": "说英语",
+    "difficulty": 1
+  },
+  {
+    "word": "we'll",
+    "definition": "我们将……（=we will）",
+    "difficulty": 1
+  },
+  {
+    "word": "party",
+    "definition": "聚会",
+    "difficulty": 1
+  },
+  {
+    "word": "next",
+    "definition": "下一个的",
+    "difficulty": 1
+  },
+  {
+    "word": "wonderful",
+    "definition": "极好的",
+    "difficulty": 1
+  },
+  {
+    "word": "learn",
+    "definition": "学习",
+    "difficulty": 1
+  },
+  {
+    "word": "any",
+    "definition": "任何的",
+    "difficulty": 1
+  },
+  {
+    "word": "problem",
+    "definition": "没问题",
+    "difficulty": 1
+  },
+  {
+    "word": "no problem",
+    "definition": "没问题",
+    "difficulty": 1
+  },
+  {
+    "word": "want",
+    "definition": "要",
+    "difficulty": 1
+  },
+  {
+    "word": "send",
+    "definition": "邮寄",
+    "difficulty": 1
+  },
+  {
+    "word": "email",
+    "definition": "电子邮件",
+    "difficulty": 1
+  },
+  {
+    "word": "at",
+    "definition": "（接邮件地址）",
+    "difficulty": 1
+  },
+  {
+    "word": "clock",
+    "definition": "时钟",
+    "difficulty": 1
+  },
+  {
+    "word": "plant",
+    "definition": "植物",
+    "difficulty": 1
+  },
+  {
+    "word": "bottle",
+    "definition": "瓶子",
+    "difficulty": 1
+  },
+  {
+    "word": "water bottle",
+    "definition": "水瓶",
+    "difficulty": 1
+  },
+  {
+    "word": "bike",
+    "definition": "自行车",
+    "difficulty": 1
+  },
+  {
+    "word": "photo",
+    "definition": "照片",
+    "difficulty": 1
+  },
+  {
+    "word": "front",
+    "definition": "正面",
+    "difficulty": 1
+  },
+  {
+    "word": "in front of",
+    "definition": "在⋯⋯前面",
+    "difficulty": 1
+  },
+  {
+    "word": "between",
+    "definition": "在⋯⋯中间",
+    "difficulty": 1
+  },
+  {
+    "word": "above",
+    "definition": "在⋯⋯上面",
+    "difficulty": 1
+  },
+  {
+    "word": "beside",
+    "definition": "在旁边",
+    "difficulty": 1
+  },
+  {
+    "word": "behind",
+    "definition": "在⋯⋯后面",
+    "difficulty": 1
+  },
+  {
+    "word": "there",
+    "definition": "（存在或发生）",
+    "difficulty": 1
+  },
+  {
+    "word": "grandparent",
+    "definition": "（外）祖父母",
+    "difficulty": 1
+  },
+  {
+    "word": "their",
+    "definition": "他们的",
+    "difficulty": 1
+  },
+  {
+    "word": "house",
+    "definition": "房子",
+    "difficulty": 1
+  },
+  {
+    "word": "lot",
+    "definition": "大量",
+    "difficulty": 1
+  },
+  {
+    "word": "lots of",
+    "definition": "大量",
+    "difficulty": 1
+  },
+  {
+    "word": "flower",
+    "definition": "花",
+    "difficulty": 1
+  },
+  {
+    "word": "move",
+    "definition": "搬家",
+    "difficulty": 1
+  },
+  {
+    "word": "dirty",
+    "definition": "肮脏的",
+    "difficulty": 1
+  },
+  {
+    "word": "everywhere",
+    "definition": "处处",
+    "difficulty": 1
+  },
+  {
+    "word": "mouse",
+    "definition": "老鼠",
+    "difficulty": 1
+  },
+  {
+    "word": "live",
+    "definition": "住",
+    "difficulty": 1
+  },
+  {
+    "word": "nature",
+    "definition": "自然界",
+    "difficulty": 1
+  },
+  {
+    "word": "forest",
+    "definition": "森林",
+    "difficulty": 1
+  },
+  {
+    "word": "river",
+    "definition": "河",
+    "difficulty": 1
+  },
+  {
+    "word": "lake",
+    "definition": "湖",
+    "difficulty": 1
+  },
+  {
+    "word": "mountain",
+    "definition": "山",
+    "difficulty": 1
+  },
+  {
+    "word": "hill",
+    "definition": "小山",
+    "difficulty": 1
+  },
+  {
+    "word": "tree",
+    "definition": "树",
+    "difficulty": 1
+  },
+  {
+    "word": "bridge",
+    "definition": "桥",
+    "difficulty": 1
+  },
+  {
+    "word": "building",
+    "definition": "建筑",
+    "difficulty": 1
+  },
+  {
+    "word": "village",
+    "definition": "村庄",
+    "difficulty": 1
+  },
+  {
+    "word": "house.",
+    "definition": "房屋",
+    "difficulty": 1
+  },
+  {
+    "word": "boating",
+    "definition": "划船",
+    "difficulty": 1
+  },
+  {
+    "word": "go boating",
+    "definition": "去划船",
+    "difficulty": 1
+  },
+  {
+    "word": "aren't",
+    "definition": "不是（= are not）",
+    "difficulty": 1
+  },
+  {
+    "word": "rabbit",
+    "definition": "兔",
+    "difficulty": 1
+  },
+  {
+    "word": "high",
+    "definition": "高的",
+    "difficulty": 1
+  },
+  {
+    "word": "eat breakfast",
+    "definition": "吃早饭",
+    "difficulty": 1
+  },
+  {
+    "word": "have...class",
+    "definition": "上⋯⋯课",
+    "difficulty": 1
+  },
+  {
+    "word": "exercise",
+    "definition": "活动",
+    "difficulty": 1
+  },
+  {
+    "word": "do morning exercise",
+    "definition": "做早操",
+    "difficulty": 1
+  },
+  {
+    "word": "eat dinner",
+    "definition": "吃晚饭",
+    "difficulty": 1
+  },
+  {
+    "word": "clean my room",
+    "definition": "打扫我的房间",
+    "difficulty": 1
+  },
+  {
+    "word": "go for a walk",
+    "definition": "散步",
+    "difficulty": 1
+  },
+  {
+    "word": "go shopping",
+    "definition": "购物",
+    "difficulty": 1
+  },
+  {
+    "word": "take",
+    "definition": "上（课）",
+    "difficulty": 1
+  },
+  {
+    "word": "dancing",
+    "definition": "跳舞",
+    "difficulty": 1
+  },
+  {
+    "word": "take a dancing class",
+    "definition": "上舞蹈课",
+    "difficulty": 1
+  },
+  {
+    "word": "when",
+    "definition": "什么时候",
+    "difficulty": 1
+  },
+  {
+    "word": "after",
+    "definition": "在⋯⋯之后",
+    "difficulty": 1
+  },
+  {
+    "word": "start",
+    "definition": "开始",
+    "difficulty": 1
+  },
+  {
+    "word": "usually",
+    "definition": "通常地",
+    "difficulty": 1
+  },
+  {
+    "word": "Spain",
+    "definition": "西班牙",
+    "difficulty": 1
+  },
+  {
+    "word": "late",
+    "definition": "晚",
+    "difficulty": 1
+  },
+  {
+    "word": "a.m.",
+    "definition": "上午",
+    "difficulty": 1
+  },
+  {
+    "word": "p.m.",
+    "definition": "下午",
+    "difficulty": 1
+  },
+  {
+    "word": "why",
+    "definition": "为什么",
+    "difficulty": 1
+  },
+  {
+    "word": "shop",
+    "definition": "购物",
+    "difficulty": 1
+  },
+  {
+    "word": "work",
+    "definition": "工作",
+    "difficulty": 1
+  },
+  {
+    "word": "last",
+    "definition": "上一个的",
+    "difficulty": 1
+  },
+  {
+    "word": "sound",
+    "definition": "听起来好像",
+    "difficulty": 1
+  },
+  {
+    "word": "also",
+    "definition": "还",
+    "difficulty": 1
+  },
+  {
+    "word": "busy",
+    "definition": "忙的",
+    "difficulty": 1
+  },
+  {
+    "word": "need",
+    "definition": "需要",
+    "difficulty": 1
+  },
+  {
+    "word": "letter",
+    "definition": "信",
+    "difficulty": 1
+  },
+  {
+    "word": "island",
+    "definition": "岛",
+    "difficulty": 1
+  },
+  {
+    "word": "always",
+    "definition": "总是",
+    "difficulty": 1
+  },
+  {
+    "word": "cave",
+    "definition": "山洞",
+    "difficulty": 1
+  },
+  {
+    "word": "go swimming",
+    "definition": "去游泳",
+    "difficulty": 1
+  },
+  {
+    "word": "win",
+    "definition": "获胜",
+    "difficulty": 1
+  },
+  {
+    "word": "spring",
+    "definition": "春天",
+    "difficulty": 1
+  },
+  {
+    "word": "summer",
+    "definition": "夏天",
+    "difficulty": 1
+  },
+  {
+    "word": "autumn",
+    "definition": "秋天",
+    "difficulty": 1
+  },
+  {
+    "word": "winter",
+    "definition": "冬天",
+    "difficulty": 1
+  },
+  {
+    "word": "season",
+    "definition": "季节",
+    "difficulty": 1
+  },
+  {
+    "word": "picnic",
+    "definition": "野餐",
+    "difficulty": 1
+  },
+  {
+    "word": "go on a picnic",
+    "definition": "去野餐",
+    "difficulty": 1
+  },
+  {
+    "word": "pick",
+    "definition": "摘",
+    "difficulty": 1
+  },
+  {
+    "word": "pick apples",
+    "definition": "摘苹果",
+    "difficulty": 1
+  },
+  {
+    "word": "snowman",
+    "definition": "雪人",
+    "difficulty": 1
+  },
+  {
+    "word": "make a snowman",
+    "definition": "堆雪人",
+    "difficulty": 1
+  },
+  {
+    "word": "go swimming.",
+    "definition": "去游泳",
+    "difficulty": 1
+  },
+  {
+    "word": "which",
+    "definition": "哪一个",
+    "difficulty": 1
+  },
+  {
+    "word": "best",
+    "definition": "最",
+    "difficulty": 1
+  },
+  {
+    "word": "snow",
+    "definition": "雪",
+    "difficulty": 1
+  },
+  {
+    "word": "good job",
+    "definition": "做得好",
+    "difficulty": 1
+  },
+  {
+    "word": "because",
+    "definition": "因为",
+    "difficulty": 1
+  },
+  {
+    "word": "vacation",
+    "definition": "假期",
+    "difficulty": 1
+  },
+  {
+    "word": "all",
+    "definition": "完全",
+    "difficulty": 1
+  },
+  {
+    "word": "pink",
+    "definition": "粉色",
+    "difficulty": 1
+  },
+  {
+    "word": "lovely",
+    "definition": "可爱的",
+    "difficulty": 1
+  },
+  {
+    "word": "leaf",
+    "definition": "叶子",
+    "difficulty": 1
+  },
+  {
+    "word": "fall",
+    "definition": "落下",
+    "difficulty": 1
+  },
+  {
+    "word": "paint",
+    "definition": "绘画",
+    "difficulty": 1
+  },
+  {
+    "word": "January",
+    "definition": "一月",
+    "difficulty": 1
+  },
+  {
+    "word": "February",
+    "definition": "二月",
+    "difficulty": 1
+  },
+  {
+    "word": "March",
+    "definition": "三月",
+    "difficulty": 1
+  },
+  {
+    "word": "April",
+    "definition": "四月",
+    "difficulty": 1
+  },
+  {
+    "word": "May",
+    "definition": "五月",
+    "difficulty": 1
+  },
+  {
+    "word": "June",
+    "definition": "六月",
+    "difficulty": 1
+  },
+  {
+    "word": "July",
+    "definition": "七月",
+    "difficulty": 1
+  },
+  {
+    "word": "August",
+    "definition": "八月",
+    "difficulty": 1
+  },
+  {
+    "word": "September",
+    "definition": "九月",
+    "difficulty": 1
+  },
+  {
+    "word": "October",
+    "definition": "十月",
+    "difficulty": 1
+  },
+  {
+    "word": "November",
+    "definition": "十一月",
+    "difficulty": 1
+  },
+  {
+    "word": "December",
+    "definition": "十二月",
+    "difficulty": 1
+  },
+  {
+    "word": "few",
+    "definition": "不多",
+    "difficulty": 1
+  },
+  {
+    "word": "a few",
+    "definition": "一些",
+    "difficulty": 1
+  },
+  {
+    "word": "thing",
+    "definition": "事情",
+    "difficulty": 1
+  },
+  {
+    "word": "meet",
+    "definition": "集会",
+    "difficulty": 1
+  },
+  {
+    "word": "sports meet",
+    "definition": "运动会",
+    "difficulty": 1
+  },
+  {
+    "word": "Easter",
+    "definition": "复活节",
+    "difficulty": 1
+  },
+  {
+    "word": "trip",
+    "definition": "旅行",
+    "difficulty": 1
+  },
+  {
+    "word": "year",
+    "definition": "年",
+    "difficulty": 1
+  },
+  {
+    "word": "contest",
+    "definition": "比赛",
+    "difficulty": 1
+  },
+  {
+    "word": "the Great Wall",
+    "definition": "长城",
+    "difficulty": 1
+  },
+  {
+    "word": "national",
+    "definition": "国家的",
+    "difficulty": 1
+  },
+  {
+    "word": "National Day",
+    "definition": "国庆日",
+    "difficulty": 1
+  },
+  {
+    "word": "American",
+    "definition": "美国的",
+    "difficulty": 1
+  },
+  {
+    "word": "Thanksgiving",
+    "definition": "感恩节",
+    "difficulty": 1
+  },
+  {
+    "word": "Christmas",
+    "definition": "圣诞节",
+    "difficulty": 1
+  },
+  {
+    "word": "holiday",
+    "definition": "节日",
+    "difficulty": 1
+  },
+  {
+    "word": "game",
+    "definition": "游戏",
+    "difficulty": 1
+  },
+  {
+    "word": "roll",
+    "definition": "滚动",
+    "difficulty": 1
+  },
+  {
+    "word": "look for",
+    "definition": "寻找",
+    "difficulty": 1
+  },
+  {
+    "word": "chocolate",
+    "definition": "巧克力",
+    "difficulty": 1
+  },
+  {
+    "word": "bunny",
+    "definition": "兔子",
+    "difficulty": 1
+  },
+  {
+    "word": "RSVP",
+    "definition": "请赐复",
+    "difficulty": 1
+  },
+  {
+    "word": "by",
+    "definition": "在⋯⋯之前",
+    "difficulty": 1
+  },
+  {
+    "word": "first",
+    "definition": "第一",
+    "difficulty": 1
+  },
+  {
+    "word": "second",
+    "definition": "第二",
+    "difficulty": 1
+  },
+  {
+    "word": "third",
+    "definition": "第三",
+    "difficulty": 1
+  },
+  {
+    "word": "fourth",
+    "definition": "第四",
+    "difficulty": 1
+  },
+  {
+    "word": "fifth",
+    "definition": "第五",
+    "difficulty": 1
+  },
+  {
+    "word": "twelfth",
+    "definition": "第十二",
+    "difficulty": 1
+  },
+  {
+    "word": "twentieth",
+    "definition": "第二十",
+    "difficulty": 1
+  },
+  {
+    "word": "twenty-first",
+    "definition": "第二十一",
+    "difficulty": 1
+  },
+  {
+    "word": "twenty-third",
+    "definition": "第二十三",
+    "difficulty": 1
+  },
+  {
+    "word": "thirtieth",
+    "definition": "第三十",
+    "difficulty": 1
+  },
+  {
+    "word": "special",
+    "definition": "特殊的",
+    "difficulty": 1
+  },
+  {
+    "word": "fool",
+    "definition": "蠢人",
+    "difficulty": 1
+  },
+  {
+    "word": "kitten",
+    "definition": "小猫",
+    "difficulty": 1
+  },
+  {
+    "word": "diary",
+    "definition": "日记",
+    "difficulty": 1
+  },
+  {
+    "word": "still",
+    "definition": "仍然",
+    "difficulty": 1
+  },
+  {
+    "word": "noise",
+    "definition": "噪音",
+    "difficulty": 1
+  },
+  {
+    "word": "fur",
+    "definition": "动物皮毛",
+    "difficulty": 1
+  },
+  {
+    "word": "open",
+    "definition": "开着的",
+    "difficulty": 1
+  },
+  {
+    "word": "walk",
+    "definition": "行走",
+    "difficulty": 1
+  },
+  {
+    "word": "hers",
+    "definition": "她的",
+    "difficulty": 1
+  },
+  {
+    "word": "theirs",
+    "definition": "他们的",
+    "difficulty": 1
+  },
+  {
+    "word": "ours",
+    "definition": "我们的",
+    "difficulty": 1
+  },
+  {
+    "word": "climbing",
+    "definition": "攀登",
+    "difficulty": 1
+  },
+  {
+    "word": "eating",
+    "definition": "吃",
+    "difficulty": 1
+  },
+  {
+    "word": "playing",
+    "definition": "玩",
+    "difficulty": 1
+  },
+  {
+    "word": "jumping",
+    "definition": "跳",
+    "difficulty": 1
+  },
+  {
+    "word": "drinking",
+    "definition": "喝",
+    "difficulty": 1
+  },
+  {
+    "word": "sleeping",
+    "definition": "睡觉",
+    "difficulty": 1
+  },
+  {
+    "word": "each",
+    "definition": "每个",
+    "difficulty": 1
+  },
+  {
+    "word": "other",
+    "definition": "其他",
+    "difficulty": 1
+  },
+  {
+    "word": "each other",
+    "definition": "相互",
+    "difficulty": 1
+  },
+  {
+    "word": "excited",
+    "definition": "兴奋地",
+    "difficulty": 1
+  },
+  {
+    "word": "like",
+    "definition": "像⋯⋯那样",
+    "difficulty": 1
+  },
+  {
+    "word": "doing morning exercises",
+    "definition": "做早操",
+    "difficulty": 1
+  },
+  {
+    "word": "having...class",
+    "definition": "上⋯⋯课",
+    "difficulty": 1
+  },
+  {
+    "word": "eating lunch",
+    "definition": "吃午饭",
+    "difficulty": 1
+  },
+  {
+    "word": "reading a book",
+    "definition": "看书",
+    "difficulty": 1
+  },
+  {
+    "word": "listening to music",
+    "definition": "听音乐",
+    "difficulty": 1
+  },
+  {
+    "word": "keep",
+    "definition": "保持",
+    "difficulty": 1
+  },
+  {
+    "word": "keep to the right",
+    "definition": "靠右",
+    "difficulty": 1
+  },
+  {
+    "word": "keep your desk clean",
+    "definition": "保持课桌干净",
+    "difficulty": 1
+  },
+  {
+    "word": "talk quietly",
+    "definition": "小声讲话",
+    "difficulty": 1
+  },
+  {
+    "word": "turn",
+    "definition": "顺序",
+    "difficulty": 1
+  },
+  {
+    "word": "take turns",
+    "definition": "按顺序来",
+    "difficulty": 1
+  },
+  {
+    "word": "bamboo",
+    "definition": "竹子",
+    "difficulty": 1
+  },
+  {
+    "word": "its",
+    "definition": "它的",
+    "difficulty": 1
+  },
+  {
+    "word": "show",
+    "definition": "指导，引导",
+    "difficulty": 1
+  },
+  {
+    "word": "anything",
+    "definition": "任何事物",
+    "difficulty": 1
+  },
+  {
+    "word": "else",
+    "definition": "另外",
+    "difficulty": 1
+  },
+  {
+    "word": "exhibition",
+    "definition": "展览",
+    "difficulty": 1
+  },
+  {
+    "word": "say",
+    "definition": "说；讲",
+    "difficulty": 1
+  },
+  {
+    "word": "have a look",
+    "definition": "看一看",
+    "difficulty": 1
+  },
+  {
+    "word": "sushi",
+    "definition": "寿司",
+    "difficulty": 1
+  },
+  {
+    "word": "teach",
+    "definition": "教",
+    "difficulty": 1
+  },
+  {
+    "word": "sure",
+    "definition": "当然",
+    "difficulty": 1
+  },
+  {
+    "word": "Canadian",
+    "definition": "加拿大的",
+    "difficulty": 1
+  },
+  {
+    "word": "Spanish",
+    "definition": "西班牙的",
+    "difficulty": 1
+  },
+  {
+    "word": "science",
+    "definition": "科学",
+    "difficulty": 1
+  },
+  {
+    "word": "museum",
+    "definition": "博物馆",
+    "difficulty": 1
+  },
+  {
+    "word": "post office",
+    "definition": "邮局",
+    "difficulty": 1
+  },
+  {
+    "word": "bookstore",
+    "definition": "书店",
+    "difficulty": 1
+  },
+  {
+    "word": "cinema",
+    "definition": "电影院",
+    "difficulty": 1
+  },
+  {
+    "word": "hospital",
+    "definition": "医院",
+    "difficulty": 1
+  },
+  {
+    "word": "crossing",
+    "definition": "十字路口",
+    "difficulty": 1
+  },
+  {
+    "word": "left",
+    "definition": "左",
+    "difficulty": 1
+  },
+  {
+    "word": "on foot",
+    "definition": "步行",
+    "difficulty": 1
+  },
+  {
+    "word": "bus",
+    "definition": "公共汽车",
+    "difficulty": 1
+  },
+  {
+    "word": "plane",
+    "definition": "飞机",
+    "difficulty": 1
+  },
+  {
+    "word": "taxi",
+    "definition": "出租汽车",
+    "difficulty": 1
+  },
+  {
+    "word": "ship",
+    "definition": "船",
+    "difficulty": 1
+  },
+  {
+    "word": "subway",
+    "definition": "地铁",
+    "difficulty": 1
+  },
+  {
+    "word": "train",
+    "definition": "火车",
+    "difficulty": 1
+  },
+  {
+    "word": "slow",
+    "definition": "慢的",
+    "difficulty": 1
+  },
+  {
+    "word": "down",
+    "definition": "减少",
+    "difficulty": 1
+  },
+  {
+    "word": "slow down",
+    "definition": "慢下来",
+    "difficulty": 1
+  },
+  {
+    "word": "stop",
+    "definition": "停下",
+    "difficulty": 1
+  },
+  {
+    "word": "Mrs",
+    "definition": "夫人",
+    "difficulty": 1
+  },
+  {
+    "word": "early",
+    "definition": "早到的",
+    "difficulty": 1
+  },
+  {
+    "word": "helmet",
+    "definition": "头盔",
+    "difficulty": 1
+  },
+  {
+    "word": "must",
+    "definition": "必须",
+    "difficulty": 1
+  },
+  {
+    "word": "wear",
+    "definition": "戴",
+    "difficulty": 1
+  },
+  {
+    "word": "attention",
+    "definition": "注意",
+    "difficulty": 1
+  },
+  {
+    "word": "pay attention to",
+    "definition": "注意",
+    "difficulty": 1
+  },
+  {
+    "word": "traffic",
+    "definition": "交通",
+    "difficulty": 1
+  },
+  {
+    "word": "traffic lights",
+    "definition": "交通信号灯",
+    "difficulty": 1
+  },
+  {
+    "word": "Munich",
+    "definition": "慕尼黑",
+    "difficulty": 1
+  },
+  {
+    "word": "Germany",
+    "definition": "德国",
+    "difficulty": 1
+  },
+  {
+    "word": "Alaska",
+    "definition": "阿拉斯加州",
+    "difficulty": 1
+  },
+  {
+    "word": "sled",
+    "definition": "雪橇",
+    "difficulty": 1
+  },
+  {
+    "word": "fast",
+    "definition": "快的",
+    "difficulty": 1
+  },
+  {
+    "word": "ferry",
+    "definition": "轮渡",
+    "difficulty": 1
+  },
+  {
+    "word": "Papa Westray",
+    "definition": "帕帕韦斯特雷岛",
+    "difficulty": 1
+  },
+  {
+    "word": "Scotland",
+    "definition": "苏格兰",
+    "difficulty": 1
+  },
+  {
+    "word": "visit",
+    "definition": "拜访",
+    "difficulty": 1
+  },
+  {
+    "word": "film",
+    "definition": "电影",
+    "difficulty": 1
+  },
+  {
+    "word": "see a film",
+    "definition": "看电影",
+    "difficulty": 1
+  },
+  {
+    "word": "take a trip",
+    "definition": "去旅行",
+    "difficulty": 1
+  },
+  {
+    "word": "supermarket",
+    "definition": "超市",
+    "difficulty": 1
+  },
+  {
+    "word": "evening",
+    "definition": "晚上",
+    "difficulty": 1
+  },
+  {
+    "word": "tonight",
+    "definition": "今晚",
+    "difficulty": 1
+  },
+  {
+    "word": "tomorrow",
+    "definition": "明天",
+    "difficulty": 1
+  },
+  {
+    "word": "next week",
+    "definition": "下周",
+    "difficulty": 1
+  },
+  {
+    "word": "dictionary",
+    "definition": "词典",
+    "difficulty": 1
+  },
+  {
+    "word": "comic",
+    "definition": "滑稽的",
+    "difficulty": 1
+  },
+  {
+    "word": "comic book",
+    "definition": "连环画",
+    "difficulty": 1
+  },
+  {
+    "word": "word",
+    "definition": "单词",
+    "difficulty": 1
+  },
+  {
+    "word": "word book",
+    "definition": "单词书",
+    "difficulty": 1
+  },
+  {
+    "word": "post card",
+    "definition": "明信片",
+    "difficulty": 1
+  },
+  {
+    "word": "lesson",
+    "definition": "课",
+    "difficulty": 1
+  },
+  {
+    "word": "space",
+    "definition": "太空",
+    "difficulty": 1
+  },
+  {
+    "word": "travel",
+    "definition": "旅行",
+    "difficulty": 1
+  },
+  {
+    "word": "half",
+    "definition": "一半",
+    "difficulty": 1
+  },
+  {
+    "word": "price",
+    "definition": "价格",
+    "difficulty": 1
+  },
+  {
+    "word": "Mid-Autumn Festival",
+    "definition": "中秋节",
+    "difficulty": 1
+  },
+  {
+    "word": "together",
+    "definition": "一起",
+    "difficulty": 1
+  },
+  {
+    "word": "get together",
+    "definition": "聚会",
+    "difficulty": 1
+  },
+  {
+    "word": "mooncake",
+    "definition": "月饼",
+    "difficulty": 1
+  },
+  {
+    "word": "poem",
+    "definition": "诗",
+    "difficulty": 1
+  },
+  {
+    "word": "moon",
+    "definition": "月亮",
+    "difficulty": 1
+  },
+  {
+    "word": "studies",
+    "definition": "学习",
+    "difficulty": 1
+  },
+  {
+    "word": "puzzle",
+    "definition": "谜",
+    "difficulty": 1
+  },
+  {
+    "word": "hiking",
+    "definition": "远足",
+    "difficulty": 1
+  },
+  {
+    "word": "pen pal",
+    "definition": "笔友",
+    "difficulty": 1
+  },
+  {
+    "word": "hobby",
+    "definition": "业余爱好",
+    "difficulty": 1
+  },
+  {
+    "word": "jasmine",
+    "definition": "茉莉",
+    "difficulty": 1
+  },
+  {
+    "word": "idea",
+    "definition": "主意",
+    "difficulty": 1
+  },
+  {
+    "word": "Canberra",
+    "definition": "堪培拉",
+    "difficulty": 1
+  },
+  {
+    "word": "amazing",
+    "definition": "令人惊奇的",
+    "difficulty": 1
+  },
+  {
+    "word": "shall",
+    "definition": "表示征求意见",
+    "difficulty": 1
+  },
+  {
+    "word": "goal",
+    "definition": "射门",
+    "difficulty": 1
+  },
+  {
+    "word": "join",
+    "definition": "加入",
+    "difficulty": 1
+  },
+  {
+    "word": "club",
+    "definition": "俱乐部",
+    "difficulty": 1
+  },
+  {
+    "word": "share",
+    "definition": "分享",
+    "difficulty": 1
+  },
+  {
+    "word": "factory",
+    "definition": "工厂",
+    "difficulty": 1
+  },
+  {
+    "word": "worker",
+    "definition": "工人",
+    "difficulty": 1
+  },
+  {
+    "word": "postman",
+    "definition": "邮递员",
+    "difficulty": 1
+  },
+  {
+    "word": "businessman",
+    "definition": "商人",
+    "difficulty": 1
+  },
+  {
+    "word": "police officer",
+    "definition": "警察",
+    "difficulty": 1
+  },
+  {
+    "word": "fisherman",
+    "definition": "渔民",
+    "difficulty": 1
+  },
+  {
+    "word": "scientist",
+    "definition": "科学家",
+    "difficulty": 1
+  },
+  {
+    "word": "pilot",
+    "definition": "飞行员",
+    "difficulty": 1
+  },
+  {
+    "word": "coach",
+    "definition": "教练",
+    "difficulty": 1
+  },
+  {
+    "word": "country",
+    "definition": "国家",
+    "difficulty": 1
+  },
+  {
+    "word": "head teacher",
+    "definition": "校长",
+    "difficulty": 1
+  },
+  {
+    "word": "sea",
+    "definition": "大海",
+    "difficulty": 1
+  },
+  {
+    "word": "stay",
+    "definition": "保持",
+    "difficulty": 1
+  },
+  {
+    "word": "university",
+    "definition": "大学",
+    "difficulty": 1
+  },
+  {
+    "word": "gym",
+    "definition": "体育馆",
+    "difficulty": 1
+  },
+  {
+    "word": "if",
+    "definition": "如果",
+    "difficulty": 1
+  },
+  {
+    "word": "reporter",
+    "definition": "记者",
+    "difficulty": 1
+  },
+  {
+    "word": "use",
+    "definition": "使用",
+    "difficulty": 1
+  },
+  {
+    "word": "type",
+    "definition": "打字",
+    "difficulty": 1
+  },
+  {
+    "word": "quickly",
+    "definition": "迅速地",
+    "difficulty": 1
+  },
+  {
+    "word": "secretary",
+    "definition": "秘书",
+    "difficulty": 1
+  },
+  {
+    "word": "angry",
+    "definition": "生气的",
+    "difficulty": 1
+  },
+  {
+    "word": "afraid",
+    "definition": "害怕",
+    "difficulty": 1
+  },
+  {
+    "word": "sad",
+    "definition": "难过的",
+    "difficulty": 1
+  },
+  {
+    "word": "worried",
+    "definition": "担心的",
+    "difficulty": 1
+  },
+  {
+    "word": "happy",
+    "definition": "高兴的",
+    "difficulty": 1
+  },
+  {
+    "word": "see a doctor",
+    "definition": "看病",
+    "difficulty": 1
+  },
+  {
+    "word": "wear.",
+    "definition": "穿",
+    "difficulty": 1
+  },
+  {
+    "word": "deep",
+    "definition": "深的",
+    "difficulty": 1
+  },
+  {
+    "word": "breath",
+    "definition": "呼吸",
+    "difficulty": 1
+  },
+  {
+    "word": "take a deep breath",
+    "definition": "深呼吸",
+    "difficulty": 1
+  },
+  {
+    "word": "count",
+    "definition": "数数",
+    "difficulty": 1
+  },
+  {
+    "word": "count to ten",
+    "definition": "数到十",
+    "difficulty": 1
+  },
+  {
+    "word": "chase",
+    "definition": "追赶",
+    "difficulty": 1
+  },
+  {
+    "word": "mice",
+    "definition": "老鼠",
+    "difficulty": 1
+  },
+  {
+    "word": "bad",
+    "definition": "邪恶的",
+    "difficulty": 1
+  },
+  {
+    "word": "hurt",
+    "definition": "受伤",
+    "difficulty": 1
+  },
+  {
+    "word": "ill",
+    "definition": "有病",
+    "difficulty": 1
+  },
+  {
+    "word": "wrong",
+    "definition": "有毛病",
+    "difficulty": 1
+  },
+  {
+    "word": "feel",
+    "definition": "觉得",
+    "difficulty": 1
+  },
+  {
+    "word": "well",
+    "definition": "健康",
+    "difficulty": 1
+  },
+  {
+    "word": "sit",
+    "definition": "坐",
+    "difficulty": 1
+  },
+  {
+    "word": "grass",
+    "definition": "草坪",
+    "difficulty": 1
+  },
+  {
+    "word": "ant",
+    "definition": "蚂蚁",
+    "difficulty": 1
+  },
+  {
+    "word": "worry",
+    "definition": "担心",
+    "difficulty": 1
+  },
+  {
+    "word": "stuck",
+    "definition": "陷住",
+    "difficulty": 1
+  },
+  {
+    "word": "mud",
+    "definition": "泥",
+    "difficulty": 1
+  },
+  {
+    "word": "pull",
+    "definition": "拉",
+    "difficulty": 1
+  },
+  {
+    "word": "everyone",
+    "definition": "每人",
+    "difficulty": 1
+  },
+  {
+    "word": "younger",
+    "definition": "更年轻的",
+    "difficulty": 1
+  },
+  {
+    "word": "older",
+    "definition": "更年长的",
+    "difficulty": 1
+  },
+  {
+    "word": "taller",
+    "definition": "更高的",
+    "difficulty": 1
+  },
+  {
+    "word": "shorter",
+    "definition": "更矮的",
+    "difficulty": 1
+  },
+  {
+    "word": "longer",
+    "definition": "更长的",
+    "difficulty": 1
+  },
+  {
+    "word": "thinner",
+    "definition": "更瘦的",
+    "difficulty": 1
+  },
+  {
+    "word": "heavier",
+    "definition": "更重的",
+    "difficulty": 1
+  },
+  {
+    "word": "bigger",
+    "definition": "更大的",
+    "difficulty": 1
+  },
+  {
+    "word": "smaller",
+    "definition": "更小的",
+    "difficulty": 1
+  },
+  {
+    "word": "stronger",
+    "definition": "更强壮的",
+    "difficulty": 1
+  },
+  {
+    "word": "dinosaur",
+    "definition": "恐龙",
+    "difficulty": 1
+  },
+  {
+    "word": "hall",
+    "definition": "大厅",
+    "difficulty": 1
+  },
+  {
+    "word": "metre",
+    "definition": "米",
+    "difficulty": 1
+  },
+  {
+    "word": "meter",
+    "definition": "米",
+    "difficulty": 1
+  },
+  {
+    "word": "than",
+    "definition": "比",
+    "difficulty": 1
+  },
+  {
+    "word": "both",
+    "definition": "两个都",
+    "difficulty": 1
+  },
+  {
+    "word": "kilogram",
+    "definition": "千克",
+    "difficulty": 1
+  },
+  {
+    "word": "countryside",
+    "definition": "乡村",
+    "difficulty": 1
+  },
+  {
+    "word": "lower",
+    "definition": "更低地",
+    "difficulty": 1
+  },
+  {
+    "word": "shadow",
+    "definition": "影子",
+    "difficulty": 1
+  },
+  {
+    "word": "smarter",
+    "definition": "更聪明的",
+    "difficulty": 1
+  },
+  {
+    "word": "become",
+    "definition": "变成",
+    "difficulty": 1
+  },
+  {
+    "word": "cleaned",
+    "definition": "打扫",
+    "difficulty": 1
+  },
+  {
+    "word": "stayed",
+    "definition": "待",
+    "difficulty": 1
+  },
+  {
+    "word": "washed",
+    "definition": "洗",
+    "difficulty": 1
+  },
+  {
+    "word": "watched",
+    "definition": "看",
+    "difficulty": 1
+  },
+  {
+    "word": "had",
+    "definition": "得病（例如 had a cold 得了感冒）",
+    "difficulty": 1
+  },
+  {
+    "word": "had a cold",
+    "definition": "感冒",
+    "difficulty": 1
+  },
+  {
+    "word": "slept",
+    "definition": "睡觉",
+    "difficulty": 1
+  },
+  {
+    "word": "saw",
+    "definition": "看",
+    "difficulty": 1
+  },
+  {
+    "word": "yesterday",
+    "definition": "昨天",
+    "difficulty": 1
+  },
+  {
+    "word": "before",
+    "definition": "在⋯⋯之前",
+    "difficulty": 1
+  },
+  {
+    "word": "drank",
+    "definition": "喝",
+    "difficulty": 1
+  },
+  {
+    "word": "magazine",
+    "definition": "杂志",
+    "difficulty": 1
+  },
+  {
+    "word": "better",
+    "definition": "更好的",
+    "difficulty": 1
+  },
+  {
+    "word": "faster",
+    "definition": "更快的",
+    "difficulty": 1
+  },
+  {
+    "word": "hotel",
+    "definition": "旅馆",
+    "difficulty": 1
+  },
+  {
+    "word": "fixed",
+    "definition": "修理",
+    "difficulty": 1
+  },
+  {
+    "word": "broken",
+    "definition": "破损的",
+    "difficulty": 1
+  },
+  {
+    "word": "lamp",
+    "definition": "台灯",
+    "difficulty": 1
+  },
+  {
+    "word": "loud",
+    "definition": "大声的",
+    "difficulty": 1
+  },
+  {
+    "word": "enjoy",
+    "definition": "享受⋯⋯的乐趣",
+    "difficulty": 1
+  },
+  {
+    "word": "went",
+    "definition": "去",
+    "difficulty": 1
+  },
+  {
+    "word": "camp",
+    "definition": "野营",
+    "difficulty": 1
+  },
+  {
+    "word": "went camping",
+    "definition": "去野营",
+    "difficulty": 1
+  },
+  {
+    "word": "went fishing",
+    "definition": "去钓鱼",
+    "difficulty": 1
+  },
+  {
+    "word": "rode",
+    "definition": "骑",
+    "difficulty": 1
+  },
+  {
+    "word": "ate",
+    "definition": "吃",
+    "difficulty": 1
+  },
+  {
+    "word": "took",
+    "definition": "拍照",
+    "difficulty": 1
+  },
+  {
+    "word": "took pictures",
+    "definition": "照相",
+    "difficulty": 1
+  },
+  {
+    "word": "bought",
+    "definition": "买",
+    "difficulty": 1
+  },
+  {
+    "word": "gift",
+    "definition": "礼物",
+    "difficulty": 1
+  },
+  {
+    "word": "fell",
+    "definition": "摔倒",
+    "difficulty": 1
+  },
+  {
+    "word": "off",
+    "definition": "落下",
+    "difficulty": 1
+  },
+  {
+    "word": "Labour Day",
+    "definition": "劳动节",
+    "difficulty": 1
+  },
+  {
+    "word": "mule",
+    "definition": "骡子",
+    "difficulty": 1
+  },
+  {
+    "word": "Turpan",
+    "definition": "吐鲁番",
+    "difficulty": 1
+  },
+  {
+    "word": "could",
+    "definition": "能",
+    "difficulty": 1
+  },
+  {
+    "word": "till",
+    "definition": "直到",
+    "difficulty": 1
+  },
+  {
+    "word": "beach",
+    "definition": "沙滩",
+    "difficulty": 1
+  },
+  {
+    "word": "basket",
+    "definition": "篮子",
+    "difficulty": 1
+  },
+  {
+    "word": "part",
+    "definition": "角色",
+    "difficulty": 1
+  },
+  {
+    "word": "licked",
+    "definition": "舔",
+    "difficulty": 1
+  },
+  {
+    "word": "laughed",
+    "definition": "笑",
+    "difficulty": 1
+  },
+  {
+    "word": "dining hall",
+    "definition": "饭厅",
+    "difficulty": 1
+  },
+  {
+    "word": "ago",
+    "definition": "以前",
+    "difficulty": 1
+  },
+  {
+    "word": "cycling",
+    "definition": "骑自行车运动",
+    "difficulty": 1
+  },
+  {
+    "word": "go cycling",
+    "definition": "去骑自行车",
+    "difficulty": 1
+  },
+  {
+    "word": "ice-skate",
+    "definition": "滑冰",
+    "difficulty": 1
+  },
+  {
+    "word": "badminton",
+    "definition": "羽毛球运动",
+    "difficulty": 1
+  },
+  {
+    "word": "star",
+    "definition": "星",
+    "difficulty": 1
+  },
+  {
+    "word": "easy",
+    "definition": "容易的",
+    "difficulty": 1
+  },
+  {
+    "word": "look up",
+    "definition": "查阅",
+    "difficulty": 1
+  },
+  {
+    "word": "Internet",
+    "definition": "互联网",
+    "difficulty": 1
+  },
+  {
+    "word": "different",
+    "definition": "不同的",
+    "difficulty": 1
+  },
+  {
+    "word": "active",
+    "definition": "活跃的",
+    "difficulty": 1
+  },
+  {
+    "word": "race",
+    "definition": "赛跑",
+    "difficulty": 1
+  },
+  {
+    "word": "nothing",
+    "definition": "没有什么",
+    "difficulty": 1
+  },
+  {
+    "word": "thought",
+    "definition": "想",
+    "difficulty": 1
+  },
+  {
+    "word": "felt",
+    "definition": "感觉",
+    "difficulty": 1
+  },
+  {
+    "word": "cheetah",
+    "definition": "猎豹",
+    "difficulty": 1
+  },
+  {
+    "word": "woke",
+    "definition": "醒",
+    "difficulty": 1
+  },
+  {
+    "word": "dream",
+    "definition": "梦",
+    "difficulty": 1
+  },
+  {
+    "word": "straight",
+    "definition": "笔直的",
+    "difficulty": 1
+  },
+  {
+    "word": "ask",
+    "definition": "问",
+    "difficulty": 1
+  },
+  {
+    "word": "sir",
+    "definition": "先生",
+    "difficulty": 1
+  },
+  {
+    "word": "interesting",
+    "definition": "有趣的",
+    "difficulty": 1
+  },
+  {
+    "word": "Italian",
+    "definition": "意大利的",
+    "difficulty": 1
+  },
+  {
+    "word": "restaurant",
+    "definition": "餐馆",
+    "difficulty": 1
+  },
+  {
+    "word": "pizza",
+    "definition": "比萨饼",
+    "difficulty": 1
+  },
+  {
+    "word": "street",
+    "definition": "大街",
+    "difficulty": 1
+  },
+  {
+    "word": "get",
+    "definition": "到达",
+    "difficulty": 1
+  },
+  {
+    "word": "GPS",
+    "definition": "全球（卫星）",
+    "difficulty": 1
+  },
+  {
+    "word": "gave",
+    "definition": "提供",
+    "difficulty": 1
+  },
+  {
+    "word": "feature",
+    "definition": "特点",
+    "difficulty": 1
+  },
+  {
+    "word": "follow",
+    "definition": "跟着",
+    "difficulty": 1
+  },
+  {
+    "word": "far",
+    "definition": "较远的",
+    "difficulty": 1
+  },
+  {
+    "word": "tell",
+    "definition": "告诉",
+    "difficulty": 1
+  }
+]

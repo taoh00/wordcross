@@ -1,0 +1,16 @@
+# 前端 Docker 忽略文件
+
+# Node模块
+node_modules
+
+# 开发文件
+*.md
+*.log
+.env.local
+
+# IDE
+.vscode
+.idea
+
+# 已构建的dist（从源码构建）
+# dist

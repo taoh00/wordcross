@@ -1,0 +1,2944 @@
+{
+  "name": "大学四级",
+  "group_code": "cet4",
+  "level_count": 14,
+  "word_count": 2390,
+  "levels": [
+    {
+      "level": 1,
+      "grid_size": 4,
+      "cells": [
+        [
+          null,
+          "S",
+          "H",
+          "F"
+        ],
+        [
+          null,
+          "L",
+          "E",
+          "U"
+        ],
+        [
+          "F",
+          "A",
+          "R",
+          "E"
+        ],
+        [
+          null,
+          "M",
+          "D",
+          "L"
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "FARE",
+          "definition": "vi  进展",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 4,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "SLAM",
+          "definition": "v 砰地关上；猛力拉，砰地放下；猛烈抨击",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "FUEL",
+          "definition": "vi  加燃料； 加油",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "HERD",
+          "definition": "n 兽群，牧群",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 2,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "2-3": "E",
+        "2-2": "R",
+        "2-1": "A",
+        "1-1": "L",
+        "3-3": "L",
+        "3-2": "D"
+      },
+      "clue_numbers": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.8125,
+      "word_count": 4,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 2,
+      "grid_size": 4,
+      "cells": [
+        [
+          null,
+          "G",
+          "C",
+          "P"
+        ],
+        [
+          null,
+          "L",
+          "O",
+          "O"
+        ],
+        [
+          "C",
+          "O",
+          "P",
+          "E"
+        ],
+        [
+          null,
+          "W",
+          null,
+          "M"
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "COPE",
+          "definition": "vi  应付， 处理",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 4,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "POEM",
+          "definition": "n  诗",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "GLOW",
+          "definition": "v  发白热光",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "COP",
+          "definition": "n  警察",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 3,
+          "clue_number": 2,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "2-1": "O",
+        "2-2": "P",
+        "2-3": "E",
+        "0-3": "P",
+        "0-1": "G",
+        "0-2": "C"
+      },
+      "clue_numbers": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.75,
+      "word_count": 4,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 3,
+      "grid_size": 5,
+      "cells": [
+        [
+          null,
+          null,
+          "J",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "O",
+          null,
+          "G"
+        ],
+        [
+          "F",
+          "A",
+          "I",
+          "R",
+          "Y"
+        ],
+        [
+          null,
+          null,
+          "N",
+          null,
+          "M"
+        ],
+        [
+          null,
+          null,
+          "T",
+          null,
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "FAIRY",
+          "definition": "n  小精灵， 小仙子",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "JOINT",
+          "definition": "adj  连接的； 共同的",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 5,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "GYM",
+          "definition": "n  体育馆； 健身房",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 4,
+          "length": 3,
+          "clue_number": 2,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "2-4": "Y",
+        "2-2": "I",
+        "0-2": "J",
+        "3-4": "M"
+      },
+      "clue_numbers": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.44,
+      "word_count": 3,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 4,
+      "grid_size": 5,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          "C"
+        ],
+        [
+          null,
+          "T",
+          null,
+          null,
+          "R"
+        ],
+        [
+          "R",
+          "O",
+          "U",
+          "S",
+          "E"
+        ],
+        [
+          null,
+          "N",
+          null,
+          null,
+          "E"
+        ],
+        [
+          null,
+          "E",
+          null,
+          null,
+          "P"
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "ROUSE",
+          "definition": "vt  惊起； 唤起； 唤醒",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "CREEP",
+          "definition": "vi  爬行， 缓慢地行进",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 4,
+          "length": 5,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "TONE",
+          "definition": "n  腔调， 语气； 音调； 风格， 气度； 色调， 明暗",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 1,
+          "length": 4,
+          "clue_number": 2,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "2-1": "O",
+        "2-4": "E",
+        "4-4": "P",
+        "3-1": "N"
+      },
+      "clue_numbers": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.48,
+      "word_count": 3,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 5,
+      "grid_size": 6,
+      "cells": [
+        [
+          null,
+          null,
+          "R",
+          null,
+          null,
+          null
+        ],
+        [
+          "S",
+          "W",
+          "I",
+          "N",
+          "G",
+          null
+        ],
+        [
+          null,
+          "E",
+          "O",
+          "V",
+          null,
+          null
+        ],
+        [
+          "F",
+          "A",
+          "T",
+          "A",
+          "L",
+          null
+        ],
+        [
+          null,
+          "V",
+          null,
+          "R",
+          null,
+          null
+        ],
+        [
+          null,
+          "E",
+          null,
+          "Y",
+          null,
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "FATAL",
+          "definition": "adj  致命的， 命运的； 重大的， 决定性的",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 5,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "VARY",
+          "definition": "v  改变； 多样化",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 3,
+          "length": 4,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "WEAVE",
+          "definition": "v  织， 编",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 1,
+          "length": 5,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "SWING",
+          "definition": "v 摇摆，回转；突然转向",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 5,
+          "word": "RIOT",
+          "definition": "vi 聚众闹事",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 1,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "3-2": "T",
+        "3-1": "A",
+        "3-3": "A",
+        "5-3": "Y",
+        "1-1": "W",
+        "1-2": "I"
+      },
+      "clue_numbers": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.5,
+      "word_count": 5,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 6,
+      "grid_size": 6,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "S",
+          "U",
+          "C",
+          "K"
+        ],
+        [
+          null,
+          null,
+          "L",
+          null,
+          null,
+          null
+        ],
+        [
+          "B",
+          "R",
+          "I",
+          "E",
+          "F",
+          null
+        ],
+        [
+          null,
+          null,
+          "P",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "BRIEF",
+          "definition": "adj 简短的，短暂的",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "SLIP",
+          "definition": "v 滑跤，滑落，溜；下降，跌落；悄悄放进",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "SUCK",
+          "definition": "v  吸， 吮， 啜； 吸收",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 4,
+          "clue_number": 1,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "3-2": "I",
+        "3-4": "F",
+        "1-2": "S",
+        "1-4": "C"
+      },
+      "clue_numbers": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.3055555555555556,
+      "word_count": 3,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 7,
+      "grid_size": 7,
+      "cells": [
+        [
+          null,
+          "C",
+          null,
+          null,
+          null,
+          "C",
+          null
+        ],
+        [
+          null,
+          "O",
+          null,
+          null,
+          null,
+          "H",
+          null
+        ],
+        [
+          null,
+          "N",
+          null,
+          null,
+          null,
+          "A",
+          null
+        ],
+        [
+          null,
+          "V",
+          "I",
+          "D",
+          "E",
+          "O",
+          null
+        ],
+        [
+          null,
+          "E",
+          null,
+          null,
+          null,
+          "S",
+          null
+        ],
+        [
+          "E",
+          "R",
+          "R",
+          "O",
+          "R",
+          null,
+          null
+        ],
+        [
+          null,
+          "T",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "VIDEO",
+          "definition": "adj 录像的；电视的",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 1,
+          "length": 5,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "CONVERT",
+          "definition": "v  转变， 转化； 改变",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 7,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "CHAOS",
+          "definition": "n  混乱， 紊乱",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 5,
+          "length": 5,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "ERROR",
+          "definition": "n  错误， 谬误， 差错",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 0,
+          "length": 5,
+          "clue_number": 4,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "3-1": "V",
+        "3-5": "O",
+        "5-1": "R",
+        "4-5": "S",
+        "5-4": "R"
+      },
+      "clue_numbers": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.3877551020408163,
+      "word_count": 4,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 8,
+      "grid_size": 7,
+      "cells": [
+        [
+          null,
+          null,
+          "S",
+          null,
+          null,
+          "D",
+          null
+        ],
+        [
+          null,
+          null,
+          "P",
+          null,
+          null,
+          "I",
+          null
+        ],
+        [
+          null,
+          null,
+          "H",
+          null,
+          null,
+          "S",
+          null
+        ],
+        [
+          null,
+          "B",
+          "E",
+          "A",
+          "S",
+          "T",
+          null
+        ],
+        [
+          null,
+          null,
+          "R",
+          null,
+          null,
+          "U",
+          null
+        ],
+        [
+          null,
+          "R",
+          "E",
+          "T",
+          "I",
+          "R",
+          "E"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "B",
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "BEAST",
+          "definition": "n  兽， 野兽， 牲畜； 凶残的人， 令人厌憎的人",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 1,
+          "length": 5,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "SPHERE",
+          "definition": "n  球， 球体； 范围",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 6,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "DISTURB",
+          "definition": "vt  打扰， 扰乱； 弄乱； 使不安",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 5,
+          "length": 7,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "RETIRE",
+          "definition": "vi  退休， 退役； 退下， 退出， 撤退； 就寝",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 1,
+          "length": 6,
+          "clue_number": 4,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "3-2": "E",
+        "3-5": "T",
+        "5-2": "E",
+        "2-2": "H",
+        "5-5": "R",
+        "0-5": "D",
+        "5-1": "R"
+      },
+      "clue_numbers": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.40816326530612246,
+      "word_count": 4,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 9,
+      "grid_size": 8,
+      "cells": [
+        [
+          null,
+          "D",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "E",
+          "P",
+          "I",
+          "L",
+          "L",
+          "O",
+          "W"
+        ],
+        [
+          null,
+          "S",
+          null,
+          null,
+          null,
+          "I",
+          null,
+          null
+        ],
+        [
+          null,
+          "S",
+          null,
+          null,
+          null,
+          "B",
+          null,
+          null
+        ],
+        [
+          "R",
+          "E",
+          "S",
+          "T",
+          "L",
+          "E",
+          "S",
+          "S"
+        ],
+        [
+          null,
+          "R",
+          null,
+          null,
+          null,
+          "R",
+          null,
+          null
+        ],
+        [
+          null,
+          "T",
+          null,
+          null,
+          null,
+          "T",
+          null,
+          null
+        ],
+        [
+          "O",
+          "C",
+          "C",
+          "U",
+          "P",
+          "Y",
+          null,
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "RESTLESS",
+          "definition": "adj  焦躁不安的； 静不下来的， 运动不止的",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 0,
+          "length": 8,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "LIBERTY",
+          "definition": "n  自由； 许可， 准许； 过于随便， 放肆",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 5,
+          "length": 7,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "PILLOW",
+          "definition": "n  枕头",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 6,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "DESSERT",
+          "definition": "n  甜食， 点心",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 7,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 5,
+          "word": "OCCUPY",
+          "definition": "vt  占领， 占， 占有",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 0,
+          "length": 6,
+          "clue_number": 5,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "4-1": "E",
+        "4-5": "E",
+        "7-5": "Y",
+        "1-5": "L",
+        "1-4": "L",
+        "1-7": "W",
+        "6-1": "T",
+        "3-1": "S",
+        "7-1": "C",
+        "7-3": "U"
+      },
+      "clue_numbers": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.46875,
+      "word_count": 5,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 10,
+      "grid_size": 8,
+      "cells": [
+        [
+          "L",
+          null,
+          null,
+          "R",
+          null,
+          null,
+          null,
+          "C"
+        ],
+        [
+          "I",
+          null,
+          null,
+          "E",
+          null,
+          null,
+          null,
+          "O"
+        ],
+        [
+          "Q",
+          null,
+          null,
+          "A",
+          null,
+          null,
+          null,
+          "N"
+        ],
+        [
+          "U",
+          null,
+          null,
+          "L",
+          null,
+          null,
+          null,
+          "C"
+        ],
+        [
+          "O",
+          "F",
+          "F",
+          "I",
+          "C",
+          "I",
+          "A",
+          "L"
+        ],
+        [
+          "R",
+          null,
+          null,
+          "T",
+          null,
+          null,
+          null,
+          "U"
+        ],
+        [
+          null,
+          null,
+          null,
+          "Y",
+          null,
+          null,
+          null,
+          "D"
+        ],
+        [
+          null,
+          "S",
+          "I",
+          "N",
+          "C",
+          "E",
+          "R",
+          "E"
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "OFFICIAL",
+          "definition": "adj 官员的；官方的，正式的",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 0,
+          "length": 8,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "REALITY",
+          "definition": "n  现实， 实际； 真实",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 3,
+          "length": 7,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "LIQUOR",
+          "definition": "n  酒， 烈性酒",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 0,
+          "length": 6,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "CONCLUDE",
+          "definition": "v  推断出， 推论出； 结束， 终了； 缔结， 议定",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 7,
+          "length": 8,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 5,
+          "word": "SINCERE",
+          "definition": "adj  真诚的， 诚挚的",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 1,
+          "length": 7,
+          "clue_number": 5,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "4-3": "I",
+        "4-0": "O",
+        "4-7": "L",
+        "4-5": "I",
+        "0-3": "R",
+        "0-0": "L",
+        "1-0": "I",
+        "7-7": "E",
+        "7-2": "I",
+        "7-3": "N"
+      },
+      "clue_numbers": [
+        [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.5,
+      "word_count": 5,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 11,
+      "grid_size": 9,
+      "cells": [
+        [
+          null,
+          "N",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "C",
+          "O",
+          "N",
+          "T",
+          "R",
+          "A",
+          "S",
+          "T",
+          null
+        ],
+        [
+          null,
+          "N",
+          null,
+          "G",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "S",
+          null,
+          "R",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "N",
+          "E",
+          "G",
+          "A",
+          "T",
+          "I",
+          "V",
+          "E",
+          null
+        ],
+        [
+          null,
+          "N",
+          null,
+          "M",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "S",
+          null,
+          "M",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "E",
+          null,
+          "A",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "D",
+          "E",
+          "C",
+          "R",
+          "E",
+          "A",
+          "S",
+          "E",
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "NEGATIVE",
+          "definition": "adj 否定的，消极的；负的；阴性的",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 0,
+          "length": 8,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "NONSENSE",
+          "definition": "n  胡说， 废话； 冒失的行动",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 8,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "GRAMMAR",
+          "definition": "n  语法； 语法书",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 3,
+          "length": 7,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "CONTRAST",
+          "definition": "vi  形成对比， 对比之下显出区别",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 0,
+          "length": 8,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 5,
+          "word": "DECREASE",
+          "definition": "v  减少",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 0,
+          "length": 8,
+          "clue_number": 5,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "4-3": "A",
+        "4-1": "E",
+        "4-4": "T",
+        "1-1": "O",
+        "7-1": "E",
+        "8-3": "R",
+        "2-3": "G",
+        "1-4": "R",
+        "1-6": "S",
+        "8-0": "D"
+      },
+      "clue_numbers": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.43209876543209874,
+      "word_count": 5,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 12,
+      "grid_size": 9,
+      "cells": [
+        [
+          null,
+          null,
+          "V",
+          "E",
+          "N",
+          "T",
+          "U",
+          "R",
+          "E"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          "I",
+          null,
+          null,
+          "X"
+        ],
+        [
+          "U",
+          "F",
+          "I",
+          "N",
+          "A",
+          "N",
+          "C",
+          "E",
+          "P"
+        ],
+        [
+          "P",
+          null,
+          "O",
+          "U",
+          "T",
+          "S",
+          "I",
+          "D",
+          "E"
+        ],
+        [
+          "R",
+          "E",
+          "P",
+          "O",
+          "R",
+          "T",
+          "E",
+          "R",
+          "N"
+        ],
+        [
+          "I",
+          null,
+          null,
+          null,
+          null,
+          "A",
+          null,
+          null,
+          "S"
+        ],
+        [
+          "G",
+          null,
+          null,
+          null,
+          null,
+          "L",
+          null,
+          null,
+          "E"
+        ],
+        [
+          "H",
+          null,
+          "S",
+          "H",
+          "E",
+          "L",
+          "T",
+          "E",
+          "R"
+        ],
+        [
+          "T",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "REPORTER",
+          "definition": "n  记者",
+          "direction": "across",
+          "start_row": 4,
+          "start_col": 0,
+          "length": 8,
+          "clue_number": 7,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "INSTALL",
+          "definition": "vt  安装， 设置； 使就职， 任命",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 5,
+          "length": 7,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "FINANCE",
+          "definition": "v  筹措资金",
+          "direction": "across",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 7,
+          "clue_number": 5,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "UPRIGHT",
+          "definition": "adv  挺直着， 竖立着",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 0,
+          "length": 7,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 5,
+          "word": "OUTSIDE",
+          "definition": "adj 外部的",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 2,
+          "length": 7,
+          "clue_number": 6,
+          "alternatives": []
+        },
+        {
+          "id": 6,
+          "word": "EXPENSE",
+          "definition": "n  花费， 消费； 费用， 开支； 业务费用",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 8,
+          "length": 7,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 7,
+          "word": "VENTURE",
+          "definition": "v  冒险， 敢于",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 2,
+          "length": 7,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 8,
+          "word": "SHELTER",
+          "definition": "n 掩蔽处，躲避处；住所；掩蔽，保护",
+          "direction": "across",
+          "start_row": 7,
+          "start_col": 2,
+          "length": 7,
+          "clue_number": 8,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "4-5": "T",
+        "4-0": "R",
+        "4-6": "E",
+        "7-5": "L",
+        "2-5": "N",
+        "2-4": "A",
+        "7-0": "H",
+        "3-5": "S",
+        "3-8": "E",
+        "0-8": "E",
+        "0-5": "T",
+        "7-6": "T",
+        "7-8": "R"
+      },
+      "clue_numbers": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.6172839506172839,
+      "word_count": 8,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 13,
+      "grid_size": 10,
+      "cells": [
+        [
+          null,
+          "F",
+          "E",
+          "E",
+          "D",
+          "B",
+          "A",
+          "C",
+          "K",
+          null
+        ],
+        [
+          null,
+          null,
+          "N",
+          null,
+          "I",
+          null,
+          "T",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "O",
+          null,
+          "S",
+          null,
+          "H",
+          null,
+          "R",
+          null
+        ],
+        [
+          null,
+          null,
+          "R",
+          null,
+          "P",
+          null,
+          "O",
+          null,
+          "E",
+          null
+        ],
+        [
+          null,
+          null,
+          "M",
+          null,
+          "O",
+          null,
+          "R",
+          null,
+          "S",
+          null
+        ],
+        [
+          null,
+          "P",
+          "A",
+          "S",
+          "S",
+          "P",
+          "O",
+          "R",
+          "T",
+          null
+        ],
+        [
+          null,
+          null,
+          "L",
+          null,
+          "A",
+          null,
+          "U",
+          null,
+          "R",
+          null
+        ],
+        [
+          null,
+          null,
+          "L",
+          null,
+          "L",
+          null,
+          "G",
+          null,
+          "A",
+          null
+        ],
+        [
+          null,
+          null,
+          "Y",
+          null,
+          null,
+          null,
+          "H",
+          null,
+          "I",
+          null
+        ],
+        [
+          null,
+          "C",
+          "A",
+          "M",
+          "P",
+          "A",
+          "I",
+          "G",
+          "N",
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "PASSPORT",
+          "definition": "n  护照",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 1,
+          "length": 8,
+          "clue_number": 6,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "THOROUGH",
+          "definition": "adj  彻底的， 详尽的",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 6,
+          "length": 8,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "NORMALLY",
+          "definition": "adv  通常； 正常地",
+          "direction": "down",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 8,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "DISPOSAL",
+          "definition": "n  丢掉， 销毁； 处理； 排列， 布置",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 4,
+          "length": 8,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 5,
+          "word": "FEEDBACK",
+          "definition": "n  回授， 反馈， 反应",
+          "direction": "across",
+          "start_row": 0,
+          "start_col": 1,
+          "length": 8,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 6,
+          "word": "RESTRAIN",
+          "definition": "vt  阻止， 控制； 抑制， 遏制",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 8,
+          "length": 8,
+          "clue_number": 5,
+          "alternatives": []
+        },
+        {
+          "id": 7,
+          "word": "CAMPAIGN",
+          "definition": "vi  参加运动； 参加竞选",
+          "direction": "across",
+          "start_row": 9,
+          "start_col": 1,
+          "length": 8,
+          "clue_number": 7,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "5-8": "T",
+        "5-4": "S",
+        "5-6": "O",
+        "5-2": "A",
+        "8-6": "H",
+        "4-6": "R",
+        "4-2": "M",
+        "3-2": "R",
+        "0-4": "D",
+        "1-4": "I",
+        "0-6": "A",
+        "9-8": "N",
+        "3-8": "E",
+        "9-5": "A",
+        "9-4": "P",
+        "9-1": "C"
+      },
+      "clue_numbers": [
+        [
+          0,
+          1,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.5,
+      "word_count": 7,
+      "layout_type": "sparse"
+    },
+    {
+      "level": 14,
+      "grid_size": 10,
+      "cells": [
+        [
+          null,
+          null,
+          null,
+          null,
+          "L",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "M",
+          "O",
+          "I",
+          "S",
+          "T",
+          "U",
+          "R",
+          "E"
+        ],
+        [
+          null,
+          "P",
+          null,
+          null,
+          "K",
+          null,
+          "S",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "A",
+          "N",
+          "C",
+          "E",
+          "S",
+          "T",
+          "O",
+          "R",
+          null
+        ],
+        [
+          null,
+          "R",
+          null,
+          null,
+          "W",
+          null,
+          "R",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "A",
+          "D",
+          "D",
+          "I",
+          "T",
+          "I",
+          "O",
+          "N",
+          null
+        ],
+        [
+          null,
+          "L",
+          null,
+          null,
+          "S",
+          null,
+          "K",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "L",
+          null,
+          null,
+          "E",
+          null,
+          "I",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "E",
+          "O",
+          "P",
+          "P",
+          "O",
+          "N",
+          "E",
+          "N",
+          "T"
+        ],
+        [
+          null,
+          "L",
+          null,
+          null,
+          null,
+          null,
+          "G",
+          null,
+          null,
+          null
+        ]
+      ],
+      "words": [
+        {
+          "id": 1,
+          "word": "ADDITION",
+          "definition": "n  加， 加法； 附加物",
+          "direction": "across",
+          "start_row": 5,
+          "start_col": 1,
+          "length": 8,
+          "clue_number": 6,
+          "alternatives": []
+        },
+        {
+          "id": 2,
+          "word": "LIKEWISE",
+          "definition": "adv  同样地； 也， 又",
+          "direction": "down",
+          "start_row": 0,
+          "start_col": 4,
+          "length": 8,
+          "clue_number": 1,
+          "alternatives": []
+        },
+        {
+          "id": 3,
+          "word": "STRIKING",
+          "definition": "adj  显著的， 突出的； 惹人注目的， 容貌出众的",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 6,
+          "length": 8,
+          "clue_number": 4,
+          "alternatives": []
+        },
+        {
+          "id": 4,
+          "word": "OPPONENT",
+          "definition": "n  对手， 敌手， 对抗者",
+          "direction": "across",
+          "start_row": 8,
+          "start_col": 2,
+          "length": 8,
+          "clue_number": 7,
+          "alternatives": []
+        },
+        {
+          "id": 5,
+          "word": "PARALLEL",
+          "definition": "adj 平行的；类似的；并列的，并联的",
+          "direction": "down",
+          "start_row": 2,
+          "start_col": 1,
+          "length": 8,
+          "clue_number": 3,
+          "alternatives": []
+        },
+        {
+          "id": 6,
+          "word": "MOISTURE",
+          "definition": "n  潮湿， 湿气",
+          "direction": "across",
+          "start_row": 1,
+          "start_col": 2,
+          "length": 8,
+          "clue_number": 2,
+          "alternatives": []
+        },
+        {
+          "id": 7,
+          "word": "ANCESTOR",
+          "definition": "n  祖宗， 祖先； 原型； 先驱",
+          "direction": "across",
+          "start_row": 3,
+          "start_col": 1,
+          "length": 8,
+          "clue_number": 5,
+          "alternatives": []
+        }
+      ],
+      "prefilled": {
+        "5-6": "I",
+        "5-1": "A",
+        "5-4": "I",
+        "5-7": "O",
+        "3-4": "E",
+        "1-4": "I",
+        "3-6": "T",
+        "8-6": "N",
+        "8-2": "O",
+        "8-4": "P",
+        "3-1": "A",
+        "1-3": "O"
+      },
+      "clue_numbers": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "density": 0.48,
+      "word_count": 7,
+      "layout_type": "sparse"
+    }
+  ]
+}

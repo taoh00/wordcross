@@ -1,0 +1,402 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-01-24 20:47:23",
+  "categories": {
+    "01_考试类": {
+      "name": "考试类",
+      "description": "四六级、考研等国内考试词汇",
+      "books": [
+        {
+          "id": "CET4luan_1",
+          "name": "四级真题核心词（图片记忆）",
+          "count": 1162
+        },
+        {
+          "id": "CET6luan_1",
+          "name": "六级真题核心词（图片记忆）",
+          "count": 1228
+        },
+        {
+          "id": "KaoYanluan_1",
+          "name": "考研必考词汇",
+          "count": 1341
+        },
+        {
+          "id": "CET4luan_2",
+          "name": "四级英语词汇",
+          "count": 3739
+        },
+        {
+          "id": "CET6_2",
+          "name": "六级英语词汇",
+          "count": 2078
+        },
+        {
+          "id": "KaoYan_2",
+          "name": "考研英语词汇",
+          "count": 4533
+        },
+        {
+          "id": "CET4_3",
+          "name": "新东方四级词汇",
+          "count": 2607
+        },
+        {
+          "id": "CET6_3",
+          "name": "新东方六级词汇",
+          "count": 2345
+        }
+      ]
+    },
+    "02_出国留学": {
+      "name": "出国留学",
+      "description": "雅思、托福、GRE等出国考试词汇",
+      "books": [
+        {
+          "id": "IELTSluan_2",
+          "name": "雅思词汇",
+          "count": 3427
+        },
+        {
+          "id": "TOEFL_2",
+          "name": "TOEFL词汇",
+          "count": 9213
+        },
+        {
+          "id": "GRE_2",
+          "name": "GRE词汇",
+          "count": 7199
+        },
+        {
+          "id": "SAT_2",
+          "name": "SAT词汇",
+          "count": 4423
+        },
+        {
+          "id": "GMATluan_2",
+          "name": "GMAT词汇",
+          "count": 3254
+        }
+      ]
+    },
+    "03_中高考": {
+      "name": "中高考",
+      "description": "中考、高考必备词汇",
+      "books": [
+        {
+          "id": "ChuZhongluan_2",
+          "name": "中考必备词汇",
+          "count": 1420
+        },
+        {
+          "id": "GaoZhongluan_2",
+          "name": "高考必备词汇（图片记忆）",
+          "count": 3668
+        },
+        {
+          "id": "ChuZhong_3",
+          "name": "新东方初中词汇",
+          "count": 1803
+        },
+        {
+          "id": "GaoZhong_3",
+          "name": "新东方高中词汇",
+          "count": 2340
+        }
+      ]
+    },
+    "04_人教版小学": {
+      "name": "人教版小学",
+      "description": "人教版PEP小学英语教材词汇",
+      "books": [
+        {
+          "id": "PEPXiaoXue3_1",
+          "name": "三年级上册",
+          "count": 64
+        },
+        {
+          "id": "PEPXiaoXue3_2",
+          "name": "三年级下册",
+          "count": 72
+        },
+        {
+          "id": "PEPXiaoXue4_1",
+          "name": "四年级上册",
+          "count": 84
+        },
+        {
+          "id": "PEPXiaoXue4_2",
+          "name": "四年级下册",
+          "count": 104
+        },
+        {
+          "id": "PEPXiaoXue5_1",
+          "name": "五年级上册",
+          "count": 131
+        },
+        {
+          "id": "PEPXiaoXue5_2",
+          "name": "五年级下册",
+          "count": 156
+        },
+        {
+          "id": "PEPXiaoXue6_1",
+          "name": "六年级上册",
+          "count": 130
+        },
+        {
+          "id": "PEPXiaoXue6_2",
+          "name": "六年级下册",
+          "count": 108
+        }
+      ]
+    },
+    "05_人教版初中": {
+      "name": "人教版初中",
+      "description": "人教版初中英语教材词汇",
+      "books": [
+        {
+          "id": "PEPChuZhong7_1",
+          "name": "七年级上册",
+          "count": 392
+        },
+        {
+          "id": "PEPChuZhong7_2",
+          "name": "七年级下册",
+          "count": 492
+        },
+        {
+          "id": "PEPChuZhong8_1",
+          "name": "八年级上册",
+          "count": 419
+        },
+        {
+          "id": "PEPChuZhong8_2",
+          "name": "八年级下册",
+          "count": 466
+        },
+        {
+          "id": "PEPChuZhong9_1",
+          "name": "九年级全册",
+          "count": 551
+        }
+      ]
+    },
+    "06_外研社初中": {
+      "name": "外研社初中",
+      "description": "外研社版初中英语教材词汇",
+      "books": [
+        {
+          "id": "WaiYanSheChuZhong_1",
+          "name": "七年级上册",
+          "count": 629
+        },
+        {
+          "id": "WaiYanSheChuZhong_2",
+          "name": "七年级下册",
+          "count": 438
+        },
+        {
+          "id": "WaiYanSheChuZhong_3",
+          "name": "八年级上册",
+          "count": 320
+        },
+        {
+          "id": "WaiYanSheChuZhong_4",
+          "name": "八年级下册",
+          "count": 266
+        },
+        {
+          "id": "WaiYanSheChuZhong_5",
+          "name": "九年级上册",
+          "count": 381
+        },
+        {
+          "id": "WaiYanSheChuZhong_6",
+          "name": "九年级下册",
+          "count": 128
+        }
+      ]
+    },
+    "07_人教版高中": {
+      "name": "人教版高中",
+      "description": "人教版高中英语教材词汇",
+      "books": [
+        {
+          "id": "PEPGaoZhong_1",
+          "name": "必修1",
+          "count": 311
+        },
+        {
+          "id": "PEPGaoZhong_2",
+          "name": "必修2",
+          "count": 319
+        },
+        {
+          "id": "PEPGaoZhong_3",
+          "name": "必修3",
+          "count": 366
+        },
+        {
+          "id": "PEPGaoZhong_4",
+          "name": "必修4",
+          "count": 307
+        },
+        {
+          "id": "PEPGaoZhong_5",
+          "name": "必修5",
+          "count": 357
+        },
+        {
+          "id": "PEPGaoZhong_6",
+          "name": "选修6",
+          "count": 391
+        },
+        {
+          "id": "PEPGaoZhong_7",
+          "name": "选修7",
+          "count": 384
+        },
+        {
+          "id": "PEPGaoZhong_8",
+          "name": "选修8",
+          "count": 420
+        },
+        {
+          "id": "PEPGaoZhong_9",
+          "name": "选修9",
+          "count": 352
+        },
+        {
+          "id": "PEPGaoZhong_10",
+          "name": "选修10",
+          "count": 361
+        },
+        {
+          "id": "PEPGaoZhong_11",
+          "name": "选修11",
+          "count": 309
+        }
+      ]
+    },
+    "08_北师大高中": {
+      "name": "北师大高中",
+      "description": "北师大版高中英语教材词汇",
+      "books": [
+        {
+          "id": "BeiShiGaoZhong_1",
+          "name": "必修1",
+          "count": 226
+        },
+        {
+          "id": "BeiShiGaoZhong_2",
+          "name": "必修2",
+          "count": 244
+        },
+        {
+          "id": "BeiShiGaoZhong_3",
+          "name": "必修3",
+          "count": 295
+        },
+        {
+          "id": "BeiShiGaoZhong_4",
+          "name": "必修4",
+          "count": 336
+        },
+        {
+          "id": "BeiShiGaoZhong_5",
+          "name": "必修5",
+          "count": 327
+        },
+        {
+          "id": "BeiShiGaoZhong_6",
+          "name": "选修6",
+          "count": 271
+        },
+        {
+          "id": "BeiShiGaoZhong_7",
+          "name": "选修7",
+          "count": 334
+        },
+        {
+          "id": "BeiShiGaoZhong_8",
+          "name": "选修8",
+          "count": 364
+        },
+        {
+          "id": "BeiShiGaoZhong_9",
+          "name": "选修9",
+          "count": 299
+        },
+        {
+          "id": "BeiShiGaoZhong_10",
+          "name": "选修10",
+          "count": 267
+        },
+        {
+          "id": "BeiShiGaoZhong_11",
+          "name": "选修11",
+          "count": 330
+        }
+      ]
+    },
+    "09_专业英语": {
+      "name": "专业英语",
+      "description": "专四专八专业英语词汇",
+      "books": [
+        {
+          "id": "Level4luan_2",
+          "name": "专四核心词汇",
+          "count": 4025
+        },
+        {
+          "id": "Level8luan_2",
+          "name": "专八核心词汇",
+          "count": 12197
+        }
+      ]
+    },
+    "10_商务英语": {
+      "name": "商务英语",
+      "description": "商务英语BEC词汇",
+      "books": [
+        {
+          "id": "BEC_2",
+          "name": "商务英语词汇",
+          "count": 2753
+        }
+      ]
+    },
+    "11_新东方扩展": {
+      "name": "新东方扩展",
+      "description": "新东方系列扩展词汇",
+      "books": [
+        {
+          "id": "KaoYan_3",
+          "name": "新东方考研词汇",
+          "count": 3728
+        },
+        {
+          "id": "IELTS_3",
+          "name": "新东方雅思词汇",
+          "count": 3575
+        },
+        {
+          "id": "TOEFL_3",
+          "name": "新东方TOEFL词汇",
+          "count": 4264
+        },
+        {
+          "id": "GRE_3",
+          "name": "新东方GRE词汇",
+          "count": 6515
+        },
+        {
+          "id": "BEC_3",
+          "name": "新东方BEC词汇",
+          "count": 2825
+        }
+      ]
+    }
+  }
+}

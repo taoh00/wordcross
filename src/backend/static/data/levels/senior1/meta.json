@@ -1,0 +1,12 @@
+{
+  "name": "必修1",
+  "group_code": "senior1",
+  "category": "高中",
+  "is_primary": false,
+  "level_count": 108,
+  "word_count": 205,
+  "vocab_size": 239,
+  "coverage": 85.8,
+  "success_count": 108,
+  "fail_count": 0
+}

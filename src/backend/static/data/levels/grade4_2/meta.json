@@ -1,0 +1,12 @@
+{
+  "name": "四年级下册",
+  "group_code": "grade4_2",
+  "category": "小学",
+  "is_primary": true,
+  "level_count": 85,
+  "word_count": 241,
+  "vocab_size": 283,
+  "coverage": 85.2,
+  "success_count": 85,
+  "fail_count": 0
+}
