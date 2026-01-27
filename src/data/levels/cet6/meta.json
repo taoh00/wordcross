@@ -3,10 +3,11 @@
   "group_code": "cet6",
   "category": "考试",
   "is_primary": false,
-  "level_count": 533,
-  "word_count": 3012,
-  "vocab_size": 3543,
+  "level_count": 521,
+  "word_count": 3011,
+  "vocab_size": 3542,
   "coverage": 85.0,
-  "success_count": 533,
-  "fail_count": 0
+  "success_count": 521,
+  "fail_count": 0,
+  "total_levels": 521
 }

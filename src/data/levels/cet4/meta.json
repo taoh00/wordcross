@@ -3,10 +3,11 @@
   "group_code": "cet4",
   "category": "考试",
   "is_primary": false,
-  "level_count": 755,
-  "word_count": 3557,
-  "vocab_size": 4198,
-  "coverage": 84.7,
-  "success_count": 755,
-  "fail_count": 0
+  "level_count": 765,
+  "word_count": 3558,
+  "vocab_size": 4193,
+  "coverage": 84.9,
+  "success_count": 765,
+  "fail_count": 0,
+  "total_levels": 765
 }

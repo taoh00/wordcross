@@ -3,10 +3,11 @@
   "group_code": "toefl",
   "category": "考试",
   "is_primary": false,
-  "level_count": 1351,
-  "word_count": 7274,
-  "vocab_size": 8918,
+  "level_count": 1337,
+  "word_count": 7273,
+  "vocab_size": 8914,
   "coverage": 81.6,
-  "success_count": 1351,
-  "fail_count": 0
+  "success_count": 1337,
+  "fail_count": 0,
+  "total_levels": 1344
 }

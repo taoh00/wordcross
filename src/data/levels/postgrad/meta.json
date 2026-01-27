@@ -3,10 +3,11 @@
   "group_code": "postgrad",
   "category": "考试",
   "is_primary": false,
-  "level_count": 811,
-  "word_count": 4078,
-  "vocab_size": 4755,
+  "level_count": 863,
+  "word_count": 4075,
+  "vocab_size": 4748,
   "coverage": 85.8,
-  "success_count": 811,
-  "fail_count": 0
+  "success_count": 863,
+  "fail_count": 0,
+  "total_levels": 863
 }

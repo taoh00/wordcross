@@ -41,6 +41,18 @@ from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Set
 
+
+def is_pure_alpha(word: str) -> bool:
+    """检查单词是否只包含26个英文字母（不含连字符、撇号、空格等）
+    
+    无效单词示例：
+    - X-RAY, T-SHIRT（含连字符）
+    - O'CLOCK, WE'LL（含撇号）
+    - HOUSE., A.M.（含句点）
+    - ICE CREAM（含空格）
+    """
+    return word.isalpha()
+
 # 添加父目录到路径
 sys.path.insert(0, str(Path(__file__).parent))
 
@@ -353,8 +365,8 @@ def load_pep_grade_vocabulary(grade_code: str) -> List[dict]:
                     words_list = data.get("words", [])
                     for w in words_list:
                         word = w.get("word", "").strip()
-                        # 过滤掉多词短语、太短的词、超过10个字母的词
-                        if word and " " not in word and 2 <= len(word) <= 10:
+                        # 过滤掉多词短语、太短的词、超过10个字母的词、含非字母字符的词
+                        if word and " " not in word and 2 <= len(word) <= 10 and is_pure_alpha(word):
                             word_lower = word.lower()
                             if word_lower not in word_set:
                                 word_set.add(word_lower)
@@ -405,8 +417,8 @@ def load_pep_junior_vocabulary(grade_code: str) -> List[dict]:
                     words_list = data.get("words", [])
                     for w in words_list:
                         word = w.get("word", "").strip()
-                        # 过滤掉多词短语、太短的词、超过10个字母的词
-                        if word and " " not in word and 2 <= len(word) <= 10:
+                        # 过滤掉多词短语、太短的词、超过10个字母的词、含非字母字符的词
+                        if word and " " not in word and 2 <= len(word) <= 10 and is_pure_alpha(word):
                             word_lower = word.lower()
                             if word_lower not in word_set:
                                 word_set.add(word_lower)
@@ -457,8 +469,8 @@ def load_pep_senior_vocabulary(grade_code: str) -> List[dict]:
                     words_list = data.get("words", [])
                     for w in words_list:
                         word = w.get("word", "").strip()
-                        # 过滤掉多词短语、太短的词、超过10个字母的词
-                        if word and " " not in word and 2 <= len(word) <= 10:
+                        # 过滤掉多词短语、太短的词、超过10个字母的词、含非字母字符的词
+                        if word and " " not in word and 2 <= len(word) <= 10 and is_pure_alpha(word):
                             word_lower = word.lower()
                             if word_lower not in word_set:
                                 word_set.add(word_lower)
@@ -517,19 +529,19 @@ def get_vocabulary_for_grade(vocab_manager: VocabularyManager, group_code: str) 
             return all_words
         # 回退到primary词库
         words = vocab_manager._vocabulary_cache.get("primary", [])
-        return [w for w in words if 2 <= len(w["word"]) <= 8 and " " not in w["word"]]
+        return [w for w in words if 2 <= len(w["word"]) <= 8 and " " not in w["word"] and is_pure_alpha(w["word"])]
     
     if group_code == "junior_all":
         # 初中全部 = junior 词库
         words = vocab_manager._vocabulary_cache.get("junior", [])
-        filtered = [w for w in words if " " not in w.get("word", "") and 2 <= len(w.get("word", "")) <= 10]
+        filtered = [w for w in words if " " not in w.get("word", "") and 2 <= len(w.get("word", "")) <= 10 and is_pure_alpha(w.get("word", ""))]
         print(f"  加载初中全部词汇: {len(filtered)} 个")
         return filtered
     
     if group_code == "senior_all":
         # 高中全部 = senior 词库
         words = vocab_manager._vocabulary_cache.get("senior", [])
-        filtered = [w for w in words if " " not in w.get("word", "") and 2 <= len(w.get("word", "")) <= 10]
+        filtered = [w for w in words if " " not in w.get("word", "") and 2 <= len(w.get("word", "")) <= 10 and is_pure_alpha(w.get("word", ""))]
         print(f"  加载高中全部词汇: {len(filtered)} 个")
         return filtered
     
@@ -542,13 +554,13 @@ def get_vocabulary_for_grade(vocab_manager: VocabularyManager, group_code: str) 
         # 如果加载失败，回退到primary词库
         print(f"  警告: PEP文件加载失败，使用primary词库")
         words = vocab_manager._vocabulary_cache.get("primary", [])
-        return [w for w in words if 2 <= len(w["word"]) <= 8 and " " not in w["word"]]
+        return [w for w in words if 2 <= len(w["word"]) <= 8 and " " not in w["word"] and is_pure_alpha(w["word"])]
     
     # 其他词库直接获取完整词汇
     words = vocab_manager._vocabulary_cache.get(group_code, [])
     
-    # 过滤掉多词短语和超过10个字母的词
-    filtered = [w for w in words if " " not in w.get("word", "") and 2 <= len(w.get("word", "")) <= 10]
+    # 过滤掉多词短语、超过10个字母的词、含非字母字符的词
+    filtered = [w for w in words if " " not in w.get("word", "") and 2 <= len(w.get("word", "")) <= 10 and is_pure_alpha(w.get("word", ""))]
     
     print(f"  从词库加载词汇: {len(filtered)} 个")
     return filtered
@@ -623,7 +635,7 @@ def add_alternatives_to_puzzle(puzzle: dict, all_vocab: List[dict]) -> None:
     vocab_by_length = {}
     for v in all_vocab:
         word = v.get("word", "")
-        if word and " " not in word and 2 <= len(word) <= 10:
+        if word and " " not in word and 2 <= len(word) <= 10 and is_pure_alpha(word):
             wlen = len(word)
             if wlen not in vocab_by_length:
                 vocab_by_length[wlen] = []
@@ -936,7 +948,7 @@ def generate_single_group(group_code: str, vocab_manager=None, sparse_generator=
     for vc_group in vocab_manager._vocabulary_cache.values():
         for w in vc_group:
             word = w.get("word", "")
-            if word and " " not in word and 2 <= len(word) <= 10:
+            if word and " " not in word and 2 <= len(word) <= 10 and is_pure_alpha(word):
                 word_lower = word.lower()
                 if word_lower not in global_word_set:
                     global_word_set.add(word_lower)
@@ -1003,8 +1015,8 @@ def generate_single_group(group_code: str, vocab_manager=None, sparse_generator=
         # 安全保护：如果连续100关没有新词或超过预估上限的3倍，尝试长词专用模式
         # 增加容忍度，给更多机会覆盖难以放入的词
         if consecutive_no_new_words >= 100 or level > estimated_max * 3:
-            # 检查是否还有未使用的长词（8-10字母）
-            remaining_unused = [w for w in usable_vocab if w["word"].upper() not in all_words_set]
+            # 检查是否还有未使用的长词（8-10字母），且必须是纯字母
+            remaining_unused = [w for w in usable_vocab if w["word"].upper() not in all_words_set and is_pure_alpha(w["word"])]
             long_unused = [w for w in remaining_unused if len(w["word"]) >= 7]
             
             if long_unused and current_coverage < target_cov * 100:
@@ -1020,8 +1032,8 @@ def generate_single_group(group_code: str, vocab_manager=None, sparse_generator=
                     level += 1
                     words_before_long = len(all_words_set)
                     
-                    # 强制只使用长词
-                    long_unused_current = [w for w in usable_vocab if w["word"].upper() not in all_words_set and len(w["word"]) >= 6]
+                    # 强制只使用长词（必须是纯字母）
+                    long_unused_current = [w for w in usable_vocab if w["word"].upper() not in all_words_set and len(w["word"]) >= 6 and is_pure_alpha(w["word"])]
                     if len(long_unused_current) < 5:
                         break
                     
@@ -1132,48 +1144,101 @@ def save_group_data(group_code: str, group_data: dict):
     """保存单个分组的数据 - 每关一个JSON文件
     
     新目录结构：
-    - levels/{group_code}/1.json
+    - levels/{group_code}/1.json          (正确关卡，编号连续)
     - levels/{group_code}/2.json
     - ...
-    - levels/{group_code}/meta.json (元数据：关卡数量、词库信息等)
+    - levels/{group_code}/meta.json       (元数据：关卡数量、词库信息等)
+    
+    - levels_error/{group_code}/error_1.json  (错误关卡，单独存放)
+    - levels_error/{group_code}/error_2.json
+    - ...
+    
+    错误关卡不计入正式编号，只有正确关卡才放入部署目录并重新编号。
     """
-    # 创建词库目录
+    # 创建正常部署目录
     output_dir = Path(__file__).parent.parent / "data" / "levels" / group_code
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    # 保存每一关到单独文件
+    # 创建错误关卡目录
+    error_dir = Path(__file__).parent.parent / "data" / "levels_error" / group_code
+    error_dir.mkdir(parents=True, exist_ok=True)
+    
+    # 清空旧文件（避免残留）
+    for old_file in output_dir.glob("*.json"):
+        if old_file.name != "meta.json":
+            old_file.unlink()
+    for old_file in error_dir.glob("*.json"):
+        old_file.unlink()
+    
     levels = group_data.get("levels", [])
-    saved_count = 0
+    
+    # 分离正确和错误关卡
+    valid_levels = []
+    error_levels = []
     
     for level_data in levels:
-        level_num = level_data.get("level", 0)
-        if level_num <= 0:
-            continue
+        if level_data.get("error"):
+            error_levels.append(level_data)
+        elif level_data.get("words") and len(level_data.get("words", [])) >= 2:
+            valid_levels.append(level_data)
+        else:
+            # 没有足够单词的关卡也视为错误
+            level_data["error"] = True
+            level_data["message"] = level_data.get("message", "单词数不足")
+            error_levels.append(level_data)
+    
+    # 保存正确关卡（重新编号，确保连续）
+    saved_count = 0
+    for new_level_num, level_data in enumerate(valid_levels, start=1):
+        # 记录原始编号（便于调试）
+        original_level = level_data.get("level", 0)
         
-        level_path = output_dir / f"{level_num}.json"
+        # 更新为新的连续编号
+        level_data["level"] = new_level_num
+        level_data["original_level"] = original_level  # 保留原始编号
+        
+        level_path = output_dir / f"{new_level_num}.json"
         with open(level_path, "w", encoding="utf-8") as f:
             json.dump(level_data, f, ensure_ascii=False)
         saved_count += 1
     
-    # 保存元数据（不含关卡数据，只有统计信息）
+    # 保存错误关卡（带 error_ 前缀，便于识别）
+    error_saved = 0
+    for idx, error_data in enumerate(error_levels, start=1):
+        error_path = error_dir / f"error_{idx}.json"
+        with open(error_path, "w", encoding="utf-8") as f:
+            json.dump(error_data, f, ensure_ascii=False, indent=2)
+        error_saved += 1
+    
+    # 保存元数据（基于实际保存的正确关卡数量）
     meta = {
         "name": group_data.get("name", ""),
         "group_code": group_code,
         "category": group_data.get("category", ""),
         "is_primary": group_data.get("is_primary", False),
-        "level_count": len(levels),
+        "level_count": saved_count,  # 只统计正确关卡
         "word_count": group_data.get("word_count", 0),
         "vocab_size": group_data.get("vocab_size", 0),
         "coverage": group_data.get("coverage", 0),
-        "success_count": group_data.get("success_count", 0),
-        "fail_count": group_data.get("fail_count", 0)
+        "success_count": saved_count,  # 实际保存的正确关卡数
+        "fail_count": error_saved,     # 错误关卡数
+        "error_levels_dir": f"levels_error/{group_code}" if error_saved > 0 else None
     }
     
     meta_path = output_dir / "meta.json"
     with open(meta_path, "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=2)
     
-    print(f"  已保存 {saved_count} 个关卡文件到: {output_dir}/")
+    # 输出统计
+    print(f"  ✓ 已保存 {saved_count} 个正确关卡到: {output_dir}/")
+    if error_saved > 0:
+        print(f"  ✗ 已保存 {error_saved} 个错误关卡到: {error_dir}/")
+    
+    # 更新返回的group_data，反映实际保存数量
+    group_data["level_count"] = saved_count
+    group_data["success_count"] = saved_count
+    group_data["fail_count"] = error_saved
+    
     return output_dir
 
 
@@ -1181,6 +1246,7 @@ def update_summary(all_groups_data: dict):
     """更新汇总文件
     
     从各词库目录的meta.json读取信息，合并生成levels_summary.json
+    注意：level_count 只统计正确关卡，fail_count 统计错误关卡
     """
     levels_dir = Path(__file__).parent.parent / "data" / "levels"
     
@@ -1198,12 +1264,17 @@ def update_summary(all_groups_data: dict):
             except:
                 pass
     
+    # 统计只计算正确关卡
+    total_valid_levels = sum(g.get("level_count", 0) for g in all_groups_data.values())
+    total_error_levels = sum(g.get("fail_count", 0) for g in all_groups_data.values())
+    
     summary = {
         "generated_at": datetime.now().isoformat(),
         "total_groups": len(all_groups_data),
-        "total_levels": sum(g.get("level_count", 0) for g in all_groups_data.values()),
-        "success_count": sum(g.get("success_count", 0) for g in all_groups_data.values()),
-        "fail_count": sum(g.get("fail_count", 0) for g in all_groups_data.values()),
+        "total_levels": total_valid_levels,  # 只统计正确关卡
+        "total_error_levels": total_error_levels,  # 错误关卡单独统计
+        "success_count": total_valid_levels,
+        "fail_count": total_error_levels,
         "groups": []
     }
     
@@ -1217,10 +1288,11 @@ def update_summary(all_groups_data: dict):
             "word_count": data.get("word_count", 0),
             "vocab_size": data.get("vocab_size", VOCAB_SIZES.get(group_code, 0)),
             "coverage": data.get("coverage", 0),
-            "level_count": data.get("level_count", 0),
-            "max_levels": data.get("max_levels", data.get("level_count", 0)),
-            "success_count": data.get("success_count", 0),
-            "fail_count": data.get("fail_count", 0)
+            "level_count": data.get("level_count", 0),  # 只统计正确关卡
+            "max_levels": data.get("level_count", 0),   # 与level_count一致
+            "success_count": data.get("success_count", data.get("level_count", 0)),
+            "fail_count": data.get("fail_count", 0),
+            "error_levels_dir": data.get("error_levels_dir")
         })
     
     summary_path = Path(__file__).parent.parent / "data" / "levels_summary.json"
@@ -1228,6 +1300,7 @@ def update_summary(all_groups_data: dict):
         json.dump(summary, f, ensure_ascii=False, indent=2)
     
     print(f"汇总报告已更新: {summary_path}")
+    print(f"  正确关卡: {total_valid_levels}, 错误关卡: {total_error_levels}")
     return summary
 
 

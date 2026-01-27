@@ -16,6 +16,36 @@
 
 ---
 
+## 参考文档索引
+
+快速查找代码和功能实现时，请优先参考以下文档：
+
+### 核心索引文档
+| 文档 | 路径 | 用途 |
+|------|------|------|
+| **代码功能索引** | `docs/CODE_INDEX.md` | 代码与功能的完整映射，包含行号级定位 |
+| **API接口文档** | `docs/API_REFERENCE.md` | 后端所有接口的详细说明 |
+| **游戏设计简报** | `docs/GAME_DESIGN_BRIEF.md` | 完整功能设计和需求说明 |
+
+### 专题文档
+| 文档 | 路径 | 用途 |
+|------|------|------|
+| CSP生成器架构 | `docs/CSP_PUZZLE_GENERATOR_ARCHITECTURE.md` | 填字游戏生成算法详解 |
+| 排行榜系统 | `docs/LEADERBOARD_SYSTEM_DESIGN.md` | 排行榜系统设计 |
+| 多端架构 | `docs/MULTI_PLATFORM_ARCHITECTURE.md` | 三端(Web/小程序/iOS)架构 |
+| Docker部署 | `docs/DOCKER_DEPLOYMENT.md` | 容器化部署指南 |
+| 词库资源 | `docs/VOCABULARY_RESOURCES.md` | 词库来源和格式说明 |
+| 性能修复 | `docs/PERFORMANCE_FIX_REPORT.md` | 历史性能问题修复记录 |
+| 功能更新 | `docs/GAME_FEATURE_UPDATES.md` | 版本更新日志 |
+
+### 查找代码的推荐流程
+1. **功能定位**: 先查看 `docs/CODE_INDEX.md` 中的"功能到代码的映射"表
+2. **API接口**: 查看 `docs/API_REFERENCE.md` 获取接口详情
+3. **设计需求**: 查看 `docs/GAME_DESIGN_BRIEF.md` 了解原始设计意图
+4. **具体代码**: 根据索引中的行号范围直接定位到源文件
+
+---
+
 ## 关卡生成规则
 
 ### 覆盖度要求

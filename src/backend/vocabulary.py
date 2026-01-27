@@ -8,6 +8,11 @@ from typing import List, Dict, Optional
 from pathlib import Path
 
 
+def is_pure_alpha(word: str) -> bool:
+    """检查单词是否只包含26个英文字母（不含连字符、撇号、空格等）"""
+    return word.isalpha()
+
+
 class VocabularyManager:
     """词汇管理器"""
     
@@ -285,10 +290,10 @@ class VocabularyManager:
         
         result = []
         
-        # 按词汇长度过滤
+        # 按词汇长度过滤，同时过滤掉含非字母字符的词
         if max_word_len:
-            # 优先选择长度在2到max_word_len之间的词（单字母词不太适合填字游戏）
-            suitable_words = [w for w in words if 2 <= len(w["word"]) <= max_word_len]
+            # 优先选择长度在2到max_word_len之间的纯字母词（单字母词不太适合填字游戏）
+            suitable_words = [w for w in words if 2 <= len(w["word"]) <= max_word_len and is_pure_alpha(w["word"])]
             
             # 如果适合的词足够，直接使用
             if len(suitable_words) >= count:
@@ -300,7 +305,7 @@ class VocabularyManager:
                 # 如果适合的词不够，先加入所有适合的词，再补充稍长的词
                 result = suitable_words.copy()
                 # 获取稍长的词（max_word_len+1 到 max_word_len+3）
-                longer_words = [w for w in words if max_word_len < len(w["word"]) <= max_word_len + 3]
+                longer_words = [w for w in words if max_word_len < len(w["word"]) <= max_word_len + 3 and is_pure_alpha(w["word"])]
                 if longer_words:
                     need_more = count - len(result)
                     if len(longer_words) <= need_more:
@@ -308,8 +313,8 @@ class VocabularyManager:
                     else:
                         result.extend(random.sample(longer_words, need_more))
         else:
-            # 无长度限制时，过滤掉单字母词
-            suitable_words = [w for w in words if len(w["word"]) >= 2]
+            # 无长度限制时，过滤掉单字母词和非纯字母词
+            suitable_words = [w for w in words if len(w["word"]) >= 2 and is_pure_alpha(w["word"])]
             if len(suitable_words) <= count:
                 result = suitable_words.copy()
             else:
@@ -362,7 +367,7 @@ class VocabularyManager:
                 words = self._grade_vocabulary_cache[primary_group]
                 for w in words:
                     word_upper = w["word"].upper()
-                    if word_upper not in word_set and len(word_upper) >= 2:
+                    if word_upper not in word_set and len(word_upper) >= 2 and is_pure_alpha(word_upper):
                         word_set.add(word_upper)
                         all_words.append(w.copy())
                 return all_words
@@ -375,7 +380,7 @@ class VocabularyManager:
                 words = self._vocabulary_cache.get(main_group, [])
                 for w in words:
                     word_upper = w["word"].upper()
-                    if word_upper not in word_set and len(word_upper) >= 2:
+                    if word_upper not in word_set and len(word_upper) >= 2 and is_pure_alpha(word_upper):
                         word_set.add(word_upper)
                         all_words.append(w.copy())
                 return all_words
@@ -396,7 +401,7 @@ class VocabularyManager:
                 words = self._vocabulary_cache.get(group, [])
             for w in words:
                 word_upper = w["word"].upper()
-                if word_upper not in word_set and len(word_upper) >= 2:
+                if word_upper not in word_set and len(word_upper) >= 2 and is_pure_alpha(word_upper):
                     word_set.add(word_upper)
                     all_words.append(w.copy())
         

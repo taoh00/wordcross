@@ -3,10 +3,11 @@
   "group_code": "pet",
   "category": "考试",
   "is_primary": false,
-  "level_count": 116,
-  "word_count": 420,
+  "level_count": 117,
+  "word_count": 421,
   "vocab_size": 490,
-  "coverage": 85.7,
-  "success_count": 116,
-  "fail_count": 0
+  "coverage": 85.9,
+  "success_count": 117,
+  "fail_count": 0,
+  "total_levels": 117
 }

@@ -8,5 +8,6 @@
   "vocab_size": 63,
   "coverage": 98.4,
   "success_count": 81,
-  "fail_count": 0
+  "fail_count": 0,
+  "total_levels": 81
 }

@@ -3,10 +3,11 @@
   "group_code": "ielts",
   "category": "考试",
   "is_primary": false,
-  "level_count": 835,
-  "word_count": 4152,
-  "vocab_size": 4708,
+  "level_count": 847,
+  "word_count": 4146,
+  "vocab_size": 4699,
   "coverage": 88.2,
-  "success_count": 835,
-  "fail_count": 0
+  "success_count": 847,
+  "fail_count": 0,
+  "total_levels": 847
 }

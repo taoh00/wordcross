@@ -3,10 +3,11 @@
   "group_code": "grade6_2",
   "category": "小学",
   "is_primary": true,
-  "level_count": 299,
-  "word_count": 553,
-  "vocab_size": 696,
-  "coverage": 79.5,
-  "success_count": 279,
-  "fail_count": 20
+  "level_count": 304,
+  "word_count": 535,
+  "vocab_size": 687,
+  "coverage": 77.9,
+  "success_count": 284,
+  "fail_count": 20,
+  "total_levels": 284
 }

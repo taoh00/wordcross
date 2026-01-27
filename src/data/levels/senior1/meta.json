@@ -5,8 +5,9 @@
   "is_primary": false,
   "level_count": 108,
   "word_count": 205,
-  "vocab_size": 239,
-  "coverage": 85.8,
+  "vocab_size": 236,
+  "coverage": 86.9,
   "success_count": 108,
-  "fail_count": 0
+  "fail_count": 0,
+  "total_levels": 108
 }

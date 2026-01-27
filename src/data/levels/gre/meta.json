@@ -3,10 +3,11 @@
   "group_code": "gre",
   "category": "考试",
   "is_primary": false,
-  "level_count": 1343,
-  "word_count": 7251,
-  "vocab_size": 8585,
+  "level_count": 1367,
+  "word_count": 7246,
+  "vocab_size": 8575,
   "coverage": 84.5,
-  "success_count": 1343,
-  "fail_count": 0
+  "success_count": 1367,
+  "fail_count": 0,
+  "total_levels": 1367
 }

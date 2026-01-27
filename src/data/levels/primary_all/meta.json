@@ -3,10 +3,11 @@
   "group_code": "primary_all",
   "category": "小学",
   "is_primary": true,
-  "level_count": 298,
-  "word_count": 550,
-  "vocab_size": 696,
-  "coverage": 79.0,
-  "success_count": 278,
-  "fail_count": 20
+  "level_count": 359,
+  "word_count": 545,
+  "vocab_size": 687,
+  "coverage": 79.3,
+  "success_count": 339,
+  "fail_count": 20,
+  "total_levels": 339
 }

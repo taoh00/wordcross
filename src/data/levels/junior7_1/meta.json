@@ -4,9 +4,10 @@
   "category": "初中",
   "is_primary": false,
   "level_count": 108,
-  "word_count": 325,
-  "vocab_size": 350,
-  "coverage": 92.9,
+  "word_count": 311,
+  "vocab_size": 333,
+  "coverage": 93.4,
   "success_count": 108,
-  "fail_count": 0
+  "fail_count": 0,
+  "total_levels": 108
 }
