@@ -54,14 +54,14 @@
             </div>
           </button>
 
-          <!-- PK模式 -->
-          <button @click="selectMode('pk')" class="mode-btn pk">
-            <span class="mode-icon">⚔️</span>
+          <!-- 排行榜入口 -->
+          <router-link to="/leaderboard" class="mode-btn leaderboard">
+            <span class="mode-icon">🏆</span>
             <div class="mode-info">
-              <div class="mode-name">PK模式</div>
-              <div class="mode-desc">在线对战</div>
+              <div class="mode-name">排行榜</div>
+              <div class="mode-desc">看看排名</div>
             </div>
-          </button>
+          </router-link>
         </div>
         
         <!-- 测试模式和重置按钮并排（仅开发环境显示） -->
@@ -77,13 +77,6 @@
           </button>
         </div>
         
-        <!-- 排行榜入口 - 放在主卡片内 -->
-        <router-link to="/leaderboard" class="leaderboard-card">
-          <span class="leaderboard-icon">🏆</span>
-          <span class="leaderboard-text">排行榜</span>
-          <span class="leaderboard-arrow">›</span>
-        </router-link>
-        
         <!-- 设置入口 -->
         <router-link to="/settings" class="settings-card">
           <span class="settings-icon">⚙️</span>
@@ -92,7 +85,7 @@
         </router-link>
       </div>
 
-      <!-- 第二步：选择时间（计时/PK模式） -->
+      <!-- 第二步：选择时间（计时模式） -->
       <div v-else-if="currentStep === 'duration'" class="duration-selection">
         <div class="selection-header">
           <button @click="goBack" class="back-btn">← 返回</button>
@@ -117,15 +110,15 @@
         </div>
       </div>
 
-      <!-- 第三步：选择难度（无限/计时/PK模式） -->
+      <!-- 第三步：选择难度（无限/计时模式） -->
       <div v-else-if="currentStep === 'difficulty'" class="difficulty-selection">
         <div class="selection-header">
           <button @click="goBack" class="back-btn">← 返回</button>
           <h2 class="section-title">⚡ 选择难度</h2>
         </div>
 
-        <!-- 显示已选时间（计时/PK模式） -->
-        <div v-if="selectedMode === 'timed' || selectedMode === 'pk'" class="selected-duration-banner">
+        <!-- 显示已选时间（计时模式） -->
+        <div v-if="selectedMode === 'timed'" class="selected-duration-banner">
           <span class="banner-label">已选时间：</span>
           <span class="banner-value duration">
             {{ durationOptions.find(d => d.value === selectedDuration)?.label }}
@@ -160,7 +153,7 @@
           <h2 class="section-title">📚 选择词库</h2>
         </div>
         
-        <!-- 显示已选难度（无限/计时/PK模式） -->
+        <!-- 显示已选难度（无限/计时模式） -->
         <div v-if="needsDifficultyFirst" class="selected-difficulty-banner">
           <span class="banner-label">已选难度：</span>
           <span :class="['banner-value', selectedDifficulty]">
@@ -388,20 +381,20 @@ async function loadUserData() {
   }
 }
 
-// 步骤：mode -> duration(计时/PK) -> difficulty(无限/计时/PK) -> group -> subgroup(可选) -> level (仅闯关模式)
+// 步骤：mode -> duration(计时) -> difficulty(无限/计时) -> group -> subgroup(可选) -> level (仅闯关模式)
 const currentStep = ref('mode')
 const selectedMode = ref(null)
 const selectedGroup = ref(null)
 const selectedGroupData = ref(null) // 选中的大分类对象
 const selectedSubGroup = ref(null)  // 选中的细分类
-const selectedDuration = ref(180)  // 默认3分钟
+const selectedDuration = ref(60)  // 默认1分钟
 const selectedDifficulty = ref('medium')  // 难度：low/medium/high
 
-// 时间选项（计时/PK模式）
+// 时间选项（计时模式）
 const durationOptions = [
-  { value: 180, label: '3分钟', icon: '⏱️' },
-  { value: 300, label: '5分钟', icon: '⏳' },
-  { value: 600, label: '10分钟', icon: '🕐' }
+  { value: 60, label: '1分钟', icon: '⏱️' },
+  { value: 180, label: '3分钟', icon: '⏳' },
+  { value: 300, label: '5分钟', icon: '🕐' }
 ]
 
 // 关卡进度 (从localStorage读取)
@@ -414,11 +407,10 @@ const difficultyOptions = [
   { code: 'high', name: '困难', desc: '5-10字母长词', icon: '🌲' }
 ]
 
-// 是否需要先选难度（无限/计时/PK模式）
+// 是否需要先选难度（无限/计时模式）
 const needsDifficultyFirst = computed(() => {
   return selectedMode.value === 'endless' || 
-         selectedMode.value === 'timed' || 
-         selectedMode.value === 'pk'
+         selectedMode.value === 'timed'
 })
 
 // 关卡分页
@@ -614,8 +606,8 @@ function selectMode(mode) {
   // 埋点：记录模式选择事件
   trackApi.trackEvent('select_mode', { mode }, 'web')
   
-  // 计时/PK模式先选时间，无限模式直接选难度，闯关模式直接选词库
-  if (mode === 'timed' || mode === 'pk') {
+  // 计时模式先选时间，无限模式直接选难度，闯关模式直接选词库
+  if (mode === 'timed') {
     currentStep.value = 'duration'
   } else if (mode === 'endless') {
     currentStep.value = 'difficulty'
@@ -624,7 +616,7 @@ function selectMode(mode) {
   }
 }
 
-// 选择时间（计时/PK模式）
+// 选择时间（计时模式）
 function selectDuration(duration) {
   selectedDuration.value = duration
   currentStep.value = 'difficulty'
@@ -642,7 +634,7 @@ async function selectGroup(group) {
   if (group.hasSubGroups && canSelectSubGroup.value) {
     currentStep.value = 'subgroup'
   } else {
-    // 没有细分类或计时/PK模式，直接使用大分类
+    // 没有细分类或计时模式，直接使用大分类
     selectedGroup.value = group.code
     gameStore.currentGroup = group.code
     
@@ -676,8 +668,8 @@ function startGame() {
     localStorage.setItem('game_difficulty', selectedDifficulty.value)
   }
   
-  // 保存选择的时间（计时/PK模式）
-  if (selectedMode.value === 'timed' || selectedMode.value === 'pk') {
+  // 保存选择的时间（计时模式）
+  if (selectedMode.value === 'timed') {
     localStorage.setItem('timed_duration', selectedDuration.value.toString())
   }
   
@@ -836,8 +828,8 @@ function goBack() {
       selectedGroupData.value = null
     }
   } else if (currentStep.value === 'difficulty') {
-    // 如果是计时/PK模式，返回时间选择；无限模式返回模式选择
-    if (selectedMode.value === 'timed' || selectedMode.value === 'pk') {
+    // 如果是计时模式，返回时间选择；无限模式返回模式选择
+    if (selectedMode.value === 'timed') {
       currentStep.value = 'duration'
     } else {
       currentStep.value = 'mode'
@@ -847,7 +839,7 @@ function goBack() {
   } else if (currentStep.value === 'duration') {
     currentStep.value = 'mode'
     selectedMode.value = null
-    selectedDuration.value = 180
+    selectedDuration.value = 60
   }
 }
 </script>
@@ -900,9 +892,9 @@ function goBack() {
 .title {
   font-size: clamp(1.8rem, 6vw, 3.5rem);
   font-weight: 900;
-  color: white;
+  color: #FF69B4;
   text-shadow: 
-    0 4px 0 rgba(0,0,0,0.15),
+    0 2px 0 rgba(255,182,193,0.5),
     0 6px 20px rgba(0, 0, 0, 0.25);
   margin: 0;
   letter-spacing: clamp(3px, 0.8vw, 8px);
@@ -956,10 +948,10 @@ function goBack() {
   gap: clamp(10px, 2vw, 20px);
   margin-top: clamp(12px, 2vw, 20px);
   padding: clamp(10px, 2vw, 16px) clamp(16px, 3vw, 32px);
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
+  background: #FFFFFF;
   border-radius: clamp(20px, 4vw, 32px);
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  border: 3px solid #FFB6C1;
+  box-shadow: 0 6px 0 #FF69B4;
   width: calc(100% - clamp(24px, 6vw, 64px));
   max-width: calc(100% - clamp(24px, 6vw, 64px));
   box-sizing: border-box;
@@ -975,8 +967,8 @@ function goBack() {
 .user-name {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 700;
-  color: white;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  color: #5D5D5D;
+  text-shadow: none;
   max-width: clamp(80px, 15vw, 150px);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -995,23 +987,21 @@ function goBack() {
   gap: clamp(2px, 0.5vw, 6px);
   font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-weight: 700;
-  color: white;
-  background: rgba(0, 0, 0, 0.2);
+  color: #5D5D5D;
+  background: #FFFACD;
   padding: clamp(6px, 1vw, 10px) clamp(10px, 1.5vw, 16px);
   border-radius: clamp(12px, 2vw, 20px);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: 2px solid #F0E68C;
+  box-shadow: 0 3px 0 #F0E68C;
 }
 
 /* 主卡片 - 卡通风格，响应式，全屏宽自适应 */
 .main-card {
   flex: 1;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
+  background: #FFFFFF;
   border-radius: clamp(18px, 4vw, 32px);
   padding: clamp(16px, 3vw, 32px);
-  box-shadow: 
-    0 10px 0 rgba(0, 0, 0, 0.08),
-    0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 0 #FFB6C1;
   display: flex;
   flex-direction: column;
   /* 移除硬编码最大宽度，使用百分比实现全屏自适应 */
@@ -1019,13 +1009,13 @@ function goBack() {
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  border: clamp(2px, 0.4vw, 4px) solid rgba(255, 255, 255, 0.9);
+  border: 3px solid #FFB6C1;
 }
 
 .section-title {
   font-size: var(--font-xl, 1.25rem);
   font-weight: 800;
-  color: #5b21b6;
+  color: #FF69B4;
   margin: 0 0 clamp(12px, 2.5vw, 24px);
   text-align: center;
   font-family: 'Nunito', sans-serif;
@@ -1077,23 +1067,32 @@ function goBack() {
 }
 
 .mode-btn.campaign {
-  background: linear-gradient(180deg, #c4b5fd, #8b5cf6);
-  color: white;
+  background: linear-gradient(180deg, #FFF0F5, #FFB6C1);
+  color: #5D5D5D;
+  border: 3px solid #FFB6C1;
+  box-shadow: 0 6px 0 #FF69B4;
 }
 
 .mode-btn.endless {
-  background: linear-gradient(180deg, #6ee7b7, #10b981);
-  color: white;
+  background: linear-gradient(180deg, #E0FBE0, #98FB98);
+  color: #5D5D5D;
+  border: 3px solid #98FB98;
+  box-shadow: 0 6px 0 #3CB371;
 }
 
 .mode-btn.timed {
-  background: linear-gradient(180deg, #f9a8d4, #ec4899);
-  color: white;
+  background: linear-gradient(180deg, #F0F8FF, #87CEEB);
+  color: #5D5D5D;
+  border: 3px solid #FFB6C1;
+  box-shadow: 0 6px 0 #FF69B4;
 }
 
-.mode-btn.pk {
-  background: linear-gradient(180deg, #fdba74, #f97316);
-  color: white;
+.mode-btn.leaderboard {
+  background: linear-gradient(180deg, #FFFFF0, #FFFACD);
+  color: #5D5D5D;
+  border: 3px solid #FFFACD;
+  box-shadow: 0 6px 0 #F0E68C;
+  text-decoration: none;
 }
 
 .mode-icon {
@@ -1235,18 +1234,18 @@ function goBack() {
   gap: 12px;
   margin-top: 10px;
   padding: 12px 18px;
-  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  background: linear-gradient(135deg, #F3E6F3, #DDA0DD);
   border-radius: 14px;
   text-decoration: none;
-  color: #4338ca;
-  box-shadow: 0 3px 0 #6366f1;
+  color: #5D5D5D;
+  box-shadow: 0 3px 0 #BA55D3;
   transition: all 0.2s ease;
-  border: 2px solid #818cf8;
+  border: 2px solid #DDA0DD;
 }
 
 .settings-card:active {
   transform: translateY(3px);
-  box-shadow: 0 1px 0 #6366f1;
+  box-shadow: 0 1px 0 #BA55D3;
 }
 
 .settings-icon {
@@ -1262,7 +1261,7 @@ function goBack() {
 .settings-arrow {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #4f46e5;
+  color: #BA55D3;
 }
 
 /* 词库选择 - 卡通风格 */
@@ -1388,9 +1387,9 @@ function goBack() {
 }
 
 .duration-btn.active {
-  background: linear-gradient(180deg, #f472b6, #ec4899);
-  color: white;
-  box-shadow: 0 4px 0 #be185d;
+  background: linear-gradient(180deg, #FFB6C1, #FF69B4);
+  color: #5D5D5D;
+  box-shadow: 0 4px 0 #FF69B4;
 }
 
 .duration-icon {
@@ -1429,8 +1428,8 @@ function goBack() {
 }
 
 .banner-value.duration {
-  background: linear-gradient(180deg, #f472b6, #ec4899);
-  color: white;
+  background: linear-gradient(180deg, #FFB6C1, #FF69B4);
+  color: #5D5D5D;
 }
 
 /* 难度选择样式 */
@@ -1576,10 +1575,9 @@ function goBack() {
 }
 
 .banner-value.high {
-  background: linear-gradient(180deg, #fca5a5, #f87171);
-  color: #7f1d1d;
-  color: white;
-  box-shadow: 0 2px 0 #be185d;
+  background: linear-gradient(180deg, #FFB6C1, #FF69B4);
+  color: #5D5D5D;
+  box-shadow: 0 2px 0 #FF69B4;
 }
 
 /* 词库网格 - 卡通风格 */
@@ -1607,10 +1605,10 @@ function goBack() {
 }
 
 .group-btn:hover {
-  border-color: #c4b5fd;
-  background: linear-gradient(180deg, #faf5ff, #ede9fe);
+  border-color: #98FB98;
+  background: linear-gradient(180deg, #E0FBE0, #98FB98);
   transform: translateY(-2px);
-  box-shadow: 0 6px 0 #a78bfa;
+  box-shadow: 0 6px 0 #3CB371;
 }
 
 .group-btn:active {
@@ -1637,7 +1635,7 @@ function goBack() {
   transform: translateY(-50%);
   font-size: 1.2rem;
   font-weight: 700;
-  color: #a78bfa;
+  color: #FF69B4;
 }
 
 .group-btn {
@@ -1783,10 +1781,11 @@ function goBack() {
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+  background: linear-gradient(135deg, #FFF0F5, #FFB6C1);
   border-radius: 12px;
   margin-bottom: 14px;
-  border: 2px solid #a78bfa;
+  border: 2px solid #FFB6C1;
+  box-shadow: 0 4px 0 #FF69B4;
 }
 
 .banner-icon {
@@ -1796,7 +1795,7 @@ function goBack() {
 .banner-text {
   font-size: var(--font-md, 1rem);
   font-weight: 700;
-  color: #5b21b6;
+  color: #FF69B4;
   flex: 1;
 }
 
@@ -1837,10 +1836,10 @@ function goBack() {
 }
 
 .page-nav-btn:hover:not(:disabled) {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
-  border-color: #7c3aed;
-  color: white;
-  box-shadow: 0 2px 0 #6d28d9;
+  background: linear-gradient(180deg, #98FB98, #3CB371);
+  border-color: #3CB371;
+  color: #5D5D5D;
+  box-shadow: 0 2px 0 #2E8B57;
 }
 
 .page-nav-btn:active:not(:disabled) {
@@ -1869,8 +1868,8 @@ function goBack() {
 .range-label {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #5b21b6;
-  background: linear-gradient(180deg, #ede9fe, #ddd6fe);
+  color: #FF69B4;
+  background: linear-gradient(180deg, #FFF0F5, #FFB6C1);
   padding: 3px 8px;
   border-radius: 6px;
   white-space: nowrap;
@@ -1898,15 +1897,15 @@ function goBack() {
 }
 
 .range-btn:hover:not(.active) {
-  background: linear-gradient(180deg, #ede9fe, #ddd6fe);
-  border-color: #a78bfa;
-  color: #5b21b6;
+  background: linear-gradient(180deg, #FFF0F5, #FFB6C1);
+  border-color: #FFB6C1;
+  color: #FF69B4;
 }
 
 .range-btn.active {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
-  border-color: #7c3aed;
-  color: white;
+  background: linear-gradient(180deg, #FFB6C1, #FF69B4);
+  border-color: #FF69B4;
+  color: #5D5D5D;
 }
 
 .range-ellipsis {
@@ -1933,7 +1932,7 @@ function goBack() {
 }
 
 .level-scroll-container::-webkit-scrollbar-thumb {
-  background: #a78bfa;
+  background: #FFB6C1;
   border-radius: 3px;
 }
 
@@ -1961,7 +1960,7 @@ function goBack() {
 
 .level-btn:hover:not(.locked) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 0 #a78bfa;
+  box-shadow: 0 6px 0 #98FB98;
 }
 
 .level-btn:active:not(.locked) {

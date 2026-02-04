@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     borderTopWidth: 1,
-    borderTopColor: '#E5E7EB',
+    borderTopColor: '#FFB6C1',
   },
   scrollContent: {
     padding: 12,
@@ -110,13 +110,13 @@ const styles = StyleSheet.create({
   columnHeader: {
     paddingBottom: 8,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#FFB6C1',
     marginBottom: 8,
   },
   columnTitle: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#4F46E5',
+    color: '#FF69B4',
   },
   wordItem: {
     paddingVertical: 8,
@@ -128,12 +128,12 @@ const styles = StyleSheet.create({
     borderColor: 'transparent',
   },
   selectedWordItem: {
-    backgroundColor: '#EEF2FF',
-    borderColor: '#4F46E5',
+    backgroundColor: '#FFF0F5',
+    borderColor: '#FF69B4',
   },
   completedWordItem: {
-    backgroundColor: '#F0FDF4',
-    borderColor: '#10B981',
+    backgroundColor: '#E0FBE0',
+    borderColor: '#3CB371',
   },
   wordHeader: {
     flexDirection: 'row',
@@ -147,16 +147,16 @@ const styles = StyleSheet.create({
   },
   checkMark: {
     fontSize: 14,
-    color: '#10B981',
+    color: '#3CB371',
     fontWeight: '600',
   },
   wordDefinition: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#888888',
     marginTop: 4,
     lineHeight: 18,
   },
   completedText: {
-    color: '#10B981',
+    color: '#3CB371',
   },
 });

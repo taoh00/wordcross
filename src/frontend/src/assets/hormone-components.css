@@ -1,0 +1,1083 @@
+/* 
+ * Hormone Color Component Library
+ * 荷尔蒙色组件库 - 统一组件样式定义
+ * 基于 docs/HORMONE_COLOR_PALETTE.md 配色方案
+ */
+
+/* =========================================
+   CSS 变量定义 - 荷尔蒙色配色
+   ========================================= */
+:root {
+  /* --- 荷尔蒙色核心配色 --- */
+  
+  /* 主色 - 活力珊瑚粉 */
+  --color-primary: #FF4081;           /* 主色 - 主按钮、重要元素 */
+  --color-primary-dark: #E91E63;      /* 深主色 - 按钮阴影、边框 */
+  --color-primary-light: #FF80AB;     /* 浅主色 - 背景渐变 */
+  
+  /* 次要色 - 电光蓝 */
+  --color-secondary: #00E5FF;          /* 次要色 - 次要按钮、信息提示 */
+  --color-secondary-dark: #00BCD4;    /* 深次要色 - 按钮阴影 */
+  --color-secondary-light: #80D8FF;   /* 浅次要色 - 背景渐变 */
+  
+  /* 强调色 - 霓虹紫 */
+  --color-accent: #9C27B0;            /* 强调色 - 特殊强调、标题 */
+  --color-accent-dark: #7B1FA2;       /* 深强调色 - 阴影 */
+  --color-accent-light: #CE93D8;      /* 浅强调色 - 背景 */
+  
+  /* 装饰色1 - 活力橙 */
+  --color-orange: #FF6D00;             /* 活力橙 - 警告提示、装饰 */
+  --color-orange-dark: #E65100;       /* 深橙色 */
+  --color-orange-light: #FFB74D;      /* 浅橙色 */
+  
+  /* 装饰色2 - 霓虹绿 */
+  --color-green: #00E676;              /* 霓虹绿 - 成功提示、完成状态 */
+  --color-green-dark: #00C853;        /* 深绿色 */
+  --color-green-light: #69F0AE;      /* 浅绿色 */
+  
+  /* 装饰色3 - 电光黄 */
+  --color-yellow: #FFD600;             /* 电光黄 - 高亮提示、特殊标记 */
+  --color-yellow-dark: #FFC400;       /* 深黄色 */
+  --color-yellow-light: #FFEE58;      /* 浅黄色 */
+  
+  /* --- 中性色 --- */
+  
+  /* 背景色 */
+  --color-bg: #1A1A2E;                /* 页面主背景 - 深蓝黑 */
+  --color-bg-secondary: #16213E;      /* 次背景 - 卡片背景 */
+  --color-bg-light: #0F3460;         /* 浅背景 - 输入框背景 */
+  
+  /* 文字色 */
+  --color-text-main: #FFFFFF;         /* 主文字 - 主要内容 */
+  --color-text-light: #E0E0E0;       /* 次文字 - 次要内容 */
+  --color-text-lighter: #B0B0B0;     /* 浅文字 - 占位符 */
+  
+  /* 边框色 */
+  --color-border: #FF4081;            /* 主边框 - 活力珊瑚粉 */
+  --color-border-secondary: #37474F;  /* 次边框 - 深灰蓝 */
+  --color-border-light: #546E7A;     /* 浅边框 - 中灰蓝 */
+  
+  /* --- 语义色 --- */
+  
+  /* 成功色 */
+  --color-success: #00E676;           /* 成功色 - 霓虹绿 */
+  --color-success-dark: #00C853;      /* 深成功色 */
+  --color-success-light: #69F0AE;     /* 浅成功色 */
+  
+  /* 警告色 */
+  --color-warning: #FFD600;           /* 警告色 - 电光黄 */
+  --color-warning-dark: #FFC400;      /* 深警告色 */
+  --color-warning-light: #FFEE58;     /* 浅警告色 */
+  
+  /* 错误色 */
+  --color-error: #FF1744;             /* 错误色 - 电光红 */
+  --color-error-dark: #D50000;       /* 深错误色 */
+  --color-error-light: #FF5252;       /* 浅错误色 */
+  
+  /* 信息色 */
+  --color-info: #00E5FF;               /* 信息色 - 电光蓝 */
+  --color-info-dark: #00BCD4;        /* 深信息色 */
+  --color-info-light: #80D8FF;       /* 浅信息色 */
+  
+  /* --- 阴影与圆角 --- */
+  
+  /* 阴影 */
+  --shadow-soft: 0 6px 0 rgba(255, 64, 129, 0.8);
+  --shadow-3d: 0 4px 0 rgba(233, 30, 99, 0.9);
+  --shadow-card: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 12px 24px rgba(255, 64, 129, 0.5);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 20px rgba(255, 64, 129, 0.6);
+  
+  /* 圆角 */
+  --radius-lg: 24px;                  /* 大圆角 - 卡片、大按钮 */
+  --radius-md: 16px;                  /* 中圆角 - 普通按钮、输入框 */
+  --radius-sm: 12px;                  /* 小圆角 - 标签、小元素 */
+  --radius-xl: 32px;                  /* 超大圆角 - 特殊装饰 */
+  
+  /* 白色（保留） */
+  --color-white: #FFFFFF;
+  
+  /* 过渡动画 */
+  --transition-fast: 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-normal: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* =========================================
+   基础按钮样式
+   ========================================= */
+.hormone-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 3px solid;
+  box-shadow: var(--shadow-3d);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  user-select: none;
+}
+
+.hormone-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.hormone-btn:hover::before {
+  left: 100%;
+}
+
+.hormone-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.hormone-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 rgba(233, 30, 99, 0.9);
+}
+
+.hormone-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.hormone-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* --- 主按钮 - 活力珊瑚粉 --- */
+.hormone-btn-primary {
+  background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
+  color: var(--color-text-main);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 4px 0 var(--color-primary-dark);
+}
+
+.hormone-btn-primary:hover {
+  box-shadow: 0 12px 24px rgba(255, 64, 129, 0.5);
+  filter: brightness(1.1);
+}
+
+.hormone-btn-primary:active {
+  box-shadow: 0 1px 0 var(--color-primary-dark);
+}
+
+/* --- 次要按钮 - 电光蓝 --- */
+.hormone-btn-secondary {
+  background: linear-gradient(180deg, var(--color-secondary-light), var(--color-secondary));
+  color: var(--color-text-main);
+  border-color: var(--color-secondary-dark);
+  box-shadow: 0 4px 0 var(--color-secondary-dark);
+}
+
+.hormone-btn-secondary:hover {
+  box-shadow: 0 12px 24px rgba(0, 229, 255, 0.5);
+  filter: brightness(1.1);
+}
+
+.hormone-btn-secondary:active {
+  box-shadow: 0 1px 0 var(--color-secondary-dark);
+}
+
+/* --- 成功按钮 - 霓虹绿 --- */
+.hormone-btn-success {
+  background: linear-gradient(180deg, var(--color-success-light), var(--color-success));
+  color: var(--color-text-main);
+  border-color: var(--color-success-dark);
+  box-shadow: 0 4px 0 var(--color-success-dark);
+}
+
+.hormone-btn-success:hover {
+  box-shadow: 0 12px 24px rgba(0, 230, 118, 0.5);
+  filter: brightness(1.1);
+}
+
+.hormone-btn-success:active {
+  box-shadow: 0 1px 0 var(--color-success-dark);
+}
+
+/* --- 警告按钮 - 电光黄 --- */
+.hormone-btn-warning {
+  background: linear-gradient(180deg, var(--color-warning-light), var(--color-warning));
+  color: var(--color-text-main);
+  border-color: var(--color-warning-dark);
+  box-shadow: 0 4px 0 var(--color-warning-dark);
+}
+
+.hormone-btn-warning:hover {
+  box-shadow: 0 12px 24px rgba(255, 214, 0, 0.5);
+  filter: brightness(1.1);
+}
+
+.hormone-btn-warning:active {
+  box-shadow: 0 1px 0 var(--color-warning-dark);
+}
+
+/* --- 信息按钮 - 电光蓝 --- */
+.hormone-btn-info {
+  background: linear-gradient(180deg, var(--color-info-light), var(--color-info));
+  color: var(--color-text-main);
+  border-color: var(--color-info-dark);
+  box-shadow: 0 4px 0 var(--color-info-dark);
+}
+
+.hormone-btn-info:hover {
+  box-shadow: 0 12px 24px rgba(0, 229, 255, 0.5);
+  filter: brightness(1.1);
+}
+
+.hormone-btn-info:active {
+  box-shadow: 0 1px 0 var(--color-info-dark);
+}
+
+/* --- 错误按钮 - 电光红 --- */
+.hormone-btn-error {
+  background: linear-gradient(180deg, var(--color-error-light), var(--color-error));
+  color: var(--color-text-main);
+  border-color: var(--color-error-dark);
+  box-shadow: 0 4px 0 var(--color-error-dark);
+}
+
+.hormone-btn-error:hover {
+  box-shadow: 0 12px 24px rgba(255, 23, 68, 0.5);
+  filter: brightness(1.1);
+}
+
+.hormone-btn-error:active {
+  box-shadow: 0 1px 0 var(--color-error-dark);
+}
+
+/* --- 强调按钮 - 霓虹紫 --- */
+.hormone-btn-accent {
+  background: linear-gradient(180deg, var(--color-accent-light), var(--color-accent));
+  color: var(--color-text-main);
+  border-color: var(--color-accent-dark);
+  box-shadow: 0 4px 0 var(--color-accent-dark);
+}
+
+.hormone-btn-accent:hover {
+  box-shadow: 0 12px 24px rgba(156, 39, 176, 0.5);
+  filter: brightness(1.1);
+}
+
+.hormone-btn-accent:active {
+  box-shadow: 0 1px 0 var(--color-accent-dark);
+}
+
+/* =========================================
+   卡片组件
+   ========================================= */
+.hormone-card {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 3px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  color: var(--color-text-main);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.hormone-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.hormone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary-light);
+}
+
+.hormone-card:hover::before {
+  opacity: 1;
+}
+
+/* --- 信息卡片 --- */
+.hormone-card-info {
+  background: linear-gradient(135deg, var(--color-bg-secondary), var(--color-bg-light));
+  border-color: var(--color-info);
+  box-shadow: 0 8px 16px rgba(0, 229, 255, 0.2);
+}
+
+.hormone-card-info:hover {
+  border-color: var(--color-info-light);
+  box-shadow: 0 12px 24px rgba(0, 229, 255, 0.3);
+}
+
+/* --- 统计卡片 --- */
+.hormone-card-stats {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-primary);
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.hormone-card-stats .stat-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.hormone-card-stats .stat-label {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+/* =========================================
+   输入框组件
+   ========================================= */
+.hormone-input {
+  background: var(--color-bg-light);
+  border: 3px solid var(--color-border-secondary);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+  width: 100%;
+  outline: none;
+}
+
+.hormone-input::placeholder {
+  color: var(--color-text-lighter);
+}
+
+.hormone-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 64, 129, 0.2), 0 0 20px rgba(255, 64, 129, 0.3);
+  background: var(--color-bg-secondary);
+}
+
+.hormone-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--color-bg);
+}
+
+.hormone-input:invalid {
+  border-color: var(--color-error);
+}
+
+.hormone-input:invalid:focus {
+  box-shadow: 0 0 0 3px rgba(255, 23, 68, 0.2), 0 0 20px rgba(255, 23, 68, 0.3);
+}
+
+/* =========================================
+   Tab 按钮组件
+   ========================================= */
+.hormone-tab {
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-light);
+  border: 2px solid var(--color-border-secondary);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 3px 0 var(--color-border-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.hormone-tab::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform var(--transition-fast);
+}
+
+.hormone-tab:hover {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-primary);
+  color: var(--color-text-main);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 var(--color-primary);
+}
+
+.hormone-tab.active {
+  background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
+  border-color: var(--color-primary-dark);
+  color: var(--color-text-main);
+  box-shadow: 0 4px 0 var(--color-primary-dark);
+}
+
+.hormone-tab.active::before {
+  transform: scaleX(1);
+}
+
+.hormone-tab:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--color-primary-dark);
+}
+
+/* =========================================
+   徽章/标签组件
+   ========================================= */
+.hormone-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary-dark);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  box-shadow: 0 2px 0 var(--color-primary-dark);
+  transition: all var(--transition-fast);
+}
+
+.hormone-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 var(--color-primary-dark);
+  filter: brightness(1.1);
+}
+
+/* --- 成功徽章 --- */
+.hormone-badge-success {
+  background: var(--color-success);
+  border-color: var(--color-success-dark);
+  box-shadow: 0 2px 0 var(--color-success-dark);
+}
+
+.hormone-badge-success:hover {
+  box-shadow: 0 3px 0 var(--color-success-dark);
+}
+
+/* --- 警告徽章 --- */
+.hormone-badge-warning {
+  background: var(--color-warning);
+  border-color: var(--color-warning-dark);
+  box-shadow: 0 2px 0 var(--color-warning-dark);
+  color: var(--color-bg);
+}
+
+.hormone-badge-warning:hover {
+  box-shadow: 0 3px 0 var(--color-warning-dark);
+}
+
+/* --- 错误徽章 --- */
+.hormone-badge-error {
+  background: var(--color-error);
+  border-color: var(--color-error-dark);
+  box-shadow: 0 2px 0 var(--color-error-dark);
+}
+
+.hormone-badge-error:hover {
+  box-shadow: 0 3px 0 var(--color-error-dark);
+}
+
+/* --- 信息徽章 --- */
+.hormone-badge-info {
+  background: var(--color-info);
+  border-color: var(--color-info-dark);
+  box-shadow: 0 2px 0 var(--color-info-dark);
+}
+
+.hormone-badge-info:hover {
+  box-shadow: 0 3px 0 var(--color-info-dark);
+}
+
+/* =========================================
+   列表项组件
+   ========================================= */
+.hormone-list-item {
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border-secondary);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 3px 0 var(--color-border-secondary);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hormone-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--color-primary);
+  transform: scaleY(0);
+  transition: transform var(--transition-fast);
+}
+
+.hormone-list-item:hover {
+  background: var(--color-bg-light);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 var(--color-primary);
+}
+
+.hormone-list-item:hover::before {
+  transform: scaleY(1);
+}
+
+.hormone-list-item:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 var(--color-primary);
+}
+
+.hormone-list-item.selected {
+  background: linear-gradient(90deg, rgba(255, 64, 129, 0.2), var(--color-bg-secondary));
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 0 var(--color-primary);
+}
+
+.hormone-list-item.selected::before {
+  transform: scaleY(1);
+}
+
+/* =========================================
+   弹窗/模态框组件
+   ========================================= */
+.hormone-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn var(--transition-normal);
+}
+
+.hormone-modal {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 3px solid var(--color-border);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  color: var(--color-text-main);
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp var(--transition-normal);
+}
+
+.hormone-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-border-secondary);
+}
+
+.hormone-modal-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.hormone-modal-close {
+  background: transparent;
+  border: 2px solid var(--color-border-secondary);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-light);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 1.2rem;
+}
+
+.hormone-modal-close:hover {
+  border-color: var(--color-error);
+  color: var(--color-error);
+  transform: rotate(90deg);
+}
+
+.hormone-modal-body {
+  margin-bottom: 1.5rem;
+}
+
+.hormone-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-border-secondary);
+}
+
+/* =========================================
+   进度条组件
+   ========================================= */
+.hormone-progress {
+  width: 100%;
+  height: 1rem;
+  background: var(--color-bg-light);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-border-secondary);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-inset);
+}
+
+.hormone-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary-light), var(--color-primary));
+  border-radius: var(--radius-sm);
+  transition: width var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.hormone-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* --- 成功进度条 --- */
+.hormone-progress-success .hormone-progress-bar {
+  background: linear-gradient(90deg, var(--color-success-light), var(--color-success));
+  box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+}
+
+/* --- 警告进度条 --- */
+.hormone-progress-warning .hormone-progress-bar {
+  background: linear-gradient(90deg, var(--color-warning-light), var(--color-warning));
+  box-shadow: 0 0 10px rgba(255, 214, 0, 0.5);
+}
+
+/* --- 错误进度条 --- */
+.hormone-progress-error .hormone-progress-bar {
+  background: linear-gradient(90deg, var(--color-error-light), var(--color-error));
+  box-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+}
+
+/* =========================================
+   开关组件
+   ========================================= */
+.hormone-switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+}
+
+.hormone-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hormone-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-bg-light);
+  border: 3px solid var(--color-border-secondary);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-inset);
+}
+
+.hormone-switch-slider::before {
+  position: absolute;
+  content: '';
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: var(--color-text-main);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hormone-switch input:checked + .hormone-switch-slider {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.5);
+}
+
+.hormone-switch input:checked + .hormone-switch-slider::before {
+  transform: translateX(1.5rem);
+  background-color: var(--color-text-main);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hormone-switch input:disabled + .hormone-switch-slider {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hormone-switch:hover input:not(:disabled) + .hormone-switch-slider {
+  border-color: var(--color-primary);
+}
+
+.hormone-switch:hover input:checked:not(:disabled) + .hormone-switch-slider {
+  box-shadow: 0 0 20px rgba(255, 64, 129, 0.7);
+}
+
+/* =========================================
+   网格组件
+   ========================================= */
+.hormone-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.hormone-grid-item {
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border-secondary);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  transition: all var(--transition-fast);
+  box-shadow: 0 3px 0 var(--color-border-secondary);
+}
+
+.hormone-grid-item:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 var(--color-primary);
+}
+
+.hormone-grid-item:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 var(--color-primary);
+}
+
+/* =========================================
+   图标组件
+   ========================================= */
+.hormone-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-light);
+  border: 2px solid var(--color-border-secondary);
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+  font-size: 1.25rem;
+}
+
+.hormone-icon:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary-dark);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 0 var(--color-primary-dark);
+}
+
+.hormone-icon-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 2px 0 var(--color-primary-dark);
+}
+
+.hormone-icon-success {
+  background: var(--color-success);
+  border-color: var(--color-success-dark);
+  box-shadow: 0 2px 0 var(--color-success-dark);
+}
+
+.hormone-icon-warning {
+  background: var(--color-warning);
+  border-color: var(--color-warning-dark);
+  box-shadow: 0 2px 0 var(--color-warning-dark);
+}
+
+.hormone-icon-error {
+  background: var(--color-error);
+  border-color: var(--color-error-dark);
+  box-shadow: 0 2px 0 var(--color-error-dark);
+}
+
+.hormone-icon-info {
+  background: var(--color-info);
+  border-color: var(--color-info-dark);
+  box-shadow: 0 2px 0 var(--color-info-dark);
+}
+
+/* =========================================
+   动画定义
+   ========================================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* =========================================
+   工具类
+   ========================================= */
+.hormone-animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.hormone-animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.hormone-animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.hormone-animate-bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* =========================================
+   响应式适配
+   ========================================= */
+@media (max-width: 768px) {
+  .hormone-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .hormone-card {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+  
+  .hormone-modal {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+  
+  .hormone-tab {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .hormone-input {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hormone-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .hormone-card {
+    padding: 0.875rem;
+  }
+  
+  .hormone-modal {
+    padding: 1rem;
+  }
+  
+  .hormone-modal-title {
+    font-size: 1.25rem;
+  }
+  
+  .hormone-badge {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================================
+   标题样式
+   ========================================= */
+.hormone-title {
+  font-weight: 900;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.hormone-title-gradient {
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =========================================
+   分割线
+   ========================================= */
+.hormone-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  border: none;
+  margin: 1.5rem 0;
+}
+
+/* =========================================
+   加载状态
+   ========================================= */
+.hormone-loading {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid var(--color-border-secondary);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   工具提示
+   ========================================= */
+.hormone-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.hormone-tooltip-text {
+  visibility: hidden;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-main);
+  text-align: center;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  font-size: 0.85rem;
+}
+
+.hormone-tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-border) transparent transparent transparent;
+}
+
+.hormone-tooltip:hover .hormone-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

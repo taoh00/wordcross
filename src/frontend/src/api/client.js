@@ -9,10 +9,44 @@ import { API_BASE, ENDPOINTS, getFullUrl, buildUrl } from './endpoints.js'
 const apiClient = axios.create({
   baseURL: API_BASE,
   withCredentials: true,
+  timeout: 15000, // 15秒超时，防止请求无限等待
   headers: {
     'Content-Type': 'application/json',
   },
 })
+
+// 添加响应拦截器处理超时和网络错误
+apiClient.interceptors.response.use(
+  response => response,
+  error => {
+    if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+      console.error('请求超时:', error.config?.url)
+      error.message = '请求超时，请检查网络连接'
+    } else if (!error.response) {
+      console.error('网络错误:', error.message)
+      error.message = '网络连接失败，请稍后重试'
+    }
+    return Promise.reject(error)
+  }
+)
+
+// 带超时的 fetch 封装（供非 axios 请求使用）
+async function fetchWithTimeout(url, options = {}, timeout = 10000) {
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), timeout)
+  
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal })
+    clearTimeout(timeoutId)
+    return response
+  } catch (error) {
+    clearTimeout(timeoutId)
+    if (error.name === 'AbortError') {
+      throw new Error('请求超时')
+    }
+    throw error
+  }
+}
 
 // ============ 用户模块 ============
 
@@ -59,44 +93,64 @@ export const userApi = {
 export const energyApi = {
   /** 获取体力 */
   async get() {
-    const response = await fetch(getFullUrl(ENDPOINTS.USER_ENERGY), {
-      credentials: 'include',
-    })
-    return response.json()
+    try {
+      const response = await fetchWithTimeout(getFullUrl(ENDPOINTS.USER_ENERGY), {
+        credentials: 'include',
+      }, 10000)
+      return response.json()
+    } catch (error) {
+      console.error('获取体力失败:', error.message)
+      return null
+    }
   },
 
   /** 更新体力 */
   async update(energy) {
-    const response = await fetch(getFullUrl(ENDPOINTS.USER_ENERGY), {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({ energy }),
-    })
-    return response.ok
+    try {
+      const response = await fetchWithTimeout(getFullUrl(ENDPOINTS.USER_ENERGY), {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ energy }),
+      }, 10000)
+      return response.ok
+    } catch (error) {
+      console.error('更新体力失败:', error.message)
+      return false
+    }
   },
 
   /** 消耗体力 */
   async consume(mode) {
-    const response = await fetch(`${getFullUrl(ENDPOINTS.ENERGY_CONSUME)}?mode=${mode}`, {
-      method: 'POST',
-      credentials: 'include',
-    })
-    return response.ok
+    try {
+      const response = await fetchWithTimeout(`${getFullUrl(ENDPOINTS.ENERGY_CONSUME)}?mode=${mode}`, {
+        method: 'POST',
+        credentials: 'include',
+      }, 10000)
+      return response.ok
+    } catch (error) {
+      console.error('消耗体力失败:', error.message)
+      return false
+    }
   },
 
   /** 领取免费体力 */
   async claimFree(amount = 30) {
-    const response = await fetch(getFullUrl(ENDPOINTS.CLAIM_FREE_ENERGY), {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({ amount }),
-    })
-    if (response.ok) {
-      return response.json()
+    try {
+      const response = await fetchWithTimeout(getFullUrl(ENDPOINTS.CLAIM_FREE_ENERGY), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ amount }),
+      }, 10000)
+      if (response.ok) {
+        return response.json()
+      }
+      return null
+    } catch (error) {
+      console.error('领取体力失败:', error.message)
+      return null
     }
-    return null
   },
 }
 
@@ -105,27 +159,37 @@ export const energyApi = {
 export const propsApi = {
   /** 获取道具 */
   async get() {
-    const response = await fetch(getFullUrl(ENDPOINTS.USER_PROPS), {
-      credentials: 'include',
-    })
-    if (response.ok) {
-      return response.json()
+    try {
+      const response = await fetchWithTimeout(getFullUrl(ENDPOINTS.USER_PROPS), {
+        credentials: 'include',
+      }, 10000)
+      if (response.ok) {
+        return response.json()
+      }
+      return null
+    } catch (error) {
+      console.error('获取道具失败:', error.message)
+      return null
     }
-    return null
   },
 
   /** 更新道具 */
   async update(hintLetterCount, showTranslationCount) {
-    const response = await fetch(getFullUrl(ENDPOINTS.USER_PROPS), {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify({
-        hintLetterCount,
-        showTranslationCount,
-      }),
-    })
-    return response.ok
+    try {
+      const response = await fetchWithTimeout(getFullUrl(ENDPOINTS.USER_PROPS), {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          hintLetterCount,
+          showTranslationCount,
+        }),
+      }, 10000)
+      return response.ok
+    } catch (error) {
+      console.error('更新道具失败:', error.message)
+      return false
+    }
   },
 }
 
@@ -224,31 +288,46 @@ export const leaderboardApi = {
 export const staticApi = {
   /** 获取关卡汇总 */
   async getLevelsSummary() {
-    const response = await fetch(buildUrl.levelsSummary)
-    if (response.ok) {
-      return response.json()
+    try {
+      const response = await fetchWithTimeout(buildUrl.levelsSummary, {}, 10000)
+      if (response.ok) {
+        return response.json()
+      }
+      return null
+    } catch (error) {
+      console.error('加载关卡汇总失败:', error.message)
+      return null
     }
-    return null
   },
 
   /** 获取单关数据 */
   async getLevelData(group, level) {
     const url = buildUrl.levelData(group, level)
-    const response = await fetch(url)
-    if (response.ok) {
-      return response.json()
+    try {
+      const response = await fetchWithTimeout(url, {}, 10000)
+      if (response.ok) {
+        return response.json()
+      }
+      return null
+    } catch (error) {
+      console.error(`加载关卡 ${group}/${level} 失败:`, error.message)
+      return null
     }
-    return null
   },
 
   /** 获取词库元数据 */
   async getLevelMeta(group) {
     const url = buildUrl.levelMeta(group)
-    const response = await fetch(url)
-    if (response.ok) {
-      return response.json()
+    try {
+      const response = await fetchWithTimeout(url, {}, 10000)
+      if (response.ok) {
+        return response.json()
+      }
+      return null
+    } catch (error) {
+      console.error(`加载词库元数据 ${group} 失败:`, error.message)
+      return null
     }
-    return null
   },
 }
 

@@ -108,6 +108,15 @@
           "level": 38
         },
         "timestamp": "2026-01-25 22:45:52"
+      },
+      {
+        "user_id": "test123",
+        "nickname": "测试",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 10,
+        "extra": {},
+        "timestamp": "2026-01-26 13:56:44"
       }
     ],
     "grade3_2": [],
@@ -310,6 +319,15 @@
           "level": 2
         },
         "timestamp": "2026-01-26 00:32:15"
+      },
+      {
+        "user_id": "test123",
+        "nickname": "测试",
+        "avatar": "😊",
+        "group": "grade3_1",
+        "value": 10,
+        "extra": {},
+        "timestamp": "2026-01-26 13:56:44"
       }
     ]
   },
@@ -654,7 +672,20 @@
     "ket": [],
     "pet": [],
     "cet4": [],
-    "cet6": [],
+    "cet6": [
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 2
+        },
+        "timestamp": "2026-01-27 01:39:18"
+      }
+    ],
     "postgrad": [],
     "ielts": [],
     "toefl": [],
@@ -671,6 +702,18 @@
           "level": 2
         },
         "timestamp": "2026-01-26 01:00:37"
+      },
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 2
+        },
+        "timestamp": "2026-01-27 01:39:18"
       }
     ]
   },
@@ -701,7 +744,20 @@
     "ket": [],
     "pet": [],
     "cet4": [],
-    "cet6": [],
+    "cet6": [
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 2
+        },
+        "timestamp": "2026-01-27 01:39:18"
+      }
+    ],
     "postgrad": [],
     "ielts": [],
     "toefl": [],
@@ -718,6 +774,18 @@
           "level": 2
         },
         "timestamp": "2026-01-26 01:00:37"
+      },
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 2
+        },
+        "timestamp": "2026-01-27 01:39:18"
       }
     ]
   },
@@ -730,12 +798,51 @@
     "grade5_2": [],
     "grade6_1": [],
     "grade6_2": [],
-    "junior": [],
+    "junior": [
+      {
+        "user_id": "5f5312f6-2b66-4c48-a52b-f901d54ce2b7",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "junior",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:57:33"
+      }
+    ],
     "senior": [],
-    "ket": [],
+    "ket": [
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "ket",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:48:33"
+      }
+    ],
     "pet": [],
     "cet4": [],
-    "cet6": [],
+    "cet6": [
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:48:38"
+      }
+    ],
     "postgrad": [
       {
         "user_id": "3f1c27a6-764b-48ed-91c9-23c82c2f544a",
@@ -765,6 +872,30 @@
           "level": 1
         },
         "timestamp": "2026-01-25 23:35:52"
+      },
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "ket",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:48:33"
+      },
+      {
+        "user_id": "5f5312f6-2b66-4c48-a52b-f901d54ce2b7",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "junior",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:57:33"
       }
     ]
   },
@@ -777,12 +908,51 @@
     "grade5_2": [],
     "grade6_1": [],
     "grade6_2": [],
-    "junior": [],
+    "junior": [
+      {
+        "user_id": "5f5312f6-2b66-4c48-a52b-f901d54ce2b7",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "junior",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:57:34"
+      }
+    ],
     "senior": [],
-    "ket": [],
+    "ket": [
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "ket",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:48:33"
+      }
+    ],
     "pet": [],
     "cet4": [],
-    "cet6": [],
+    "cet6": [
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "cet6",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:48:39"
+      }
+    ],
     "postgrad": [
       {
         "user_id": "3f1c27a6-764b-48ed-91c9-23c82c2f544a",
@@ -812,6 +982,30 @@
           "level": 1
         },
         "timestamp": "2026-01-25 23:35:53"
+      },
+      {
+        "user_id": "8c4e2567-bce3-4792-820f-7b441b2a314f",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "ket",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:48:33"
+      },
+      {
+        "user_id": "5f5312f6-2b66-4c48-a52b-f901d54ce2b7",
+        "nickname": "游客",
+        "avatar": "😊",
+        "group": "junior",
+        "value": 0,
+        "extra": {
+          "time": 0,
+          "level": 1
+        },
+        "timestamp": "2026-01-27 01:57:34"
       }
     ]
   },

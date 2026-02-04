@@ -4,10 +4,10 @@
   "category": "高中",
   "is_primary": false,
   "level_count": 108,
-  "word_count": 205,
+  "word_count": 202,
   "vocab_size": 236,
-  "coverage": 86.9,
+  "coverage": 85.6,
   "success_count": 108,
   "fail_count": 0,
-  "total_levels": 108
+  "error_levels_dir": null
 }

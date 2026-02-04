@@ -1,4 +1,0 @@
-<!--components/modal/modal.wxml-->
-<view class="modal-wrapper">
-  <slot></slot>
-</view>

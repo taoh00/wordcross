@@ -30,10 +30,11 @@
           <div :class="['timer-mini', { warning: isTimeWarning }]">
             ⏱️{{ gameStore.formattedTimer }}
           </div>
+          <!-- 累计总分（计时/无限模式） -->
+          <div v-if="showSessionScore" class="session-score-badge">🏆{{ sessionScore }}</div>
+          <!-- 当关分数 -->
           <div class="score-mini">🌟{{ gameStore.score }}</div>
           <div class="progress-mini">
-            <!-- 累计分数显示在进度条左侧（计时/PK/无限模式） -->
-            <span v-if="showSessionScore && sessionScore > 0" class="session-score-mini">+{{ sessionScore }}</span>
             <div class="progress-bar-mini">
               <div 
                 class="progress-fill-mini"
@@ -199,8 +200,8 @@
           <span v-for="i in 12" :key="i" class="confetti" :style="{ '--delay': i * 0.1 + 's', '--x': (Math.random() * 200 - 100) + 'px' }">🎊</span>
         </div>
         
-        <!-- 计时/PK/无限模式结束 - 显示时间到图标 -->
-        <template v-if="timedModeEnded && (gameStore.currentMode === 'timed' || gameStore.currentMode === 'pk' || gameStore.currentMode === 'endless')">
+        <!-- 计时/无限模式结束 - 显示时间到图标 -->
+        <template v-if="timedModeEnded && (gameStore.currentMode === 'timed' || gameStore.currentMode === 'endless')">
           <div class="trophy-area">
             <div class="trophy-emoji">{{ gameStore.currentMode === 'endless' ? '♾️' : '⏰' }}</div>
             <div class="timed-result">
@@ -424,7 +425,6 @@ const userEnergy = ref(100)
 const ENERGY_COST = {
   campaign: 10,   // 闯关模式
   timed: 30,      // 计时模式
-  pk: 30,         // PK模式
   endless: 30,    // 无限模式
 }
 
@@ -594,11 +594,11 @@ async function continueGameInit(mode) {
   // 获取难度设置
   const difficulty = localStorage.getItem('game_difficulty') || 'medium'
   
-  // 计时/PK模式读取用户选择的时间
-  let timerSeconds = 180  // 默认3分钟
-  if (mode === 'timed' || mode === 'pk') {
+  // 计时模式读取用户选择的时间
+  let timerSeconds = 60  // 默认1分钟
+  if (mode === 'timed') {
     const savedDuration = localStorage.getItem('timed_duration')
-    timerSeconds = savedDuration ? parseInt(savedDuration) : 180
+    timerSeconds = savedDuration ? parseInt(savedDuration) : 60
   } else if (mode === 'endless') {
     timerSeconds = ENDLESS_TIME_PER_LEVEL
   }
@@ -611,7 +611,7 @@ async function continueGameInit(mode) {
   gameStore.checkAllWords()
   
   // 启动计时器
-  if (mode === 'timed' || mode === 'pk') {
+  if (mode === 'timed') {
     gameStore.startTimer(timerSeconds)
   } else if (mode === 'endless') {
     gameStore.startTimer(ENDLESS_TIME_PER_LEVEL)
@@ -644,30 +644,28 @@ const hintActiveWordId = ref(null)  // 提示生效的单词ID
 const speakRepeatCount = ref(0)  // 发音重复计数
 let speakRepeatTimeout = null  // 发音重复的定时器引用
 
-// 计时/PK/无限模式的累计状态
+// 计时/无限模式的累计状态
 const sessionScore = ref(0)  // 本局累计积分
 const sessionLevelCount = ref(0)  // 本局过关数
 const sessionWordsCount = ref(0)  // 本局完成单词数
 const sessionStarted = ref(false)  // 本局是否已开始
 
 // 无限模式每关时间限制（秒）
-const ENDLESS_TIME_PER_LEVEL = 180  // 每关3分钟
+const ENDLESS_TIME_PER_LEVEL = 60  // 每关1分钟
 
 // 计算属性
 const modeTitle = computed(() => {
   const titles = {
     campaign: '🏰 闯关',
     endless: '♾️ 无限',
-    timed: '⏱️ 计时',
-    pk: '⚔️ PK'
+    timed: '⏱️ 计时'
   }
   return titles[gameStore.currentMode] || '游戏'
 })
 
-// 是否显示累计分数（计时/PK/无限模式）
+// 是否显示累计分数（计时/无限模式）
 const showSessionScore = computed(() => {
   return gameStore.currentMode === 'timed' || 
-         gameStore.currentMode === 'pk' || 
          gameStore.currentMode === 'endless'
 })
 
@@ -675,8 +673,7 @@ const modeIcon = computed(() => {
   const icons = {
     campaign: '🏰',
     endless: '♾️',
-    timed: '⏱️',
-    pk: '⚔️'
+    timed: '⏱️'
   }
   return icons[gameStore.currentMode] || '🎮'
 })
@@ -685,14 +682,13 @@ const modeName = computed(() => {
   const names = {
     campaign: '闯关',
     endless: '无限',
-    timed: '计时',
-    pk: 'PK'
+    timed: '计时'
   }
   return names[gameStore.currentMode] || '游戏'
 })
 
 const isTimeWarning = computed(() => {
-  if (gameStore.currentMode === 'timed' || gameStore.currentMode === 'pk') {
+  if (gameStore.currentMode === 'timed') {
     return gameStore.timer < 60
   }
   return false
@@ -721,9 +717,9 @@ const sortedWords = computed(() => {
 // 计算当前星级（根据用时）
 const currentStars = computed(() => {
   const seconds = gameStore.timer
-  if (seconds <= 120) return 3  // 2分钟内三星
-  if (seconds <= 180) return 2  // 3分钟内两星
-  return 1  // 5分钟以上一星（3分钟以上也算1星）
+  if (seconds <= 30) return 3  // 30秒内三星
+  if (seconds <= 45) return 2  // 45秒内两星
+  return 1  // 超过45秒一星
 })
 
 // 最大关卡数（根据词库动态获取）
@@ -1408,7 +1404,7 @@ function replayLevel() {
   }
 }
 
-// 再玩一次（计时/PK/无限模式 - 需要扣除体力）
+// 再玩一次（计时/无限模式 - 需要扣除体力）
 async function playAgain() {
   const mode = gameStore.currentMode
   
@@ -1436,13 +1432,13 @@ async function playAgain() {
   const difficulty = localStorage.getItem('game_difficulty') || 'medium'
   
   // 根据模式设置计时
-  let timerSeconds = 180  // 默认3分钟
+  let timerSeconds = 60  // 默认1分钟
   if (mode === 'endless') {
     timerSeconds = ENDLESS_TIME_PER_LEVEL
-  } else if (mode === 'pk' || mode === 'timed') {
+  } else if (mode === 'timed') {
     // 读取用户选择的时间（再来一次使用相同时间）
     const savedDuration = localStorage.getItem('timed_duration')
-    timerSeconds = savedDuration ? parseInt(savedDuration) : 180
+    timerSeconds = savedDuration ? parseInt(savedDuration) : 60
   }
   
   // 加载新关卡
@@ -1452,7 +1448,7 @@ async function playAgain() {
   gameStore.checkAllWords()
   
   // 启动计时器
-  if (mode === 'timed' || mode === 'pk') {
+  if (mode === 'timed') {
     gameStore.startTimer(timerSeconds)  // 倒计时
   } else if (mode === 'endless') {
     gameStore.startTimer(ENDLESS_TIME_PER_LEVEL)  // 倒计时
@@ -1467,12 +1463,12 @@ async function playAgain() {
 // 计时模式时间到结束标记
 const timedModeEnded = ref(false)
 
-// 监听计时器 - 计时/PK/无限模式倒计时结束自动结束游戏
+// 监听计时器 - 计时/无限模式倒计时结束自动结束游戏
 watch(() => gameStore.timer, async (newTimer) => {
   const mode = gameStore.currentMode
   
-  // 计时/PK模式检查总时间结束
-  if (mode === 'timed' || mode === 'pk') {
+  // 计时模式检查总时间结束
+  if (mode === 'timed') {
     if (newTimer <= 0 && !timedModeEnded.value && !showCompleteModal.value) {
       timedModeEnded.value = true
       await handleTimedModeEnd()
@@ -1495,7 +1491,7 @@ async function handleEndlessModeTimeUp() {
   
   // 包含当前未完成的单词数也计入统计
   const wordsCompleted = gameStore.completedWords.length
-  const scoreEarned = wordsCompleted * 10
+  const scoreEarned = gameStore.score  // 按字母数计算的分数
   sessionScore.value += scoreEarned
   sessionWordsCount.value += wordsCompleted
   
@@ -1519,14 +1515,14 @@ async function handleEndlessModeTimeUp() {
   }, 300)
 }
 
-// 处理计时/PK模式时间到
+// 处理计时模式时间到
 async function handleTimedModeEnd() {
   gameStore.stopTimer()
   playSound('levelComplete')
   
   // 包含当前未完成的单词数也计入统计
   const wordsCompleted = gameStore.completedWords.length
-  const scoreEarned = wordsCompleted * 10
+  const scoreEarned = gameStore.score  // 按字母数计算的分数
   sessionScore.value += scoreEarned
   sessionWordsCount.value += wordsCompleted
   
@@ -1538,15 +1534,12 @@ async function handleTimedModeEnd() {
   if (mode === 'timed') {
     await submitLeaderboardScore('timed_words', sessionWordsCount.value)
     await submitLeaderboardScore('timed_score', sessionScore.value)
-  } else if (mode === 'pk') {
-    await submitLeaderboardScore('pk_words', sessionWordsCount.value)
-    await submitLeaderboardScore('pk_score', sessionScore.value)
   }
   
   // 更新本地统计
   updateLocalStats(wordsCompleted, scoreEarned)
   
-  // 从后端获取奖励（计时/PK模式结束后也显示奖励）
+  // 从后端获取奖励（计时模式结束后也显示奖励）
   earnedRewards.value = await fetchRewardsFromBackend()
   showRewardChoice.value = true
   rewardClaimed.value = false
@@ -1559,9 +1552,9 @@ async function handleTimedModeEnd() {
 // 监听关卡完成
 watch(() => gameStore.isLevelComplete, async (complete) => {
   if (complete) {
-    // 计算本关分数（每个单词10分）
+    // 计算本关分数（按字母数计算）
     const wordsCompleted = gameStore.completedWords.length
-    const scoreEarned = wordsCompleted * 10
+    const scoreEarned = gameStore.score  // 按字母数计算的分数
     
     // 埋点：记录关卡完成
     const elapsedSeconds = gameStore.getElapsedSeconds ? gameStore.getElapsedSeconds() : null
@@ -1577,8 +1570,8 @@ watch(() => gameStore.isLevelComplete, async (complete) => {
     // 根据模式处理不同逻辑
     const mode = gameStore.currentMode
     
-    if (mode === 'timed' || mode === 'pk') {
-      // 计时/PK模式：不停止计时，累加分数，自动续下一关
+    if (mode === 'timed') {
+      // 计时模式：不停止计时，累加分数，自动续下一关
       playSound('levelComplete')
       sessionScore.value += scoreEarned
       sessionLevelCount.value++
@@ -1636,7 +1629,7 @@ watch(() => gameStore.isLevelComplete, async (complete) => {
   }
 })
 
-// 自动加载下一关（用于计时/PK/无限模式的连续游戏）
+// 自动加载下一关（用于计时/无限模式的连续游戏）
 async function autoNextLevel() {
   // 重置游戏状态
   resetLevelProps()
@@ -1649,7 +1642,7 @@ async function autoNextLevel() {
     gameStore.currentMode, 
     0,  // 随机关卡
     gameStore.currentGroup, 
-    gameStore.currentMode === 'endless' ? ENDLESS_TIME_PER_LEVEL : 180, 
+    gameStore.currentMode === 'endless' ? ENDLESS_TIME_PER_LEVEL : 60, 
     difficulty
   )
   
@@ -1704,38 +1697,6 @@ async function submitLeaderboardScore(lbType, value) {
   }
 }
 
-// 提交PK结果
-async function submitPKResult(result) {
-  try {
-    const userId = getUserId()
-    const userInfo = getUserInfo()
-    
-    if (!userId) return
-    
-    // 新API：提交到数据库
-    await gameApi.submitPkResult(
-      gameStore.currentGroup,
-      result,
-      gameStore.completedWords.length,
-      gameStore.timer
-    )
-    
-    // 兼容旧API
-    await leaderboardApi.submit('pk', {
-      user_id: userId,
-      nickname: userInfo.nickname || '游客',
-      avatar: userInfo.avatar || '😊',
-      group: gameStore.currentGroup,
-      result: result  // "win", "lose", "draw"
-    })
-    
-    // 更新本地PK统计
-    updatePKStats(result)
-    console.log(`PK结果提交成功: ${result}`)
-  } catch (error) {
-    console.error('PK结果提交失败:', error)
-  }
-}
 
 // 提交游戏数据到数据库
 async function submitGameData(gameMode, wordsCompleted, scoreEarned) {
@@ -1820,34 +1781,6 @@ function updateLocalStats(wordsCompleted, scoreEarned) {
   }
 }
 
-// 更新PK统计
-function updatePKStats(result) {
-  try {
-    const key = 'pk_stats'
-    let stats = { wins: 0, draws: 0, losses: 0, games: 0 }
-    
-    const saved = localStorage.getItem(key)
-    if (saved) {
-      stats = JSON.parse(saved)
-    }
-    
-    stats.games = (stats.games || 0) + 1
-    if (result === 'win') {
-      stats.wins = (stats.wins || 0) + 1
-    } else if (result === 'draw') {
-      stats.draws = (stats.draws || 0) + 1
-    } else {
-      stats.losses = (stats.losses || 0) + 1
-    }
-    
-    localStorage.setItem(key, JSON.stringify(stats))
-  } catch (e) {
-    console.error('保存PK统计失败:', e)
-  }
-}
-
-// 暴露PK结果提交方法给外部使用
-defineExpose({ submitPKResult })
 
 // 加载词库的关卡总数（从静态数据）
 async function loadMaxLevelCount(group) {
@@ -1891,7 +1824,7 @@ onMounted(async () => {
   // 重置计时模式结束标记
   timedModeEnded.value = false
   
-  // 重置累计状态（计时/PK/无限模式）
+  // 重置累计状态（计时/无限模式）
   sessionScore.value = 0
   sessionLevelCount.value = 0
   sessionWordsCount.value = 0
@@ -1938,15 +1871,15 @@ onMounted(async () => {
     }
   }
   
-  // 获取难度设置（无限/计时/PK模式）
+  // 获取难度设置（无限/计时模式）
   const difficulty = localStorage.getItem('game_difficulty') || 'medium'
   
   // 根据模式设置计时
-  let timerSeconds = 180  // 默认3分钟
-  if (mode === 'pk' || mode === 'timed') {
-    // 读取用户选择的时间（3分/5分/10分）
+  let timerSeconds = 60  // 默认1分钟
+  if (mode === 'timed') {
+    // 读取用户选择的时间（1分/3分/5分）
     const savedDuration = localStorage.getItem('timed_duration')
-    timerSeconds = savedDuration ? parseInt(savedDuration) : 180
+    timerSeconds = savedDuration ? parseInt(savedDuration) : 60
   } else if (mode === 'endless') {
     timerSeconds = ENDLESS_TIME_PER_LEVEL  // 无限模式每关时间
   }
@@ -1959,8 +1892,8 @@ onMounted(async () => {
   gameStore.checkAllWords()
   
   // 启动计时器
-  if (mode === 'timed' || mode === 'pk') {
-    // 计时/PK模式使用倒计时
+  if (mode === 'timed') {
+    // 计时模式使用倒计时
     gameStore.startTimer(timerSeconds)
   } else if (mode === 'endless') {
     // 无限模式每关倒计时
@@ -2025,7 +1958,7 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  gap: clamp(6px, 1vw, 12px);
+  gap: clamp(8px, 1.5vw, 14px); /* 增加间距 */
   overflow: hidden;
   min-height: 0; /* 关键：让flex子元素可以缩小 */
   width: 100%;
@@ -2033,17 +1966,16 @@ onUnmounted(() => {
   box-sizing: border-box;
 }
 
-/* 键盘区固定在底部 - 透明风格，全屏宽 */
+/* 键盘区固定在底部 - 马卡龙风格，全屏宽 */
 .keyboard-section {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  background: rgba(255, 255, 255, 0.70);
-  backdrop-filter: blur(15px);
+  background: #FFFFFF;
   padding: clamp(6px, 1vw, 12px) clamp(4px, 0.8vw, 10px);
   padding-bottom: max(clamp(6px, 1vw, 12px), env(safe-area-inset-bottom));
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
+  border-top: 3px solid #FFB6C1;
+  box-shadow: 0 -4px 0 #FFF0F5;
   box-sizing: border-box;
 }
 
@@ -2112,7 +2044,7 @@ onUnmounted(() => {
   border-radius: 50%;
   font-size: clamp(0.75rem, 1.8vw, 0.95rem);
   font-weight: 800;
-  color: white;
+  color: #5D5D5D;
 }
 
 .keyboard-prop-btn.active .prop-num {
@@ -2134,14 +2066,13 @@ onUnmounted(() => {
   display: contents;
 }
 
-/* 紧凑的顶部卡片 - 透明卡通风格，全屏宽 */
+/* 紧凑的顶部卡片 - 马卡龙卡通风格，全屏宽 */
 .game-card-compact {
   padding: clamp(6px, 1vw, 12px) clamp(10px, 2vw, 20px);
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
+  background: #FFFFFF;
   border-radius: clamp(12px, 2vw, 20px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 0 #FFB6C1;
+  border: 2px solid #FFB6C1;
   width: 100%;
   box-sizing: border-box;
 }
@@ -2152,7 +2083,7 @@ onUnmounted(() => {
   align-items: center;
   gap: clamp(6px, 1.2vw, 12px);
   padding-bottom: 4px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 2px dashed #FFF0F5;
   margin-bottom: 4px;
   justify-content: flex-start;
 }
@@ -2246,11 +2177,11 @@ onUnmounted(() => {
   gap: clamp(3px, 0.5vw, 6px);
   font-size: var(--font-sm, clamp(0.8rem, 1.6vw, 0.95rem));
   font-weight: 800;
-  color: #5b21b6;
-  background: linear-gradient(180deg, #ede9fe, #ddd6fe);
+  color: #FF69B4;
+  background: linear-gradient(180deg, #FFF0F5, #FFB6C1);
   padding: clamp(4px, 0.6vw, 7px) clamp(8px, 1.2vw, 12px);
   border-radius: clamp(6px, 1vw, 10px);
-  border: 1px solid #c4b5fd;
+  border: 2px solid #FFB6C1;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -2289,7 +2220,23 @@ onUnmounted(() => {
   animation: pulse 0.5s ease-in-out infinite;
 }
 
-/* 分数迷你版 */
+/* 累计总分徽章（计时/无限模式） */
+.session-score-badge {
+  font-size: var(--font-sm, clamp(0.85rem, 1.8vw, 1rem));
+  font-weight: 800;
+  color: #059669;
+  background: linear-gradient(180deg, #d1fae5, #a7f3d0);
+  padding: clamp(4px, 0.6vw, 7px) clamp(8px, 1.2vw, 12px);
+  border-radius: clamp(6px, 1vw, 10px);
+  border: 1px solid #34d399;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(3px, 0.5vw, 5px);
+}
+
+/* 当关分数迷你版 */
 .score-mini {
   font-size: var(--font-sm, clamp(0.85rem, 1.8vw, 1rem));
   font-weight: 800;
@@ -2305,25 +2252,25 @@ onUnmounted(() => {
   gap: clamp(3px, 0.5vw, 5px);
 }
 
-/* 进度迷你版 - 占满右侧剩余空间但不超过中心 */
+/* 进度迷你版 - 进度条自适应，文字靠右固定 */
 .progress-mini {
   display: flex;
   align-items: center;
-  gap: clamp(6px, 1vw, 10px);
+  gap: clamp(4px, 0.8vw, 8px);
   margin-left: auto;
   flex: 1;
   min-width: 0;
-  /* 最大宽度为父容器的50%，确保不超过屏幕中心 */
-  max-width: 50%;
+  /* 最大宽度为父容器的45%，确保不超过屏幕中心 */
+  max-width: 45%;
 }
 
 .progress-bar-mini {
-  flex: 1;
+  flex: 1 1 auto;
   height: clamp(8px, 1.5vw, 12px);
   background: #e5e7eb;
   border-radius: clamp(4px, 0.8vw, 6px);
   overflow: hidden;
-  min-width: 60px;
+  min-width: 30px;
 }
 
 .progress-fill-mini {
@@ -2334,35 +2281,18 @@ onUnmounted(() => {
 }
 
 .progress-text-mini {
-  font-size: var(--font-md, clamp(0.9rem, 2vw, 1.15rem));
+  font-size: var(--font-md, clamp(0.85rem, 1.8vw, 1.1rem));
   font-weight: 800;
   color: #374151;
   white-space: nowrap;
   flex-shrink: 0;
+  flex-grow: 0;
   background: linear-gradient(180deg, #d1fae5, #a7f3d0);
-  padding: clamp(3px, 0.5vw, 6px) clamp(8px, 1.2vw, 12px);
+  padding: clamp(2px, 0.4vw, 5px) clamp(6px, 1vw, 10px);
   border-radius: clamp(6px, 1vw, 10px);
   border: 1px solid #34d399;
 }
 
-/* 累计分数（计时/PK/无限模式） */
-.session-score-mini {
-  font-size: clamp(0.65rem, 1.3vw, 0.8rem);
-  font-weight: 800;
-  color: #059669;
-  background: linear-gradient(180deg, #d1fae5, #a7f3d0);
-  padding: 2px clamp(4px, 0.8vw, 8px);
-  border-radius: clamp(4px, 0.8vw, 8px);
-  border: 1px solid #34d399;
-  white-space: nowrap;
-  flex-shrink: 0;
-  animation: pulse-score 1s ease-in-out infinite;
-}
-
-@keyframes pulse-score {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
 
 /* 老的back-btn样式保留兼容 */
 .back-btn {
@@ -2380,14 +2310,14 @@ onUnmounted(() => {
 
 .back-btn:hover {
   color: #1f2937;
-  background: rgba(0, 0, 0, 0.05);
+  background: #F5F5F5;
 }
 
 /* 模式标题 - 防止换行 */
 .mode-title {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #7c3aed;
+  color: #FF69B4;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -2397,17 +2327,18 @@ onUnmounted(() => {
   margin-left: 4px;
 }
 
-/* 主游戏卡片 - 透明卡通风格，全屏宽 */
+/* 主游戏卡片 - 马卡龙卡通风格，全屏宽 */
 .game-card-main {
-  padding: clamp(10px, 2vw, 18px);
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(15px);
+  padding: clamp(8px, 1.5vw, 14px) clamp(10px, 2vw, 18px) clamp(10px, 2vw, 18px); /* 上边距减小 */
+  background: #FFFFFF;
   border-radius: clamp(14px, 2.5vw, 24px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 0 #FFB6C1;
   width: 100%;
   max-width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 3px solid #FFB6C1;
   box-sizing: border-box;
+  flex-shrink: 0; /* 防止网格区域被压缩 */
+  min-height: fit-content; /* 确保网格区域有足够高度 */
 }
 
 /* 网格包装容器 - 居中显示 */
@@ -2422,18 +2353,17 @@ onUnmounted(() => {
 .words-section {
   width: 100%;
   max-width: 100%;
-  flex: 1;
+  flex: 1 1 auto; /* 允许缩小 */
   min-height: 0; /* 关键：让flex子元素可以缩小 */
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(12px);
+  background: #FFFFFF;
   border-radius: clamp(12px, 2vw, 18px);
   padding: clamp(8px, 1.2vw, 14px) clamp(10px, 1.8vw, 18px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 0 #FFB6C1;
+  border: 2px solid #FFB6C1;
   overflow: hidden;
-  margin-bottom: clamp(4px, 0.8vw, 8px);
+  margin-bottom: 0; /* 移除底部间距，避免与键盘区重叠 */
   box-sizing: border-box;
 }
 
@@ -2446,7 +2376,7 @@ onUnmounted(() => {
   min-height: 0;
   /* 自定义滚动条 */
   scrollbar-width: thin;
-  scrollbar-color: #c4b5fd #f3f4f6;
+  scrollbar-color: #FFB6C1 #f3f4f6;
 }
 
 .words-list::-webkit-scrollbar {
@@ -2459,12 +2389,12 @@ onUnmounted(() => {
 }
 
 .words-list::-webkit-scrollbar-thumb {
-  background: #c4b5fd;
+  background: #FFB6C1;
   border-radius: 3px;
 }
 
 .words-list::-webkit-scrollbar-thumb:hover {
-  background: #a78bfa;
+  background: #FFB6C1;
 }
 
 .word-item {
@@ -2472,32 +2402,32 @@ onUnmounted(() => {
   align-items: center;
   gap: clamp(8px, 1.5vw, 14px);
   padding: clamp(10px, 1.8vw, 16px) clamp(12px, 2vw, 18px);
-  background: rgba(248, 250, 252, 0.7);
+  background: #FFFFFF;
   border-radius: clamp(12px, 2vw, 16px);
   font-size: var(--word-font, 0.95rem);
   cursor: pointer;
   transition: all 0.15s ease;
-  border: 1px solid rgba(203, 213, 225, 0.6);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  border: 2px solid #FFF0F5;
+  box-shadow: 0 3px 0 #DDD;
 }
 
 .word-item:hover:not(.completed) {
-  background: rgba(237, 233, 254, 0.75);
-  border-color: rgba(167, 139, 250, 0.7);
+  background: #FFF0F5;
+  border-color: #FFB6C1;
   transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 3px 0 #FF69B4;
 }
 
 .word-item.selected {
-  background: rgba(219, 234, 254, 0.8);
-  border-color: rgba(96, 165, 250, 0.7);
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+  background: #E0FBE0;
+  border-color: #98FB98;
+  box-shadow: 0 4px 0 #3CB371;
 }
 
 .word-item.completed {
-  background: rgba(209, 250, 229, 0.75);
-  border-color: rgba(52, 211, 153, 0.6);
-  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.1);
+  background: #E0FBE0;
+  border-color: #3CB371;
+  box-shadow: 0 3px 0 #2E8B57;
   cursor: default;
 }
 
@@ -2507,13 +2437,13 @@ onUnmounted(() => {
   justify-content: center;
   width: clamp(30px, 6vw, 42px);
   height: clamp(30px, 6vw, 42px);
-  background: linear-gradient(180deg, #e0e7ff, #c7d2fe);
+  background: linear-gradient(180deg, #F0F8FF, #87CEEB);
   border-radius: 50%;
   font-size: var(--font-md, clamp(0.9rem, 2vw, 1.2rem));
   font-weight: 800;
-  color: #4338ca;
+  color: #4682B4;
   flex-shrink: 0;
-  border: 2px solid #a5b4fc;
+  border: 2px solid #FFB6C1;
 }
 
 .word-direction-badge {
@@ -2532,9 +2462,9 @@ onUnmounted(() => {
 }
 
 .word-item.completed .word-index {
-  background: linear-gradient(180deg, #a7f3d0, #6ee7b7);
-  border-color: #34d399;
-  color: #065f46;
+  background: linear-gradient(180deg, #98FB98, #3CB371);
+  border-color: #3CB371;
+  color: #2E8B57;
 }
 
 .word-text {
@@ -2581,7 +2511,7 @@ onUnmounted(() => {
 }
 
 .placeholder-char.hint-letter {
-  color: #7c3aed;
+  color: #FF69B4;
   background: linear-gradient(180deg, #fef3c7, #fde68a);
   border-radius: 4px;
   padding: 1px 3px;
@@ -2675,7 +2605,7 @@ onUnmounted(() => {
   border-radius: 50%;
   font-size: 0.7rem;
   font-weight: 800;
-  color: white;
+  color: #5D5D5D;
 }
 
 .speak-btn {
@@ -2797,7 +2727,7 @@ onUnmounted(() => {
 .detail-word {
   font-size: 2rem;
   font-weight: 900;
-  color: #5b21b6;
+  color: #FF69B4;
   text-align: center;
   margin-bottom: 4px;
   font-family: 'Nunito', sans-serif;
@@ -2862,7 +2792,7 @@ onUnmounted(() => {
 .detail-label {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #7c3aed;
+  color: #FF69B4;
   margin-bottom: 6px;
 }
 
@@ -2890,12 +2820,12 @@ onUnmounted(() => {
 
 .meta-badge {
   padding: 6px 12px;
-  background: linear-gradient(180deg, #ede9fe, #ddd6fe);
+  background: linear-gradient(180deg, #FFF0F5, #ddd6fe);
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #5b21b6;
-  border: 2px solid #c4b5fd;
+  color: #FF69B4;
+  border: 2px solid #FFB6C1;
 }
 
 /* 通关弹窗样式 */
@@ -2983,7 +2913,7 @@ onUnmounted(() => {
 .complete-title {
   font-size: var(--font-2xl, clamp(1.5rem, 4vw, 2rem));
   font-weight: 900;
-  color: #5b21b6;
+  color: #FF69B4;
   margin-bottom: clamp(12px, 2vw, 18px);
 }
 
@@ -3051,15 +2981,15 @@ onUnmounted(() => {
 }
 
 .modal-btn.primary {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
-  color: white;
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
+  color: #5D5D5D;
   box-shadow: 0 4px 0 #6d28d9;
-  border: 2px solid #7c3aed;
+  border: 2px solid #FF69B4;
 }
 
 .modal-btn.success {
   background: linear-gradient(180deg, #34d399, #10b981);
-  color: white;
+  color: #5D5D5D;
   box-shadow: 0 4px 0 #059669;
   border: 2px solid #10b981;
 }
@@ -3105,7 +3035,7 @@ onUnmounted(() => {
 .timed-words-count {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #5b21b6;
+  color: #FF69B4;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -3178,12 +3108,12 @@ onUnmounted(() => {
   font-size: 1rem;
   font-weight: 900;
   font-family: 'Nunito', sans-serif;
-  color: #5b21b6;
+  color: #FF69B4;
   padding: 4px 12px;
-  background: linear-gradient(180deg, #ede9fe, #ddd6fe);
+  background: linear-gradient(180deg, #FFF0F5, #ddd6fe);
   border-radius: 10px;
-  border: 2px solid #a78bfa;
-  box-shadow: 0 2px 0 #8b5cf6;
+  border: 2px solid #FFB6C1;
+  box-shadow: 0 2px 0 #FFB6C1;
 }
 
 .timer-compact.warning {
@@ -3221,9 +3151,9 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg, #ffffff, #f1f5f9);
-  border: clamp(2px, 0.4vw, 3px) solid #c7d2fe;
+  border: clamp(2px, 0.4vw, 3px) solid #87CEEB;
   border-radius: clamp(8px, 1.5vw, 14px);
-  box-shadow: 0 clamp(2px, 0.5vw, 4px) 0 #a5b4fc, inset 0 2px 0 rgba(255,255,255,0.8);
+  box-shadow: 0 clamp(2px, 0.5vw, 4px) 0 #87CEEB, inset 0 2px 0 rgba(255,255,255,0.8);
   cursor: pointer;
   transition: all 0.15s ease;
   user-select: none;
@@ -3252,22 +3182,22 @@ onUnmounted(() => {
 }
 
 .letter-cell-new.empty {
-  background: rgba(241, 245, 249, 0.2);
-  border-color: transparent;
+  background: #F0F8FF;
+  border-color: #E0E0E0;
   box-shadow: none;
   cursor: default;
 }
 
 .letter-cell-new.active {
-  border-color: #8b5cf6;
-  background: linear-gradient(180deg, #ede9fe, #ddd6fe);
-  box-shadow: 0 4px 0 #7c3aed, 0 0 0 3px rgba(139, 92, 246, 0.3);
+  border-color: #FFB6C1;
+  background: linear-gradient(180deg, #FFF0F5, #ddd6fe);
+  box-shadow: 0 4px 0 #FF69B4, 0 0 0 3px #FFB6C1;
   transform: translateY(-2px);
 }
 
 .letter-cell-new.in-word {
-  border-color: #a5b4fc;
-  background: linear-gradient(180deg, #f5f3ff, #ede9fe);
+  border-color: #87CEEB;
+  background: linear-gradient(180deg, #f5f3ff, #FFF0F5);
 }
 
 /* 预填字母 - 特殊样式 */
@@ -3292,7 +3222,7 @@ onUnmounted(() => {
 }
 
 .letter-cell-new.locked .cell-letter {
-  color: white;
+  color: #5D5D5D;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -3341,9 +3271,9 @@ onUnmounted(() => {
 .keyboard-key-new:hover {
   transform: translateY(-2px);
   background: linear-gradient(180deg, #ffffff, #ddd6fe);
-  border-color: #a78bfa;
-  box-shadow: 0 6px 0 #7c3aed;
-  color: #5b21b6;
+  border-color: #FFB6C1;
+  box-shadow: 0 6px 0 #FF69B4;
+  color: #FF69B4;
 }
 
 .keyboard-key-new:active {
@@ -3362,7 +3292,7 @@ onUnmounted(() => {
   flex: 1;
   background: linear-gradient(180deg, #fecaca, #f87171);
   border-color: #ef4444;
-  color: white;
+  color: #5D5D5D;
   box-shadow: 0 3px 0 #b91c1c;
   font-size: 1.3rem;
 }
@@ -3450,7 +3380,7 @@ onUnmounted(() => {
 .energy-modal-btn {
   width: 100%;
   padding: clamp(14px, 2.5vw, 20px) clamp(24px, 4vw, 36px);
-  color: white;
+  color: #5D5D5D;
   border: none;
   border-radius: clamp(14px, 2.5vw, 20px);
   font-size: var(--font-lg, clamp(1.1rem, 2.5vw, 1.35rem));

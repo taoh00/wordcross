@@ -818,7 +818,7 @@ onMounted(() => {
 .title {
   font-size: 1.8rem;
   font-weight: 900;
-  color: white;
+  color: #5D5D5D;
   text-shadow: 0 3px 0 rgba(0,0,0,0.15);
   margin: 0;
 }
@@ -862,12 +862,12 @@ onMounted(() => {
 
 .refresh-btn-small {
   padding: 8px 12px;
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
   border: none;
   border-radius: 8px;
   font-size: 0.8rem;
   font-weight: 700;
-  color: white;
+  color: #5D5D5D;
   cursor: pointer;
 }
 
@@ -909,7 +909,7 @@ onMounted(() => {
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 700;
-  color: white;
+  color: #5D5D5D;
   cursor: pointer;
 }
 
@@ -958,9 +958,9 @@ onMounted(() => {
 }
 
 .tab-btn.active {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
-  border-color: #7c3aed;
-  color: white;
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
+  border-color: #FF69B4;
+  color: #5D5D5D;
 }
 
 /* 加载中 */
@@ -973,7 +973,7 @@ onMounted(() => {
   width: 32px;
   height: 32px;
   border: 3px solid #e5e7eb;
-  border-top-color: #8b5cf6;
+  border-top-color: #FFB6C1;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 12px;
@@ -1093,7 +1093,7 @@ onMounted(() => {
   flex: 0 0 auto;
   text-align: right;
   font-weight: 700;
-  color: #7c3aed;
+  color: #FF69B4;
   font-size: 0.8rem;
   white-space: nowrap;
 }
@@ -1110,7 +1110,7 @@ onMounted(() => {
 
 .group-score, .feature-count {
   font-weight: 700;
-  color: #7c3aed;
+  color: #FF69B4;
 }
 
 /* 用户列表 */
@@ -1165,7 +1165,7 @@ onMounted(() => {
 
 .user-plays {
   font-weight: 600;
-  color: #7c3aed;
+  color: #FF69B4;
   font-size: 0.8rem;
 }
 
@@ -1260,7 +1260,7 @@ onMounted(() => {
 
 .player-score {
   font-weight: 700;
-  color: #7c3aed;
+  color: #FF69B4;
   font-size: 0.85rem;
 }
 
@@ -1295,7 +1295,7 @@ onMounted(() => {
 }
 
 .platform-users {
-  color: #7c3aed;
+  color: #FF69B4;
   font-weight: 600;
 }
 
@@ -1335,7 +1335,7 @@ onMounted(() => {
 }
 
 .energy-users, .prop-users, .event-users {
-  color: #7c3aed;
+  color: #FF69B4;
 }
 
 /* 留存分析 */
@@ -1454,7 +1454,7 @@ onMounted(() => {
 }
 
 .vocab-games {
-  color: #7c3aed;
+  color: #FF69B4;
   font-weight: 600;
 }
 
@@ -1480,7 +1480,7 @@ onMounted(() => {
 
 .hour-fill {
   width: 100%;
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
   border-radius: 4px 4px 0 0;
   position: absolute;
   bottom: 36px;
@@ -1498,7 +1498,7 @@ onMounted(() => {
   position: absolute;
   bottom: 0;
   font-size: 0.6rem;
-  color: #7c3aed;
+  color: #FF69B4;
   font-weight: 600;
 }
 
@@ -1542,7 +1542,7 @@ onMounted(() => {
   gap: 12px;
   padding: 16px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: #5D5D5D;
 }
 
 .modal-avatar {
@@ -1568,7 +1568,7 @@ onMounted(() => {
 .modal-close {
   background: none;
   border: none;
-  color: white;
+  color: #5D5D5D;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0;
@@ -1649,7 +1649,7 @@ onMounted(() => {
 
 .record-score {
   font-weight: 600;
-  color: #7c3aed;
+  color: #FF69B4;
 }
 
 .record-date {
@@ -1687,7 +1687,7 @@ onMounted(() => {
 
 .form-input:focus {
   outline: none;
-  border-color: #8b5cf6;
+  border-color: #FFB6C1;
 }
 
 .error-msg {
@@ -1705,12 +1705,12 @@ onMounted(() => {
 .submit-btn {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 700;
-  color: white;
+  color: #5D5D5D;
   cursor: pointer;
   margin-top: 8px;
 }

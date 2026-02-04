@@ -1,0 +1,92 @@
+# Cursor Agent 脚本使用规则
+
+本项目有两个专用脚本用于与 Cursor Agent 进行交互，分别对应不同的使用场景。
+
+> **注意**：这些脚本是用于 **执行开发任务** 的，不是用于发布应用的。
+> 如需发布应用到 SuperTeam App，请参考 `app-publish.mdc` 规则。
+
+## 脚本概览
+
+| 脚本 | 别名 | 用途 |
+|------|------|------|
+| `run_cursor_with_history.sh` | ashh | 通用任务执行（代码修改、问题排查等）|
+| `run_cursor_with_history_by_role.sh` | ashr | 角色驱动执行（指定Agent和工作流）|
+
+## 脚本1: run_cursor_with_history.sh (ashh)
+
+### 用途
+- 用于**通用任务执行**，直接发送指令给 Agent
+- 适合：系统管理、代码修改、问题排查等
+
+### 用法
+
+```bash
+./run_cursor_with_history.sh "你的提示内容"
+# 或使用别名
+ashh "你的提示内容"
+```
+
+### 功能特性
+- 自动保存对话历史到 `.cursor_history/project_history`
+- 自动携带最近 3 轮历史上下文
+- 项目级别统一管理对话历史
+
+### 示例
+
+```bash
+ashh "分析项目结构"
+ashh "修复登录功能"
+ashh "继续上面的工作"
+```
+
+## 脚本2: run_cursor_with_history_by_role.sh (ashr)
+
+### 用途
+- 用于**角色驱动的工作流执行**，需指定 Agent 和工作流
+- 适合：需要特定专业角色（如架构师、产品经理）参与的复杂任务
+
+### 用法
+
+```bash
+./run_cursor_with_history_by_role.sh <agent名> <工作流名> "消息内容"
+# 或使用别名
+ashr <agent名> <工作流名> "消息内容"
+```
+
+### 参数说明
+
+| 参数 | 说明 | 示例 |
+|------|------|------|
+| agent名 | Agent 的文件名（不含扩展名） | architect, sm, game-designer |
+| 工作流名 | 工作流标识 | [CA], [SA], [GDD] |
+| 消息内容 | 要发送给 Agent 的消息 | "创建系统架构设计" |
+
+### 常用 Agent 名称
+
+- `architect` - 架构师
+- `sm` - Scrum Master
+- `dev` - 开发者
+- `pm` - 产品经理
+- `game-designer` - 游戏设计师（游戏项目）
+- `game-architect` - 游戏架构师（游戏项目）
+
+### 示例
+
+```bash
+ashr architect "[CA]" "设计后端API架构"
+ashr sm "[SM]" "检查当前Sprint状态"
+ashr game-designer "[GDD]" "完善游戏机制设计"
+```
+
+## 历史文件说明
+
+- 历史存储位置: `项目根目录/.cursor_history/project_history`
+- 保留轮数: 最近 3 轮（可在脚本中调整 MAX_HISTORY）
+- 输出截断: 超过 2000/10000 字符自动截断
+
+## 注意事项
+
+1. **脚本需要执行权限**: `chmod +x run_cursor*.sh`
+2. **必须在项目根目录执行**: 脚本使用相对路径查找配置
+3. **历史文件不要手动编辑**: 可能破坏格式导致解析失败
+4. **首次使用会自动创建历史目录**

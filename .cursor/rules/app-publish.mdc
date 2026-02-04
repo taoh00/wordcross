@@ -1,0 +1,216 @@
+# 应用发布规则
+
+## 概述
+
+SuperTeam App 有两个Tab用于展示发布的项目：
+
+| Tab | 用途 | 对应字段 | 发布参数 |
+|-----|------|----------|----------|
+| **应用** (Tab 2) | 用户端前端应用 | `frontend_url` | `--frontend-port` 或 `--frontend-url` |
+| **管理** (Tab 3) | 后台管理系统 | `backend_url` | `--backend-port` 或 `--backend-url` |
+
+## 发布脚本
+
+位置: `/root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py`
+
+此脚本直接操作数据库，无需 HTTP API 认证，适合在同一服务器上使用。
+
+---
+
+## 发布到"应用"Tab（前端应用）
+
+将项目的前端应用发布到 App 的"应用"页面，让用户可以体验。
+
+```bash
+# 基本用法
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id {项目ID} \
+    --frontend-port {前端端口}
+
+# 示例：发布项目1的前端应用
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 1 \
+    --frontend-port 10000 \
+    --version "1.0.0"
+```
+
+发布成功后，应用会出现在 App 的"应用"Tab，用户可以点击打开前端页面。
+
+---
+
+## 发布到"管理"Tab（后台管理系统）
+
+将项目的后台管理系统发布到 App 的"管理"页面，供管理员使用。
+
+```bash
+# 基本用法
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id {项目ID} \
+    --backend-port {后端端口}
+
+# 示例：发布项目2的后台管理系统
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 2 \
+    --backend-port 10012
+```
+
+发布成功后，应用会出现在 App 的"管理"Tab，管理员可以点击打开后台管理页面。
+
+---
+
+## 同时发布前端和后台
+
+一条命令同时发布前端应用和后台管理系统：
+
+```bash
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id {项目ID} \
+    --frontend-port {前端端口} \
+    --backend-port {后端端口} \
+    --version "1.0.0"
+
+# 示例：同时发布项目2的前端和后台
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 2 \
+    --frontend-port 10010 \
+    --backend-port 10012 \
+    --version "2.0.0"
+```
+
+---
+
+## 完整参数说明
+
+| 参数 | 短写 | 必填 | 说明 |
+|------|------|------|------|
+| `--project-id` | `-p` | ✅ | 项目 ID（在projects表中的id） |
+| `--environment` | `-e` | ❌ | 环境：`development`（默认）或 `production` |
+| `--frontend-port` | `-fp` | ❌ | 前端端口号，自动生成 `http://服务器IP:端口` |
+| `--backend-port` | `-bp` | ❌ | 后端端口号，自动生成 `http://服务器IP:端口` |
+| `--frontend-url` | `-fu` | ❌ | 前端 URL（直接指定完整URL） |
+| `--backend-url` | `-bu` | ❌ | 后端 URL（直接指定完整URL） |
+| `--version` | `-v` | ❌ | 版本号 |
+| `--name` | `-n` | ❌ | 应用名称（首次发布时使用） |
+| `--list` | `-l` | ❌ | 列出项目的所有应用记录 |
+
+---
+
+## 查看已发布应用
+
+```bash
+# 查看项目1的所有应用记录
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 1 --list
+
+# 查看项目2的应用记录
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 2 --list
+```
+
+---
+
+## 发布到生产环境
+
+默认发布到开发环境。要发布到生产环境：
+
+```bash
+# 生产环境（使用域名）
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 2 \
+    --environment production \
+    --frontend-url "https://your-domain.com" \
+    --backend-url "https://admin.your-domain.com"
+```
+
+---
+
+## 端口分配规则
+
+每个项目分配 10 个连续端口，基准端口 = 10000 + ((项目ID - 1) × 10)：
+
+| 项目 | 项目ID | 前端端口 | 后端端口 | 端口范围 |
+|------|--------|----------|----------|----------|
+| 创意游戏 | 1 | 10000 | 10002 | 10000-10009 |
+| 我爱填单词 | 2 | 10010 | 10012 | 10010-10019 |
+| 新项目 | 3 | 10020 | 10022 | 10020-10029 |
+
+端口用途约定：
+- +0: 前端主端口
+- +1: 前端备用端口
+- +2: 后端主端口
+- +3: 后端备用端口
+- +4~+9: 预留
+
+---
+
+## 发布前提条件
+
+1. **服务已启动**：确保应用服务已在对应端口运行
+   ```bash
+   # 检查端口是否在监听
+   ss -tlnp | grep {端口号}
+   
+   # 启动静态网页服务（示例）
+   cd /path/to/dist
+   nohup python3 -m http.server {端口号} > /tmp/app.log 2>&1 &
+   ```
+
+2. **防火墙已开放**：确保服务器防火墙允许对应端口的访问
+
+3. **项目存在**：项目ID必须在 projects 表中存在
+
+---
+
+## 常见问题
+
+### 发布后在 App 看不到应用
+
+1. **检查登录账号**：应用只对项目所有者可见，确保使用创建项目的账号登录
+2. **检查环境Tab**：开发环境和生产环境是分开显示的
+3. **检查应用记录**：使用 `--list` 确认应用已发布
+4. **刷新应用列表**：在 App 中下拉刷新
+
+### 点击应用显示 502 Bad Gateway
+
+服务未运行，需重新启动应用服务。
+
+### 管理Tab看不到应用
+
+需要设置 `--backend-port` 或 `--backend-url`。只设置前端端口的应用不会出现在管理Tab。
+
+---
+
+## 使用场景示例
+
+### 场景1：发布静态网页游戏
+
+```bash
+# 只需要前端，发布到应用Tab
+cd /root/AllProjects/project_1_创意游戏/dist
+nohup python3 -m http.server 10000 > /tmp/game.log 2>&1 &
+
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 1 \
+    --frontend-port 10000 \
+    --version "1.0.0"
+```
+
+### 场景2：发布带后台管理的应用
+
+```bash
+# 前端 + 后台，同时发布到应用Tab和管理Tab
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 2 \
+    --frontend-port 10010 \
+    --backend-port 10012 \
+    --version "2.0.0"
+```
+
+### 场景3：只更新版本号
+
+```bash
+python3 /root/SuperTeam/superteam/apps/backend/scripts/internal_publish.py \
+    --project-id 2 \
+    --frontend-port 10010 \
+    --version "2.0.1"
+```

@@ -4,10 +4,10 @@
   "category": "小学",
   "is_primary": true,
   "level_count": 81,
-  "word_count": 112,
+  "word_count": 116,
   "vocab_size": 131,
-  "coverage": 85.5,
+  "coverage": 88.5,
   "success_count": 81,
   "fail_count": 0,
-  "total_levels": 81
+  "error_levels_dir": null
 }

@@ -171,7 +171,7 @@
       <div class="settings-section">
         <div class="section-title">ℹ️ 关于</div>
         <div class="about-info">
-          <div class="about-item">
+          <div class="about-item version-item" @click="onVersionClick">
             <span class="about-label">版本</span>
             <span class="about-value">v1.0.0</span>
           </div>
@@ -223,18 +223,67 @@ const showEditNickname = ref(false)
 const newNickname = ref('')
 const debugMode = ref(false)
 
-// 是否显示开发者选项（根据环境变量控制）
-const showDevOptions = import.meta.env.VITE_SHOW_DEV_OPTIONS === 'true'
+// 版本号连击开启debug模式
+const versionClickCount = ref(0)
+const versionClickTimer = ref(null)
+const DEBUG_CLICK_THRESHOLD = 10
+const CLICK_TIMEOUT = 2000 // 2秒内连击有效
+
+// 是否显示开发者选项（根据环境变量或debug模式）
+const showDevOptions = ref(import.meta.env.VITE_SHOW_DEV_OPTIONS === 'true')
 
 // 加载debug模式设置
 onMounted(() => {
   try {
     const saved = localStorage.getItem('game_debug_mode')
     debugMode.value = saved === 'true'
+    // 如果debug模式已开启，显示开发者选项
+    if (debugMode.value) {
+      showDevOptions.value = true
+    }
   } catch (e) {
     debugMode.value = false
   }
 })
+
+// 版本号连击处理
+function onVersionClick() {
+  // 清除之前的计时器
+  if (versionClickTimer.value) {
+    clearTimeout(versionClickTimer.value)
+  }
+  
+  versionClickCount.value++
+  
+  // 设置超时重置
+  versionClickTimer.value = setTimeout(() => {
+    versionClickCount.value = 0
+  }, CLICK_TIMEOUT)
+  
+  const remaining = DEBUG_CLICK_THRESHOLD - versionClickCount.value
+  
+  if (versionClickCount.value >= DEBUG_CLICK_THRESHOLD) {
+    versionClickCount.value = 0
+    clearTimeout(versionClickTimer.value)
+    
+    if (debugMode.value) {
+      // 已开启，关闭debug模式
+      debugMode.value = false
+      showDevOptions.value = import.meta.env.VITE_SHOW_DEV_OPTIONS === 'true'
+      saveDebugMode()
+      alert('🔒 Debug模式已关闭')
+    } else {
+      // 未开启，开启debug模式
+      debugMode.value = true
+      showDevOptions.value = true
+      saveDebugMode()
+      alert('🔓 Debug模式已开启')
+    }
+  } else if (remaining <= 3 && remaining > 0) {
+    // 剩余3次以内时给提示
+    console.log(`还需点击 ${remaining} 次${debugMode.value ? '关闭' : '开启'}Debug模式`)
+  }
+}
 
 // 保存debug模式设置
 function saveDebugMode() {
@@ -306,13 +355,13 @@ function saveNickname() {
 .settings-title {
   font-size: var(--font-2xl, clamp(1.5rem, 4vw, 2.2rem));
   font-weight: 900;
-  color: white;
+  color: #5D5D5D;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
 
 .settings-card {
-  background: rgba(255, 255, 255, 0.98);
+  background: #FFFFFF;
   border-radius: clamp(18px, 3vw, 28px);
   padding: clamp(16px, 3vw, 28px);
   width: 100%;
@@ -344,7 +393,7 @@ function saveNickname() {
 }
 
 .settings-card::-webkit-scrollbar-thumb:hover {
-  background: #a78bfa;
+  background: #FFB6C1;
 }
 
 .settings-section {
@@ -358,7 +407,7 @@ function saveNickname() {
 .section-title {
   font-size: var(--font-lg, clamp(1rem, 2.5vw, 1.3rem));
   font-weight: 800;
-  color: #5b21b6;
+  color: #FF69B4;
   margin-bottom: clamp(12px, 2vw, 18px);
   padding-bottom: clamp(6px, 1vw, 12px);
   border-bottom: 2px dashed #e5e7eb;
@@ -373,6 +422,11 @@ function saveNickname() {
   border-radius: 14px;
   margin-bottom: 10px;
   border: 2px solid #e5e7eb;
+}
+
+/* 移除最后一个设置项的底部间距 */
+.setting-item:last-child {
+  margin-bottom: 0;
 }
 
 .setting-link-item {
@@ -456,7 +510,7 @@ function saveNickname() {
 }
 
 .toggle-switch input:checked + .toggle-slider {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
   border-color: #7c3aed;
 }
 
@@ -544,8 +598,8 @@ function saveNickname() {
   justify-content: center;
   background: white;
   border-radius: 50%;
-  border: 3px solid #a78bfa;
-  box-shadow: 0 3px 0 #8b5cf6;
+  border: 3px solid #FFB6C1;
+  box-shadow: 0 3px 0 #FFB6C1;
 }
 
 .user-details {
@@ -555,7 +609,7 @@ function saveNickname() {
 .user-nickname {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #5b21b6;
+  color: #FF69B4;
 }
 
 .user-id {
@@ -571,13 +625,13 @@ function saveNickname() {
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 2px 0 #a78bfa;
+  box-shadow: 0 2px 0 #FFB6C1;
   transition: all 0.15s ease;
 }
 
 .edit-btn:active {
   transform: translateY(2px);
-  box-shadow: 0 0 0 #a78bfa;
+  box-shadow: 0 0 0 #FFB6C1;
 }
 
 /* 头像选择 */
@@ -645,7 +699,7 @@ function saveNickname() {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: #87CEEB;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -664,7 +718,7 @@ function saveNickname() {
 .modal-title {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #5b21b6;
+  color: #FF69B4;
   text-align: center;
   margin: 0 0 16px;
 }
@@ -682,7 +736,7 @@ function saveNickname() {
 
 .nickname-input:focus {
   outline: none;
-  border-color: #8b5cf6;
+  border-color: #FFB6C1;
 }
 
 .modal-actions {
@@ -708,10 +762,10 @@ function saveNickname() {
 }
 
 .confirm-btn {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
   border: 2px solid #7c3aed;
-  color: white;
-  box-shadow: 0 3px 0 #5b21b6;
+  color: #5D5D5D;
+  box-shadow: 0 3px 0 #FF69B4;
 }
 
 .cancel-btn:active, .confirm-btn:active {

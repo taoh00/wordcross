@@ -1,4 +1,0 @@
-/* components/modal/modal.wxss */
-.modal-wrapper {
-  width: 100%;
-}

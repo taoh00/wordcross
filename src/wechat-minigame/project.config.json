@@ -1,50 +1,29 @@
 {
-  "miniprogramRoot": "./",
-  "projectname": "wordcross",
-  "description": "我爱填单词 - 趣味英语学习小程序",
-  "appid": "wx0000000000000000",
+  "projectname": "wordcross-minigame",
+  "description": "我爱填单词 - 趣味英语学习小游戏",
+  "appid": "wxd041e1aeccc04bf8",
+  "compileType": "minigame",
+  "libVersion": "3.2.0",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
-    "enhance": true,
-    "postcss": true,
-    "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": true,
+    "enhance": false,
+    "minified": false,
     "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
     "uploadWithSourceMap": true,
-    "compileHotReLoad": true,
-    "useMultiFrameRuntime": true,
+    "compileHotReLoad": false,
     "useApiHook": true,
     "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    },
-    "enableEngineNative": false,
-    "useIsolateContext": true,
-    "userConfirmedBundleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "disableUseStrict": false,
-    "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    }
   },
-  "compileType": "miniprogram",
-  "libVersion": "3.2.0",
   "packOptions": {
     "ignore": [],
     "include": []
   },
   "condition": {},
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
-  }
+  "isGameTourist": false
 }

@@ -20,6 +20,11 @@ from collections import defaultdict
 from pathlib import Path
 
 
+def is_pure_alpha(word: str) -> bool:
+    """检查单词是否只包含26个英文字母（不含连字符、撇号、空格等）"""
+    return word.isalpha()
+
+
 # ==================== 配置常量 ====================
 
 # 难度配置 - 决定单词长度
@@ -227,12 +232,20 @@ class ConfigurablePuzzle:
         for (row, col), num in position_clue_map.items():
             clue_number_grid[row][col] = num
         
+        # 创建 prefilled 字典，格式为 {"row-col": "letter"}
+        # 将 revealed_positions 转换为前端期望的格式
+        prefilled = {}
+        for i, row in enumerate(self.grid):
+            for j, cell in enumerate(row):
+                if cell and (i, j) in self.revealed_positions:
+                    prefilled[f"{i}-{j}"] = cell
+        
         return {
             "grid_size": self.grid_size,
             "cells": masked_grid,
             "revealed": revealed_grid,
             "words": words,
-            "prefilled": {},
+            "prefilled": prefilled,  # 预填字母字典
             "clue_numbers": clue_number_grid,
             "puzzle_type": "configurable",
             "density": self.calculate_density(),
@@ -253,10 +266,11 @@ class WordIndex:
         self.word_to_info: Dict[str, dict] = {}
         self.valid_words_set: Set[str] = set()
         
-        # 按长度索引，只保留符合长度要求的单词
+        # 按长度索引，只保留符合长度要求的纯字母单词
         for w in words:
             word = w["word"].upper()
-            if self.min_len <= len(word) <= self.max_len:
+            # 过滤含撇号、连字符等特殊字符的单词
+            if self.min_len <= len(word) <= self.max_len and is_pure_alpha(word):
                 self.by_length[len(word)].append(word)
                 self.word_to_info[word] = w
                 self.valid_words_set.add(word)

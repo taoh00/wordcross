@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-01-27T11:54:02.519940",
+  "summary": {
+    "total_groups": 1,
+    "total_levels": 81,
+    "validated_levels": 81,
+    "success_count": 81,
+    "failed_count": 0,
+    "total_load_time_ms": 6.6070556640625,
+    "total_solve_time_ms": 2.1228790283203125
+  },
+  "groups": [
+    {
+      "group_code": "grade3_1",
+      "group_name": "三年级上册",
+      "total_levels": 81,
+      "validated_levels": 81,
+      "success_count": 81,
+      "failed_count": 0,
+      "success_rate": "100.0%",
+      "avg_load_time_ms": 0.08156858844521606,
+      "avg_solve_time_ms": 0.02620838306568287,
+      "error_levels": []
+    }
+  ]
+}

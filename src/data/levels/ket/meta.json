@@ -4,10 +4,10 @@
   "category": "考试",
   "is_primary": false,
   "level_count": 108,
-  "word_count": 452,
+  "word_count": 460,
   "vocab_size": 524,
-  "coverage": 86.3,
+  "coverage": 87.8,
   "success_count": 108,
   "fail_count": 0,
-  "total_levels": 108
+  "error_levels_dir": null
 }

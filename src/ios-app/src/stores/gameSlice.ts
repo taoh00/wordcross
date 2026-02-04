@@ -24,7 +24,7 @@ interface Puzzle {
 
 interface GameState {
   // 游戏模式
-  mode: 'campaign' | 'endless' | 'timed' | 'pk' | null;
+  mode: 'campaign' | 'endless' | 'timed' | null;
   
   // 词库
   vocabGroup: string;
@@ -175,10 +175,10 @@ function checkWordComplete(
   return true;
 }
 
-/** 计算星级 */
+/** 计算星级（1分钟模式，30秒内三星，45秒内二星） */
 function calculateStars(seconds: number): number {
-  if (seconds <= 60) return 3;
-  if (seconds <= 120) return 2;
+  if (seconds <= 30) return 3;
+  if (seconds <= 45) return 2;
   return 1;
 }
 

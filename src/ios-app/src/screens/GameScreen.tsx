@@ -34,6 +34,7 @@ import { consumeEnergy, useProp } from '../stores/userSlice';
 import { RootStackParamList } from '../navigation/AppNavigator';
 import { speakWord } from '../utils/audio';
 import { trackApi } from '../api';
+import { COLORS } from '../utils/theme';
 import Grid from '../components/Grid';
 import Keyboard from '../components/Keyboard';
 import WordList from '../components/WordList';
@@ -66,6 +67,9 @@ export default function GameScreen() {
   const { showTranslation, autoSpeak } = useAppSelector((state) => state.settings);
   
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  
+  // 累计分数（计时/无限模式）
+  const [sessionScore, setSessionScore] = React.useState(0);
   
   // 加载关卡
   useEffect(() => {
@@ -266,19 +270,42 @@ export default function GameScreen() {
     <SafeAreaView style={styles.container} edges={['bottom']}>
       {/* 顶部信息栏 */}
       <View style={styles.topBar}>
-        <View style={styles.topBarItem}>
-          <Text style={styles.topBarIcon}>📊</Text>
-          <Text style={styles.topBarValue}>{score}</Text>
+        {/* 左侧：计时器、总分、当关分数、进度 */}
+        <View style={styles.topBarLeft}>
+          <View style={styles.topBarItem}>
+            <Text style={styles.topBarIcon}>⏱️</Text>
+            <Text style={styles.topBarValue}>{formatTime(timer)}</Text>
+          </View>
+          {/* 累计总分（计时/无限模式） */}
+          {(mode === 'timed' || mode === 'endless') && (
+            <View style={styles.sessionScoreBadge}>
+              <Text style={styles.sessionScoreIcon}>🏆</Text>
+              <Text style={styles.sessionScoreText}>{sessionScore}</Text>
+            </View>
+          )}
+          {/* 当关分数 */}
+          <View style={styles.topBarItem}>
+            <Text style={styles.topBarIcon}>🌟</Text>
+            <Text style={styles.topBarValue}>{score}</Text>
+          </View>
+          <View style={styles.topBarItem}>
+            <Text style={styles.topBarIcon}>✅</Text>
+            <Text style={styles.topBarValue}>
+              {completedWords.length}/{puzzle.words.length}
+            </Text>
+          </View>
         </View>
-        <View style={styles.topBarItem}>
-          <Text style={styles.topBarIcon}>⏱️</Text>
-          <Text style={styles.topBarValue}>{formatTime(timer)}</Text>
-        </View>
-        <View style={styles.topBarItem}>
-          <Text style={styles.topBarIcon}>✅</Text>
-          <Text style={styles.topBarValue}>
-            {completedWords.length}/{puzzle.words.length}
-          </Text>
+        {/* 右侧：体力和道具（靠右对齐） */}
+        <View style={styles.topBarRight}>
+          <View style={styles.miniStat}>
+            <Text style={styles.miniStatText}>⚡{energy}</Text>
+          </View>
+          <View style={styles.miniStat}>
+            <Text style={styles.miniStatText}>💡{hintCount}</Text>
+          </View>
+          <View style={styles.miniStat}>
+            <Text style={styles.miniStatText}>🔊{speakCount}</Text>
+          </View>
         </View>
       </View>
       
@@ -349,7 +376,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: '#6B7280',
+    color: COLORS.textLight,
   },
   errorContainer: {
     flex: 1,
@@ -363,7 +390,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 16,
-    color: '#6B7280',
+    color: COLORS.textLight,
     textAlign: 'center',
     marginBottom: 24,
   },
@@ -380,24 +407,69 @@ const styles = StyleSheet.create({
   },
   topBar: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    paddingVertical: 12,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 12,
     backgroundColor: '#fff',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: COLORS.pink.main,
+  },
+  topBarLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  topBarRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginLeft: 'auto',
   },
   topBarItem: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   topBarIcon: {
-    fontSize: 16,
-    marginRight: 6,
+    fontSize: 14,
+    marginRight: 4,
   },
   topBarValue: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
-    color: '#1F2937',
+    color: COLORS.textMain,
+  },
+  miniStat: {
+    backgroundColor: '#F3F4F6',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.pink.main,
+  },
+  miniStatText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: COLORS.textMain,
+  },
+  sessionScoreBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#D1FAE5',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#34D399',
+    gap: 3,
+  },
+  sessionScoreIcon: {
+    fontSize: 14,
+  },
+  sessionScoreText: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#059669',
   },
   gridContainer: {
     alignItems: 'center',
@@ -428,7 +500,7 @@ const styles = StyleSheet.create({
   },
   wordDefinition: {
     fontSize: 15,
-    color: '#374151',
+    color: COLORS.textMain,
     marginTop: 8,
     lineHeight: 22,
   },
@@ -445,7 +517,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: COLORS.pink.main,
   },
   propIcon: {
     fontSize: 20,
@@ -454,6 +526,6 @@ const styles = StyleSheet.create({
   propCount: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1F2937',
+    color: COLORS.textMain,
   },
 });

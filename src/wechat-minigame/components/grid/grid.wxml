@@ -1,5 +1,0 @@
-<!--components/grid/grid.wxml-->
-<view class="grid-wrapper">
-  <!-- 网格组件占位符 - 当前游戏页使用内联网格 -->
-  <slot></slot>
-</view>

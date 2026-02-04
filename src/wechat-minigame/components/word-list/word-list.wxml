@@ -1,4 +1,0 @@
-<!--components/word-list/word-list.wxml-->
-<view class="word-list-wrapper">
-  <slot></slot>
-</view>

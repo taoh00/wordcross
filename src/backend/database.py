@@ -722,6 +722,32 @@ def refresh_leaderboard(lb_type: str, vocab_group: str = "all", limit: int = 100
                 pk_info = cursor.fetchone()
                 if pk_info:
                     extra = {"wins": pk_info[0] or 0, "games": pk_info[1] or 0}
+            elif lb_type.startswith("endless"):
+                # 获取无限模式总分（累计分数，不清零）
+                cursor.execute("""
+                    SELECT SUM(endless_total_score) as total_score, MAX(endless_max_level) as max_level
+                    FROM user_stats 
+                    WHERE user_id = ? AND game_mode = 'endless'
+                """, (entry["user_id"],))
+                endless_info = cursor.fetchone()
+                if endless_info:
+                    extra = {
+                        "total_score": endless_info[0] or 0,
+                        "max_level": endless_info[1] or 0
+                    }
+            elif lb_type.startswith("timed"):
+                # 获取计时模式总分（累计分数，不清零）
+                cursor.execute("""
+                    SELECT SUM(timed_total_score) as total_score, MAX(timed_max_words) as max_words
+                    FROM user_stats 
+                    WHERE user_id = ? AND game_mode = 'timed'
+                """, (entry["user_id"],))
+                timed_info = cursor.fetchone()
+                if timed_info:
+                    extra = {
+                        "total_score": timed_info[0] or 0,
+                        "max_words": timed_info[1] or 0
+                    }
             
             cursor.execute("""
                 INSERT INTO leaderboard_cache 

@@ -1,5 +1,5 @@
 /**
- * 首页 - 游戏模式选择
+ * 首页 - 游戏模式选择 (Kawaii Style)
  */
 
 import React, { useEffect, useState } from 'react';
@@ -19,6 +19,7 @@ import { useAppDispatch, useAppSelector } from '../stores/hooks';
 import { initUser, refreshEnergy, refreshProps, claimFreeEnergy } from '../stores/userSlice';
 import { RootStackParamList } from '../navigation/AppNavigator';
 import { trackApi } from '../api';
+import { COLORS, SHADOWS, LAYOUT } from '../utils/theme';
 
 type NavigationProp = StackNavigationProp<RootStackParamList>;
 
@@ -28,17 +29,28 @@ interface ModeCardProps {
   icon: string;
   description: string;
   color: string;
+  borderColor: string;
+  shadowColor: string;
   onPress: () => void;
 }
 
-function ModeCard({ title, icon, description, color, onPress }: ModeCardProps) {
+function ModeCard({ title, icon, description, color, borderColor, shadowColor, onPress }: ModeCardProps) {
   return (
     <TouchableOpacity
-      style={[styles.modeCard, { borderLeftColor: color }]}
+      style={[
+        styles.modeCard, 
+        { 
+          backgroundColor: color,
+          borderColor: borderColor,
+          shadowColor: shadowColor 
+        }
+      ]}
       onPress={onPress}
-      activeOpacity={0.7}
+      activeOpacity={0.85}
     >
-      <Text style={styles.modeIcon}>{icon}</Text>
+      <View style={styles.iconContainer}>
+        <Text style={styles.modeIcon}>{icon}</Text>
+      </View>
       <View style={styles.modeInfo}>
         <Text style={styles.modeTitle}>{title}</Text>
         <Text style={styles.modeDesc}>{description}</Text>
@@ -88,7 +100,7 @@ export default function HomeScreen() {
   };
   
   // 选择模式
-  const handleModeSelect = (mode: 'campaign' | 'endless' | 'timed' | 'pk') => {
+  const handleModeSelect = (mode: 'campaign' | 'endless' | 'timed') => {
     // 埋点：记录模式选择事件
     trackApi.trackEvent('select_mode', { mode }, 'ios');
     
@@ -99,23 +111,29 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <ScrollView
         style={styles.scrollView}
+        contentContainerStyle={{ paddingBottom: 40 }}
         refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={COLORS.pink.dark} />
         }
       >
-        {/* 头部用户信息 */}
+        {/* 头部区域 */}
         <View style={styles.header}>
+          <Text style={styles.headerTitle}>我爱填单词</Text>
           <View style={styles.userInfo}>
-            <Text style={styles.avatar}>{avatar}</Text>
+            <View style={styles.avatarContainer}>
+              <Text style={styles.avatar}>{avatar || '😊'}</Text>
+            </View>
             <View>
-              <Text style={styles.nickname}>{nickname}</Text>
-              <Text style={styles.welcome}>欢迎回来</Text>
+              <Text style={styles.nickname}>{nickname || '游客'}</Text>
+              <View style={styles.levelBadge}>
+                <Text style={styles.levelText}>Lv.1 初学乍练</Text>
+              </View>
             </View>
           </View>
         </View>
         
         {/* 资源栏 */}
-        <View style={styles.resourceBar}>
+        <View style={styles.resourceContainer}>
           <TouchableOpacity style={styles.resourceItem} onPress={handleClaimEnergy}>
             <Text style={styles.resourceIcon}>⚡</Text>
             <Text style={styles.resourceValue}>{energy}/{maxEnergy}</Text>
@@ -141,43 +159,54 @@ export default function HomeScreen() {
         
         {/* 游戏模式 */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>选择游戏模式</Text>
+          <Text style={styles.sectionTitle}>🎮 选择游戏模式</Text>
           
-          <ModeCard
-            title="闯关模式"
-            icon="📚"
-            description="按照词库顺序，逐关挑战"
-            color="#4F46E5"
-            onPress={() => handleModeSelect('campaign')}
-          />
-          
-          <ModeCard
-            title="无限模式"
-            icon="♾️"
-            description="无尽挑战，看你能走多远"
-            color="#10B981"
-            onPress={() => handleModeSelect('endless')}
-          />
-          
-          <ModeCard
-            title="计时模式"
-            icon="⏱️"
-            description="限时挑战，分秒必争"
-            color="#F59E0B"
-            onPress={() => handleModeSelect('timed')}
-          />
-          
-          <ModeCard
-            title="PK对战"
-            icon="⚔️"
-            description="与其他玩家实时对战"
-            color="#EF4444"
-            onPress={() => handleModeSelect('pk')}
-          />
+          <View style={styles.gridContainer}>
+            {/* 闯关模式 */}
+            <ModeCard
+              title="闯关模式"
+              icon="🏰"
+              description="逐关挑战"
+              color={COLORS.pink.light}
+              borderColor={COLORS.pink.main}
+              shadowColor={COLORS.pink.dark}
+              onPress={() => handleModeSelect('campaign')}
+            />
+            
+            {/* 无限模式 */}
+            <ModeCard
+              title="无限模式"
+              icon="♾️"
+              description="随机生成"
+              color={COLORS.mint.light}
+              borderColor={COLORS.mint.main}
+              shadowColor={COLORS.mint.dark}
+              onPress={() => handleModeSelect('endless')}
+            />
+            
+            {/* 计时模式 */}
+            <ModeCard
+              title="计时模式"
+              icon="⏱️"
+              description="限时挑战"
+              color={COLORS.blue.light}
+              borderColor={COLORS.blue.main}
+              shadowColor={COLORS.blue.dark}
+              onPress={() => handleModeSelect('timed')}
+            />
+            
+            {/* 排行榜 */}
+            <ModeCard
+              title="排行榜"
+              icon="🏆"
+              description="查看排名"
+              color={COLORS.yellow.light}
+              borderColor={COLORS.yellow.main}
+              shadowColor={COLORS.yellow.dark}
+              onPress={() => navigation.navigate('Leaderboard')}
+            />
+          </View>
         </View>
-        
-        {/* 底部留白 */}
-        <View style={styles.bottomSpacer} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -186,118 +215,170 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: COLORS.background,
   },
   scrollView: {
     flex: 1,
   },
   header: {
-    backgroundColor: '#4F46E5',
-    paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 24,
+    paddingHorizontal: 24,
+    paddingTop: 20,
+    paddingBottom: 40,
+    backgroundColor: COLORS.white,
+    borderBottomLeftRadius: 32,
+    borderBottomRightRadius: 32,
+    ...SHADOWS.soft,
+    zIndex: 1,
+  },
+  headerTitle: {
+    fontSize: 28,
+    fontWeight: '900',
+    color: COLORS.textMain,
+    textAlign: 'center',
+    marginBottom: 20,
+    letterSpacing: 1,
   },
   userInfo: {
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: COLORS.blue.light,
+    padding: 12,
+    borderRadius: 24,
+    borderWidth: 2,
+    borderColor: COLORS.blue.main,
+    alignSelf: 'center',
+  },
+  avatarContainer: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: COLORS.white,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 12,
+    borderWidth: 2,
+    borderColor: COLORS.white,
   },
   avatar: {
-    fontSize: 48,
-    marginRight: 16,
+    fontSize: 28,
   },
   nickname: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#fff',
+    fontSize: 16,
+    fontWeight: '800',
+    color: COLORS.textMain,
   },
-  welcome: {
-    fontSize: 14,
-    color: 'rgba(255,255,255,0.8)',
+  levelBadge: {
+    backgroundColor: COLORS.white,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 10,
     marginTop: 4,
+    alignSelf: 'flex-start',
   },
-  resourceBar: {
+  levelText: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: COLORS.blue.dark,
+  },
+  
+  /* 资源栏 - 浮动卡片 */
+  resourceContainer: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
-    marginHorizontal: 16,
-    marginTop: -16,
-    borderRadius: 12,
+    backgroundColor: COLORS.white,
+    marginHorizontal: 20,
+    marginTop: -24,
+    borderRadius: 24,
     padding: 16,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 4,
+    ...SHADOWS.soft,
+    borderWidth: 2,
+    borderColor: COLORS.border,
+    zIndex: 2,
   },
   resourceItem: {
     flex: 1,
     alignItems: 'center',
   },
   resourceIcon: {
-    fontSize: 24,
+    fontSize: 20,
     marginBottom: 4,
   },
   resourceValue: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#1F2937',
+    fontSize: 16,
+    fontWeight: '800',
+    color: COLORS.textMain,
   },
   resourceLabel: {
-    fontSize: 12,
-    color: '#6B7280',
+    fontSize: 11,
+    fontWeight: '600',
+    color: COLORS.textLight,
     marginTop: 2,
   },
   resourceDivider: {
-    width: 1,
-    backgroundColor: '#E5E7EB',
-    marginVertical: 4,
+    width: 2,
+    backgroundColor: COLORS.border,
+    marginVertical: 8,
+    borderRadius: 1,
   },
+  
+  /* 模式选择 */
   section: {
-    paddingHorizontal: 16,
-    marginTop: 24,
+    paddingHorizontal: 20,
+    marginTop: 32,
   },
   sectionTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#1F2937',
+    fontSize: 20,
+    fontWeight: '900',
+    color: COLORS.textMain,
     marginBottom: 16,
+    textAlign: 'center',
+  },
+  gridContainer: {
+    gap: 16,
   },
   modeCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
-    borderRadius: 12,
     padding: 16,
-    marginBottom: 12,
-    borderLeftWidth: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
+    borderRadius: 24,
+    borderWidth: 3,
+    marginBottom: 4,
+    // 3D Shadow effect manually
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 1,
+    shadowRadius: 0,
+    elevation: 0, 
+  },
+  iconContainer: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: COLORS.white,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 16,
+    borderWidth: 2,
+    borderColor: COLORS.pink.main,
   },
   modeIcon: {
-    fontSize: 36,
-    marginRight: 16,
+    fontSize: 32,
   },
   modeInfo: {
     flex: 1,
   },
   modeTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#1F2937',
+    fontSize: 18,
+    fontWeight: '800',
+    color: COLORS.textMain,
+    marginBottom: 4,
   },
   modeDesc: {
     fontSize: 13,
-    color: '#6B7280',
-    marginTop: 4,
+    fontWeight: '600',
+    color: COLORS.textLight,
   },
   modeArrow: {
     fontSize: 24,
-    color: '#9CA3AF',
-    fontWeight: '300',
-  },
-  bottomSpacer: {
-    height: 24,
+    fontWeight: '800',
+    color: COLORS.textLight,
   },
 });

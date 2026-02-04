@@ -1,0 +1,12 @@
+{
+  "name": "wordcross-autotest",
+  "version": "1.0.0",
+  "description": "微信小游戏自动化截图对比工具",
+  "scripts": {
+    "screenshot": "node screenshot-compare.js",
+    "compare": "node dual-screenshot.js"
+  },
+  "dependencies": {
+    "miniprogram-automator": "^0.12.0"
+  }
+}

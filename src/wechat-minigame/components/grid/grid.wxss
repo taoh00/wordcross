@@ -1,4 +1,0 @@
-/* components/grid/grid.wxss */
-.grid-wrapper {
-  width: 100%;
-}

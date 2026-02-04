@@ -1,0 +1,11 @@
+{
+  "libVersion": "3.2.0",
+  "projectname": "wordcross-minigame",
+  "condition": {},
+  "setting": {
+    "urlCheck": false,
+    "ignoreDevUnusedFiles": false,
+    "compileHotReLoad": false,
+    "useIsolateContext": true
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关卡验证报告</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #333; }
+        .summary { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .summary h2 { margin-top: 0; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .stat-card { background: #e3f2fd; padding: 15px; border-radius: 6px; text-align: center; }
+        .stat-value { font-size: 24px; font-weight: bold; color: #1976d2; }
+        .stat-label { color: #666; font-size: 14px; }
+        .group-table { width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .group-table th, .group-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        .group-table th { background: #1976d2; color: white; }
+        .group-table tr:hover { background: #f5f5f5; }
+        .success { color: #4caf50; }
+        .failed { color: #f44336; }
+        .error-details { background: #fff3e0; padding: 10px; border-radius: 4px; margin-top: 10px; font-size: 12px; }
+        .progress-bar { background: #e0e0e0; border-radius: 10px; height: 20px; overflow: hidden; }
+        .progress-fill { background: #4caf50; height: 100%; transition: width 0.3s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 关卡验证报告</h1>
+        <p>生成时间: 2026-01-27 11:54:07</p>
+        
+        <div class="summary">
+            <h2>📊 总体统计</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value">1</div>
+                    <div class="stat-label">词库数量</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">1367</div>
+                    <div class="stat-label">验证关卡</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value success">1366</div>
+                    <div class="stat-label">通过</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value failed">1</div>
+                    <div class="stat-label">失败</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">99.9%</div>
+                    <div class="stat-label">通过率</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>📚 词库详情</h2>
+        <table class="group-table">
+            <thead>
+                <tr>
+                    <th>词库</th>
+                    <th>关卡数</th>
+                    <th>通过</th>
+                    <th>失败</th>
+                    <th>通过率</th>
+                    <th>平均加载(ms)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>GRE</strong> (gre)</td>
+                    <td>1367</td>
+                    <td class="success">1366</td>
+                    <td class="failed">1</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 99.92684711046086%"></div>
+                        </div>
+                        99.9%
+                    </td>
+                    <td>0.09</td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="error-details">
+                            <strong>错误关卡:</strong>
+                            第1318关(load_failed)
+                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

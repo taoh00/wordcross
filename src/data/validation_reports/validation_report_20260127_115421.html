@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关卡验证报告</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #333; }
+        .summary { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .summary h2 { margin-top: 0; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .stat-card { background: #e3f2fd; padding: 15px; border-radius: 6px; text-align: center; }
+        .stat-value { font-size: 24px; font-weight: bold; color: #1976d2; }
+        .stat-label { color: #666; font-size: 14px; }
+        .group-table { width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .group-table th, .group-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        .group-table th { background: #1976d2; color: white; }
+        .group-table tr:hover { background: #f5f5f5; }
+        .success { color: #4caf50; }
+        .failed { color: #f44336; }
+        .error-details { background: #fff3e0; padding: 10px; border-radius: 4px; margin-top: 10px; font-size: 12px; }
+        .progress-bar { background: #e0e0e0; border-radius: 10px; height: 20px; overflow: hidden; }
+        .progress-fill { background: #4caf50; height: 100%; transition: width 0.3s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 关卡验证报告</h1>
+        <p>生成时间: 2026-01-27 11:54:21</p>
+        
+        <div class="summary">
+            <h2>📊 总体统计</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value">31</div>
+                    <div class="stat-label">词库数量</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">155</div>
+                    <div class="stat-label">验证关卡</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value success">155</div>
+                    <div class="stat-label">通过</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value failed">0</div>
+                    <div class="stat-label">失败</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">100.0%</div>
+                    <div class="stat-label">通过率</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>📚 词库详情</h2>
+        <table class="group-table">
+            <thead>
+                <tr>
+                    <th>词库</th>
+                    <th>关卡数</th>
+                    <th>通过</th>
+                    <th>失败</th>
+                    <th>通过率</th>
+                    <th>平均加载(ms)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>大学四级</strong> (cet4)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.09</td>
+                </tr>
+                <tr>
+                    <td><strong>大学六级</strong> (cet6)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.09</td>
+                </tr>
+                <tr>
+                    <td><strong>三年级上册</strong> (grade3_1)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>三年级下册</strong> (grade3_2)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>四年级上册</strong> (grade4_1)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>四年级下册</strong> (grade4_2)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>五年级上册</strong> (grade5_1)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>五年级下册</strong> (grade5_2)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>六年级上册</strong> (grade6_1)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>六年级下册</strong> (grade6_2)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>GRE</strong> (gre)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>雅思</strong> (ielts)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>初中词汇</strong> (junior)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>七年级上册</strong> (junior7_1)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>七年级下册</strong> (junior7_2)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.08</td>
+                </tr>
+                <tr>
+                    <td><strong>八年级上册</strong> (junior8_1)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>八年级下册</strong> (junior8_2)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>九年级全册</strong> (junior9)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>初中全部</strong> (junior_all)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>KET考试</strong> (ket)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>PET考试</strong> (pet)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>考研词汇</strong> (postgrad)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>小学全部</strong> (primary_all)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>高中词汇</strong> (senior)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>必修1</strong> (senior1)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>必修2</strong> (senior2)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>必修3</strong> (senior3)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>必修4</strong> (senior4)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>必修5</strong> (senior5)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.06</td>
+                </tr>
+                <tr>
+                    <td><strong>高中全部</strong> (senior_all)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.07</td>
+                </tr>
+                <tr>
+                    <td><strong>托福</strong> (toefl)</td>
+                    <td>5</td>
+                    <td class="success">5</td>
+                    <td class="failed">0</td>
+                    <td>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100.0%"></div>
+                        </div>
+                        100.0%
+                    </td>
+                    <td>0.08</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

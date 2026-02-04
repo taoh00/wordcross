@@ -1,9 +1,10 @@
 /**
- * 虚拟键盘组件
+ * 虚拟键盘组件 (Kawaii Style)
  */
 
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Platform } from 'react-native';
+import { COLORS, SHADOWS, LAYOUT } from '../utils/theme';
 
 interface KeyboardProps {
   onKeyPress: (key: string) => void;
@@ -28,8 +29,10 @@ export default function Keyboard({ onKeyPress, onDelete }: KeyboardProps) {
   };
   
   // 计算按键大小
-  const keyWidth = (screenWidth - 32 - 9 * 4) / 10;
-  const keyHeight = keyWidth * 1.3;
+  // 留出边距: padding(8) + gap(4 * 9)
+  const availableWidth = screenWidth - 16;
+  const keyWidth = Math.floor((availableWidth - 36) / 10);
+  const keyHeight = keyWidth * 1.35;
   
   return (
     <View style={styles.keyboard}>
@@ -50,7 +53,7 @@ export default function Keyboard({ onKeyPress, onDelete }: KeyboardProps) {
                   isDelete && styles.deleteKey,
                 ]}
                 onPress={() => handlePress(key)}
-                activeOpacity={0.6}
+                activeOpacity={0.5}
               >
                 <Text
                   style={[
@@ -72,38 +75,44 @@ export default function Keyboard({ onKeyPress, onDelete }: KeyboardProps) {
 const styles = StyleSheet.create({
   keyboard: {
     paddingHorizontal: 8,
-    paddingVertical: 12,
-    backgroundColor: '#E5E7EB',
-    borderTopWidth: 1,
-    borderTopColor: '#D1D5DB',
+    paddingTop: 12,
+    paddingBottom: Platform.OS === 'ios' ? 34 : 20, // 适配 iPhone 底部
+    backgroundColor: COLORS.background, // 与页面背景一致，不单独设色
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: 6,
+    marginBottom: 8,
   },
   key: {
-    backgroundColor: '#fff',
-    borderRadius: 6,
+    backgroundColor: COLORS.white,
+    borderRadius: 12, // 更圆润
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 2,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 2,
+    // 3D Button effect
+    borderBottomWidth: 4,
+    borderBottomColor: '#FFB6C1', // gray-200
+    borderWidth: 1,
+    borderTopColor: '#FDFDFD',
+    borderLeftColor: '#FDFDFD',
+    borderRightColor: '#FDFDFD',
   },
   deleteKey: {
-    backgroundColor: '#9CA3AF',
+    backgroundColor: COLORS.pink.light,
+    borderBottomColor: COLORS.pink.main,
+    borderTopColor: COLORS.pink.light,
+    borderLeftColor: COLORS.pink.light,
+    borderRightColor: COLORS.pink.light,
   },
   keyText: {
     fontSize: 18,
-    fontWeight: '500',
-    color: '#1F2937',
+    fontWeight: '700',
+    color: COLORS.textMain,
+    fontFamily: Platform.OS === 'ios' ? 'Nunito-Bold' : 'sans-serif-medium',
   },
   deleteKeyText: {
     fontSize: 20,
-    color: '#fff',
+    color: COLORS.pink.dark,
   },
 });

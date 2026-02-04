@@ -124,6 +124,7 @@
               <div v-if="entry.extra && Object.keys(entry.extra).length > 0" class="value-extra">
                 <span v-if="entry.extra.wins !== undefined">{{ entry.extra.wins }}胜</span>
                 <span v-if="entry.extra.games !== undefined">/{{ entry.extra.games }}场</span>
+                <span v-if="entry.extra.total_score !== undefined" class="total-score">总分:{{ formatValue(entry.extra.total_score) }}</span>
               </div>
             </div>
           </div>
@@ -156,8 +157,8 @@
           <div class="stat-label">完成单词</div>
         </div>
         <div class="stat-item blue">
-          <div class="stat-value">{{ myStats.pkWins }}</div>
-          <div class="stat-label">PK胜场</div>
+          <div class="stat-value">{{ myStats.playCount }}</div>
+          <div class="stat-label">游戏次数</div>
         </div>
       </div>
       
@@ -215,9 +216,7 @@ const leaderboardTypes = ref([
   { code: 'endless_level', name: '无限关卡榜' },
   { code: 'endless_score', name: '无限积分榜' },
   { code: 'timed_words', name: '计时单词榜' },
-  { code: 'timed_score', name: '计时积分榜' },
-  { code: 'pk_wins', name: 'PK获胜榜' },
-  { code: 'pk_score', name: 'PK积分榜' }
+  { code: 'timed_score', name: '计时积分榜' }
 ])
 
 // 分组大类
@@ -269,9 +268,7 @@ function getTypeIcon(code) {
     'endless_level': '♾️',
     'endless_score': '🌟',
     'timed_words': '⏱️',
-    'timed_score': '💫',
-    'pk_wins': '⚔️',
-    'pk_score': '🏅'
+    'timed_score': '💫'
   }
   return icons[code] || '📊'
 }
@@ -284,9 +281,7 @@ function getValueLabel() {
     'endless_level': '关',
     'endless_score': '分',
     'timed_words': '词',
-    'timed_score': '分',
-    'pk_wins': '胜',
-    'pk_score': '分'
+    'timed_score': '分'
   }
   return labels[selectedType.value] || ''
 }
@@ -304,7 +299,6 @@ const myStats = ref({
   campaignLevel: 1,
   totalScore: 0,
   totalWords: 0,
-  pkWins: 0,
   endlessLevel: 0,
   timedWords: 0,
   playCount: 0
@@ -385,16 +379,13 @@ async function loadMyStats() {
       myStats.value.campaignLevel = stats.campaign?.max_level || 1
       myStats.value.totalScore = (stats.campaign?.total_score || 0) + 
                                   (stats.endless?.total_score || 0) + 
-                                  (stats.timed?.total_score || 0) +
-                                  (stats.pk?.total_score || 0)
+                                  (stats.timed?.total_score || 0)
       myStats.value.totalWords = stats.campaign?.total_words || 0
-      myStats.value.pkWins = stats.pk?.wins || 0
       myStats.value.endlessLevel = stats.endless?.max_level || 0
       myStats.value.timedWords = stats.timed?.max_words || 0
       myStats.value.playCount = (stats.campaign?.play_count || 0) +
                                 (stats.endless?.play_count || 0) +
-                                (stats.timed?.play_count || 0) +
-                                (stats.pk?.play_count || 0)
+                                (stats.timed?.play_count || 0)
       return
     }
   } catch (e) {
@@ -419,12 +410,6 @@ async function loadMyStats() {
     myStats.value.campaignLevel = maxLevel
     myStats.value.totalWords = totalCompleted * 5
     myStats.value.totalScore = myStats.value.totalWords * 10
-    
-    const pkStats = localStorage.getItem('pk_stats')
-    if (pkStats) {
-      const stats = JSON.parse(pkStats)
-      myStats.value.pkWins = stats.wins || 0
-    }
   } catch (e) {
     console.error('加载统计失败:', e)
   }
@@ -488,7 +473,7 @@ onMounted(() => {
 .title {
   font-size: var(--font-3xl, clamp(2rem, 6vw, 3.2rem));
   font-weight: 900;
-  color: white;
+  color: #5D5D5D;
   text-shadow: 0 4px 0 rgba(0,0,0,0.15), 0 6px 20px rgba(0,0,0,0.25);
   margin: 0;
 }
@@ -508,46 +493,53 @@ onMounted(() => {
   gap: clamp(10px, 2vw, 16px);
   width: 100%;
   padding: clamp(8px, 1.5vw, 12px) 0;
+  margin-bottom: clamp(8px, 1.5vw, 12px); /* 与内容区域的间距 */
 }
 
 .tab-buttons {
   display: flex;
   gap: clamp(6px, 1vw, 10px);
   flex: 1;
+  min-width: 0; /* 允许flex容器收缩 */
 }
 
 .tab-btn {
   flex: 1;
-  padding: clamp(10px, 1.8vw, 14px) clamp(12px, 2vw, 18px);
-  background: rgba(255,255,255,0.3);
-  border: 2px solid rgba(255,255,255,0.5);
+  min-width: 0; /* 关键：允许按钮收缩 */
+  padding: clamp(10px, 1.8vw, 14px) clamp(8px, 1.5vw, 12px);
+  background: #FFFFFF;
+  border: 2px solid #FFB6C1;
   border-radius: clamp(12px, 2vw, 16px);
-  font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
+  font-size: var(--font-md, clamp(0.9rem, 2vw, 1.2rem));
   font-weight: 700;
   color: rgba(255,255,255,0.9);
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tab-btn.active {
-  background: rgba(255,255,255,0.98);
-  border-color: white;
-  color: #7c3aed;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: #FFFFFF;
+  border-color: #5D5D5D;
+  color: #FF69B4;
+  box-shadow: 0 4px 0 #FF69B4;
 }
 
 .tab-btn:not(.active):hover {
-  background: rgba(255,255,255,0.5);
+  background: #FFF0F5;
 }
 
 /* 主卡片 - 占满剩余空间，支持滚动 */
 .main-card {
   flex: 1;
   min-height: 0;
-  background: rgba(255,255,255,0.98);
+  background: #FFFFFF;
   border-radius: clamp(16px, 2.5vw, 24px);
   padding: clamp(16px, 3vw, 28px);
-  box-shadow: 0 8px 0 rgba(0,0,0,0.08), 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 0 #FFB6C1;
+  border: 2px solid #FFB6C1;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -575,7 +567,7 @@ onMounted(() => {
 }
 
 .main-card::-webkit-scrollbar-thumb:hover {
-  background: #a78bfa;
+  background: #FFB6C1;
 }
 
 .back-btn {
@@ -583,20 +575,20 @@ onMounted(() => {
   align-items: center;
   flex-shrink: 0;
   padding: clamp(10px, 1.8vw, 14px) clamp(12px, 2vw, 18px);
-  background: rgba(255,255,255,0.98);
-  border: none;
+  background: #FFFFFF;
+  border: 2px solid #F0F8FF;
   border-radius: clamp(10px, 1.5vw, 14px);
   font-size: var(--font-md, clamp(1rem, 2.2vw, 1.2rem));
   font-weight: 700;
   color: #6b7280;
   text-decoration: none;
-  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 3px 0 #DDD;
   transition: all 0.15s ease;
 }
 
 .back-btn:active {
   transform: translateY(2px);
-  box-shadow: 0 0 0 rgba(0,0,0,0.1);
+  box-shadow: none;
 }
 
 /* 选择区域 */
@@ -607,7 +599,7 @@ onMounted(() => {
 .section-label {
   font-size: var(--font-lg, clamp(1.1rem, 2.5vw, 1.4rem));
   font-weight: 700;
-  color: #5b21b6;
+  color: #FF69B4;
   margin: 0 0 clamp(8px, 1.5vw, 14px);
 }
 
@@ -638,13 +630,13 @@ onMounted(() => {
 }
 
 .type-btn.active {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
-  border-color: #7c3aed;
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
+  border-color: #FF69B4;
   box-shadow: 0 3px 0 #6d28d9;
 }
 
 .type-btn.active .type-name {
-  color: white;
+  color: #5D5D5D;
 }
 
 .type-icon {
@@ -681,7 +673,7 @@ onMounted(() => {
 .group-tab.active {
   background: linear-gradient(180deg, #60a5fa, #3b82f6);
   border-color: #2563eb;
-  color: white;
+  color: #5D5D5D;
 }
 
 .subgroup-row {
@@ -707,9 +699,9 @@ onMounted(() => {
 }
 
 .subgroup-btn.active {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
-  border-color: #7c3aed;
-  color: white;
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
+  border-color: #FF69B4;
+  color: #5D5D5D;
 }
 
 /* 排行榜区域 - 不限制高度，跟随页面滚动 */
@@ -842,7 +834,7 @@ onMounted(() => {
 .value-main {
   font-size: var(--font-xl, clamp(1.3rem, 3vw, 1.7rem));
   font-weight: 900;
-  color: #7c3aed;
+  color: #FF69B4;
 }
 
 .value-label {
@@ -855,6 +847,13 @@ onMounted(() => {
   color: #6b7280;
 }
 
+.value-extra .total-score {
+  display: block;
+  margin-top: 2px;
+  color: #10b981;
+  font-weight: 600;
+}
+
 /* 操作按钮 */
 .action-row {
   margin-top: clamp(14px, 2.5vw, 20px);
@@ -863,12 +862,12 @@ onMounted(() => {
 
 .refresh-btn {
   padding: clamp(12px, 2vw, 16px) clamp(28px, 5vw, 40px);
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+  background: linear-gradient(180deg, #FFB6C1, #FFB6C1);
   border: none;
   border-radius: clamp(14px, 2vw, 18px);
   font-size: var(--font-md, clamp(1rem, 2.2vw, 1.25rem));
   font-weight: 700;
-  color: white;
+  color: #5D5D5D;
   cursor: pointer;
   box-shadow: 0 4px 0 #6d28d9;
   transition: all 0.15s ease;
@@ -888,17 +887,18 @@ onMounted(() => {
 .my-stats-card {
   flex: 1;
   min-height: 0;
-  background: rgba(255,255,255,0.98);
+  background: #FFFFFF;
   border-radius: clamp(16px, 2.5vw, 24px);
   padding: clamp(16px, 3vw, 28px);
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 8px 0 rgba(0,0,0,0.08), 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 0 #FFB6C1;
+  border: 2px solid #FFB6C1;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
-  scrollbar-color: #c4b5fd #f3f4f6;
+  scrollbar-color: #FFB6C1 #f3f4f6;
 }
 
 .my-stats-card::-webkit-scrollbar {
@@ -916,7 +916,7 @@ onMounted(() => {
 }
 
 .my-stats-card::-webkit-scrollbar-thumb:hover {
-  background: #a78bfa;
+  background: #FFB6C1;
 }
 
 .stats-title {
@@ -928,7 +928,7 @@ onMounted(() => {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(8px, 1.5vw, 14px);
 }
 
@@ -994,7 +994,7 @@ onMounted(() => {
 .ranking-rank {
   font-size: var(--font-md, clamp(0.95rem, 2vw, 1.15rem));
   font-weight: 700;
-  color: #7c3aed;
+  color: #FF69B4;
 }
 
 /* 底部装饰 - 隐藏，因为底部固定了我的记录卡片 */

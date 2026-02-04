@@ -11,6 +11,17 @@ from typing import List, Dict, Tuple, Optional, Set, FrozenSet
 from dataclasses import dataclass, field
 
 
+def is_pure_alpha(word: str) -> bool:
+    """检查单词是否只包含26个英文字母（不含连字符、撇号、空格等）
+    
+    无效单词示例：
+    - X-RAY, T-SHIRT（含连字符）
+    - O'CLOCK, WE'LL（含撇号）
+    - ICE CREAM（含空格）
+    """
+    return word.isalpha()
+
+
 @dataclass
 class Word:
     """单词数据结构"""
@@ -191,11 +202,11 @@ class CrosswordGenerator:
         self._random_seed = random_seed
     
     def _build_valid_words_set(self, word_list: List[dict]):
-        """构建有效单词集合，用于交叉验证"""
+        """构建有效单词集合，用于交叉验证（只接受纯字母单词）"""
         self._valid_words_set = set()
         for w in word_list:
             word = w.get("word", "").upper()
-            if len(word) >= 2:
+            if len(word) >= 2 and is_pure_alpha(word):
                 self._valid_words_set.add(word)
     
     def _is_valid_word(self, text: str) -> bool:
@@ -283,11 +294,11 @@ class CrosswordGenerator:
         """使用改进的算法生成谜题，确保单词能交叉"""
         puzzle = CrosswordPuzzle(grid_size=grid_size)
         
-        # 转换词汇格式
+        # 转换词汇格式（过滤含非字母字符的单词）
         words = [
             Word(id=w["id"], text=w["word"].upper(), definition=w["definition"], difficulty=w.get("difficulty", 1))
             for w in word_list
-            if 2 <= len(w["word"]) <= grid_size
+            if 2 <= len(w["word"]) <= grid_size and is_pure_alpha(w["word"])
         ]
         
         if not words:
@@ -362,18 +373,18 @@ class CrosswordGenerator:
         """备用生成算法：使用更简单的放置策略"""
         puzzle = CrosswordPuzzle(grid_size=grid_size)
         
-        # 转换词汇格式，优先选择3-5字母的词
+        # 转换词汇格式，优先选择3-5字母的纯字母词
         words = []
         for w in word_list:
             word_len = len(w["word"])
-            if 3 <= word_len <= min(5, grid_size):
+            if 3 <= word_len <= min(5, grid_size) and is_pure_alpha(w["word"]):
                 words.append(Word(id=w["id"], text=w["word"].upper(), definition=w["definition"], difficulty=w.get("difficulty", 1)))
         
         if len(words) < 2:
             # 如果没有足够的3-5字母词，放宽条件
             for w in word_list:
                 word_len = len(w["word"])
-                if 2 <= word_len <= grid_size:
+                if 2 <= word_len <= grid_size and is_pure_alpha(w["word"]):
                     words.append(Word(id=w["id"], text=w["word"].upper(), definition=w["definition"], difficulty=w.get("difficulty", 1)))
         
         if not words:
@@ -439,9 +450,6 @@ class CrosswordGenerator:
         grid_size, min_words, max_words, max_word_len = config
         num_words = random.randint(min_words, max_words)
         
-        # 获取词汇（优先获取适合网格大小的词汇）
-        words = vocab_manager.get_words_for_puzzle(group, num_words * 5, max_word_len)
-        
         # 获取完整词库用于交叉验证
         if hasattr(vocab_manager, 'get_all_words_for_csp'):
             all_words = vocab_manager.get_all_words_for_csp(group)
@@ -449,8 +457,33 @@ class CrosswordGenerator:
             all_words = vocab_manager.get_words(group, limit=10000)
         self._build_valid_words_set(all_words)
         
-        # 使用改进的算法生成谜题（带交叉验证）
-        puzzle = self._generate_puzzle_with_crossable_words(grid_size, words, num_words)
+        # 增加重试机制，确保生成至少 min_words 个单词
+        max_retries = 5
+        best_puzzle = None
+        best_word_count = 0
+        
+        for retry in range(max_retries):
+            # 获取词汇（优先获取适合网格大小的词汇），每次重试打乱顺序
+            words = vocab_manager.get_words_for_puzzle(group, num_words * 5, max_word_len)
+            random.shuffle(words)
+            
+            # 使用改进的算法生成谜题（带交叉验证）
+            puzzle = self._generate_puzzle_with_crossable_words(grid_size, words, num_words)
+            
+            word_count = len(puzzle.placed_words)
+            
+            # 如果达到目标数量，直接使用
+            if word_count >= min_words:
+                best_puzzle = puzzle
+                break
+            
+            # 记录最好的结果
+            if word_count > best_word_count:
+                best_word_count = word_count
+                best_puzzle = puzzle
+        
+        # 使用最好的结果
+        puzzle = best_puzzle
         
         # 添加预填字母（无额外加成）
         self._add_prefilled_letters(puzzle, difficulty, 0.0)
@@ -579,11 +612,11 @@ class CrosswordGenerator:
         """尝试生成谜题（增强版：支持10x10高阶表格）"""
         puzzle = CrosswordPuzzle(grid_size=grid_size)
         
-        # 转换词汇格式
+        # 转换词汇格式（过滤含非字母字符的单词）
         words = [
             Word(id=w["id"], text=w["word"].upper(), definition=w["definition"], difficulty=w.get("difficulty", 1))
             for w in word_list
-            if 2 <= len(w["word"]) <= grid_size  # 过滤太长或太短的单词
+            if 2 <= len(w["word"]) <= grid_size and is_pure_alpha(w["word"])
         ]
         
         if not words:

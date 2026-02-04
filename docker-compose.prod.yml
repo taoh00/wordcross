@@ -1,0 +1,74 @@
+# 我爱填单词 - Docker Compose 生产环境配置 (支持HTTPS)
+# 前端(nginx) + 后端(fastapi) + Certbot(SSL证书)
+# 端口分配: HTTP 10010, HTTPS 10443
+
+services:
+  # ============ 后端服务 ============
+  backend:
+    build:
+      context: ./src
+      dockerfile: backend/Dockerfile.prod
+    image: wordcross-backend:latest
+    container_name: wordcross-backend
+    restart: unless-stopped
+    volumes:
+      # 数据持久化（用户数据、词库等）
+      - ./src/data:/app/data:rw
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      - wordcross-net
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:10012/api')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # ============ 前端服务 (支持HTTPS) ============
+  frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile.ssl
+    image: wordcross-frontend:latest
+    container_name: wordcross-frontend
+    restart: unless-stopped
+    ports:
+      # HTTP端口（用于证书验证和重定向）
+      - "10010:80"
+      # HTTPS端口
+      - "10443:443"
+    volumes:
+      # 音频文件
+      - ./data/audio:/usr/share/nginx/html/data/audio:ro
+      # SSL证书（由certbot管理）
+      - ./certbot/conf:/etc/letsencrypt:ro
+      - ./certbot/www:/var/www/certbot:ro
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      - wordcross-net
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+
+  # ============ Certbot 证书服务 ============
+  certbot:
+    image: certbot/certbot:latest
+    container_name: wordcross-certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt:rw
+      - ./certbot/www:/var/www/certbot:rw
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    networks:
+      - wordcross-net
+
+networks:
+  wordcross-net:
+    driver: bridge

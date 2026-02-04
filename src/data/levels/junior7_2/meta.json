@@ -3,11 +3,11 @@
   "group_code": "junior7_2",
   "category": "初中",
   "is_primary": false,
-  "level_count": 115,
-  "word_count": 618,
+  "level_count": 116,
+  "word_count": 621,
   "vocab_size": 724,
-  "coverage": 85.4,
-  "success_count": 115,
+  "coverage": 85.8,
+  "success_count": 116,
   "fail_count": 0,
-  "total_levels": 115
+  "error_levels_dir": null
 }

@@ -492,7 +492,7 @@ onMounted(() => {
   border-radius: 12px;
   font-size: 0.85rem;
   font-weight: 700;
-  color: white;
+  color: #5D5D5D;
   cursor: pointer;
   box-shadow: 0 3px 0 #059669;
 }
@@ -580,10 +580,10 @@ onMounted(() => {
 }
 
 .category-tab.active {
-  background: linear-gradient(180deg, #8b5cf6, #7c3aed);
-  border-color: #5b21b6;
-  color: white;
-  box-shadow: 0 2px 0 #5b21b6;
+  background: linear-gradient(180deg, #FFB6C1, #FF69B4);
+  border-color: #FF69B4;
+  color: #5D5D5D;
+  box-shadow: 0 2px 0 #FF69B4;
 }
 
 /* 词库选择器 */
@@ -708,9 +708,9 @@ onMounted(() => {
 }
 
 .page-btn:hover:not(:disabled) {
-  background: linear-gradient(180deg, #8b5cf6, #7c3aed);
-  border-color: #5b21b6;
-  color: white;
+  background: linear-gradient(180deg, #FFB6C1, #FF69B4);
+  border-color: #FF69B4;
+  color: #5D5D5D;
 }
 
 .page-btn:disabled {
@@ -721,7 +721,7 @@ onMounted(() => {
 .page-info {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #5b21b6;
+  color: #FF69B4;
   min-width: 60px;
   text-align: center;
 }
@@ -752,7 +752,7 @@ onMounted(() => {
 }
 
 .level-card.expanded {
-  border-color: #8b5cf6;
+  border-color: #FFB6C1;
 }
 
 .level-header {
@@ -887,7 +887,7 @@ onMounted(() => {
 .words-title {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #5b21b6;
+  color: #FF69B4;
   margin-bottom: 6px;
 }
 

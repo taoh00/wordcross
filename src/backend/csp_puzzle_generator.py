@@ -23,6 +23,17 @@ from collections import defaultdict
 from copy import deepcopy
 
 
+def is_pure_alpha(word: str) -> bool:
+    """检查单词是否只包含26个英文字母（不含连字符、撇号、空格等）
+    
+    无效单词示例：
+    - X-RAY, T-SHIRT（含连字符）
+    - O'CLOCK, WE'LL（含撇号）
+    - ICE CREAM（含空格）
+    """
+    return word.isalpha()
+
+
 @dataclass
 class WordSlot:
     """单词槽位 - CSP中的变量"""
@@ -248,12 +259,20 @@ class DensePuzzle:
         for (row, col), num in position_clue_map.items():
             clue_number_grid[row][col] = num
         
+        # 创建 prefilled 字典，格式为 {"row-col": "letter"}
+        # 将 revealed_positions 转换为前端期望的格式
+        prefilled = {}
+        for i, row in enumerate(self.grid):
+            for j, cell in enumerate(row):
+                if cell and (i, j) in self.revealed_positions:
+                    prefilled[f"{i}-{j}"] = cell
+        
         return {
             "grid_size": self.grid_size,
             "cells": masked_grid,
             "revealed": revealed_grid,  # 展示的字母位置（用于红色标记）
             "words": words,
-            "prefilled": {},  # 可以根据难度预填
+            "prefilled": prefilled,  # 预填字母字典
             "clue_numbers": clue_number_grid,
             "puzzle_type": "template",  # 标识为模板填字类型
             "density": self.calculate_density()  # 密度信息
@@ -308,10 +327,11 @@ class WordIndex:
         self.word_to_info: Dict[str, dict] = {}
         self.valid_words_set: Set[str] = set()  # 用于快速验证
         
-        # 按长度索引
+        # 按长度索引（过滤特殊字符）
         for w in words:
             word = w["word"].upper()
-            if 2 <= len(word) <= 15:  # 合理范围
+            # 只接受纯字母单词，过滤含撇号、连字符等特殊字符的单词
+            if 2 <= len(word) <= 15 and is_pure_alpha(word):
                 self.by_length[len(word)].append(word)
                 self.word_to_info[word] = w
                 self.valid_words_set.add(word)
@@ -1594,6 +1614,8 @@ class CSPPuzzleGenerator:
         )
         
         if puzzle:
+            # 关键：生成展示字母（之前缺失导致 prefilled 为空）
+            puzzle.compute_revealed_letters(min_reveal=2)
             result = puzzle.to_dict()
             result["level"] = level
             result["difficulty"] = difficulty
@@ -1628,6 +1650,14 @@ class CSPPuzzleGenerator:
         """
         grid_size = self.GRID_SIZE_CONFIG.get(difficulty, 6)
         
+        # 最小单词数配置
+        min_words_config = {
+            "easy": 2,
+            "medium": 3,
+            "hard": 4,
+        }
+        min_words = min_words_config.get(difficulty, 2)
+        
         # 根据难度调整密度要求
         density_config = {
             "easy": 0.30,
@@ -1644,21 +1674,46 @@ class CSPPuzzleGenerator:
         else:
             all_words = vocab_manager.get_words(group, limit=10000)
         
-        # 优先使用交叉验证生成器
-        puzzle = self.generate_cross_validated_puzzle(
-            grid_size, all_words,
-            min_density=min_density,
-            timeout=10.0,
-            max_retries=20
-        )
+        # 增加重试机制，确保生成至少 min_words 个单词
+        best_result = None
+        best_word_count = 0
         
-        if puzzle:
-            result = puzzle.to_dict()
-            result["level"] = 0
-            result["difficulty"] = difficulty
-            result["group"] = group
-            result["cross_validated"] = True
-            return result
+        for attempt in range(5):
+            # 打乱词汇顺序
+            random.shuffle(all_words)
+            
+            # 优先使用交叉验证生成器
+            puzzle = self.generate_cross_validated_puzzle(
+                grid_size, all_words,
+                min_density=min_density,
+                timeout=10.0,
+                max_retries=20
+            )
+            
+            if puzzle:
+                # 关键：生成展示字母（之前缺失导致 prefilled 为空）
+                puzzle.compute_revealed_letters(min_reveal=2)
+                result = puzzle.to_dict()
+                word_count = len(result.get("words", []))
+                
+                if word_count >= min_words:
+                    result["level"] = 0
+                    result["difficulty"] = difficulty
+                    result["group"] = group
+                    result["cross_validated"] = True
+                    return result
+                
+                if word_count > best_word_count:
+                    best_word_count = word_count
+                    best_result = result
+        
+        # 使用最好的结果
+        if best_result:
+            best_result["level"] = 0
+            best_result["difficulty"] = difficulty
+            best_result["group"] = group
+            best_result["cross_validated"] = True
+            return best_result
         
         # 后备：使用模板生成器
         puzzle = self.generate_template_puzzle(grid_size, all_words, timeout=5.0, max_retries=10)

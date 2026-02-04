@@ -110,7 +110,7 @@ function completeRegistration() {
 
 body {
   font-family: 'Nunito', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #7c3aed 100%);
+  background: linear-gradient(135deg, #a78bfa 0%, #FFB6C1 50%, #FF69B4 100%);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -231,7 +231,7 @@ body {
 .register-app-name {
   font-size: 1.8rem;
   font-weight: 900;
-  color: #5b21b6;
+  color: #FF69B4;
   margin: 4px 0 0;
   letter-spacing: 2px;
 }
@@ -262,7 +262,7 @@ body {
 
 .nickname-input:focus {
   outline: none;
-  border-color: #8b5cf6;
+  border-color: #FFB6C1;
   box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
 }
 
@@ -300,25 +300,25 @@ body {
 .start-btn {
   width: 100%;
   padding: 16px;
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
-  border: 3px solid #7c3aed;
+  background: linear-gradient(180deg, #a78bfa, #FFB6C1);
+  border: 3px solid #FF69B4;
   border-radius: 16px;
   font-size: 1.15rem;
   font-weight: 800;
-  color: white;
+  color: #5D5D5D;
   cursor: pointer;
-  box-shadow: 0 5px 0 #5b21b6;
+  box-shadow: 0 5px 0 #FF69B4;
   transition: all 0.15s ease;
 }
 
 .start-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 7px 0 #5b21b6;
+  box-shadow: 0 7px 0 #FF69B4;
 }
 
 .start-btn:active:not(:disabled) {
   transform: translateY(3px);
-  box-shadow: 0 2px 0 #5b21b6;
+  box-shadow: 0 2px 0 #FF69B4;
 }
 
 .start-btn:disabled {

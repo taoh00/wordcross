@@ -121,7 +121,7 @@ export default function LevelSelectScreen() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#4F46E5" />
+        <ActivityIndicator size="large" color="#FF69B4" />
         <Text style={styles.loadingText}>加载关卡...</Text>
       </View>
     );
@@ -177,13 +177,13 @@ export default function LevelSelectScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#FDFDFD',
   },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#FDFDFD',
   },
   loadingText: {
     marginTop: 12,
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
   progressValue: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#4F46E5',
+    color: '#FF69B4',
   },
   progressLabel: {
     fontSize: 13,
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
   },
   progressDivider: {
     width: 1,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#FFB6C1',
     marginVertical: 4,
   },
   levelGroup: {
@@ -251,12 +251,12 @@ const styles = StyleSheet.create({
     elevation: 1,
   },
   levelLocked: {
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#FFB6C1',
   },
   levelCompleted: {
-    backgroundColor: '#EEF2FF',
+    backgroundColor: '#FFF0F5',
     borderWidth: 2,
-    borderColor: '#4F46E5',
+    borderColor: '#FF69B4',
   },
   lockIcon: {
     fontSize: 18,
@@ -264,10 +264,10 @@ const styles = StyleSheet.create({
   levelNumber: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1F2937',
+    color: '#5D5D5D',
   },
   levelNumberCompleted: {
-    color: '#4F46E5',
+    color: '#FF69B4',
   },
   starsContainer: {
     flexDirection: 'row',
@@ -275,10 +275,10 @@ const styles = StyleSheet.create({
   },
   star: {
     fontSize: 10,
-    color: '#E5E7EB',
+    color: '#FFB6C1',
   },
   starActive: {
-    color: '#F59E0B',
+    color: '#DAA520',
   },
   bottomSpacer: {
     height: 32,

@@ -35,9 +35,10 @@ interface SettingItemProps {
   subtitle?: string;
   right?: React.ReactNode;
   onPress?: () => void;
+  noFeedback?: boolean; // 隐藏点击反馈（用于隐藏功能）
 }
 
-function SettingItem({ icon, title, subtitle, right, onPress }: SettingItemProps) {
+function SettingItem({ icon, title, subtitle, right, onPress, noFeedback }: SettingItemProps) {
   const content = (
     <View style={styles.settingItem}>
       <Text style={styles.settingIcon}>{icon}</Text>
@@ -51,7 +52,7 @@ function SettingItem({ icon, title, subtitle, right, onPress }: SettingItemProps
   
   if (onPress) {
     return (
-      <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
+      <TouchableOpacity onPress={onPress} activeOpacity={noFeedback ? 1 : 0.7}>
         {content}
       </TouchableOpacity>
     );
@@ -70,6 +71,10 @@ function SettingGroup({ title, children }: { title: string; children: React.Reac
   );
 }
 
+// 常量
+const DEBUG_CLICK_THRESHOLD = 10;
+const CLICK_TIMEOUT = 2000;
+
 export default function SettingsScreen() {
   const dispatch = useAppDispatch();
   const { nickname, avatar } = useAppSelector((state) => state.user);
@@ -78,10 +83,66 @@ export default function SettingsScreen() {
   const [editingNickname, setEditingNickname] = useState(false);
   const [tempNickname, setTempNickname] = useState(nickname);
   
+  // Debug模式相关状态
+  const [debugMode, setDebugMode] = useState(false);
+  const [versionClickCount, setVersionClickCount] = useState(0);
+  const versionClickTimer = React.useRef<NodeJS.Timeout | null>(null);
+  
   // 加载设置
   useEffect(() => {
     dispatch(loadSettings());
+    loadDebugMode();
   }, []);
+  
+  // 加载debug模式
+  const loadDebugMode = async () => {
+    try {
+      const saved = await AsyncStorage.getItem('game_debug_mode');
+      setDebugMode(saved === 'true');
+    } catch (e) {
+      setDebugMode(false);
+    }
+  };
+  
+  // 版本号连击处理
+  const handleVersionPress = async () => {
+    // 清除之前的计时器
+    if (versionClickTimer.current) {
+      clearTimeout(versionClickTimer.current);
+    }
+    
+    const newCount = versionClickCount + 1;
+    setVersionClickCount(newCount);
+    
+    // 设置超时重置
+    versionClickTimer.current = setTimeout(() => {
+      setVersionClickCount(0);
+    }, CLICK_TIMEOUT);
+    
+    const remaining = DEBUG_CLICK_THRESHOLD - newCount;
+    
+    if (newCount >= DEBUG_CLICK_THRESHOLD) {
+      setVersionClickCount(0);
+      if (versionClickTimer.current) {
+        clearTimeout(versionClickTimer.current);
+      }
+      
+      if (debugMode) {
+        // 关闭debug模式
+        setDebugMode(false);
+        await AsyncStorage.setItem('game_debug_mode', 'false');
+        Alert.alert('🔒 Debug模式已关闭');
+      } else {
+        // 开启debug模式
+        setDebugMode(true);
+        await AsyncStorage.setItem('game_debug_mode', 'true');
+        Alert.alert('🔓 Debug模式已开启');
+      }
+    } else if (remaining <= 3 && remaining > 0) {
+      // 剩余3次以内时给提示
+      console.log(`还需点击 ${remaining} 次${debugMode ? '关闭' : '开启'}Debug模式`);
+    }
+  };
   
   // 保存设置
   const handleSaveSettings = () => {
@@ -230,7 +291,7 @@ export default function SettingsScreen() {
                   dispatch(toggleSound());
                   handleSaveSettings();
                 }}
-                trackColor={{ false: '#E5E7EB', true: '#4F46E5' }}
+                trackColor={{ false: '#FFB6C1', true: '#FF69B4' }}
               />
             }
           />
@@ -246,7 +307,7 @@ export default function SettingsScreen() {
                   dispatch(toggleAutoSpeak());
                   handleSaveSettings();
                 }}
-                trackColor={{ false: '#E5E7EB', true: '#4F46E5' }}
+                trackColor={{ false: '#FFB6C1', true: '#FF69B4' }}
               />
             }
           />
@@ -270,7 +331,7 @@ export default function SettingsScreen() {
                   dispatch(toggleShowTranslation());
                   handleSaveSettings();
                 }}
-                trackColor={{ false: '#E5E7EB', true: '#4F46E5' }}
+                trackColor={{ false: '#FFB6C1', true: '#FF69B4' }}
               />
             }
           />
@@ -286,7 +347,7 @@ export default function SettingsScreen() {
                   dispatch(toggleHaptic());
                   handleSaveSettings();
                 }}
-                trackColor={{ false: '#E5E7EB', true: '#4F46E5' }}
+                trackColor={{ false: '#FFB6C1', true: '#FF69B4' }}
               />
             }
           />
@@ -311,12 +372,35 @@ export default function SettingsScreen() {
           />
         </SettingGroup>
         
+        {/* 开发者选项（仅debug模式显示） */}
+        {debugMode && (
+          <SettingGroup title="开发者选项">
+            <SettingItem
+              icon="🐛"
+              title="Debug模式"
+              subtitle="开启后可解锁全部关卡"
+              right={
+                <Switch
+                  value={debugMode}
+                  onValueChange={async (value) => {
+                    setDebugMode(value);
+                    await AsyncStorage.setItem('game_debug_mode', value ? 'true' : 'false');
+                  }}
+                  trackColor={{ false: '#FFB6C1', true: '#FF69B4' }}
+                />
+              }
+            />
+          </SettingGroup>
+        )}
+        
         {/* 关于 */}
         <SettingGroup title="关于">
           <SettingItem
             icon="ℹ️"
             title="版本"
             subtitle="1.0.0"
+            onPress={handleVersionPress}
+            noFeedback={true}
           />
           
           <SettingItem
@@ -337,7 +421,7 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#FDFDFD',
   },
   scrollView: {
     flex: 1,
@@ -349,7 +433,7 @@ const styles = StyleSheet.create({
   groupTitle: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#6B7280',
+    color: '#888888',
     marginBottom: 8,
     marginLeft: 4,
   },
@@ -363,7 +447,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#F3F4F6',
+    borderBottomColor: '#FDFDFD',
   },
   settingIcon: {
     fontSize: 24,
@@ -374,35 +458,35 @@ const styles = StyleSheet.create({
   },
   settingTitle: {
     fontSize: 16,
-    color: '#1F2937',
+    color: '#5D5D5D',
   },
   settingSubtitle: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#888888',
     marginTop: 2,
   },
   arrowIcon: {
     fontSize: 20,
-    color: '#9CA3AF',
+    color: '#888888',
   },
   nicknameInput: {
     flex: 1,
     fontSize: 16,
-    color: '#1F2937',
+    color: '#5D5D5D',
     paddingVertical: 4,
     paddingHorizontal: 8,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#FFB6C1',
     borderRadius: 6,
     marginRight: 12,
   },
   saveButton: {
     fontSize: 16,
-    color: '#4F46E5',
+    color: '#FF69B4',
     fontWeight: '600',
   },
   dangerText: {
-    color: '#EF4444',
+    color: '#FF69B4',
   },
   bottomSpacer: {
     height: 40,

@@ -3,11 +3,11 @@
   "group_code": "senior4",
   "category": "高中",
   "is_primary": false,
-  "level_count": 167,
-  "word_count": 845,
+  "level_count": 166,
+  "word_count": 842,
   "vocab_size": 989,
-  "coverage": 85.4,
-  "success_count": 167,
+  "coverage": 85.1,
+  "success_count": 166,
   "fail_count": 0,
-  "total_levels": 167
+  "error_levels_dir": null
 }

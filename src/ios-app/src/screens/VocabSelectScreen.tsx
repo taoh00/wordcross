@@ -19,61 +19,59 @@ import { staticApi } from '../api';
 type NavigationProp = StackNavigationProp<RootStackParamList, 'VocabSelect'>;
 type RouteType = RouteProp<RootStackParamList, 'VocabSelect'>;
 
-/** 词库分组配置 */
+/** 词库分组配置 - 与 src/shared/constants/groups.ts 保持一致 */
 const VOCAB_GROUPS = [
   {
     category: '小学词汇',
     icon: '📚',
     groups: [
+      { code: 'primary_all', name: '全部', icon: '📚' },
       { code: 'grade3_1', name: '三年级上册', icon: '🌱' },
       { code: 'grade3_2', name: '三年级下册', icon: '🌿' },
       { code: 'grade4_1', name: '四年级上册', icon: '🌲' },
       { code: 'grade4_2', name: '四年级下册', icon: '🌳' },
       { code: 'grade5_1', name: '五年级上册', icon: '🌴' },
       { code: 'grade5_2', name: '五年级下册', icon: '🌵' },
-      { code: 'grade6_1', name: '六年级上册', icon: '🎋' },
-      { code: 'grade6_2', name: '六年级下册', icon: '🎍' },
-      { code: 'primary_all', name: '小学全部', icon: '📚' },
+      { code: 'grade6_1', name: '六年级上册', icon: '🎄' },
+      { code: 'grade6_2', name: '六年级下册', icon: '🎋' },
     ],
   },
   {
     category: '初中词汇',
     icon: '📖',
     groups: [
-      { code: 'junior7_1', name: '七年级上册', icon: '📗' },
-      { code: 'junior7_2', name: '七年级下册', icon: '📘' },
-      { code: 'junior8_1', name: '八年级上册', icon: '📙' },
-      { code: 'junior8_2', name: '八年级下册', icon: '📕' },
-      { code: 'junior9', name: '九年级全册', icon: '📓' },
-      { code: 'junior', name: '初中词汇', icon: '📔' },
-      { code: 'junior_all', name: '初中全部', icon: '📖' },
+      { code: 'junior_all', name: '全部', icon: '📖' },
+      { code: 'junior7_1', name: '七年级上册', icon: '🌱' },
+      { code: 'junior7_2', name: '七年级下册', icon: '🌿' },
+      { code: 'junior8_1', name: '八年级上册', icon: '🌲' },
+      { code: 'junior8_2', name: '八年级下册', icon: '🌳' },
+      { code: 'junior9', name: '九年级全册', icon: '🌴' },
     ],
   },
   {
     category: '高中词汇',
     icon: '📕',
     groups: [
-      { code: 'senior1', name: '必修1', icon: '1️⃣' },
-      { code: 'senior2', name: '必修2', icon: '2️⃣' },
-      { code: 'senior3', name: '必修3', icon: '3️⃣' },
-      { code: 'senior4', name: '必修4', icon: '4️⃣' },
-      { code: 'senior5', name: '必修5', icon: '5️⃣' },
-      { code: 'senior', name: '高中词汇', icon: '📚' },
-      { code: 'senior_all', name: '高中全部', icon: '📕' },
+      { code: 'senior_all', name: '全部', icon: '📕' },
+      { code: 'senior1', name: '必修1', icon: '📗' },
+      { code: 'senior2', name: '必修2', icon: '📘' },
+      { code: 'senior3', name: '必修3', icon: '📙' },
+      { code: 'senior4', name: '必修4', icon: '📔' },
+      { code: 'senior5', name: '必修5', icon: '📓' },
     ],
   },
   {
     category: '考试词汇',
     icon: '🎯',
     groups: [
-      { code: 'ket', name: 'KET考试', icon: '🅰️' },
-      { code: 'pet', name: 'PET考试', icon: '🅱️' },
-      { code: 'cet4', name: '大学四级', icon: '4️⃣' },
-      { code: 'cet6', name: '大学六级', icon: '6️⃣' },
-      { code: 'postgrad', name: '考研词汇', icon: '🎓' },
-      { code: 'ielts', name: '雅思', icon: '🌍' },
+      { code: 'ket', name: 'KET考试', icon: '🎯' },
+      { code: 'pet', name: 'PET考试', icon: '🎓' },
+      { code: 'cet4', name: '大学四级', icon: '🏛️' },
+      { code: 'cet6', name: '大学六级', icon: '🎖️' },
+      { code: 'postgrad', name: '考研词汇', icon: '🔬' },
+      { code: 'ielts', name: '雅思', icon: '✈️' },
       { code: 'toefl', name: '托福', icon: '🗽' },
-      { code: 'gre', name: 'GRE', icon: '🎖️' },
+      { code: 'gre', name: 'GRE', icon: '🎩' },
     ],
   },
 ];
@@ -131,7 +129,7 @@ export default function VocabSelectScreen() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#4F46E5" />
+        <ActivityIndicator size="large" color="#FF69B4" />
         <Text style={styles.loadingText}>加载词库...</Text>
       </View>
     );
@@ -185,18 +183,18 @@ export default function VocabSelectScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#FDFDFD',
   },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#FDFDFD',
   },
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: '#6B7280',
+    color: '#888888',
   },
   categoryContainer: {
     marginTop: 16,
@@ -222,11 +220,11 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 18,
     fontWeight: '600',
-    color: '#1F2937',
+    color: '#5D5D5D',
   },
   categoryArrow: {
     fontSize: 14,
-    color: '#9CA3AF',
+    color: '#888888',
   },
   groupList: {
     marginTop: 8,
@@ -239,7 +237,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 14,
     borderBottomWidth: 1,
-    borderBottomColor: '#F3F4F6',
+    borderBottomColor: '#FDFDFD',
   },
   groupIcon: {
     fontSize: 24,
@@ -250,16 +248,16 @@ const styles = StyleSheet.create({
   },
   groupName: {
     fontSize: 16,
-    color: '#1F2937',
+    color: '#5D5D5D',
   },
   groupLevels: {
     fontSize: 13,
-    color: '#6B7280',
+    color: '#888888',
     marginTop: 2,
   },
   groupArrow: {
     fontSize: 20,
-    color: '#9CA3AF',
+    color: '#888888',
   },
   bottomSpacer: {
     height: 32,
